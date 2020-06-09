@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Quantidade de lances realizados em leilões extras no ano fiscal vigente. --></help>
+    <label><!-- Lances em Leilões Extra - AF --></label>
+    <name>V_LancesLeiloesCompAF__c</name>
+</CustomFieldTranslation>

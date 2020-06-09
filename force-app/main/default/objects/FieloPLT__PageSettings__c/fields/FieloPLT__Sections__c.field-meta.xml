@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Sections__c</fullName>
+    <deprecated>false</deprecated>
+    <description>JSON string which allows adding &quot;Sections&quot; to group fields (e.g. Information) in New, Edit and Detail Page Setting Types.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter JSON string to add Sections to group fields in New, Edit and Detail Page Setting Types.</inlineHelpText>
+    <label>Sections</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

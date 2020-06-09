@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Meta do ano fiscal relacionado ao badge. --></help>
+    <label><!-- Meta - AF OLD --></label>
+    <name>V_MetaAFOLD__c</name>
+    <relationshipLabel><!-- Badges Ganhas --></relationshipLabel>
+</CustomFieldTranslation>

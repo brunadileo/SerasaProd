@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score SPY de atingimento de meta do participante no 1o. Trimestre do ano fiscal. --></help>
+    <label><!-- Score AM SPY - 1o. Trim. --></label>
+    <name>V_ScoreAMSPYTrimestre1AF__c</name>
+</CustomFieldTranslation>

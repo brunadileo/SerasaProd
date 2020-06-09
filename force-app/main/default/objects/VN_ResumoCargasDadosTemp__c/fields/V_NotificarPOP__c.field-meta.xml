@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_NotificarPOP__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Se assinalado, enviar alerta de email para os responsáveis das áreas envolvidas.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Se assinalado, enviar alerta de email para os responsáveis das áreas envolvidas.</inlineHelpText>
+    <label>Notificar POP</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

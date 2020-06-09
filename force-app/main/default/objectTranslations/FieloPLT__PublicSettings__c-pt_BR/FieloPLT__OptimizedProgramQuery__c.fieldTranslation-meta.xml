@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When ticked, Site only retrieves Program&apos;s Custom fields defined in the Program fieldset. --></help>
+    <label><!-- Optimized Program query --></label>
+    <name>FieloPLT__OptimizedProgramQuery__c</name>
+</CustomFieldTranslation>

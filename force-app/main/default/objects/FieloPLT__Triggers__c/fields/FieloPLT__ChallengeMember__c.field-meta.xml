@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ChallengeMember__c</fullName>
+    <defaultValue>true</defaultValue>
+    <deprecated>false</deprecated>
+    <description>It disables Challenge Member trigger.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When unchecked, it disables Challenge Member trigger.</inlineHelpText>
+    <label>Challenge Member</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Email do participante relacionado ao Item de resgate. --></help>
+    <label><!-- E-mail do Participante --></label>
+    <name>V_EmailParticipante__c</name>
+</CustomFieldTranslation>

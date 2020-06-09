@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RuleTrigger__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Action Engine Trigger.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose an Engine Trigger related to the Action.</inlineHelpText>
+    <label>Engine Trigger</label>
+    <referenceTo>FieloPLT__RuleTrigger__c</referenceTo>
+    <relationshipLabel>Actions</relationshipLabel>
+    <relationshipName>Actions</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

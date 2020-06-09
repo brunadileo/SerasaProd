@@ -1,0 +1,33 @@
+<aura:component implements="forceCommunity:themeLayout" description="Custom Content Layout" access="global">
+    <aura:attribute name="contentleft" type="Aura.Component[]" />
+    <aura:attribute name="contentright" type="Aura.Component[]" />
+    <aura:attribute name="firstAcess" type="String" />
+
+    <ltng:require styles="{!join(',', 
+    				$Resource.SX_style, 
+    				$Resource.SX_FontAwesomeIcons + '/css/all.min.css')}"/>
+	<ltng:require scripts="{!$Resource.SX_script}"/>
+  
+  
+<div>
+  <div class="container p-0">
+    <div class="columns box-img pl-0 pl-md-4">
+      <img src="/insiders/resource/SX_Images/logo-insiders.png" alt="Serasa Experian - Insiders"/>
+    </div>
+  </div> 
+  <aura:if isTrue="{!v.firstAcess == 'Não'}">
+    <div class="container p-5 pb-0">
+      <div class="row m-0">
+        <div class="content-left columns p-0">
+          {!v.contentleft}
+        </div>
+        <div class="content-right columns p-0 pl-3">
+          {!v.contentright}
+        </div>
+      </div>
+    </div>
+  </aura:if>
+  <c:SX_Subcomponent_Modal/> 
+  <c:SX_ModalError_Cmp/> 
+</div>
+</aura:component>

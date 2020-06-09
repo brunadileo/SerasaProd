@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ValidatesCreationAndEdition</fullName>
+    <active>true</active>
+    <description>Challenge Rewards from &quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot; Challenges cannot be modified.</description>
+    <errorConditionFormula>( 
+ISPICKVAL(FieloPLT__Challenge__r.FieloPLT__Status__c,&apos;Pending&apos;) || 
+ISPICKVAL(FieloPLT__Challenge__r.FieloPLT__Status__c,&apos;Scheduled&apos;) || 
+ISPICKVAL(FieloPLT__Challenge__r.FieloPLT__Status__c,&apos;Active&apos;) 
+)
+&amp;&amp;
+(
+ISBLANK(FieloPLT__Mission__c) || ISBLANK(FieloPLT__Mission__r.FieloPLT__StartDate__c) || FieloPLT__Mission__r.FieloPLT__StartDate__c &lt;= TODAY()
+)
+&amp;&amp;
+OR(
+ISCHANGED(FieloPLT__Badge__c),
+ISCHANGED(FieloPLT__BadgeExpiration__c),
+ISCHANGED(FieloPLT__BadgeExpirationDate__c),
+ISCHANGED(FieloPLT__BadgeExpirationMode__c),
+ISCHANGED(FieloPLT__BadgeReflection__c),
+ISCHANGED(FieloPLT__Challenge__c),
+ISCHANGED(FieloPLT__WithCustomReward__c),
+ISCHANGED(FieloPLT__From__c),
+ISCHANGED(FieloPLT__Reward__c),
+ISCHANGED(FieloPLT__Limit__c),
+ISCHANGED(FieloPLT__LogicalExpression__c),
+ISCHANGED(FieloPLT__Mission__c),
+ISCHANGED(FieloPLT__PointConversionMode__c),
+ISCHANGED(FieloPLT__ConversionValue__c),
+ISCHANGED(FieloPLT__MonthsUntilExpiration__c),
+ISCHANGED(FieloPLT__PointExpirationDate__c),
+ISCHANGED(FieloPLT__PointExpirationMode__c),
+ISCHANGED(FieloPLT__RecordFieldName__c),
+ISCHANGED(FieloPLT__PointReflection__c),
+ISCHANGED(FieloPLT__Position__c),
+ISCHANGED(FieloPLT__RewardDeliveryClass__c),
+ISCHANGED(FieloPLT__To__c)
+)</errorConditionFormula>
+    <errorMessage>Challenge Rewards from &quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot; Challenges cannot be modified.</errorMessage>
+</ValidationRule>

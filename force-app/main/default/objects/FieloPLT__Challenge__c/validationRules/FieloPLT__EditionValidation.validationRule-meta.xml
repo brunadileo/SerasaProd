@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__EditionValidation</fullName>
+    <active>true</active>
+    <description>&quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot; Challenges cannot be edited.</description>
+    <errorConditionFormula>NOT(ISNEW()) 
+&amp;&amp;
+(
+ISPICKVAL(FieloPLT__Status__c,&apos;Pending&apos;) || 
+ISPICKVAL(FieloPLT__Status__c,&apos;Scheduled&apos;) || 
+ISPICKVAL(FieloPLT__Status__c,&apos;Active&apos;)
+)
+&amp;&amp;
+(
+ISPICKVAL(PRIORVALUE(FieloPLT__Status__c),&apos;Pending&apos;) ||
+ISPICKVAL(PRIORVALUE(FieloPLT__Status__c),&apos;Scheduled&apos;) ||
+ISPICKVAL(PRIORVALUE(FieloPLT__Status__c),&apos;Active&apos;)
+)
+&amp;&amp;
+(
+ISCHANGED(FieloPLT__AcomplishAction__c) ||
+ISCHANGED(FieloPLT__DeliverRewards__c) ||
+ISCHANGED(FieloPLT__EndDate__c) ||
+ISCHANGED(FieloPLT__StartDate__c) ||
+ISCHANGED(FieloPLT__MissionCounter__c) ||
+ISCHANGED(FieloPLT__IsProcessed__c) ||
+ISCHANGED(FieloPLT__Program__c) ||
+ISCHANGED(FieloPLT__Segment__c) ||
+ISCHANGED(FieloPLT__Subscription__c) ||
+ISCHANGED(FieloPLT__TableType__c) ||
+ (
+  ISCHANGED(FieloPLT__Status__c) &amp;&amp; NOT(
+  (
+   ISPICKVAL(PRIORVALUE(FieloPLT__Status__c),&apos;Pending&apos;) ||
+   ISPICKVAL(PRIORVALUE(FieloPLT__Status__c),&apos;Scheduled&apos;)) &amp;&amp;
+   ISPICKVAL(FieloPLT__Status__c,&apos;Active&apos;)
+  )
+ )
+)</errorConditionFormula>
+    <errorMessage>&quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot; Challenges cannot be edited.</errorMessage>
+</ValidationRule>

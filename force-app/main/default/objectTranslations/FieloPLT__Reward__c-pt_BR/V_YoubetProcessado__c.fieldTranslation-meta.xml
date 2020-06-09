@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo atualizado com data e hora após processamento do batch para indicar o lance vencedor após a vigência do Youbet. Se assinalado, indica que o Youbet encerrado já teve a indicação do lance ganhador. --></help>
+    <label><!-- Youbet Processado --></label>
+    <name>V_YoubetProcessado__c</name>
+</CustomFieldTranslation>

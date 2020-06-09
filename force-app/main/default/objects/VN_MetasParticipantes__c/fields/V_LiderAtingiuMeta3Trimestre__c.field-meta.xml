@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_LiderAtingiuMeta3Trimestre__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo criado apenas para servir de gatilho para pontuar os participantes que tiverem seus líderes imediatos com atingimento de meta no terceiro trimestre.</description>
+    <externalId>false</externalId>
+    <label>Não usar -Lider atingiu meta 3 Trimestre</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Status do ETL, aplicação que importa a carga de consumo (processo automático). --></help>
+    <label><!-- Status do PDI --></label>
+    <name>V_StatusPDI__c</name>
+    <picklistValues>
+        <masterLabel>Carregado</masterLabel>
+        <translation><!-- Carregado --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carregando</masterLabel>
+        <translation><!-- Carregando --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Validado Com Erro</masterLabel>
+        <translation><!-- Validado Com Erro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Validado Sem Erro</masterLabel>
+        <translation><!-- Validado Sem Erro --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

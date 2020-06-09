@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The type of the campaign: Standard for one-time campaigns and Recurrent for recurring campaigns.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the type of campaign you want to set up: Standard for a one-time campaign or Recurrent for a recurring campaign.</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Recurrent</fullName>
+                <default>false</default>
+                <label>Recurrent</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

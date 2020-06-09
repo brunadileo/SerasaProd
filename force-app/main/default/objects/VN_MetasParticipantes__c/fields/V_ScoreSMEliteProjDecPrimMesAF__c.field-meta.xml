@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ScoreSMEliteProjDecPrimMesAF__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Indica o score de atingimento de meta Elite projetado do participante até o 11o. mês do ano fiscal.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indica o score de atingimento de meta Elite projetado do participante até o 11o. mês do ano fiscal.</inlineHelpText>
+    <label>Score de SM Elite Projetado - Mês 2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valida_Vigencia_de_Youbet</fullName>
+    <active>true</active>
+    <description>Data/hora de início do Youbet não poder ser maior que a sua data final.</description>
+    <errorConditionFormula>V_DataHoraFimYoubet__c &lt; 
+
+V_DataHoraInicioYoubet__c</errorConditionFormula>
+    <errorDisplayField>V_DataHoraInicioYoubet__c</errorDisplayField>
+    <errorMessage>A Data/Hora início do Youbet não pode ser maior que a sua data final.</errorMessage>
+</ValidationRule>

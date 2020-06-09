@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Optionally, enter an Instant Reward to be granted as part of the Challenge. You can create Instant Rewards in the Rewards tab. --></help>
+    <label><!-- Instant Reward --></label>
+    <lookupFilter>
+        <errorMessage><!-- Reward does not exist or it is not an instant reward --></errorMessage>
+    </lookupFilter>
+    <name>FieloPLT__Reward__c</name>
+    <relationshipLabel><!-- Challenge Rewards --></relationshipLabel>
+</CustomFieldTranslation>

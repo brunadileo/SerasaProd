@@ -1,0 +1,316 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_SpyHomeController">
+	
+	<!-- <aura:attribute name="proximoLance" type="String" /> -->
+	<aura:attribute name="activeSections" type="List" default="" />
+    <aura:attribute name="activeSectionsMessage" type="String" default="" />
+    <aura:attribute name="eliteBadges" type="Aura.Component[]">
+    	<div class="component-accordion-header-button d-flex align-items-center px-3 px-lg-5 py-1 text-grey-6" onclick="{!c.changeButton}">
+    		<span class="component-accordion-button-text font-size-3">
+    			CLIQUE PARA EXPANDIR
+    		</span>
+    		<span class="fa fa-angle-down component-accordion-header-button-icon"></span>
+    	</div>
+    </aura:attribute>
+    <aura:attribute name="youbetBadges" type="Aura.Component[]">
+    	<div class="component-accordion-header-button d-flex align-items-center px-3 px-lg-5 py-1 text-grey-6" onclick="{!c.changeButton}">
+    		<span class="component-accordion-button-text font-size-3">
+    			CLIQUE PARA EXPANDIR
+    		</span>
+    		<span class="fa fa-angle-down component-accordion-header-button-icon"></span>
+    	</div>
+    </aura:attribute>
+    <aura:attribute name="engagementBadges" type="Aura.Component[]">
+    	<div class="component-accordion-header-button d-flex align-items-center px-3 px-lg-5 py-1 text-grey-6" onclick="{!c.changeButton}">
+    		<span class="component-accordion-button-text font-size-3">
+    			CLIQUE PARA EXPANDIR
+    		</span>
+    		<span class="fa fa-angle-down component-accordion-header-button-icon"></span>
+    	</div>
+    </aura:attribute>
+
+    <aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+	<aura:attribute name="member" type="FieloPLT__Member__c" /> 
+	<aura:attribute name="lstBadges" type="FieloPLT__Badge__c[]"/>
+	<aura:attribute name="lstElite" type="object[]" />
+	<aura:attribute name="lstYB" type="object[]" />
+	<aura:attribute name="lstEngajamento" type="object[]" />
+	<aura:attribute name="totalElite" type="String" />
+	<aura:attribute name="totalYB" type="String" />
+	<aura:attribute name="totalEngajamento" type="String" />
+
+	<div class="component-wrapper">
+		<div class="component-header d-flex flex-column flex-sm-row align-items-center justify-content-between px-3">
+			<img src="/insiders/resource/SX_Images/logospynobg.png" alt="Logo Spy"/>
+			<div class="d-flex flex-column flex-sm-row my-3 my-sm-0">
+				<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'GERENTES DE CONTAS'}">
+					<a onclick="{!c.openTeamPerformance}" class="btn btn-default bg-spy">Resultados da Equipe</a>
+				</aura:if>
+				<a onclick="{!c.openAgreement}" class="btn btn-default mt-3 mt-sm-0 ml-sm-3 bg-spy">Regulamento</a>
+			</div>
+		</div>
+		<div class="component-content px-3 px-md-5 py-3 bg-white">
+			<!-- PROGRAM USER -->
+			<!-- <aura:if istrue=""> -->
+				<div class="component-content-member">
+					<div class="component-title">
+						<h2 class="mb-4 text-center">
+							<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+								Acumule badges e cresça no ranking
+								 <aura:set attribute="else">
+									Conheça as badges que avaliam a performance de sua equipe 
+								</aura:set>
+							</aura:if>
+						</h2>
+						<p class="mb-4 text-spy text-center font-size-5">
+							Os comportamentos da premiação Sales Person of the Year serão avaliados por BADGES!
+						</p>
+					</div>
+					<div class="component-information mb-3 text-grey-6">
+						<div class="row">
+							<div class="col-sm-5">
+								<div class="d-flex flex-column">
+									<div class="d-flex justify-content-center">
+										<img src="/insiders/resource/SX_Images/icon-spy--pontos.png" alt="Ícone pontos"/>
+									</div>
+									<span class="mt-3">
+										<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">  
+											As badges são agrupadas por categorias e cada uma tem um valor em pontos. A soma dos pontos define a sua posição no ranking.
+											 <aura:set attribute="else">
+												As badges são agrupadas por categorias e cada uma tem um valor em pontos. A soma dos pontos define a posição de cada participante no ranking.
+											</aura:set>
+										</aura:if>
+										
+									</span>          
+								</div>
+							</div>
+							<div class="col-sm-2 d-flex justify-content-center pt-3">
+								<span class="icon-angle fa font-size-20"></span>
+							</div>
+							<div class="col-sm-5">
+								<div class="d-flex flex-column">
+									<div class="d-flex justify-content-center">
+										<img src="/insiders/resource/SX_Images/icon-spy--trophy.png" alt="Ícone Troféu"/>
+									</div>
+									<span class="mt-3">
+										Ao final do FY os 5 primeiros colocados serão avaliados pelo comitê de apuração e o vendedor e o líder do ano serão divulgados na convenção de vendas.
+									</span>         
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="component-accordion pt-3 pb-4">
+						<lightning:accordion allowMultipleSectionsOpen="true" onsectiontoggle="{! c.handleSectionToggle }" activeSectionName="{!v.activeSections }">
+							
+							<!-- ELITE BADGES ACCORDION -->
+							<div class="component-accordion-header-info d-flex flex-column text-grey-6 py-3">
+								<div class="d-flex align-items-center justify-content-between px-3 px-lg-5">
+									<div class="w-100 w-sm-auto d-flex flex-column flex-sm-row align-items-center">
+										<img src="/insiders/resource/SX_Images/badge-elite.png" alt="Badges Elite"/>
+										<div class="d-flex flex-column align-self-start mx-3">
+											<span class="font-size-6">
+												Elite
+											</span>
+											<span class="font-size-3">
+												Pontuam sobre sua performance no atingimento de todas as metas do ano fiscal.
+												<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+												Confira suas badges no Elite
+												</aura:if>
+											</span>
+										</div>
+									</div>
+									<div class="d-flex flex-column align-items-center">
+										<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+											<span class="font-size-3">
+													Suas Badges
+												</span>
+												<span class="text-spy font-size-10">
+													{!v.totalElite}
+												</span>
+										</aura:if>										
+									</div>
+								</div>
+							</div>
+							<lightning:accordionSection name="elite" label="{!v.eliteBadges}">
+								<div class="component-accordion-content">
+									<div class="row">
+
+										<aura:iteration items="{!v.lstElite}" var="badge">
+									        <div class="col-4 my-3">
+												<div class="{!'d-flex flex-column align-items-center ' + (or(badge.wShowColor,v.member.V_PapelSalesPersonYear__c == 'DIRETORES') ? '': 'disabled-badge')}">
+													<img src="{! badge.wImgURL}" alt=""/>
+												<!-- 	<span class="mt-3 font-size-5 text-body font-weight-bold">
+														{! badge.wName}
+													</span>
+ -->										<!-- 			<span class="text-spy">
+														50 pts
+													</span>
+													<span class="text-grey-6">
+														Ganhou um Youbet (perene)
+													</span> -->
+												</div>
+											</div>
+								        </aura:iteration>
+									</div>
+								</div>
+							</lightning:accordionSection>
+							<!-- ELITE BADGES ACCORDION END -->
+
+							<!-- YOUBET BADGES ACCORDION -->
+							<div class="component-accordion-header-info d-flex flex-column text-grey-6 py-3">
+								<div class="d-flex align-items-center justify-content-between px-3 px-lg-5">
+									<div class="w-100 w-sm-auto d-flex flex-column flex-sm-row align-items-center">
+										<img src="/insiders/resource/SX_Images/badge-youbet.png" alt="Badges YouBet"/>
+										<div class="d-flex flex-column align-self-start mx-3">
+											<span class="font-size-6">
+												YouBet
+											</span>
+											<span class="font-size-3">
+												Pontuam sobre o seu comportamento na campanha, vitórias e betcoins acumuladas.
+												<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+												Confira suas badges no Youbet
+												</aura:if>
+											</span>
+										</div>
+									</div>
+									<div class="d-flex flex-column align-items-center">
+										<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+											<span class="font-size-3">
+												Suas Badges
+											</span>
+											<span class="text-spy font-size-10">
+												{!v.totalYB}
+											</span>
+										</aura:if>
+									</div>
+								</div>
+							</div>
+							<lightning:accordionSection name="youbet" label="{!v.youbetBadges}">
+								<div class="component-accordion-content">
+									<div class="row">
+										<aura:iteration items="{!v.lstYB}" var="badge">
+									        <div class="col-4 my-3">
+												<div class="{!'d-flex flex-column align-items-center ' + (or(badge.wShowColor, v.member.V_PapelSalesPersonYear__c == 'DIRETORES') ? '': 'disabled-badge')}">
+													<img src="{! badge.wImgURL}" alt=""/>
+												</div>
+											</div>
+								        </aura:iteration>
+									</div>
+								</div>
+							</lightning:accordionSection>
+							<!-- YOUBET BADGES ACCORDION END -->
+
+							<!-- ENGAJAMENTO BADGES ACCORDION -->
+							<div class="component-accordion-header-info d-flex flex-column text-grey-6 py-3">
+								<div class="d-flex align-items-center justify-content-between px-3 px-lg-5">
+									<div class="w-100 w-sm-auto d-flex flex-column flex-sm-row align-items-center">
+										<img src="/insiders/resource/SX_Images/badge-engajamento.png" alt="Badges Engajamento"/>
+										<div class="d-flex flex-column align-self-start mx-3">
+											<span class="font-size-6">
+												Engajamento
+											</span>
+											<span class="font-size-3">
+												Pontuam os participantes com perfil Insiders.
+												<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+												Confira suas badges no Engajamento
+												</aura:if>
+											</span>
+										</div>
+									</div>
+									<div class="d-flex flex-column align-items-center">
+										<aura:if isTrue="{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+											<span class="font-size-3">
+												Suas Badges
+											</span>
+											<span class="text-spy font-size-10">
+												{!v.totalEngajamento}
+											</span>
+										</aura:if>
+									</div>
+								</div>
+							</div>
+							<lightning:accordionSection name="C" label="{!v.engagementBadges}">
+								<div class="component-accordion-content">
+									<div class="row">
+										<aura:iteration items="{!v.lstEngajamento}" var="badge">
+									        <div class="col-4 my-3">
+												<div class="{!'d-flex flex-column align-items-center ' + (or(badge.wShowColor, v.member.V_PapelSalesPersonYear__c == 'DIRETORES') ? ''
+													: 'disabled-badge')}">
+													<img src="{! badge.wImgURL}" alt=""/>
+												</div>
+											</div>
+								        </aura:iteration>
+									</div>
+								</div>
+							</lightning:accordionSection>
+							<!-- ENGAJAMENTO BADGES ACCORDION END -->
+						</lightning:accordion>
+					</div>
+				</div>
+			<!-- </aura:if> -->
+			<!-- PROGRAM USER END -->
+			<!-- PROGRAM LEADERS -->
+			<aura:if isTrue="">
+				<div class="component-content-leaders">
+					<h2 class="my-2 text-spy font-size-8 text-center">
+						Acompanhe as Badges de sua equipe
+					</h2>
+					<p class="text-grey-6 font-size-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quas vel pariatur minima, porro temporibus blanditiis reiciendis delectus eos, autem iste error aliquid saepe, vero optio magni iure dolor cumque quae labore obcaecati sint amet sapiente. Nobis alias est asperiores tempore nostrum repudiandae eos, aut itaque. Dicta perspiciatis, consequatur enim.</p>
+					<div class="row d-flex align-items-end mb-3 box-filters">
+					    <div class="col-lg-10">
+					        <div class="row d-flex align-items-end text-grey-6">
+					            <div class="col-sm-6 col-lg-3">
+					                <lightning:select aura:id="area" label="" value="{!v.area}" class="single">
+					                    <option value="">Diretoria</option>
+					                    <aura:iteration items="{!v.lstArea}" var="item">
+					                        <option text="{!item.label}" value="{!item.value}" />
+					                    </aura:iteration>
+					                </lightning:select>
+					            </div>
+					            <div class="col-sm-6 col-lg-3 mt-3 mt-lg-0">
+					                <lightning:select aura:id="subArea" label="" value="{!v.subArea}" class="single">
+					                    <option value="">Setor</option>
+					                    <aura:iteration items="{!v.lstSubArea}" var="item">
+					                        <option text="{!item.label}" value="{!item.value}" />
+					                    </aura:iteration>
+					                </lightning:select>
+					            </div>
+					            <div class="col-sm-6 col-lg-3 mt-3 mt-lg-0">
+					                <lightning:select aura:id="cargo" label="" value="{!v.cargo}" class="single">
+					                    <option value="">Cargo</option>
+					                    <aura:iteration items="{!v.lstCargo}" var="item">
+					                        <option text="{!item.label}" value="{!item.value}" />
+					                    </aura:iteration>
+					                </lightning:select>
+					            </div>
+					            <div class="col-sm-6 col-lg-3 mt-3 mt-sm-0">
+					                <ui:inputText aura:id="palavraChave" keyup="{!c.searchOnEnter}" class="field" placeholder="Buscar"/>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="col-lg-2 my-3 my-lg-0">
+					        <lightning:button iconName="utility:chevronright" onclick="{!c.loadResultados}" class="btn-search btn btn-default w-100 w-lg-auto text-white"/>
+					    </div>
+					</div>
+					<!-- ADD TABLE HERE -->
+
+					<!-- TABLE END -->
+					<!-- NO RESULTS FOUND -->
+					<aura:if isTrue="{!!not(empty(v.lstRdi))}">
+						<div class="component-content-no-results d-flex align-items-center justify-content-center">
+							<p class="p-3 text-grey-6 text-center">
+								Não há resultados para serem exibidos
+							</p>
+						</div>
+					</aura:if>
+					<!-- NO RESULTS FOUND END -->
+				</div>
+			</aura:if>
+			<!-- PROGRAM LEADERS END -->
+		</div>
+		<div class="d-flex justify-content-center mt-3">
+			<a href="./" class="btn btn-default bg-btn-home">
+				HOME
+			</a>
+		</div>
+	</div>
+</aura:component>

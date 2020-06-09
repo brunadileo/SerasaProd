@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ElegivelAoElite__c</fullName>
+    <description>Indica se o participante está elegível ao Elite no momento atual.</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+
+CONTAINS(UPPER( V_Participante__r.Name), &apos;TESTE&apos;), FALSE, 
+
+IF( 
+AND( 
+TEXT(V_Participante__r.V_NovoContratado__c) = &apos;Não&apos;, 
+TEXT(V_Participante__r.FieloPLT__Status__c) = &apos;Active&apos;, 
+V_PercentualAMAF__c &gt;= 1), TRUE, FALSE 
+
+))</formula>
+    <inlineHelpText>Indica se o participante está elegível ao Elite no momento atual.</inlineHelpText>
+    <label>Elegível ao Elite?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

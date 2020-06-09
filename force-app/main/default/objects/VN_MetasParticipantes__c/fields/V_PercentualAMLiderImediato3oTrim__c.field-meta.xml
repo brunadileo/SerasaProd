@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PercentualAMLiderImediato3oTrim__c</fullName>
+    <description>Percentual de atingimento de meta (AM) do líder imediato do participante após fechamento do 3o. trimestre do ano fiscal.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Percentual de atingimento de meta (AM) do líder imediato do participante após fechamento do 3o. trimestre do ano fiscal.</inlineHelpText>
+    <label>% AM do Líder Imediato - 3o. Trim.</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

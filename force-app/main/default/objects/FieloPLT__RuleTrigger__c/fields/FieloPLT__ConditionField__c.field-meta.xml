@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ConditionField__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It allows to choose the entry condition which depends on the Object previously chosen.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the entry condition to process the Object.</inlineHelpText>
+    <label>Condition Field</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FieloPLT__Type__c</fullName>
+                <default>false</default>
+                <label>FieloPLT__Type__c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

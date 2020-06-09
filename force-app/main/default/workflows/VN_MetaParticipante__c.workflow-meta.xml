@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>V_Atualiza1QuarterAtingido</fullName>
+        <field>V_1QuarterAtingido__c</field>
+        <literalValue>1</literalValue>
+        <name>Atualiza 1 Quarter Atingido</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_Atualiza2QuartersAtingidos</fullName>
+        <description>Atualiza o campo 2 Quartes Atingidos</description>
+        <field>V_2QuartersAtingidos__c</field>
+        <literalValue>1</literalValue>
+        <name>Atualiza | 2 Quarters Atingidos</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_Atualiza3QuartersAtingidos</fullName>
+        <description>Atualiza o campo 3 Quarters Atingidos</description>
+        <field>V_3QuartersAtingidos__c</field>
+        <literalValue>1</literalValue>
+        <name>Atualiza 3 Quarters Atingidos</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotaldeBetcoins</fullName>
+        <field>V_SaldoTotalBetcoinsmaior__c</field>
+        <literalValue>1</literalValue>
+        <name>Atualiza Total de Betcoins &gt;= 1000</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_NovoAtualizaChaveCompostaExclusiva</fullName>
+        <description>Atualiza campo exclusivo do registro de Metas dos Participantes para evitar duplicidade de registros.</description>
+        <field>V_ChaveExclusiva__c</field>
+        <formula>Id&amp;&quot;+&quot;&amp;V_CodParticipante__c</formula>
+        <name>Novo - Atualiza Chave Composta Exclusiva</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_NovoAtualizaIDdoAnoFiscal</fullName>
+        <description>Atualiza o campo ID SF do último Ano Fiscal criado no participante.</description>
+        <field>V_IDSFUltimoAF__c</field>
+        <formula>Id</formula>
+        <name>Novo - Atualiza ID do Ano Fiscal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_Participante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_NovoCalculaScorePotencialCarteira</fullName>
+        <description>Tamanho de Carteira: Calcula score conforme o valor do tamanho da carteira do participante.</description>
+        <field>V_ScorePotencialCarteira__c</field>
+        <formula>IF( 
+AND( 
+V_PapelEliteText__c = &apos;GERENTES DE CONTAS&apos;, 
+V_PotencialCarteira__c &gt;= 22000000), 3, 
+
+IF( 
+AND( 
+V_PapelEliteText__c = &apos;GERENTES DE CONTAS&apos;, 
+V_PotencialCarteira__c &gt;= 7000000), 2, 
+
+IF( 
+AND( 
+V_PapelEliteText__c = &apos;GERENTES DE CONTAS&apos;, 
+V_PotencialCarteira__c &lt; 7000000), 1, 
+
+IF( 
+AND( 
+V_PapelEliteText__c = &apos;LÍDERES&apos;, 
+V_PotencialCarteira__c &lt; 80000000), 1, 
+
+IF( 
+AND( 
+V_PapelEliteText__c = &apos;LÍDERES&apos;, 
+V_PotencialCarteira__c &gt;= 80000000), 2, 
+
+IF( 
+V_PapelEliteText__c = &apos;DIRETORES&apos;, 1, 
+
+IF( 
+V_PapelEliteText__c = &apos;LÍDERES (COORDENADORES) E GERENTE REGIONAIS&apos;, 1, 0
+
+)))))))</formula>
+        <name>Novo - Calcula Score Tamanho da Carteira</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_PreencheEmailMeta</fullName>
+        <description>Preenche o e-mail do participante na meta do participante. Utilizado pelo Dinamize.</description>
+        <field>V_EmailMember__c</field>
+        <formula>V_Participante__r.FieloPLT__Email__c</formula>
+        <name>Preenche Email na Meta</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Atualiza %7C 1 Quarter Atingido</fullName>
+        <actions>
+            <name>V_Atualiza1QuarterAtingido</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger
+Atualiza o campo 1 quarter atingido</description>
+        <formula>OR(  V_PercentualAM1Trimestre__c &gt;= 1, V_PercentualAM2Trimestre__c &gt;= 1, V_PercentualAM3Trimestre__c &gt;= 1, V_PercentualAM4Trimestre__c &gt;= 1 )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza %7C 2 Quarters Atingidos</fullName>
+        <actions>
+            <name>V_Atualiza2QuartersAtingidos</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger
+Atualiza o campo 2 Quartes Atingidos</description>
+        <formula>IF( AND(V_PercentualAM1Trimestre__c &gt;= 1,V_PercentualAM2Trimestre__c &gt;= 1),true, IF( AND(V_PercentualAM1Trimestre__c &gt;= 1,V_PercentualAM3Trimestre__c &gt;= 1),true, IF( AND(V_PercentualAM1Trimestre__c &gt;= 1,V_PercentualAM4Trimestre__c &gt;= 1),true, IF( AND(V_PercentualAM2Trimestre__c &gt;= 1,V_PercentualAM3Trimestre__c &gt;= 1),true, IF( AND(V_PercentualAM2Trimestre__c &gt;= 1,V_PercentualAM4Trimestre__c &gt;= 1),true, IF( AND(V_PercentualAM3Trimestre__c &gt;= 1,V_PercentualAM4Trimestre__c &gt;= 1),true, false ))))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza %7C 3 Quarters Atingidos</fullName>
+        <actions>
+            <name>V_Atualiza3QuartersAtingidos</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger
+Atualiza o campo 3 Quarters Atingidos</description>
+        <formula>IF (AND(V_PercentualAM1Trimestre__c &gt;= 1, V_PercentualAM2Trimestre__c &gt;= 1,V_PercentualAM3Trimestre__c &gt;= 1),true, IF (AND(V_PercentualAM1Trimestre__c &gt;= 1, V_PercentualAM2Trimestre__c &gt;= 1,V_PercentualAM4Trimestre__c &gt;= 1),true, IF (AND(V_PercentualAM1Trimestre__c &gt;= 1, V_PercentualAM3Trimestre__c &gt;= 1,V_PercentualAM4Trimestre__c &gt;= 1),true, IF (AND(V_PercentualAM2Trimestre__c &gt;= 1, V_PercentualAM3Trimestre__c &gt;= 1,V_PercentualAM4Trimestre__c &gt;= 1),true, false ))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza %7C Total de Beticoins %3E%3D1000</fullName>
+        <actions>
+            <name>V_AtualizaTotaldeBetcoins</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger
+Atualiza o campo Saldo Total de Betcoins &gt;= 1000?</description>
+        <formula>V_TotalBetcoins__c &gt;= 1000</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Novo - Atualiza Ano Fiscal no Participante</fullName>
+        <actions>
+            <name>V_NovoAtualizaIDdoAnoFiscal</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualiza Ano Fiscal no Participante ao criar o registro de ano fiscal e suas metas.</description>
+        <formula>OR(  ISNEW(), ISCHANGED( Name )  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Novo - Atualiza Chave Composta Exclusiva</fullName>
+        <actions>
+            <name>V_NovoAtualizaChaveCompostaExclusiva</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Atualiza campo exclusivo do registro de Metas dos Participantes para evitar duplicidade de registros.</description>
+        <formula>OR( ISNEW(), ISCHANGED(Name), ISCHANGED(V_CodParticipante__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Novo - Calcula Score Tamanho da Carteira</fullName>
+        <actions>
+            <name>V_NovoCalculaScorePotencialCarteira</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Tamanho de Carteira: Calcula score conforme o valor do tamanho da carteira do participante.</description>
+        <formula>OR( ISNEW(), ISCHANGED(V_PotencialCarteira__c), ISCHANGED( V_PapelEliteText__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Preenche Email na Meta</fullName>
+        <actions>
+            <name>V_PreencheEmailMeta</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>FieloPLT__Member__c.FieloPLT__Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Conforme e-mail do participante, é preenchido na meta o campo Email do Participante. Utilizado pelo Dinamize.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

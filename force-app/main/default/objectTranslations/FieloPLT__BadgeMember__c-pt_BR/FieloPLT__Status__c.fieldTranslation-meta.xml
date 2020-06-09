@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the status of the Badge given to that specific Member. --></help>
+    <label><!-- Status --></label>
+    <name>FieloPLT__Status__c</name>
+    <picklistValues>
+        <masterLabel>Reverted</masterLabel>
+        <translation><!-- Reverted --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

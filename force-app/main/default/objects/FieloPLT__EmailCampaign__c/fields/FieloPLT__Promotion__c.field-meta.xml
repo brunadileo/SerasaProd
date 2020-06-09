@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Promotion__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Promotion that the Email Campaign is associated with (if any).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Promotion that the Email Campaign is associated with (if any).</inlineHelpText>
+    <label>Promotion</label>
+    <referenceTo>FieloPLT__Promotion__c</referenceTo>
+    <relationshipLabel>Email Campaigns</relationshipLabel>
+    <relationshipName>EmailCampaigns</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

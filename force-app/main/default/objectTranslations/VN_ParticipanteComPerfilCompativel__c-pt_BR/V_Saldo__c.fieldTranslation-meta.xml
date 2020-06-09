@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Saldo do participante no momento de criação do Youbet. --></help>
+    <label><!-- Betcoins disponíveis para leilão --></label>
+    <name>V_Saldo__c</name>
+</CustomFieldTranslation>

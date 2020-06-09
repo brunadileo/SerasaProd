@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Reward from a Reward item. --></help>
+    <label><!-- Reward --></label>
+    <name>FieloPLT__Reward__c</name>
+    <relationshipLabel><!-- Reward Items --></relationshipLabel>
+</CustomFieldTranslation>

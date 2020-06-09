@@ -1,0 +1,5 @@
+<design:component label="CC - Home | Card">
+	<design:attribute name="type" label="Tipo de Card" description="Opções: Youbet, Elite e Spy" datasource="Youbet, Elite, Spy"/>
+	<design:attribute name="borderColor" label="Cor Borda"/>
+	<design:attribute name="disabled" label="Desabilitar Card" datasource="Enable, disabled-item"/>
+</design:component>

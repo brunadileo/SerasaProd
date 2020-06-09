@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the Standard Actions to include in the Page Setting. --></help>
+    <label><!-- Standard Actions --></label>
+    <name>FieloPLT__StandardActions__c</name>
+    <picklistValues>
+        <masterLabel>Clone</masterLabel>
+        <translation><!-- Clone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delete</masterLabel>
+        <translation><!-- Delete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edit</masterLabel>
+        <translation><!-- Edit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation><!-- New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Page Settings Management</masterLabel>
+        <translation><!-- Page Settings Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sharing</masterLabel>
+        <translation><!-- Sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>View</masterLabel>
+        <translation><!-- View --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

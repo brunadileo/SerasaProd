@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__All</fullName>
+    <columns>NAME</columns>
+    <columns>FieloPLT__Object__c</columns>
+    <columns>FieloPLT__RecordType__c</columns>
+    <columns>FieloPLT__Actions__c</columns>
+    <columns>FieloPLT__Buttons__c</columns>
+    <columns>FieloPLT__IsActive__c</columns>
+    <columns>FieloPLT__Program__c</columns>
+    <columns>FieloPLT__Sections__c</columns>
+    <columns>FieloPLT__StandardActions__c</columns>
+    <columns>FieloPLT__TargetField__c</columns>
+    <columns>FieloPLT__TargetObject__c</columns>
+    <columns>FieloPLT__Type__c</columns>
+    <columns>FieloPLT__Tools__c</columns>
+    <columns>FieloPLT__Library__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Diferença de percentual de AM (até Mês 2 menos Até Mês 1). Campo a ser utilizado pela Comunicação. --></help>
+    <label><!-- Diferença % AM (Até Mês 2 - Até Mês 1) --></label>
+    <name>V_DiferencaPercentualAMAteMes2AteMes1__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>Badge</keywords>
+    <name>MISSÃO CUMPRIDA - 150 pts - Atingimento de Meta &gt;= 100% - &lt; 120%</name>
+    <public>true</public>
+</Document>

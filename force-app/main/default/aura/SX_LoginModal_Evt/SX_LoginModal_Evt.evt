@@ -1,0 +1,13 @@
+<!-- **************************************************************************
+*                          Copyright (C) 2018 ValueNET
+* *****************************************************************************
+* Author: PT                          						   date: 11/09/2018
+* 
+* Name: SX_LoginModal_Evt.evt
+* 
+* Classe qua alimenta a page SX_Processamentos
+*************************************************************************** -->
+<aura:event type="APPLICATION" description="Event template">
+	<aura:attribute name="function" type="String"/>
+	<aura:attribute name="numeroRegistro" type="String"/>
+</aura:event>

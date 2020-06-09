@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__BadgeMember__c.V_MemberName__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__BadgeMember__c.V_MetaAFOLD__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__BadgeMember__c.V_MetaAFOLD__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>FY19</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__BadgeMember__c.FieloPLT__Badge__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Participantes por Badge FY19</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$FieloPLT__BadgeMember__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__BadgeMember__c.FieloPLT__ExpirationDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

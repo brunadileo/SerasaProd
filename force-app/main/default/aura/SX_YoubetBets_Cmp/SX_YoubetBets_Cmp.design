@@ -1,0 +1,4 @@
+<design:component label="CT - Youbet | Bets">
+	<design:attribute name="youbetType" label="Tipo de Youbet" datasource="Selecione, youbet, youbet-extra"/>
+	<design:attribute name="youbetType2" label="Tipo de Youbet2"/>
+</design:component>

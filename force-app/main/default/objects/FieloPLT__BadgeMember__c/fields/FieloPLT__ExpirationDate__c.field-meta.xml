@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ExpirationDate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Date after which the Badge is no longer valid for the Member.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date after which the Badge is no longer valid for the Member.</inlineHelpText>
+    <label>Expiration Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the JSON string which allows filtering by to group fields in Reward&gt;Lookup Page Setting Type. --></help>
+    <label><!-- Filters --></label>
+    <name>FieloPLT__Filters__c</name>
+</CustomFieldTranslation>

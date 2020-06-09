@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_LiderImediato__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Líder imediato deste participante durante o período das vendas.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Líder imediato deste participante durante o período das vendas.</inlineHelpText>
+    <label>Líder Imediato</label>
+    <referenceTo>FieloPLT__Member__c</referenceTo>
+    <relationshipLabel>Resultados (Líder Imediato)</relationshipLabel>
+    <relationshipName>Vendas</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

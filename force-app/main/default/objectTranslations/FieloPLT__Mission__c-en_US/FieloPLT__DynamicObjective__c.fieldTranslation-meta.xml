@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If ticked, &quot;Objective Field&quot; can be any numerical field from the Member. --></help>
+    <label><!-- Dynamic Objective Field --></label>
+    <name>FieloPLT__DynamicObjective__c</name>
+</CustomFieldTranslation>

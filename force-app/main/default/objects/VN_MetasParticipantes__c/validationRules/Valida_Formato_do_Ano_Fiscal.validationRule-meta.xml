@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valida_Formato_do_Ano_Fiscal</fullName>
+    <active>true</active>
+    <description>Valida formato do campo Ano Fiscal (Name).</description>
+    <errorConditionFormula>OR(
+LEN( Name ) &lt;&gt; 4,
+LEFT( Name, 2 ) &lt;&gt; &quot;FY&quot;,
+ISNUMBER(LEFT( Name, 2 )),
+NOT(ISNUMBER(RIGHT( Name, 2 ))))</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Formato inválido do &quot;Ano Fiscal&quot;. Exemplo correto: FY19</errorMessage>
+</ValidationRule>

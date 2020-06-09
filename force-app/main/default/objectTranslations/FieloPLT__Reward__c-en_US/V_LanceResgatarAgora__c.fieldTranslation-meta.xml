@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Quando este campo estiver prenchido com alguma pontuação, quer dizer que o primeiro participante que der esse valor no lance, o youbet será encerrado. --></help>
+    <label><!-- Lance para Resgatar Agora --></label>
+    <name>V_LanceResgatarAgora__c</name>
+</CustomFieldTranslation>

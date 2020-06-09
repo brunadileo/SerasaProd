@@ -1,0 +1,248 @@
+.THIS.modal-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.THIS .modal-card {
+    width: 991px;
+    height: 80%;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
+    border: none;
+    border-radius: 0;
+}
+.THIS .slds-card__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-bottom: 0;
+    padding: .5rem 1.5rem;
+}
+.THIS .slds-card__body {
+    height: 100%;
+    overflow-y: auto;
+    margin: 0;
+}
+.THIS .slds-card__body h2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0667cd;
+    color: #ffffff;
+}
+.THIS .slds-card__body h2 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px #000000;
+}
+.THIS .uiInput--input.input {
+    height: 44px;
+    padding-right: 30px;
+}
+.THIS .slds-select {
+    height: 44px !important;
+}
+.THIS  input::placeholder {
+    color: #999;
+    font-size:1rem;
+}
+.THIS select {
+    height: 38px !important;
+    color: #888888 !important;
+}
+.THIS .search-icon {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+.THIS .btn {
+    height: 44px;
+    text-shadow: none;
+}
+.THIS .box-filters {
+    min-height: 45px;
+}
+.THIS .box-filters label {
+    display: none;
+}
+.THIS .teamperformance-table {
+    height: auto;
+    min-height: 200px;
+    overflow-y: auto;
+    color: #666666;
+}
+/*.THIS div::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+.THIS div::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+.THIS div::-webkit-scrollbar-button {
+    display: none;
+}
+.THIS div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.THIS div::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}*/
+.THIS .component-content-team-result-table lightning-datatable tbody th {
+    color: #666;
+}
+.THIS .component-content-team-result-table lightning-datatable tbody td {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2.2rem;
+    color: #0667cd;
+}
+.THIS lightning-primitive-header-actions {
+    display: none;
+}
+.THIS .uiInput--input.input:focus,
+.THIS .uiInput--input .input:focus,
+.THIS .uiInput--input.input:active,
+.THIS .uiInput--input .input:active,
+.THIS .slds-select {
+    border-color: rgb(212, 212, 212);
+    box-shadow: none;
+}
+.THIS table tbody tr:hover th,
+.THIS table tbody tr:hover td,
+.THIS table tbody tr th:focus,
+.THIS table tbody tr td:focus,
+.THIS table tbody tr th:active,
+.THIS table tbody tr td:active  {
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+.THIS .component-content-team-result-table lightning-datatable table thead th {
+    color: #999;
+}
+.THIS .component-content-team-result-table lightning-datatable table thead th:nth-child(2) .slds-th__action {
+    justify-content: flex-end;
+}
+.THIS .component-content-rankings {
+    background-color: #eeeeee;
+}
+.THIS .component-content-rankings-table {
+    table-layout: fixed;
+}
+.THIS .component-content-rankings-table th {
+    text-align: center;
+}
+.THIS .component-content-rankings-table tr {
+    position: relative;
+}
+.THIS .component-content-rankings-table td {
+    padding: 5px 0;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+.THIS .component-content-rankings-table tr:last-child td {
+    border-bottom: none;
+}
+.THIS .component-content-rankings-table td div {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+}
+.THIS .component-content-rankings-table-elegible {
+    padding-top: 3px;
+    border-radius: 50%;
+    background: #0667cd!important;
+    color: #fff;
+}
+.THIS .component-content-rankings-table-elegible:after {
+    content: "ELEGÍVEL";
+    position: absolute;
+    left: 80px;
+    color: #0667cd;
+    font-size: 12px;
+    font-weight: bold;
+}
+/*
+.THIS .component-content-rankings-table-position {
+    background: #fff;
+    color: #0667cd;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+.THIS .component-content-rankings-table-position:after {
+    content: "VOCÊ ESTÁ AQUI";
+    position: absolute;
+    left: 80px;
+    color: #666;
+    font-size: 12px;
+    font-weight: bold;
+}*/
+@media (max-width: 991px) {
+    .THIS .modal-card {
+        height: 100%;
+    }
+    .THIS .box-filters {
+        min-height: 200px;
+    }
+    .THIS .teamperformance-table {
+        min-height: auto;
+        overflow-y: unset;
+    }
+    .THIS .slds-table_header-fixed_container::before {
+        border-bottom: none;
+    }
+    .THIS lightning-datatable table thead {
+        display: none;
+    }
+    .THIS lightning-datatable table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgb(212,212,212);
+    }
+    .THIS lightning-datatable table tbody tr:nth-child(odd) {
+        background: #eee;
+    }
+    .THIS lightning-datatable table tbody tr th, .THIS table tbody td {
+        border-top: none !important;
+        flex-direction: column;
+        align-items: start;
+    }
+    .THIS lightning-datatable table tbody tr th::before, .THIS table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        color: rgb(105,105,105);
+        font-size: .5rem;
+        font-weight: bold;
+    }
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected) {
+        box-shadow: none;
+        background: transparent;
+    }
+    .THIS .component-content-rankings-table-elegible:after {
+        left: 20%;
+    }
+}
+@media (max-width: 767px) {
+    .THIS .component-content-rankings-table-elegible:after {
+        left: 25%;
+    }
+}
+@media (max-width: 575px) {
+    .THIS .box-filters {
+        min-height: 300px;
+    }
+}

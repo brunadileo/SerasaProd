@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__StartDate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Promotion initial date. If no Initial date is established, Promotion starts when its status changes to &quot;Active&quot; or &quot;Pending&quot;, if an Approval Workflow process is required.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a date to start the Promotion. If blank, the Promotion will need to be activated manually.</inlineHelpText>
+    <label>Start Date</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

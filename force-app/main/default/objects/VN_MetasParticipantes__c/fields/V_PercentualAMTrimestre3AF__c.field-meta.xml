@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PercentualAMTrimestre3AF__c</fullName>
+    <description>Percentual de atingimento de metas do participante no 3o. trimestre do ano fiscal. Cálculo utilizado no Youbet e SPY.</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+
+NOT(ISNULL( V_AMTrimestre3Ponderado__c )), V_AMTrimestre3Ponderado__c, 
+
+
+IF(
+
+OR(
+ISNULL(V_TotalMetasTrimestre3AF__c),
+V_TotalMetasTrimestre3AF__c = 0), 0,
+
+V_TotalVendasTrimestre3AF__c / V_TotalMetasTrimestre3AF__c
+
+))</formula>
+    <inlineHelpText>Percentual de atingimento de metas do participante no 3o. trimestre do ano fiscal. Cálculo utilizado no Youbet e SPY.</inlineHelpText>
+    <label>% AM - 3o. Trim.</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

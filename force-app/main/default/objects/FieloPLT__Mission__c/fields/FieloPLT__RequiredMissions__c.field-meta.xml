@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RequiredMissions__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Checked Mission/s must be achieved before starting current Mission.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked Mission/s must be achieved before starting current Mission.</inlineHelpText>
+    <label>Mission Dependency</label>
+    <length>20</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

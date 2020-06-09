@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score DQS (Data Quality Service) do participante. Campo utilizado para o ranking do SPY. --></help>
+    <label><!-- Score DQS SPY - AF --></label>
+    <name>V_ScoreDQSSPYAF__c</name>
+</CustomFieldTranslation>

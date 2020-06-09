@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__AuditPoints__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>It specifies where the &quot;Program Point Type&quot; used in a Redemption come from.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When ticked, it specifies where &quot;Program Point Type&quot; used in a Redemption come from.</inlineHelpText>
+    <label>Audit Points</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

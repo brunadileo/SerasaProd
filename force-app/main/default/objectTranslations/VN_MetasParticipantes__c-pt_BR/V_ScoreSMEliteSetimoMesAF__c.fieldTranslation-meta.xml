@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score de superação de meta  Elite do participante até o 7o. mês do ano fiscal. Campo atualizado por workflow. --></help>
+    <label><!-- Score de SM Elite - Mês 10 --></label>
+    <name>V_ScoreSMEliteSetimoMesAF__c</name>
+</CustomFieldTranslation>

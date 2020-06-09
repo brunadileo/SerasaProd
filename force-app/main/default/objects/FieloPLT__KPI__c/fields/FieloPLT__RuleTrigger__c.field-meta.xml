@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RuleTrigger__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Action (Rule) Trigger that defines how records are processed to generate an outcome for a report.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Action (Rule) Trigger that defines how records are processed to generate an outcome for your report.</inlineHelpText>
+    <label>Action Trigger</label>
+    <referenceTo>FieloPLT__RuleTrigger__c</referenceTo>
+    <relationshipLabel>KPIs</relationshipLabel>
+    <relationshipName>KPIs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ResProjAF__c</fullName>
+    <description>Total de resultados projetado do ano fiscal. Utilizado para o cálculo do score Elite projetado.</description>
+    <externalId>false</externalId>
+    <formula>V_ResProjPrimMesAF__c +
+ V_ResProjSegMesAF__c +
+ V_ResProjTercMesAF__c +
+ V_ResProjQuartoMesAF__c +
+ V_ResProjQuiMesAF__c +
+ V_ResProjSextoMesAF__c +
+ V_ResProjSetMesAF__c +
+ V_ResProjOitMesAF__c +
+ V_ResProjNonoMesAF__c +
+ V_ResProjDecMes__c +
+ V_ResProjDecPrimMes__c +
+ V_ResProjDecSegMes__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Total de resultados projetado do ano fiscal. Utilizado para o cálculo do score Elite projetado.</inlineHelpText>
+    <label>Excluir - Resultado Projetado - AF</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>8</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

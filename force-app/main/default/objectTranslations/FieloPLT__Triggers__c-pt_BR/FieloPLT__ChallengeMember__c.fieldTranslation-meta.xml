@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When unchecked, it disables Challenge Member trigger. --></help>
+    <label><!-- Challenge Member --></label>
+    <name>FieloPLT__ChallengeMember__c</name>
+</CustomFieldTranslation>

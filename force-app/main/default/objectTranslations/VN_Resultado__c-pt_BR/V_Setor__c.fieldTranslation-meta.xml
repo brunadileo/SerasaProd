@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Valor de setor do participante relacionado à venda. --></help>
+    <label><!-- Setor --></label>
+    <name>V_Setor__c</name>
+    <picklistValues>
+        <masterLabel>BANCO DO BRASIL</masterLabel>
+        <translation><!-- BANCO DO BRASIL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BANCOS E FINANCEIRAS BR</masterLabel>
+        <translation><!-- BANCOS E FINANCEIRAS BR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BANCOS E FINANCEIRAS SP</masterLabel>
+        <translation><!-- BANCOS E FINANCEIRAS SP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BENS DURÁVEIS E SERVIÇOS</masterLabel>
+        <translation><!-- BENS DURÁVEIS E SERVIÇOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRADESCO</masterLabel>
+        <translation><!-- BRADESCO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CAIXA ECONÔMICA</masterLabel>
+        <translation><!-- CAIXA ECONÔMICA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CO, NO e NE</masterLabel>
+        <translation><!-- CO, NO e NE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CONVÊNIO SPC SERASA EXPERIAN</masterLabel>
+        <translation><!-- CONVÊNIO SPC SERASA EXPERIAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COOPERATIVAS</masterLabel>
+        <translation><!-- COOPERATIVAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPG</masterLabel>
+        <translation><!-- CPG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DISTRIBUIDOR</masterLabel>
+        <translation><!-- DISTRIBUIDOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FINTECHS</masterLabel>
+        <translation><!-- FINTECHS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ITAÚ</masterLabel>
+        <translation><!-- ITAÚ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MULTICANAL WINBACK</masterLabel>
+        <translation><!-- MULTICANAL WINBACK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NICHOS</masterLabel>
+        <translation><!-- NICHOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PR</masterLabel>
+        <translation><!-- PR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REGIÕES WINBACK</masterLabel>
+        <translation><!-- REGIÕES WINBACK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REMOTO</masterLabel>
+        <translation><!-- REMOTO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RJ, MG e ES</masterLabel>
+        <translation><!-- RJ, MG e ES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RS e SC</masterLabel>
+        <translation><!-- RS e SC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SANTANDER</masterLabel>
+        <translation><!-- SANTANDER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEGUROS</masterLabel>
+        <translation><!-- SEGUROS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SETOR PÚBLICO</masterLabel>
+        <translation><!-- SETOR PÚBLICO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SP I</masterLabel>
+        <translation><!-- SP I --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SP II</masterLabel>
+        <translation><!-- SP II --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SP INTERIOR</masterLabel>
+        <translation><!-- SP INTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TELECOM, MÍDIA E TECNOLOGIA</masterLabel>
+        <translation><!-- TELECOM, MÍDIA E TECNOLOGIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UTILITIES</masterLabel>
+        <translation><!-- UTILITIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VAREJO E MEIOS DE PAGAMENTO</masterLabel>
+        <translation><!-- VAREJO E MEIOS DE PAGAMENTO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIP MG, CO e NO</masterLabel>
+        <translation><!-- VIP MG, CO e NO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIP RJ, ES e NE</masterLabel>
+        <translation><!-- VIP RJ, ES e NE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIP SP I</masterLabel>
+        <translation><!-- VIP SP I --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIP SP II</masterLabel>
+        <translation><!-- VIP SP II --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIP SUL</masterLabel>
+        <translation><!-- VIP SUL --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

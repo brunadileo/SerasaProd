@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo sem valor apenas para utilização no modo de exibição para o Dinamize. --></help>
+    <label><!-- Email Dinamize Em Branco --></label>
+    <name>V_EmailDinamizeBranco__c</name>
+</CustomFieldTranslation>

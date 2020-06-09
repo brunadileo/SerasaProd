@@ -1,0 +1,23 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" />
+    <aura:attribute name="title" type="String" default="Título" access="global" />
+    <aura:attribute name="bgBtn" type="String" default="f1c40f" access="global" />
+    <aura:attribute name="cta" type="String" default="Regulamento" access="global" />
+    <aura:attribute name="linkBtn" type="String" default="link" access="global" />
+	
+	<div class="row h-100 m-0 p-3">
+		<div class="col-xl-6 d-flex flex-column flex-xl-row p-o">
+			<div class="w-logo d-flex align-items-center justify-content-center mb-5 mb-xl-0">
+				<img src="{!v.logo}" class="img-fluid max-height"/>
+			</div>
+			<div class="d-flex flex-column align-items-center align-items-xl-start justify-content-center ml-4">
+				<h3 class="m-0 font-size-7 text-dark">{!v.title}</h3>
+			</div>
+		</div>
+		<div class="col-6 d-none d-xl-flex align-items-center justify-content-end p-0">
+			<a href="{!v.linkBtn}" class="btn btn-default p-3 text-white" style="{!'background: #' + v.bgBtn}">{!v.cta}</a>
+		</div>
+	</div>
+
+</aura:component>

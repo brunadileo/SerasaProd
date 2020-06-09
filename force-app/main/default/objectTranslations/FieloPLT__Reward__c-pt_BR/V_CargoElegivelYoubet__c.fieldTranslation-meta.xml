@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Posição da hierarquia do participante elegível ao Youbet. --></help>
+    <label><!-- Cargo Elegível ao Youbet --></label>
+    <name>V_CargoElegivelYoubet__c</name>
+    <picklistValues>
+        <masterLabel>COORDENADOR | GERENTE REGIONAL VIP</masterLabel>
+        <translation><!-- COORDENADOR | GERENTE REGIONAL VIP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DIRETOR</masterLabel>
+        <translation><!-- DIRETOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GERENTE DE CONTAS</masterLabel>
+        <translation><!-- GERENTE DE CONTAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LÍDER</masterLabel>
+        <translation><!-- LÍDER --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Participante__c</fullName>
+    <description>Participante relacionado à meta.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Participante relacionado à meta.</inlineHelpText>
+    <label>Participante</label>
+    <referenceTo>FieloPLT__Member__c</referenceTo>
+    <relationshipName>Metas_dos_Participantes</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

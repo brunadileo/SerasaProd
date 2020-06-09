@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- Objective Value cannot be 0 --></errorMessage>
+        <name>FieloPLT__ObjectiveValueCannotBe0</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Start and/or End Date. A Mission&apos;s start and end dates must fall within the start and end dates of its Challenge. --></errorMessage>
+        <name>FieloPLT__ValidateStartEndDate</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Operator__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Relational operator (E.g. &quot;equal to&quot;, &quot;greater than&quot;, etc.).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a mathematical operator with which to compare the Action counter or Target Object field summary and the Objective Value or Objective Field.</inlineHelpText>
+    <label>Operator</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>equals</fullName>
+                <default>false</default>
+                <label>equals</label>
+            </value>
+            <value>
+                <fullName>greater than</fullName>
+                <default>false</default>
+                <label>greater than</label>
+            </value>
+            <value>
+                <fullName>greater or equal</fullName>
+                <default>false</default>
+                <label>greater or equal</label>
+            </value>
+            <value>
+                <fullName>less than</fullName>
+                <default>false</default>
+                <label>less than</label>
+            </value>
+            <value>
+                <fullName>less or equal</fullName>
+                <default>false</default>
+                <label>less or equal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

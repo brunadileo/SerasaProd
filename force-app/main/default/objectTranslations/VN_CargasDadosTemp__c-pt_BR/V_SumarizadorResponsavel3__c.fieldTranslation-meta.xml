@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sumarizador Responsável 3 --></label>
+    <name>V_SumarizadorResponsavel3__c</name>
+    <relationshipLabel><!-- Cargas de Dados Temp (Sumarizador do Responsável 3) --></relationshipLabel>
+</CustomFieldTranslation>

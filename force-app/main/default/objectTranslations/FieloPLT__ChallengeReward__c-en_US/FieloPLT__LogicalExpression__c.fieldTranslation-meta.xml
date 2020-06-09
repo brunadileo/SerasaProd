@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Logical expressions which can be applied to Challenge Rewards: &quot;All&quot; (it meets all the established Missions); &quot;Any&quot; (it meets at least one Mission) and &quot;Custom&quot; (it enables creating a formula based on the established Mission. E.g. ((1 AND 2) OR 3).). --></help>
+    <label><!-- Match Missions --></label>
+    <name>FieloPLT__LogicalExpression__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the transaction field name related to the triggered object. --></help>
+    <label><!-- Lookup from Email Alert --></label>
+    <name>FieloPLT__LookupFromEmailAlert__c</name>
+</CustomFieldTranslation>

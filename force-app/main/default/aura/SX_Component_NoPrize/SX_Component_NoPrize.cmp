@@ -1,0 +1,10 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <!-- <aura:attribute name="background" type="String" default="https://picsum.photos/1000/1000/?random" access="global" /> -->
+
+	<div class="h-100 d-flex flex-column align-items-center justify-content-center p-3 text-center">
+		<span class="fa fa-exclamation-triangle text-warning my-5 font-size-32"></span>
+		<p class="w-100 w-sm-50 font-size-5 font-size-sm-7">"NÃO TEMOS PREMIAÇÕES EXTRAS NO MOMENTO, ACOMPANHE AS PREMIAÇÕES PERENES"</p>
+	</div>
+
+</aura:component>

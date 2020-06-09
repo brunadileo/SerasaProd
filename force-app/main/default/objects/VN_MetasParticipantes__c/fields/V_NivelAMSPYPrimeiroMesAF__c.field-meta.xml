@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_NivelAMSPYPrimeiroMesAF__c</fullName>
+    <description>Range de atingimento de metas para a iniciativa SPY. Campo para auxiliar na funcionalidade de atribuição de badges a cada mês no ano fiscal.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+OR(
+ISNULL(V_PercentualAMAtePrimeiroMesAF__c),
+V_PercentualAMAtePrimeiroMesAF__c &lt; 0.95), 0,
+
+IF(
+AND(
+V_PercentualAMAtePrimeiroMesAF__c &gt;= 0.95,
+V_PercentualAMAtePrimeiroMesAF__c &lt; 1), 1,
+
+IF(
+AND(
+V_PercentualAMAtePrimeiroMesAF__c &gt;= 1,
+V_PercentualAMAtePrimeiroMesAF__c &lt; 1.2), 2,
+
+IF(
+AND(
+V_PercentualAMAtePrimeiroMesAF__c &gt;= 1.2,
+V_PercentualAMAtePrimeiroMesAF__c &lt; 1.4), 3,
+
+IF(
+V_PercentualAMAtePrimeiroMesAF__c &gt;= 1.4, 4, Null)
+
+))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Range de atingimento de metas para a iniciativa SPY. Campo para auxiliar na funcionalidade de atribuição de badges a cada mês no ano fiscal.</inlineHelpText>
+    <label>INATIVO - Nível AM SPY Até Mês 4</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

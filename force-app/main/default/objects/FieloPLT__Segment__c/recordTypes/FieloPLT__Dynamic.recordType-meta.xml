@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Dynamic</fullName>
+    <active>true</active>
+    <description>It defines Criteria so that Members are automatically assessed and thus connected to the proper Segment.</description>
+    <label>Dynamic</label>
+</RecordType>

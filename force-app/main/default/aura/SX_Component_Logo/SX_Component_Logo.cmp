@@ -1,0 +1,9 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" />
+	<aura:attribute name="logoContainerClasses" type="String" access="global" />
+	<aura:attribute name="logoClasses" type="String" default="width: 500px" access="global" />
+
+	<div class="{!v.logoContainerClasses}">
+		<img src="{!v.logo}" style="{!v.logoClasses}"/>
+	</div>
+</aura:component>

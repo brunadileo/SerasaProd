@@ -1,0 +1,95 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="tableTitle" type="String" default="EXTRATO" access="global" />
+	<aura:attribute name="filterOne" type="String" default="none" access="global" />
+	<aura:attribute name="filterTwo" type="String" default="none" access="global" />
+	<aura:attribute name="filterThree" type="String" default="none" access="global" />
+	<aura:attribute name="columnLabelOne" type="String" default="PARTICIPANTE" access="global" />
+	<aura:attribute name="columnLabelTwo" type="String" default="PRÊMIO" access="global" />
+	<aura:attribute name="columnLabelThree" type="String" default="INVESTIMENTO" access="global" />
+	<aura:attribute name="columnLabelFour" type="String" default="DATA" access="global" />
+
+	<div class="h-auto h-xl-100 d-flex flex-column align-items-center justify-content-start px-xl-3">
+		<div class="d-flex flex-column flex-sm-row input-group mb-3">
+			<select class="w-100 w-sm-auto rounded custom-select mx-sm-3 my-3 my-sm-0" id="inputGroupSelect01" style="{!'display: ' + v.filterOne}">
+				<option>Choose...</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="3">Three</option>
+			</select>
+			<select class="w-100 w-sm-auto rounded custom-select mx-sm-3 my-3 my-sm-0" id="inputGroupSelect02" style="{!'display: ' + v.filterTwo}">
+				<option>Choose...</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="3">Three</option>
+			</select>
+			<select class="w-100 w-sm-auto rounded custom-select mx-sm-3 my-3 my-sm-0" id="inputGroupSelect02" style="{!'display: ' + v.filterThree}">
+				<option>Choose...</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="3">Three</option>
+			</select>
+		</div>
+		<table class="table table-default">
+			<thead class="thead-dark">
+				<tr>
+					<th>{!V.columnLabelOne}</th>
+					<th>{!v.columnLabelTwo}</th>
+					<th>{!v.columnLabelThree}</th>
+					<th>{!v.columnLabelFour}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Nome</td>
+					<td>Prêmio 1</td>
+					<td>BETCOINS</td>
+					<td>DATA</td>
+				</tr>
+				<tr>
+					<td>Nome</td>
+					<td>Prêmio 2</td>
+					<td>BETCOINS</td>
+					<td>DATA</td>
+				</tr>
+				<tr>
+					<td>Nome</td>
+					<td>Prêmio 3</td>
+					<td>BETCOINS</td>
+					<td>DATA</td>
+				</tr>
+				<tr>
+					<td>Nome</td>
+					<td>Prêmio 4</td>
+					<td>BETCOINS</td>
+					<td>DATA</td>
+				</tr>
+				<tr>
+					<td>Nome</td>
+					<td>Prêmio 1</td>
+					<td>BETCOINS</td>
+					<td>DATA</td>
+				</tr>
+				<tr>
+					<td>Nome</td>
+					<td>Prêmio 5</td>
+					<td>BETCOINS</td>
+					<td>DATA</td>
+				</tr>
+				<tr>
+					<td>Nome</td>
+					<td>Prêmio 6</td>
+					<td>BETCOINS</td>
+					<td>DATA</td>
+				</tr>
+				<tr>
+					<td>Nome</td>
+					<td>Prêmio 6</td>
+					<td>BETCOINS</td>
+					<td>DATA</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</aura:component>

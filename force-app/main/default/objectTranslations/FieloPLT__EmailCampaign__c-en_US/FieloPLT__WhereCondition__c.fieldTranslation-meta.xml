@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- These are the criteria that specify which Members the Email Campaign will be sent to. --></help>
+    <label><!-- Where Condition --></label>
+    <name>FieloPLT__WhereCondition__c</name>
+</CustomFieldTranslation>

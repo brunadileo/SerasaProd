@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the entry condition to process the Object. --></help>
+    <label><!-- Condition Field --></label>
+    <name>FieloPLT__ConditionField__c</name>
+    <picklistValues>
+        <masterLabel>FieloPLT__Type__c</masterLabel>
+        <translation><!-- FieloPLT__Type__c --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the Salesforce Email Template that contains the content for your Email Template. To view, edit and create Salesforce Email Templates, go to Email Templates in Salesforce Setup. --></help>
+    <label><!-- Template Unique Name --></label>
+    <name>FieloPLT__TemplateUniqueName__c</name>
+</CustomFieldTranslation>

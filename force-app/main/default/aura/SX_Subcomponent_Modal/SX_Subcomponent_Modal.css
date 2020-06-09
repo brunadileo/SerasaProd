@@ -1,0 +1,44 @@
+.THIS.modal-overlay {
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: auto;
+}
+.THIS.modal-overlay > div.position-relative {
+    min-height: 550px;
+}
+.THIS .modal-card {
+	background: url(/insiders/resource/SX_Images/modal-background.jpg) 50% 50%/cover no-repeat;
+    width: 587px;
+    height: 467px;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
+    border: none;
+    border-radius: 0
+}
+.THIS  input {
+    width: 75%;
+    padding: .5rem;
+}
+.THIS  input::placeholder {
+    color: #999;
+}
+.THIS .btn {
+	text-shadow: none;
+}
+.THIS .slds-button:hover, .THIS .slds-button:focus {
+	color: #fff !important;
+}
+.THIS .fa-times.slds-button:hover, .THIS .fa-times.slds-button:focus {
+	color: #6c757d!important;
+}
+.THIS .icon-success {
+	color: #00c980;
+	font-size: 7rem;
+}
+@media (max-width: 575px) {
+    .THIS  input {
+        width: 100%;
+    }
+}

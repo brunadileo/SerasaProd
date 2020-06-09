@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter a Point value or the value by which the &quot;Point Field Name&quot; is to be divided (Factor) or multiplied (Multiplier) --></help>
+    <label><!-- Point Conversion Value --></label>
+    <name>FieloPLT__ConversionValue__c</name>
+</CustomFieldTranslation>

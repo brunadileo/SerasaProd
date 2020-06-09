@@ -1,0 +1,235 @@
+<aura:component controller="SX_SubComponentController" implements="flexipage:availableForAllPageTypes" access="global">
+    
+    <!-- <aura:attribute name="lMember" type="FieloPLT__Member__c"/> -->
+   <!--  <aura:handler name="change" value="{!v.lMember}" action="{!c.onlMemberChange}"/> -->
+
+   <aura:handler name="init" value="{!this}" action="{!c.initComponent}"/>
+   <aura:attribute name="lMember" type="FieloPLT__Member__c" />
+   <aura:attribute name="score" type="String" />
+   <aura:attribute name="positionRanking" type="String" />
+   <aura:attribute name="showAll" type="boolean" default="true" />
+
+	<div class="menu-header d-flex align-items-center">
+		<ui:button aura:id="menuButton" press="{!c.toggleMenu}" class="main-menu-mod border-0 rounded-0 p-0 text-white" >
+			<span id="btnIcon" class="fa fa-bars d-flex align-items-center justify-content-center font-size-5"></span>
+		</ui:button>
+		<div class="greetings ml-3 font-size-5">
+	   		<span>Olá, </span>
+	   		<span>{!v.lMember.V_NomeTratamento__c}</span>
+	   	</div> 
+	</div>
+	<div id="menuBox" class="main-menu-overlay pr-1 pl-5 bg-white text-grey-6" style="display: none;">
+        <ui:button aura:id="menuX" press="{!c.toggleMenu}" class="close-menu-btn border-0 rounded-0 m-2 p-0 text-white" >
+        	<span id="btnIcon" class="fa fa-times d-flex align-items-center justify-content-center font-size-5"></span>
+        </ui:button>                             
+  		<img src="/insiders/resource/SX_Images/logo-insiders-mini.png" class="menu-logo mt-3"/>
+
+		<div class="menu-content d-flex flex-column pr-4 pl-5 pt-5">
+			<div class="d-flex align-items-center justify-content-between">
+				<span class="text-body font-size-5 font-weight-bold ">{!v.lMember.V_NomeTratamento__c}</span>
+				<div class="w-20 d-flex justify-content-between">
+					<a href="../secur/logout.jsp" data-toggle="tooltip" data-placement="top" title="Logout">
+						<img src="/insiders/resource/SX_Images/icon-newlogout.png" alt="" style="height:17px;"/>
+					</a>
+					<a onclick="{!c.changePassword}" data-toggle="tooltip" data-placement="top" title="Alterar Senha">
+						<img src="/insiders/resource/SX_Images/icon-changepw.png" alt="" style="height:20px;"/>
+					</a>
+				</div>
+			</div>
+			<hr class="my-1"/>
+			<aura:if isTrue="{! and(v.showAll, v.lMember.V_PapelElite__c != 'NÃO ELEGÍVEL')}">
+				<div class="d-flex align-items-center justify-content-between disabled-item">
+					<span>
+						Score:
+					</span>
+					<span class="d-flex align-items-center">
+						<span class="font-size-6 text-elite">
+
+							<aura:if isTrue="{!v.lMember.V_MetaScoreEliteAFCongelado__c == null}">
+								{!v.score == null ? '00': v.score}
+								<aura:set attribute="else">
+									{!v.lMember.V_MetaScoreEliteAFCongelado__c}
+								</aura:set>
+							</aura:if>
+								
+						</span>
+					</span>
+				</div>
+				<div class="d-flex align-items-center justify-content-between disabled-item">
+					<span>
+						Ranking:
+					</span>
+					<span class="d-flex align-items-center">
+						<span class="font-size-6 text-elite">
+								
+							<aura:if isTrue="{!v.lMember.V_PosicaoRankingCongelado__c == null}">
+								{!v.positionRanking == null ? '0' : v.positionRanking}
+								<aura:set attribute="else">
+									{!v.lMember.V_PosicaoRankingCongelado__c}
+								</aura:set>
+							</aura:if>
+						</span>
+					</span>
+				</div>
+			</aura:if>
+			<!-- FIM -->
+			<aura:if isTrue="{! and(v.lMember.V_PapelYoubet__c != 'DIRETORES',v.lMember.V_PapelYoubet__c != 'NÃO ELEGÍVEL')}">
+				<div class="d-flex align-items-center justify-content-between">
+					<span>
+						Betcoins:
+					</span>
+					<span class="d-flex align-items-center">
+						<span class="font-size-6 text-youbet">
+							{!v.lMember.FieloPLT__Points__c == null? 0 : v.lMember.FieloPLT__Points__c}
+						</span>
+						<img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" style="height:20px;margin:0 0 .25rem .25rem"/>
+					</span>
+				</div>
+			</aura:if>
+			
+			
+			<!-- BETCOIN EXTRA - OCULTADO -->
+			<aura:if isTrue="">
+				<div class="d-flex align-items-center justify-content-between">
+					<span>
+						Betcoins Extras:
+					</span>
+					<span class="d-flex align-items-center">
+						<span class="font-size-6 text-youbet-extra">
+							{!v.lMember.V_BetcoinsComp__c == null? 0 : v.lMember.V_BetcoinsComp__c}
+						</span>
+						<img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" style="height:20px;margin:0 0 .25rem .25rem"/>
+					</span>
+				</div>
+			</aura:if>
+			<hr class="my-1"/>
+
+			<div class="d-flex align-items-start mt-4">
+				<!-- <a href="./youbet-home">
+					<img src="/insiders/resource/SX_Images/youbet-menu.png" alt="Youbet" class="menu-img"/>
+				</a> -->
+				<div class="d-flex flex-column about-margin">
+					<a href="./about" class="d-flex align-items-center">
+						<span class="fa fa-angle-right text-base font-size-4"></span>
+						<span class="ml-1 text-grey-6 font-size-3">
+							Como funciona
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<!-- YOUBET -->
+			<div class="{!'d-flex align-items-start mt-4 ' + (v.lMember.V_PapelYoubet__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item')}">
+				<a href="./youbet-home">
+					<img src="/insiders/resource/SX_Images/youbet-menu.png" alt="Youbet" class="menu-img"/>
+				</a>
+				<div class="d-flex flex-column ml-3">
+					<a href="./youbet-home" class="d-flex align-items-center">
+						<span class="fa fa-angle-right text-youbet font-size-4"></span>
+						<span class="ml-1 text-grey-6 font-size-3">
+							Prêmio
+						</span>
+					</a>
+					<a onclick="{!c.openExtract}" class="d-flex align-items-center">
+						<span class="fa fa-angle-right text-youbet font-size-4"></span>
+						<span class="ml-1 text-grey-6 font-size-3">
+							Extrato
+						</span>
+					</a>
+					<a onclick="{!c.openYoubetsPerformed}" class="d-flex align-items-start">
+						<span class="fa fa-angle-right text-youbet font-size-4"></span>
+						<span class="ml-1 text-grey-6 font-size-3">
+							Youbets realizados
+						</span>
+					</a>
+					<a onclick="{!c.openAgreement}" class="d-flex align-items-center">
+						<span class="fa fa-angle-right text-youbet font-size-4"></span>
+						<span class="ml-1 text-grey-6 font-size-3">
+							Regulamento
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<!-- YOUBET EXTRA - OCULTO -->
+			<aura:if isTrue="">
+				<div class="d-flex align-items-start mt-4">
+					<a href="./youbet-extra-home">
+						<img src="/insiders/resource/SX_Images/youbet-extra-menu.png" alt="Youbet" class="menu-img"/>
+					</a>
+					<div class="d-flex flex-column ml-3">
+						<a href="./youbet-extra-home" class="d-flex align-items-center">
+							<span class="fa fa-angle-right text-youbet-extra font-size-4"></span>
+							<span class="ml-1 text-grey-6 font-size-3">
+								Prêmio
+							</span>
+						</a>
+						<a onclick="{!c.openExtractComp}" class="d-flex align-items-center">
+							<span class="fa fa-angle-right text-youbet-extra font-size-4"></span>
+							<span class="ml-1 text-grey-6 font-size-3">
+								Extrato
+							</span>
+						</a>
+						<a onclick="{!c.openYoubetsPerformedComp}" class="d-flex align-items-start">
+							<span class="fa fa-angle-right text-youbet-extra font-size-4"></span>
+							<span class="ml-1 text-grey-6 font-size-3">
+								Youbets realizados
+							</span>
+						</a>
+						<a onclick="{!c.openAgreementComp}" class="d-flex align-items-center">
+							<span class="fa fa-angle-right text-youbet-extra font-size-4"></span>
+							<span class="ml-1 text-grey-6 font-size-3">
+								Regulamento
+							</span>
+						</a>
+					</div>
+				</div>
+			</aura:if>
+			
+			<aura:if isTrue="{!v.showAll}">
+
+				<!-- ELITE -->
+				<div class="{!'d-flex align-items-start mt-4 elite ' + (v.lMember.V_PapelElite__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item')}">
+					<a href="./elite-home" class="{!'elite__img-link ' + ( v.lMember.V_PosicaoRankingCongelado__c != null ? 'disabled-item': '')}">
+						<img src="/insiders/resource/SX_Images_fy20/menu-elitefy20.png" alt="Elite Logo" class="menu-img"/>
+					</a>
+					<div class="d-flex flex-column ml-3">
+						<a href="./elite-home" class="{!'d-flex align-items-center ' + ( v.lMember.V_PosicaoRankingCongelado__c != null ? 'disabled-item': '')}">
+							<span class="fa fa-angle-right text-elite font-size-4"></span>
+							<span class="ml-1 text-grey-6 font-size-3">
+								Elite Score
+							</span>
+						</a>
+						<a onclick="{!c.openAgreementElite}" class="d-flex align-items-start">
+							<span class="fa fa-angle-right text-elite font-size-4"></span>
+							<span class="ml-1 text-grey-6 font-size-3">
+								Regulamento
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- SPY -->
+				<div class="{!'d-flex align-items-start mt-4 ' + (v.lMember.V_PapelSalesPersonYear__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item')}">
+					<a href="./sales-person-of-the-year-home" class="{!v.lMember.V_PosicaoRankingCongelado__c != null ? 'disabled-item': ''}">
+						<img src="/insiders/resource/SX_Images/logospynobg.png" alt="Sales Person of The Year Logo" class="menu-img"/>
+					</a>
+					<div class="d-flex flex-column ml-3 mt-2">
+						<a href="./sales-person-of-the-year-home" class="{!'d-flex align-items-center ' + ( v.lMember.V_PosicaoRankingCongelado__c != null ? 'disabled-item': '')}">
+							<span class="fa fa-angle-right text-spy font-size-4"></span>
+							<span class="ml-1 text-grey-6 font-size-3">
+								Badges
+							</span>
+						</a>
+						<a onclick="{!c.openAgreementSpy}" class="d-flex align-items-center">
+							<span class="fa fa-angle-right text-spy font-size-4"></span>
+							<span class="ml-1 text-grey-6 font-size-3">
+								Regulamento
+							</span>
+						</a>
+					</div>
+				</div>
+			</aura:if>
+		</div>		
+	</div>
+</aura:component>

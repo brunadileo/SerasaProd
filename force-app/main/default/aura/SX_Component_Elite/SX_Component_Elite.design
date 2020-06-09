@@ -1,0 +1,8 @@
+<design:component label="CC - Home | Elite Area">
+	<design:attribute name="background" label="Cor de Fundo da Área" description="Cores no formato HEX (#??????)"/>
+	<design:attribute name="bgBtn" label="Cor de Fundo dos Botões" description="Cores no formato HEX (#??????)"/>
+	<design:attribute name="logo" label="Logo da Área" description="Link da Imagem"/>
+	<design:attribute name="circleOne" label="Texto do primeiro Botão"/>
+	<design:attribute name="circleTwo" label="Texto do segundo Botão"/>
+	<design:attribute name="circleThree" label="Texto do terceiro Botão"/>
+</design:component>

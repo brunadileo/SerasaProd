@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ChallengeMember__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Challenge Member from the Challenge a Mission belongs to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Challenge Member from the Challenge a Mission belongs to.</inlineHelpText>
+    <label>Challenge Member</label>
+    <referenceTo>FieloPLT__ChallengeMember__c</referenceTo>
+    <relationshipLabel>Missions Members</relationshipLabel>
+    <relationshipName>MissionsMembers</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

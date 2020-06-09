@@ -1,0 +1,35 @@
+.THIS {
+	position: relative;
+}
+.THIS .circle-container {
+	padding: 2.5rem;
+}
+.THIS .circle-container > span{
+	min-width: 35px;
+	min-height: 35px;
+}
+.THIS a {
+	text-decoration: none;
+}
+.THIS a > div {
+	transition: .3s ease all;
+}
+.THIS a > div:hover { 	
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,.37);
+}
+/*Media Query*/
+@media (max-width: 1600px) {
+	.THIS .circle-container {
+		padding: 2rem;
+	}
+}
+@media (max-width: 1400px) {
+	.THIS .circle-container {
+		padding: 1.5rem;
+	}
+}
+@media (max-width: 1200px) {
+	.THIS .circle-container {
+		padding: 1.0rem;
+	}
+}

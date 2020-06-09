@@ -1,0 +1,100 @@
+@font-face {
+    font-family: DINNextW1G;
+    src: url('/insiders/resource/SX_Fonts/DINNextW1G-Regular.otf');
+}
+.THIS {
+    min-height: 100%;
+    position: relative;
+    font-family: DINNextW1G;
+}
+.THIS .content {
+    min-height: calc(100vh - 65px);
+    height: auto;
+    background: url(/insiders/resource/SX_Images/home-background-two.jpg) top no-repeat/cover;
+    background-attachment: fixed;
+}
+.THIS .container-serasa {
+    width: 100%;
+    max-width: 991px;
+    margin: 0 auto;
+}
+.THIS .sup-content {
+    background: url(/insiders/resource/SX_Images/home-background-one.jpg) top right no-repeat #f5e5fc;
+    height: 350px;
+    padding: 2rem 0;
+}
+.THIS .logo-img {
+    height: 150px;
+}
+.THIS .footer {
+    background: #eeeeee;
+    min-height: 65px;
+}
+.THIS .footer .columns > div, .THIS .footer .columns > div > div {
+    height: 100%;
+}
+.THIS .content .columns > div, .THIS .columns > div > div {
+    width: 100%;
+}
+.THIS .mt-neg-custom {
+    margin-top: -5rem;
+}
+@media (max-width: 1200px) {
+    .THIS .container-serasa { 
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 991px) {
+    .THIS .list-items { 
+        margin-top: -80px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .THIS .content { 
+        height: auto;
+        overflow: initial;
+        background-attachment: initial;
+    }
+    .THIS .sup-content { 
+        height: auto;
+        background: url(/insiders/resource/SX_Images/home-background-one-simple.jpg) top right no-repeat #f5e5fc;
+    }
+    .THIS .footer { 
+        height: auto;
+    }
+    .THIS .container-serasa {
+        width: 100%;
+    }
+    .THIS .box-img {
+        text-align: center;
+    }
+    .THIS .list-items {
+        max-width: 340px;
+        margin: auto;
+    }
+}
+@media (max-width: 400px) {
+    .THIS .list-items > div {
+        padding: 0px;
+    }
+}
+
+/*AGREEMENT CLASSES*/
+.THIS .box-content {
+    min-height: calc(100vh - 65px);
+}
+.THIS .header {
+    background: #eeeeee;
+    height: 65px;
+}
+.THIS .header-logo {
+    position: absolute;
+    left: calc(50% - 66px);
+}
+.THIS .content-agreement {
+    overflow-y: auto;
+    margin: 60px 0;
+}

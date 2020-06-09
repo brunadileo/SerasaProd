@@ -1,0 +1,46 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_YoubetBetsContoller">
+	<aura:attribute name="headerTitle" type="Aura.Component[]">
+        <div class="d-flex justify-content-end">
+            <lightning:button class="fa fa-times btn p-0 border-0 bg-transparent text-secondary font-size-7" onclick="{!c.closeModal}"/>
+        </div>
+    </aura:attribute>
+
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+	
+    <aura:handler event="c:SX_Confirmation_Evt" action="{!c.youbetModal}"/> 
+    <aura:attribute name="youbetType" type="String"/> 
+    <aura:attribute name="lance" type="String"/> 
+    <aura:attribute name="member" type="FieloPLT__Member__c"/>
+    <aura:attribute name="reward" type="FieloPLT__Reward__c"/>  
+
+	<div id="modalConfirmation" class="position-fixed modal-overlay" style="display: none" onclick="{!c.closeModal}">
+	    <div class="modal-container">
+		    <div class="modal-helper">
+                <lightning:card title="{!v.headerTitle}" class="modal-card">
+                    <div class="w-70 d-flex flex-column align-items-center justify-content-center mx-auto my-0">
+                        <h2 class="{!'font-size-8 text-' + v.youbetType + ' text-center font-weight-bold'}">Confirmação!</h2>
+                          <img src="/insiders/resource/SX_Images/alert-bets.png" alt="" class="modal-sucess-img"/>
+                          <span class="mt-3 text-grey-6 font-size-5 font-weight-bold">
+                            Seu lance é de:
+                          </span>
+                          <div class="d-flex align-items-center">
+                            <span class="{!'font-size-8 text-' + v.youbetType + ' font-weight-bold'}">
+                                {!v.lance}
+                            </span>
+                            <img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" class="modal-sucess-icon ml-2"/>
+                          </div>
+                        <div class="w-100 my-3">
+
+                            <aura:if isTrue="{!v.Spinner}">
+                                <lightning:spinner alternativeText="Loading" size="large" />
+                            </aura:if>
+
+                            <lightning:button label="DAR LANCE" class="{!'btn btn-default w-100 bg-' + v.youbetType + ' text-white'}" onclick="{!c.darLanceAcao}"/>
+                        </div>
+                    </div>
+                </lightning:card>      
+            </div>
+	    </div>
+    </div>
+	
+</aura:component>

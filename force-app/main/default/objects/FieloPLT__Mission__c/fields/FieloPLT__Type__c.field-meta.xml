@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It shows the kind of Mission. Missions with Objective meet a particular goal; Mission without Objective do not include a established aim. This field is automatically completed after creating a Mission whether its &quot;Objective&quot; section is completed or not.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+   ISPICKVAL(FieloPLT__Operator__c, &apos;&apos;) &amp;&amp; 
+   OR( ISBLANK(FieloPLT__ObjectiveValue__c), ISBLANK(FieloPLT__ObjectiveField__c) )
+   , &apos;Without Objective&apos;,
+    &apos;With Objective&apos;
+)</formula>
+    <inlineHelpText>It shows the kind of Mission. Missions with Objective meet a particular goal; Mission without Objective do not include a established aim. This field is automatically completed after creating a Mission whether its &quot;Objective&quot; section is completed or not.</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

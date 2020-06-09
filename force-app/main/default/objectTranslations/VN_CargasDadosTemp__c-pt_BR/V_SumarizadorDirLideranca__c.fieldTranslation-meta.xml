@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sumarizador Dir Liderança --></label>
+    <name>V_SumarizadorDirLideranca__c</name>
+    <relationshipLabel><!-- Cargas de Dados Temp (Sumarizador Dir Liderança) --></relationshipLabel>
+</CustomFieldTranslation>

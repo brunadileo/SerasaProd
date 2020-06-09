@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_BadgesEngajamento</fullName>
+    <columns>NAME</columns>
+    <columns>V_ArquivoImagem__c</columns>
+    <columns>V_Pontos__c</columns>
+    <columns>V_Ordem__c</columns>
+    <columns>V_Classificacao__c</columns>
+    <columns>FieloPLT__Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>V_Classificacao__c</field>
+        <operation>equals</operation>
+        <value>Engajamento</value>
+    </filters>
+    <label>Badges - Engajamento</label>
+    <language>pt_BR</language>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_LanceGanhador__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo indica o lance do leilão ganhador (maior quantidade de pontos). Será atualizado por batch após o término da vigência do leilão.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Campo indica o lance do leilão ganhador (maior quantidade de pontos). Será atualizado por batch após o término da vigência do leilão.</inlineHelpText>
+    <label>Lance Ganhador</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

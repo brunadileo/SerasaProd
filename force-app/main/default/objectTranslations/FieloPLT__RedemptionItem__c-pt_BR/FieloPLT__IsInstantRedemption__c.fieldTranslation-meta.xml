@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When ticked, a Redemption item was generated from an Instant Reward. --></help>
+    <label><!-- Instant Redemption --></label>
+    <name>FieloPLT__IsInstantRedemption__c</name>
+</CustomFieldTranslation>

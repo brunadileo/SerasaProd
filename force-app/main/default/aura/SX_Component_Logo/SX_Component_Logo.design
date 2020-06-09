@@ -1,0 +1,5 @@
+<design:component label="CC - General | Logo">
+	<design:attribute name="logo" label="Logo da Área"/>
+	<design:attribute name="logoContainerClasses" label="Estilos do Container da Logo"/>
+	<design:attribute name="logoClasses" label="Estilos da Logo"/>
+</design:component>

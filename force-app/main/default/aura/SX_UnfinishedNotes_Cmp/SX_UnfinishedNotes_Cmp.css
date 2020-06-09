@@ -1,0 +1,177 @@
+.THIS.modal-overlay {
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.THIS .modal-card {
+    /*transform: translate(-50%, -50%);*/
+    width: 991px;
+    height: 80%;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
+    border: none;
+    border-radius: 0;
+}
+.THIS .slds-card__body {
+    height: calc(100% - 100px);
+    overflow-y: auto;
+}
+/*.THIS div::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+.THIS div::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+.THIS div::-webkit-scrollbar-button {
+    display: none;
+}
+.THIS div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.THIS div::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}*/
+.THIS .uiInput--input.input {
+	height: 44px;
+	padding-right: 30px;
+}
+.THIS input::placeholder {
+    color: #999;
+    font-size:1rem;
+}
+.THIS select {
+	height: 38px !important;
+	color: #888888 !important;
+}
+.THIS .box-filters {
+    min-height: 45px;
+}
+.THIS .dateBeginning {
+	padding-top: .75rem;
+    padding-right: 2rem;
+	border-radius: .25rem 0 0 .25rem;
+    border-right: none;
+}
+.THIS .dateEnd {
+    padding-top: .75rem;
+    padding-right: 2rem;
+	border-radius: 0 .25rem .25rem 0;
+}
+.THIS .uiLabel {
+	position: absolute;
+    top: 5px;
+    left: 12px;
+    color: rgb(105,105,105);
+    z-index: 999;
+	font-size: .5rem;
+}
+.THIS .datePicker-openIcon {
+	top: 15px;
+	background: url('/insiders/resource/SX_Images/icon-calendar.png') no-repeat;
+	background-size: 15px;
+}
+.THIS .search-icon {
+	position: absolute;
+	top: 12px;
+	right: 25px;
+}
+.THIS .btn {
+	height: 44px;
+	text-shadow: none;
+}
+.THIS lightning-datatable {
+    height: auto;
+    min-height: 200px;
+    overflow-y: auto;
+    color: #666666;
+}
+.THIS .youbet-extra lightning-datatable td:last-child {
+    display: flex;
+    color: #b635ab;
+}
+.THIS .youbet lightning-datatable td:last-child {
+    display: flex;
+    color: #48c5ff;
+}
+.THIS lightning-primitive-header-actions {
+    display: none;
+}
+.THIS .uiInput--input.input:focus,
+.THIS .uiInput--input .input:focus,
+.THIS .uiInput--input.input:active,
+.THIS .uiInput--input .input:active,
+.THIS .slds-select {
+    border-color: rgb(212, 212, 212);
+    box-shadow: none;
+}
+@media (max-width: 991px) {
+    .THIS .modal-card {
+        height: 100%;
+    }
+    .THIS .box-filters {
+        min-height: 180px;
+    }
+    .THIS lightning-datatable {
+        min-height: auto;
+        overflow-y: unset;
+    }
+    .THIS .slds-table_header-fixed_container::before {
+        border-bottom: none;
+    }
+    .THIS table thead {
+        display: none;
+    }
+    .THIS table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgb(212,212,212);
+    }
+    .THIS table tbody tr:nth-child(odd) {
+        background: #eee;
+    }
+    .THIS table tbody tr th, .THIS table tbody td {
+        border-top: none !important;
+        flex-direction: column;
+        align-items: start;
+    }
+    .THIS table tbody tr th::before, .THIS table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        color: rgb(105,105,105);
+        font-size: .5rem;
+        font-weight: bold;
+    }
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected) {
+        box-shadow: none;
+        background: transparent;
+    }
+}
+@media (max-width: 575px) {
+    .THIS .slds-form-element {
+        width: 100%;
+    }
+    .THIS .box-filters {
+        min-height: 250px;
+    }
+    .THIS .dateBeginning {
+        margin-bottom: 1rem;
+        border-right: 1px solid rgb(212,212,212);
+        border-radius: .25rem;
+    }
+    .THIS .dateEnd {
+        border-radius: .25rem;
+    }
+}

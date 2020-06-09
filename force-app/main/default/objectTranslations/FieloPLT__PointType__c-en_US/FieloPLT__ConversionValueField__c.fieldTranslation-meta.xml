@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the API name for the field that will store your Point Type&apos;s Conversion Value (e.g. MileConversionValue__c). --></help>
+    <label><!-- Conversion Value Field --></label>
+    <name>FieloPLT__ConversionValueField__c</name>
+</CustomFieldTranslation>

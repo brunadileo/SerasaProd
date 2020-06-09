@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Date__c</fullName>
+    <defaultValue>&apos;CreatedDate&apos;</defaultValue>
+    <deprecated>false</deprecated>
+    <description>It enables to choose any Date field linked to the above chosen Object</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose any Date field linked to above chosen Object</inlineHelpText>
+    <label>Date</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Rule__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>It relates a Criterion Group to a particular Rule.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a Rule for the Criterion Group.</inlineHelpText>
+    <label>Rule</label>
+    <referenceTo>FieloPLT__Rule__c</referenceTo>
+    <relationshipLabel>Criteria Group</relationshipLabel>
+    <relationshipName>CriteriaGroup</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

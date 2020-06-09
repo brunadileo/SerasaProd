@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Se assinalado, existem registros que não estão em conformidade e que precisam ser revisados e normalizados. --></help>
+    <label><!-- Possui Impeditivo? --></label>
+    <name>V_PossuiImpeditivo__c</name>
+</CustomFieldTranslation>

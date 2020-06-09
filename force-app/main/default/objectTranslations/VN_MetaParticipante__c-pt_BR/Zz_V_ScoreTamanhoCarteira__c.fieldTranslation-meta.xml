@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Zz_Score Tamanho da Carteira --></label>
+    <name>Zz_V_ScoreTamanhoCarteira__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,45 @@
+<apex:component controller="VN_BatchJobs" selfClosing="true">
+
+	<apex:attribute type="String" name="nameBatch" description="" assignTo="{!fNameBatch}" required="true" />
+  
+    <apex:outputPanel id="divJobs" >
+
+	<!-- This action poller will check the status of the batch jobs every 5 seconds -->
+	<apex:actionPoller rerender="divJobs" interval="5" enabled="{!fExecutarActionPooler}" />
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+			<thead>
+				<tr class="slds-line-height_reset">
+					<th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate">Data Execução</div>
+					</th>
+					<th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate" title="Opportunity Name">Andamento</div>
+					</th>
+					<th class="slds-text-title_caps" scope="col">
+						<div class="slds-truncate">Log</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<apex:repeat value="{!batchJobs}" var="b" id="jobs">
+
+					<tr class="slds-hint-parent">
+						<td>
+							<div class="slds-truncate" ><apex:outputField value="{!b.job.CompletedDate}"/></div>
+						</td>
+						<th scope="row">
+							<div class="progressBar"
+									style="border: 1px solid gray; background-color: {!CASE(b.job.Status, 'Aborted', '#551A8B', 'Completed', '#66ff66', 'Failed', '#ff0000', '#f8f8f8')}">
+								<div class="progress">{!b.percentComplete}% </div>
+							</div>
+						</th>
+						<td>
+							<div class="slds-truncate" ><apex:outputLink value="/{!fErros}" target="_blank" rendered="{!fErros != ''}"> Log do Erro</apex:outputLink></div>
+						</td>
+					</tr>
+				</apex:repeat>
+			</tbody>
+		</table>
+	</apex:outputPanel>
+	
+</apex:component>

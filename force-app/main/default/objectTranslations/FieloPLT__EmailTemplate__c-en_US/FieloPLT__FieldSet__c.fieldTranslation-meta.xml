@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ths is a list of all of the merge fields used in the Salesforce E-mail Template used by this Fielo Email Template. --></help>
+    <label><!-- Field Set --></label>
+    <name>FieloPLT__FieldSet__c</name>
+</CustomFieldTranslation>

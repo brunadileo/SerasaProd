@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Registro exclusivo do participante relacionado ao registro do ano fiscal. --></help>
+    <label><!-- Registro Participante --></label>
+    <name>V_RegistroParticipante__c</name>
+</CustomFieldTranslation>

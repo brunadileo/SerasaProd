@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__NumberOfVoucherDigits__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Number of digits displayed on the voucher. Vouchers must include at least 4 digits.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Set the number of digits displayed on the Voucher (min. 4 digits).</inlineHelpText>
+    <label>Number of Voucher Digits</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

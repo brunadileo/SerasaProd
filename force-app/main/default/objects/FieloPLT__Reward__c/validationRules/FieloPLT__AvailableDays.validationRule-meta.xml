@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__AvailableDays</fullName>
+    <active>true</active>
+    <description>Value must be positive.</description>
+    <errorConditionFormula>FieloPLT__DaysAvailable__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>FieloPLT__DaysAvailable__c</errorDisplayField>
+    <errorMessage>Value must be positive.</errorMessage>
+</ValidationRule>

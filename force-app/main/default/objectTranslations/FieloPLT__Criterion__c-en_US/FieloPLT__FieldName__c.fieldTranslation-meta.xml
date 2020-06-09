@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a Criterion field applied to the Action. This field varies depending on the Action object and it allows 1st-level filtering by lookup fields. --></help>
+    <label><!-- Field Name --></label>
+    <name>FieloPLT__FieldName__c</name>
+</CustomFieldTranslation>

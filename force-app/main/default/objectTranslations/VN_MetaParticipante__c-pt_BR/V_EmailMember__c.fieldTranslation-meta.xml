@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo contendo o e-mail do participante. Utilizado para disparos Dinamize. --></help>
+    <label><!-- Email Participante --></label>
+    <name>V_EmailMember__c</name>
+</CustomFieldTranslation>

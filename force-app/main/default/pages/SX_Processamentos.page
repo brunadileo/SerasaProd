@@ -1,0 +1,296 @@
+<apex:page controller="SX_ProcessamentosController" lightningStyleSheets="true" docType="html-5.0" >
+
+	<apex:slds />
+	<style>
+		.disabled{cursor: not-allowed;}
+		.input-ano-fiscal{width: 110px;}
+	</style>
+	<c:VN_Loading />
+
+	<!-- HEADER -->
+	<div class="slds-page-header">
+	  <div class="slds-page-header__row">
+	    <div class="slds-page-header__col-title">
+	      <div class="slds-media">
+	        <div class="slds-media__figure">
+				<span class="slds-icon_container slds-icon-custom-custom5" title="Description of icon when needed">
+					<svg class="slds-icon" aria-hidden="true">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink"  xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom6"/>
+					</svg>
+				</span>
+	        </div>
+	        <div class="slds-media__body">
+	          <div class="slds-page-header__name">
+	            <div class="slds-page-header__name-title">
+	              <h1>
+	                <span class="slds-page-header__title slds-truncate">Processamentos</span>
+	              </h1>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- END -->
+
+
+
+	<apex:form id="form-processamentos">
+
+		<apex:pageMessages />
+
+		<!-- PANEL 2 -->
+		<div class="slds-panel slds-size_x-large slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+		    <div class="slds-panel__body">
+		
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label"></label>
+							<div class="slds-form-element__control">
+								<strong>Processar Cálculos por Mês</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">Ano Fiscal</label>
+							<div class="slds-form-element__control input-ano-fiscal">
+								<apex:outputText value="{!fAnoFiscal}" styleClass="slds-input disabled"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">Mês Desejado</label>
+							<div class="slds-form-element__control">
+							    <apex:selectList value="{!fMesCalculos}" multiselect="false" size="1" styleClass="slds-input">
+		                            <apex:selectOptions value="{!MesDesejado}" /> 
+		                        </apex:selectList>
+						    </div>
+						</div>
+					</div>
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">&nbsp;</label>
+							<div class="slds-form-element__control">
+								<apex:commandButton action="{!processarCalculos}" styleclass="slds-button slds-button_destructive" value="Processar" rerender="form-processamentos" status="loading" onclick="if (!confirm('{!$Label.V_ConfirmarProcessarCalculos}')) return false;"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		    </div>
+
+		   	<c:VN_BatchJobs rendered="{!fProcessarCalculos}" nameBatch="SX_BatchProcessarCalculos"/> 
+
+		</div>
+		<!-- END -->
+
+		<!-- PANEL 3 -->
+		<!-- <div class="slds-panel slds-size_x-large slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+		    <div class="slds-panel__body">
+		
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label"></label>
+							<div class="slds-form-element__control ">
+								<strong>Processar Ano Fiscal Concluído</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">Ano Fiscal</label>
+							<div class="slds-form-element__control input-ano-fiscal">
+								<apex:outputText value="{!fAnoFiscal}" styleClass="slds-input disabled"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">&nbsp;</label>
+							<div class="slds-form-element__control">
+								<apex:commandButton action="{!processarAnoFiscalConcluido}" styleclass="slds-button slds-button_destructive" value="Processar" rerender="form-processamentos" status="loading" onclick="if (!confirm('{!$Label.V_ConfirmarProcessarAnoFiscal}')) return false;"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		    </div>
+
+		    <c:VN_BatchJobs rendered="{!fProcessarAnoFiscal}" nameBatch="SX_BatchAnoFiscalConcluido"/>
+
+		</div> -->
+		<!-- END -->
+
+		<!-- PANEL 4 -->
+		<div class="slds-panel slds-size_x-large slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+		    <div class="slds-panel__body">
+		
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label"></label>
+							<div class="slds-form-element__control">
+								<strong>Processar Mecânicas após Execução dos Cálculos por Mês</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">Ano Fiscal</label>
+							<div class="slds-form-element__control input-ano-fiscal">
+								<apex:outputText value="{!fAnoFiscal}" styleClass="slds-input disabled"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">Mês Desejado</label>
+							<div class="slds-form-element__control">
+							    <apex:selectList value="{!fMesMecanica}" multiselect="false" size="1" styleClass="slds-input">
+		                            <apex:selectOptions value="{!MesDesejado}" /> 
+		                        </apex:selectList>
+						    </div>
+						</div>
+					</div>
+
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">&nbsp;</label>
+							<div class="slds-form-element__control">
+								<apex:commandButton action="{!processarMecanica}" styleclass="slds-button slds-button_destructive" value="Processar" rerender="form-processamentos" status="loading" onclick="if (!confirm('{!$Label.V_ConfirmarProcessarMecanica}')) return false;"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		    </div>
+
+		    <c:VN_BatchJobs rendered="{!fProcessarMecanica}" nameBatch="SX_BatchProcessarMecanica"/>
+
+		</div>
+		<!-- END -->
+
+		<!-- PANEL 5 -->
+		<div class="slds-panel slds-size_x-large slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+		    <div class="slds-panel__body">
+		
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label"></label>
+							<div class="slds-form-element__control">
+								<strong>Processar Lances Ganhadores de Youbet</strong>
+							</div>
+						</div>
+					</div>
+
+					<div class="slds-col">
+					</div>
+
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">&nbsp;</label>
+							<div class="slds-form-element__control">
+								<apex:commandButton action="{!processarLanceGanhador}" styleclass="slds-button slds-button_destructive" value="Processar" rerender="form-processamentos" status="loading"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		    </div>
+
+		    <c:VN_BatchJobs rendered="{!fProcessarLanceGanhador}" nameBatch="SX_BatchLanceGanhador"/>
+		    
+		</div>
+		<!-- END -->
+
+		<!-- PANEL 6 -->
+		<div class="slds-panel slds-size_x-large slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+		    <div class="slds-panel__body">
+		
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label"></label>
+							<div class="slds-form-element__control">
+								<strong>Recalcular Ranking Elite</strong>
+							</div>
+						</div>
+					</div>
+
+					<div class="slds-col">
+					</div>
+
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">&nbsp;</label>
+							<div class="slds-form-element__control" style="text-align: center">
+								<apex:commandButton action="{!recalcularRanking}" styleclass="slds-button slds-button_destructive" value="Processar" rerender="form-processamentos" status="loading"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		    </div>
+
+		    <c:VN_BatchJobs rendered="{!fProcessarLanceGanhador}" nameBatch="SX_BatchLanceGanhador"/>
+		    
+		</div>
+		<!-- END -->
+
+		<!-- PANEL 7 -->
+		<div class="slds-panel slds-size_x-large slds-panel_docked slds-panel_docked-left slds-is-open" aria-hidden="false">
+		    <div class="slds-panel__body">
+		
+				<div class="slds-grid slds-gutters">
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label"></label>
+							<div class="slds-form-element__control">
+								<strong>Recalcular Sumarizadores</strong>
+							</div>
+						</div>
+					</div>
+
+					<div class="slds-col">
+					</div>
+
+					<div class="slds-col">
+						<div class="slds-form-element">
+							<label class="slds-form-element__label">&nbsp;</label>
+							<div class="slds-form-element__control" style="text-align: center">
+								<apex:commandButton action="{!processarSumarizadores}" styleclass="slds-button slds-button_destructive" value="Processar" rerender="form-processamentos" status="loading"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		    </div>
+
+		    <c:VN_BatchJobs rendered="{!fProcessarSumarizadores}" nameBatch="SX_BatchAtualizarSumarizador"/>
+		    
+		</div>
+		<!-- END -->
+
+	</apex:form>
+
+
+</apex:page>

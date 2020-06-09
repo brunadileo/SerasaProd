@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>badge</keywords>
+    <name>Top Seller - 10 pts - Treinamento</name>
+    <public>true</public>
+</Document>

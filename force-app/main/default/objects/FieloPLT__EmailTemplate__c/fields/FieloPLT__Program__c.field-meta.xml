@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Program__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Program the Email Template belongs to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Program that the Email Template belongs to.</inlineHelpText>
+    <label>Program</label>
+    <referenceTo>FieloPLT__Program__c</referenceTo>
+    <relationshipLabel>Email Templates</relationshipLabel>
+    <relationshipName>EmailTemplates</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

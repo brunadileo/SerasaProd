@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo atualizado por batch após a conclusão da carga de vendas do último mês do ano fiscal. Esse campo será utilizado para o cálculo da elegibilidade anual do Elite. --></help>
+    <label><!-- Ano Fiscal Concluído? --></label>
+    <name>V_AnoFiscalConcluido__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,196 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_EliteHomeController">
+
+	<aura:attribute name="activeSections" type="List" default="" />
+    <aura:attribute name="activeSectionsMessage" type="String" default="" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+	<aura:attribute name="member" type="FieloPLT__Member__c" /> 
+	<!-- <aura:attribute name="meta" type="VN_MetasParticipantes__c" /> -->
+	<aura:attribute name="meta" type="VN_MetaParticipante__c" />
+	<aura:attribute name="mostrarRanking" type="Boolean" default="false"/>
+	<aura:attribute name="ranking" type="object[]" />
+	<aura:attribute name="posicaoRanking" type="Integer" />
+   <!--  <aura:attribute name="pontuacaoElegivel" type="String" /> -->
+	<aura:attribute name="vagas" type="String" />
+	<aura:attribute name="ultimoMesProcessado" type="String"/>
+    <aura:attribute name="ano" type="String"/>
+    <aura:attribute name="anofim" type="String"/>
+
+	<div class="component-wrapper">
+		<div class="component-header">
+			<img src="/insiders/resource/SX_Images_fy20/elitefy20_header_page.png" alt="Logo Elite"/>
+		</div>
+		<div class="component-content bg-white">
+			<div class="row m-0">
+				<div class="col-lg-8 mb-4 mb-lg-0 py-4 px-5 my-1">
+
+					<!-- CHECK PERFORMANCE -->
+					<div class="check-performance">
+						<div class="check-performance__title">
+							Acompanhe sua performance YTD
+						</div>
+						<!-- SPOTS -->
+						<div class="check-performance__spots">
+							<div class="spots">
+								<div class="spots__label">
+									<span class="font-size-7">vagas totais:</span>
+									<span class="font-size-3">Quantidade fixa de vagas no seu perfil</span>
+								</div>
+								<div class="spots__value">
+									<span class="font-size-10">{!v.vagas}</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- RANKING POSITION -->
+						<div class="check-performance__ranking-position">
+							<div class="ranking-position">
+								<div class="ranking-position__label font-size-6">
+									Sua posição no ranking
+								</div>
+								<div class="ranking-position__value font-size-10">
+									{!v.posicaoRanking}
+								</div>
+							</div>
+						</div>
+
+						<!-- CURRENT SCORE -->
+						<div class="check-performance__current-score">
+							<div class="current-score">
+								<div class="current-score__label font-size-6">
+									Score Atual:
+								</div>
+								<div class="current-score__value font-size-10">
+									<!-- 02 -->
+									<!-- POSSÍVEIS SCORES -->
+									{!v.meta.V_ScoreElite__c}
+								</div>
+							</div>
+						</div>
+
+						<!-- SCORE COMPOSITION -->
+						<div class="check-performance__score-composition">
+							<div class="score-composition">
+								<div class="score-composition__label font-size-3">
+									Tamanho da Carteira:
+								</div>
+								<div class="score-composition__value font-size-5">
+									{!v.meta.V_ScorePotencialCarteira__c}
+								</div>
+							</div>
+
+							<div class="score-composition">
+								<div class="score-composition__label font-size-3">
+									Resultado do Quarter 1
+								</div>
+								<div class="score-composition__value font-size-5">
+									{!v.meta.V_ScoreSuperacaoQ1__c}
+								</div>
+							</div>
+
+							<div class="score-composition">
+								<div class="score-composition__label font-size-3">
+									Atingimento de meta:
+								</div>
+								<div class="score-composition__value font-size-5">
+									{!v.meta.V_ScoreAtingimentoFY__c}
+								</div>
+							</div>
+
+							<div class="score-composition">
+								<div class="score-composition__label font-size-3">
+									Superação de meta:
+								</div>
+								<div class="score-composition__value font-size-5">
+									{!v.meta.V_ScoreSuperacaoFY__c}
+								</div>
+							</div>
+						</div>
+
+						<!-- Último Mês Atualizado -->
+						<div class="check-performance__last-update">
+							<div>
+								* Números atualizados com os resultados de Abril/{!v.ano} a {!v.ultimoMesProcessado}/{!v.anofim}
+							</div>
+						</div>
+
+						<!-- LINKS -->
+						<aura:if isTrue="{! and(v.member.V_Cargo__c != 'GERENTE DE CONTAS', v.member.V_Cargo__c != 'GERENTE DE VENDAS')}">
+							<a onclick="{!c.openTeamPerformance}" class="d-flex align-items-center">
+								<span class="fa fa-angle-down text-elite font-size-6"></span>
+								<span class="ml-2 text-grey-6">
+									RESULTADO DA EQUIPE
+								</span>
+							</a>
+						</aura:if>
+						<!-- <a onclick="{!c.openUnfinishedNotes}" class="d-flex align-items-center">
+							<span class="fa fa-angle-down text-elite font-size-6"></span>
+							<span class="ml-2 text-grey-6">
+								NOTAS EM ABERTO
+							</span>
+						</a> -->
+						
+						<!-- MINI-BANNER -->
+						<a onclick="{!c.openExceedLimits}" class="check-performance__mini-banner">
+							<img src="/insiders/resource/SX_Images/banner_supere-limites.jpg" alt="Banner Supere Seus Limites"/>
+						</a>
+
+						<!-- BUTTONS -->
+						<a onclick="{!c.openAgreement}" class="btn btn-default bg-elite">REGULAMENTO</a>
+						<a onclick="{!c.openRanking}" class="btn btn-default bg-elite">RANKING</a>
+					</div>
+				</div>
+
+				<!-- RANKING TABLE -->
+				<div class="component-content-rankings h-100 col-lg-4 px-0 py-4">
+					<div class="component-content-rankings-title d-flex justify-content-center mb-3 text-elite font-weight-bold font-size-6">
+						RANKING GERAL
+					</div>
+					<table class="component-content-rankings-table pr-3 text-grey-6">
+						<thead>
+							<tr>
+								<th>
+									<div class="d-flex flex-column">
+										<span>Score</span>
+										<span class="fa fa-angle-down text-elite"></span>
+									</div>
+								</th>
+								<th>
+									<div class="d-flex flex-column">
+										<span>Participantes</span>
+										<span class="fa fa-angle-down text-elite"></span>
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<aura:renderIf isTrue="{!v.mostrarRanking}">
+						        <aura:iteration items="{!v.ranking}" var="score" indexVar="key">
+						        	<tr>
+										<td>
+										<!-- DESCOMENTAR O CÓDIGO PARA ADICIONAR A MARCAÇÃO DE ELEGÍVEL -->
+											<div class="d-flex align-items-center justify-content-center">
+												<div class="{!(score.wPosicaoElegivel ? 'component-content-rankings-table-elegible' :'')+' '+( and(score.wScore == v.meta.V_ScoreElite__c, v.meta.V_Participante__r.V_NovoContratado__c == 'Não') ? 'component-content-rankings-table-position' :'')}">
+													{!score.wScoreStr}
+												</div>
+											</div>
+										</td>
+										<td>
+											{!score.wTotalMembers}
+										</td>
+									</tr>
+						        </aura:iteration>
+						    </aura:renderIf>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center mt-3">
+			<a href="./" class="btn btn-default bg-btn-home">
+				HOME
+			</a>
+		</div>
+	</div>
+
+</aura:component>

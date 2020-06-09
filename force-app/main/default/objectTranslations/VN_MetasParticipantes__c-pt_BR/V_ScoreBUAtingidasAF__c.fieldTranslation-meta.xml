@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Score em função da quantidade de BUs que tiveram atingimento de metas no ano fiscal. Cálculo utilizado no SPY. --></help>
+    <label><!-- Score BUs Atingidas SPY - AF --></label>
+    <name>V_ScoreBUAtingidasAF__c</name>
+</CustomFieldTranslation>

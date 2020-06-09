@@ -1,0 +1,3 @@
+<design:component label="CC - Youbet | Agreement">
+	<design:attribute name="youbetType" label="Tipo de Youbet" datasource="Selecione, youbet, youbet-extra"/>
+</design:component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Action__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Action that triggered an Email Alert. Actions can be configured in the Libraries tab.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Action that triggered the Email Alert. Actions can be configured in the Libraries tab.</inlineHelpText>
+    <label>Action</label>
+    <referenceTo>FieloPLT__Action__c</referenceTo>
+    <relationshipLabel>Email Alerts</relationshipLabel>
+    <relationshipName>EmailAlerts</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Papel Elite --></label>
+    <name>V_PapelElite__c</name>
+    <picklistValues>
+        <masterLabel>DIRETORES</masterLabel>
+        <translation><!-- DIRETORES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GERENTES DE CONTAS</masterLabel>
+        <translation><!-- GERENTES DE CONTAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LÍDERES</masterLabel>
+        <translation><!-- LÍDERES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LÍDERES (COORDENADORES) E GERENTE REGIONAIS</masterLabel>
+        <translation><!-- LÍDERES (COORDENADORES) E GERENTE REGIONAIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NÃO ELEGÍVEL</masterLabel>
+        <translation><!-- NÃO ELEGÍVEL --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Se este campo estiver assinalado, somente os participantes que forem elegíveis (notas fiscais em aberto no ano fiscal como referência) é que poderão participar deste leilião. --></help>
+    <label><!-- Usar Elegibilidade? --></label>
+    <name>V_UsarElegibilidade__c</name>
+</CustomFieldTranslation>

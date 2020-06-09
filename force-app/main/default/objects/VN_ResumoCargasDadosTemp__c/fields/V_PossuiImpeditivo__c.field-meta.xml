@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PossuiImpeditivo__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Se assinalado, existem registros que não estão em conformidade e que precisam ser revisados e normalizados.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Se assinalado, existem registros que não estão em conformidade e que precisam ser revisados e normalizados.</inlineHelpText>
+    <label>Possui Impeditivo?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

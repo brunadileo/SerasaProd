@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- Please add a Program, Record Type or a Profile. --></errorMessage>
+        <name>FieloPLT__FilterMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid assignment to Program for Models of Type = &quot;Program&quot; --></errorMessage>
+        <name>FieloPLT__ProgramAssigmentForProgramModel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please add an Action, Model or Page Setting. --></errorMessage>
+        <name>FieloPLT__RecordMandatory</name>
+    </validationRules>
+</CustomObjectTranslation>

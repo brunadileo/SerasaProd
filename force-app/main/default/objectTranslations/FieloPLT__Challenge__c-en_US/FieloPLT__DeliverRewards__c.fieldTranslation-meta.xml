@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If ticked, Challenge can grant Challenge Rewards while being &quot;Active&quot;. It can only be applied to Challenges under &quot;Singular&quot;, &quot;Time Table&quot; or &quot;Level Table&quot; types. --></help>
+    <label><!-- Challenge Reward Delivery --></label>
+    <name>FieloPLT__DeliverRewards__c</name>
+</CustomFieldTranslation>

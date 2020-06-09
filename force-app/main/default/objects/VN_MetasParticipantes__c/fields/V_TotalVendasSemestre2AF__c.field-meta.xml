@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_TotalVendasSemestre2AF__c</fullName>
+    <description>Total de vendas do 2o. semestre do ano fiscal. Somatória das vendas dos meses 10, 11, 12, 1, 2 e 3.</description>
+    <externalId>false</externalId>
+    <formula>V_ResultadoSetimoMesAF__c + 
+V_ResultadoOitavoMesAF__c + 
+V_ResultadoNonoMesAF__c + 
+V_ResultadoDecimoMesAF__c + 
+V_ResultadoDecimoPrimeiroMesAF__c + 
+V_ResultadoDecimoSegundoMesAF__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Total de vendas do 2o. semestre do ano fiscal. Somatória das vendas dos meses 10, 11, 12, 1, 2 e 3.</inlineHelpText>
+    <label>Total Vendas - 2o. Sem.</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

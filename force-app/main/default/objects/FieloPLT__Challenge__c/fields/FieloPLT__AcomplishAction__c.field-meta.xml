@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__AcomplishAction__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It defines if a Member subscribed to a specific Challenge who obtained a Challenge Reward continues participating in the Challenge. If Accomplished Action is &quot;Finished&quot;, Members do not continue. If Accomplished Action is &quot;Continue&quot;, Members can still participate and obtain other Challenge Rewards. Accomplished Action is &quot;Repeat&quot;, Members can still participate and obtain the same Challenge Rewards indefinetely as defined in the Challenge Reward.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>It defines if a Member subscribed to a specific Challenge who obtained a Challenge Reward continues participating in the Challenge.</inlineHelpText>
+    <label>Accomplished Action</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Finish</fullName>
+                <default>true</default>
+                <label>Finish</label>
+            </value>
+            <value>
+                <fullName>Repeat</fullName>
+                <default>false</default>
+                <label>Repeat</label>
+            </value>
+            <value>
+                <fullName>Continue</fullName>
+                <default>false</default>
+                <label>Continue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

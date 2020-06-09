@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the User who grants the Admin permissions. --></help>
+    <label><!-- User granted --></label>
+    <name>FieloPLT__UserGranted__c</name>
+</CustomFieldTranslation>

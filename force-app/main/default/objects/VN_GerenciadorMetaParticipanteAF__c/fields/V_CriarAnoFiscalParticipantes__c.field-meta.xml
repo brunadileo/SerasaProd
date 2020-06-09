@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_CriarAnoFiscalParticipantes__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo que servirá de gatilho para a criação de registros do Ano Fiscal para os participantes.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Campo que servirá de gatilho para a criação de registros do Ano Fiscal para os participantes.</inlineHelpText>
+    <label>Criar Ano Fiscal para os Participantes</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__EmailTemplate__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Fielo template containing the content for the Transactional Email associated with an Email Alert. Fielo Email Templates are configurable from a Program, Promotion or Challenge record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Fielo template containing the content for the Transactional Email associated with this Email Alert. Fielo Email Templates are configurable from a Program, Promotion or Challenge record.</inlineHelpText>
+    <label>Email Template</label>
+    <referenceTo>FieloPLT__EmailTemplate__c</referenceTo>
+    <relationshipLabel>Email Alerts</relationshipLabel>
+    <relationshipName>EmailAlerts</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,124 @@
+.THIS .content-left {
+	border-width: 5px;
+	border-top-style: solid;
+}
+.THIS .content-middle, .THIS .content-right {
+	border-width: 5px;
+	border-top-style: solid;
+	border-color: transparent;
+} 
+.THIS a:hover, .THIS a:active, .THIS a:focus {
+	text-decoration: none;
+}
+.THIS .time-left {
+	line-height: 20px;
+}
+.THIS .line-height-custom-one {
+	line-height: 1;
+}
+.THIS .line-height-custom-two {
+	line-height: 25px;
+}
+.THIS input {
+	padding: .5rem 15% .5rem 5%;
+}
+.THIS .input-icon {
+	position: absolute;
+	top: 50%;
+    right: 5%;
+}
+.THIS .youbet-bg {
+	background: #31b9d5;
+}
+.THIS .youbet-icon {
+	filter: hue-rotate(250deg);
+}
+.THIS .youbet-color {
+	color: #31b9d5;
+}
+.THIS .youbet-border-color {
+	color: #31b9d5;
+}
+.THIS .youbet-extra-color {
+	color: #b635ab;
+}
+.THIS .youbet-extra-border-color {
+	color: #b635ab;
+}
+.THIS .youbet-extra-bg {
+	background: #b635ab;
+}
+.THIS .home-color {
+	color: #6D214F;
+}
+.THIS .slds-input:focus, .THIS .slds-input:active {
+    border-color: rgb(212, 212, 212);
+    box-shadow: none;
+}
+.THIS a.btn-default:hover {
+	color:#fff;
+}
+.THIS .future-youbets {
+	width: 100%;
+	padding: 0 1.93rem 2rem 2.7rem;
+}
+.THIS .future-youbets__card {
+	display: flex;
+	justify-content: center;
+}
+.THIS .future-youbets .item {
+	flex: 0 0 calc(33.33% - 2rem);
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, max-content);
+	grid-gap: 10px;
+	margin: 0 1rem;
+}
+.THIS .future-youbets__img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	margin: 0 auto;
+}
+.THIS .future-youbets__label,
+.THIS .future-youbets__date {
+	color: #666;
+	text-align: center;
+	text-transform: uppercase;
+}
+.THIS .future-youbets .item img {
+	width: 100%;
+	max-height: 100%;
+    object-fit: contain;
+}
+@media (max-width: 991px) {
+	.THIS .youbet-bets-content {
+	    display: flex;
+    	margin: 0px;
+	}
+	.THIS .youbet-bets-menu {
+		order: 2;
+	}
+	.THIS .youbet-bets-product {
+		order: 0;
+	}
+	.THIS .youbet-bets-betting {
+		order: 1;
+	}
+	.THIS .future-youbets {
+		order: 3;
+	}
+}
+@media (max-width: 768px) {
+	.THIS .future-youbets {
+		padding: 1rem;
+	}
+	.THIS .future-youbets__card {
+		flex-direction: column;
+	}
+	.THIS .future-youbets .item {
+		flex: 0 0 100%;
+		margin: 2rem 0;
+	}
+}

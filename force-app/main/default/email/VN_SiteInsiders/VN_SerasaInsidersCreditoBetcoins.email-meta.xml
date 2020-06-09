@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Participantes ativos que tiveram o saldo de Betcoins alterado após o processamento das mecânicas.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa Insiders: crédito de Betcoins</name>
+    <style>none</style>
+    <subject>Youbet: confira seu saldo de betcoins!</subject>
+    <textOnly>{!FieloPLT__Member__c.V_NomeTratamento__c}, parece que você ganhou betcoins!
+
+Seu saldo atual é de !FieloPLT__Points__c betcoins.
+
+Fique de olho nos próximos Youbets e aproveite para fazer seus lances!
+
+Acesse o site
+
+
+Caso não esteja visualizando corretamente esta mensagem, acesse este link</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

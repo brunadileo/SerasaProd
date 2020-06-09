@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It stores Mission Member ranking position based on the Leaderboard Value in descending order. --></help>
+    <label><!-- Leaderboard Position --></label>
+    <name>FieloPLT__LeaderboardPosition__c</name>
+</CustomFieldTranslation>

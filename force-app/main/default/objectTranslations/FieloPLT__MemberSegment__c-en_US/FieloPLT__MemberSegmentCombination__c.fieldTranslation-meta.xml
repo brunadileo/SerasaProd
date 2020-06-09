@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Unique, automatically generated Member ID and Segment ID field. --></help>
+    <label><!-- Member Segment Combination --></label>
+    <name>FieloPLT__MemberSegmentCombination__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It displays the Member incentivized (Field API name). --></help>
+    <label><!-- Target Member --></label>
+    <name>FieloPLT__TargetMember__c</name>
+</CustomFieldTranslation>

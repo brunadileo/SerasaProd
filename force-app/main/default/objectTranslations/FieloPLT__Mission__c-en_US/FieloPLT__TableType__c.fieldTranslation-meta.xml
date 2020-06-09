@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the Mission Reward Table for the Mission. --></help>
+    <label><!-- Table Type --></label>
+    <name>FieloPLT__TableType__c</name>
+    <picklistValues>
+        <masterLabel>Performance Position</masterLabel>
+        <translation><!-- Performance Position --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Performance Value</masterLabel>
+        <translation><!-- Performance Value --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Singular</masterLabel>
+        <translation><!-- Singular --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Time Position</masterLabel>
+        <translation><!-- Time Position --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

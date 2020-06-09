@@ -1,0 +1,155 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_EliteTeamPerfomanceController">
+    <aura:attribute name="headerTitle" type="Aura.Component[]">
+        <div class="d-flex justify-content-end">
+            <lightning:button class="fa fa-times btn p-0 border-0 bg-transparent text-white font-size-7" onclick="{!c.closeModal}"/>
+        </div>
+    </aura:attribute>
+
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+
+    <aura:handler event="c:SX_YouBetModal_Evt" action="{!c.youbetModal}"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+    <aura:attribute name="member" type="FieloPLT__Member__c" />
+    <aura:attribute name="lstArea" type="List"/>
+    <aura:attribute Name="area" type="String" />  
+
+    <aura:attribute name="lstPapel" type="List"/>
+    <aura:attribute Name="papel" type="String" /> 
+
+    <aura:attribute name="lstSubArea" type="List"/>
+    <aura:attribute Name="subArea" type="String" />
+    <aura:attribute name="lstCargo" type="List"/>
+    <aura:attribute Name="cargo" type="String" />
+    <aura:attribute name="lstMetas" type="VN_MetaParticipante__c[]"/>
+    <aura:attribute name="tableCols" type="List" />
+    <aura:attribute name="mostrarRanking" type="Boolean" default="false"/>
+    <aura:attribute name="ranking" type="object[]" />
+    <aura:attribute name="pontuacaoElegivel" type="String" />
+
+    <div id="eliteTeamPerformanceModal" class="position-fixed modal-overlay" style="display: none" onclick="{!c.closeModal}">
+        <div class="position-relative d-flex h-100 align-items-center justify-content-center">
+            <lightning:card title="{!v.headerTitle}" class="modal-card">
+                
+                <div class="h-100 d-flex flex-column mx-auto my-0">
+                    <h2 class="m-0 font-size-8">
+                        <img src="/insiders/resource/SX_Images_fy20/elitefy20_header_modal.png" alt="Elite Logo"/>
+                        <span>Resultados da Equipe</span>
+                    </h2>
+                    
+                    <div class="h-100 row m-0">
+                        <div class="component-content-team-result-table col-lg-8 py-3">
+                            <div class="d-flex align-items-lg-end justify-content-center justify-content-lg-start mb-3 box-filters">
+                                <div class="w-100 row d-flex align-items-end">
+
+                                     <div class="col-sm-6 col-lg-3">
+                                        <lightning:select aura:id="area" label="" value="{!v.area}" class="single">
+                                            <option value="">Área</option>
+                                            <aura:iteration items="{!v.lstArea}" var="item">
+                                                <option text="{!item.label}" value="{!item.value}" />
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-3 mt-3 mt-lg-0">
+                                        <lightning:select aura:id="subArea" label="" value="{!v.subArea}" class="single">
+                                            <option value="">Liderança</option>
+                                            <aura:iteration items="{!v.lstSubArea}" var="item">
+                                                <option text="{!item.label}" value="{!item.value}" />
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-3">
+                                        <lightning:select aura:id="papel" label="" value="{!v.papel}" class="single">
+                                            <option value="">Cargo</option>
+                                            <aura:iteration items="{!v.lstPapel}" var="item">
+                                                <option text="{!item.label}" value="{!item.value}" />
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </div>
+
+                                    <!--<div class="col-sm-6 col-lg-3 mt-3 mt-lg-0">
+                                        <lightning:select aura:id="cargo" label="" value="{!v.cargo}" class="single">
+                                        <option value="">Categoria</option>
+                                        <aura:iteration items="{!v.lstCargo}" var="item">
+                                            <option text="{!item.label}" value="{!item.value}" />
+                                        </aura:iteration>
+                                        </lightning:select>
+                                    </div> -->
+                                    <div class="col-lg-3 my-3 my-lg-0">
+                                        <lightning:button label="OK" onclick="{!c.loadResultados}" class="{!'btn btn-default w-100 w-lg-auto bg-elite text-white'}"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <aura:if isTrue="{!v.Spinner}">
+                                <lightning:spinner alternativeText="Loading" size="large" />
+                            </aura:if>
+                            <aura:if isTrue="{!not(empty(v.lstMetas))}">
+                                 <lightning:datatable data="{!v.lstMetas}"
+                                         columns="{!v.tableCols }"
+                                         keyField="Id"
+                                         hideCheckboxColumn="true"
+                                         timeZone="{! $Locale.timezone }"/>
+                            </aura:if>
+                            <aura:if isTrue="{!empty(v.lstMetas)}"><p class="p-3 text-grey-6 text-center">
+                                Não há resultados para serem exibidos</p>
+                            </aura:if>
+                        </div>
+
+                        <!-- RANKING -->
+                        <div class="component-content-rankings col-lg-4 px-0 py-3">
+                            <div class="component-content-rankings-title d-flex justify-content-center mb-3 text-elite font-weight-bold font-size-6">
+                                RANKING GERAL
+                            </div>
+                            <table class="component-content-rankings-table pr-3 text-grey-6">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="d-flex flex-column align-items-center">
+                                                <span>Score</span>
+                                                <span class="fa fa-angle-down text-elite"></span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex flex-column align-items-center">
+                                                <span>Total</span>
+                                                <span class="fa fa-angle-down text-elite"></span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="d-flex flex-column align-items-center">
+                                                <span>Equipe</span>
+                                                <span class="fa fa-angle-down text-elite"></span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <aura:renderIf isTrue="{!v.mostrarRanking}">
+                                    <aura:iteration items="{!v.ranking}" var="score" indexVar="key">
+                                        <tr>
+                                            <td>
+                                                <!-- <div class="{!'d-flex align-items-center justify-content-center '+(score.wScoreStr == v.pontuacaoElegivel ? 'component-content-rankings-table-elegible' :'')}"> -->
+                                                <div class="{!'d-flex align-items-center justify-content-center '+(score.wScoreStr == v.pontuacaoElegivel ? '' :'')}">  
+                                                    {!score.wScoreStr} 
+                                                </div>
+                                            </td>
+                                            <td>
+                                                {!score.wTotalMembers}
+                                            </td>
+                                            <td>
+                                                {!score.wTotalEquipe}
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>
+                                </aura:renderIf>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </lightning:card>
+        </div>
+    </div>
+    <ltng:require scripts="{!$Resource.SX_script}" />
+
+</aura:component>

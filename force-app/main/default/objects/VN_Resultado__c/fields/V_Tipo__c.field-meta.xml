@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Tipo__c</fullName>
+    <description>Tipo do registro de resultado.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tipo do registro de resultado.</inlineHelpText>
+    <label>Tipo</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Resultados</fullName>
+                <default>false</default>
+                <label>Resultados</label>
+            </value>
+            <value>
+                <fullName>Visitas</fullName>
+                <default>false</default>
+                <label>Visitas</label>
+            </value>
+            <value>
+                <fullName>Cadastros</fullName>
+                <default>false</default>
+                <label>Cadastros</label>
+            </value>
+            <value>
+                <fullName>Conversões</fullName>
+                <default>false</default>
+                <label>Conversões</label>
+            </value>
+            <value>
+                <fullName>VCM</fullName>
+                <default>false</default>
+                <label>VCM</label>
+            </value>
+            <value>
+                <fullName>Net Add</fullName>
+                <default>false</default>
+                <label>Net Add</label>
+            </value>
+            <value>
+                <fullName>Oportunidades Abertas</fullName>
+                <default>false</default>
+                <label>Oportunidades Abertas</label>
+            </value>
+            <value>
+                <fullName>LNO</fullName>
+                <default>false</default>
+                <label>LNO</label>
+            </value>
+            <value>
+                <fullName>eCred</fullName>
+                <default>false</default>
+                <label>eCred</label>
+            </value>
+            <value>
+                <fullName>Treinamento Reciclagem</fullName>
+                <default>false</default>
+                <label>Treinamento Reciclagem</label>
+            </value>
+            <value>
+                <fullName>Serasa Itinerante</fullName>
+                <default>false</default>
+                <label>Serasa Itinerante</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

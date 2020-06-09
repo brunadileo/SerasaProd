@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When ticked, Member is a Manager of Fielo Organization Member. --></help>
+    <label><!-- Manager --></label>
+    <name>FieloPLT__IsManager__c</name>
+</CustomFieldTranslation>

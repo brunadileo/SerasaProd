@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_MesString__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( MCEILING(V_Mes__c) ,
+10, &quot;Janeiro&quot;,
+11, &quot;Fevereiro&quot;,
+12, &quot;Março&quot;,
+1, &quot;Abril&quot;,
+2, &quot;Maio&quot;,
+3, &quot;Junho&quot;,
+4, &quot;Julho&quot;,
+5, &quot;Agosto&quot;,
+6, &quot;Setembro&quot;,
+7, &quot;Outubro&quot;,
+8, &quot;Novembro&quot;,
+9, &quot;Dezembro&quot;,
+&quot;Error&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mês String</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

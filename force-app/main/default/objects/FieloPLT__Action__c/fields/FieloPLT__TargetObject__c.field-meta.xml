@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__TargetObject__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Object field API name. It shows which related object is evaluated by the Rule and/or Mission, it different from the &quot;Engine Trigger&quot; Action.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a related object evaluated by the Rule and/or Mission, if different from the &quot;Engine Trigger&quot; Action.</inlineHelpText>
+    <label>Target Object</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

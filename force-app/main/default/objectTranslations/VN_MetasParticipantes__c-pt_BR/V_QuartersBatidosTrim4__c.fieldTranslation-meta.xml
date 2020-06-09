@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica a quantidade de quarters atingidos até o 4o. quarter. --></help>
+    <label><!-- INATIVO - Quarters Batidos - 4o. Trim. --></label>
+    <name>V_QuartersBatidosTrim4__c</name>
+</CustomFieldTranslation>

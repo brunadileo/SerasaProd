@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Área do participante relacionado à venda. --></help>
+    <label><!-- Área --></label>
+    <name>V_Area__c</name>
+    <picklistValues>
+        <masterLabel>MULTI CANAL</masterLabel>
+        <translation><!-- MULTI CANAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PLANEJAMENTO COMERCIAL</masterLabel>
+        <translation><!-- PLANEJAMENTO COMERCIAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REGIÕES</masterLabel>
+        <translation><!-- REGIÕES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TBD I</masterLabel>
+        <translation><!-- TBD I --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TBD II</masterLabel>
+        <translation><!-- TBD II --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VERTICAIS</masterLabel>
+        <translation><!-- VERTICAIS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

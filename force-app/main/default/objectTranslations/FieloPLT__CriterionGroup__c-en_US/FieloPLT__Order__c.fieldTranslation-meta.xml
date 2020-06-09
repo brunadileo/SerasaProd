@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Criterion Group order based on its related Mission, Rule, Segment or Level. --></help>
+    <label><!-- Order --></label>
+    <name>FieloPLT__Order__c</name>
+</CustomFieldTranslation>

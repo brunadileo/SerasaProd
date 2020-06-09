@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Shows the status of the Badge given to that specific Member.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the status of the Badge given to that specific Member.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reverted</fullName>
+                <default>false</default>
+                <label>Reverted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

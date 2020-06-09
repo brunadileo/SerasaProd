@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It shows which Member and Mission the Tracker belongs to. --></help>
+    <label><!-- Mission Member --></label>
+    <name>FieloPLT__MissionMember__c</name>
+    <relationshipLabel><!-- Trackers --></relationshipLabel>
+</CustomFieldTranslation>

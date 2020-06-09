@@ -1,0 +1,51 @@
+.THIS {
+    display: flex;
+    flex-direction: column;
+}
+.THIS  #error {
+    width:100%;
+    color:#ff4a4a;
+}
+.THIS .login-error {
+    border-color: #ff4a4a !important;
+    background: #ffeded !important;
+    color:#ff4a4a !important;
+}
+.THIS .uiButton--default .label {
+    color: #fff;
+}
+.THIS  input {
+    width: 250px;
+}
+.THIS  input::placeholder {
+    color: #bfbfbf;
+}
+.THIS  a:hover {
+    color: #4f25a6;
+}
+.THIS button {
+    border: none;
+    text-shadow: none;
+}
+.THIS .my-custom {
+    margin: 20px 0 5px 0;
+}
+
+@media (max-width: 767px) {
+    .THIS {
+        align-items: center;
+    }
+    .THIS input, .THIS .form-item {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .THIS {
+        align-items: start;
+    }
+}
+/*@media (max-aspect-ratio: 4/3) {
+    .THIS {
+        align-items: center;
+    }
+}*/

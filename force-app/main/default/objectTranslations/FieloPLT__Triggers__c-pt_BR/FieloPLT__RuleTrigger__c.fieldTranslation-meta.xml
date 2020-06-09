@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When unchecked, it disables RuleTrigger trigger. --></help>
+    <label><!-- RuleTrigger --></label>
+    <name>FieloPLT__RuleTrigger__c</name>
+</CustomFieldTranslation>

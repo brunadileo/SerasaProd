@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__MinValue__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It stores the minimum Leaderboard Value obtained when processing Tracker for all Members who are part of a Mission (Mission Members).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>It stores the minimum Leaderboard Value obtained when processing Tracker for all Members who are part of a Mission (Mission Members).</inlineHelpText>
+    <label>Min.Value</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

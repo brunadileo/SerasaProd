@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentual de atingimento de meta (AM) do líder imediato do participante após fechamento do 1o. trimestre do ano fiscal. --></help>
+    <label><!-- % AM do Líder Imediato - 1o. Trim. --></label>
+    <name>V_PercentualAMLiderImediato1oTrim__c</name>
+</CustomFieldTranslation>

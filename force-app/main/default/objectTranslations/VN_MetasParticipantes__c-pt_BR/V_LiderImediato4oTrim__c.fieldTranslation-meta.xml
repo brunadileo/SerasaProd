@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Líder imediato do participante após o fechamento do 4o. trimestre do ano fiscal. --></help>
+    <label><!-- Líder Imediato - 4o. Trim. --></label>
+    <name>V_LiderImediato4oTrim__c</name>
+    <relationshipLabel><!-- Metas dos Participantes - OLD (Líder Imediato - 4o. Trim.) --></relationshipLabel>
+</CustomFieldTranslation>

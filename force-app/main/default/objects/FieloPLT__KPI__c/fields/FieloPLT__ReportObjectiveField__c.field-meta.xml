@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ReportObjectiveField__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The field containing the data to be compared against a fixed numerical objective or metric.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the field that contains the data you want to compare against a fixed numerical objective or metric.</inlineHelpText>
+    <label>Report Objective Field</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

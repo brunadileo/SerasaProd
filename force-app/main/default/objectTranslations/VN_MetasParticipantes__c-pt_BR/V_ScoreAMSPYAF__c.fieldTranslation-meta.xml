@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score de atingimento de meta no ano fiscal do participante. Campo utilizado no SPY. --></help>
+    <label><!-- Score AM SPY - AF --></label>
+    <name>V_ScoreAMSPYAF__c</name>
+</CustomFieldTranslation>

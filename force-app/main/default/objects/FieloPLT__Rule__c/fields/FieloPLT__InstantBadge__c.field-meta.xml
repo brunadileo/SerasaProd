@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__InstantBadge__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Badge chosen from &quot;Instant Badge&quot; when is under &quot;Fixed Value&quot; mode.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose an &quot;Instant Badge&quot;.</inlineHelpText>
+    <label>Instant Badge</label>
+    <referenceTo>FieloPLT__Badge__c</referenceTo>
+    <relationshipLabel>Rules</relationshipLabel>
+    <relationshipName>Rules</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

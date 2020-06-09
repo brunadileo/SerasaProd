@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentual de atingimento de meta do participante até o 8o. mês do ano fiscal. Cálculo utilizado no Elite e SPY. --></help>
+    <label><!-- % AM Até Mês 11 --></label>
+    <name>V_PercentualAMAteOitavoMesAF__c</name>
+</CustomFieldTranslation>

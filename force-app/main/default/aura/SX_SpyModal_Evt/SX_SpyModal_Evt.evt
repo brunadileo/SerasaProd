@@ -1,0 +1,13 @@
+<!-- **************************************************************************
+*                          Copyright (C) 2018 ValueNET
+* *****************************************************************************
+* Author: LF                          						   date: 01/10/2018
+* 
+* Name: SX_SpyModal_Evt.evt
+* 
+*
+*************************************************************************** -->
+<aura:event type="APPLICATION" description="Event template">
+	<aura:attribute name="name" type="String"/>
+	<aura:attribute name="type" type="String"/>
+</aura:event>

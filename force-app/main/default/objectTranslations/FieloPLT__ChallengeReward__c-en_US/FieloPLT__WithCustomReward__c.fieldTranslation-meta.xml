@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If ticked, a Custom Reward can be chosen. --></help>
+    <label><!-- Custom Reward --></label>
+    <name>FieloPLT__WithCustomReward__c</name>
+</CustomFieldTranslation>

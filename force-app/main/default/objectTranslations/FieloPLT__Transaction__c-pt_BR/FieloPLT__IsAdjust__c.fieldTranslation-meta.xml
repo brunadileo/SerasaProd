@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If ticked, the Transaction is an Adjust Transaction, created as a result of adjusting a previously generated Transaction. --></help>
+    <label>Ajuste</label>
+    <name>FieloPLT__IsAdjust__c</name>
+</CustomFieldTranslation>

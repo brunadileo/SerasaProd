@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Reward_Program_Validation</fullName>
+    <active>true</active>
+    <description>Challenge Reward and Challenge must belong to the same Program.</description>
+    <errorConditionFormula>AND(
+    NOT( ISBLANK(FieloPLT__Reward__c) ) ,
+    NOT( ISBLANK(FieloPLT__Reward__r.FieloPLT__Program__c) ) ,
+    FieloPLT__Reward__r.FieloPLT__Program__c !=  FieloPLT__Challenge__r.FieloPLT__Program__c)</errorConditionFormula>
+    <errorMessage>Challenge Reward and Challenge must belong to the same Program.</errorMessage>
+</ValidationRule>

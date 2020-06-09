@@ -1,0 +1,20 @@
+<apex:page showHeader="true" sidebar="true" standardController="FieloPLT__Badge__c">
+<style>
+        .msg-tamanho-imagem {
+            padding-left: 13px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+    
+    <p class="msg-tamanho-imagem">Envie uma imagem para o site</p>
+
+    <c:VN_PhotoUpload myObject="{!FieloPLT__Badge__c}"
+                   saveInRecordField="true" 
+                   attachField="FieloPLT__Image__c" 
+                   info=""
+                   recordName="banner1"/>
+
+</apex:page>

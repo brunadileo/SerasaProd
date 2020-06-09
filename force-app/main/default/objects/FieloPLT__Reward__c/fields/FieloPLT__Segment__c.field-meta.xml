@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Segment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Targets the Challenge by Segment. If no Segment is chosen or available, Reward can be redeemed by any Member who belongs to the Program.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>To target this Reward by Segment, add the Segment(s) you want to make eligible. If blank, all Program Members will be eligible. You can view, edit and create Segments in the Programs tab.</inlineHelpText>
+    <label>Segment</label>
+    <referenceTo>FieloPLT__Segment__c</referenceTo>
+    <relationshipLabel>Rewards</relationshipLabel>
+    <relationshipName>Rewards</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

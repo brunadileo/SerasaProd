@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__OrganizationAccountCanNotBeManager</fullName>
+    <active>true</active>
+    <description>An Organization Member cannot be a Manager.</description>
+    <errorConditionFormula>ISPICKVAL(FieloPLT__Type__c, &apos;Organization Account&apos;) &amp;&amp; FieloPLT__IsManager__c</errorConditionFormula>
+    <errorDisplayField>FieloPLT__IsManager__c</errorDisplayField>
+    <errorMessage>An Organization Member cannot be a Manager.</errorMessage>
+</ValidationRule>

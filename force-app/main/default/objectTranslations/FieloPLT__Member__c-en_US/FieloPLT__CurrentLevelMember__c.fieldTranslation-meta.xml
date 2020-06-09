@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It relates a Level to a Member. --></help>
+    <label><!-- Level Member --></label>
+    <name>FieloPLT__CurrentLevelMember__c</name>
+    <relationshipLabel><!-- Members --></relationshipLabel>
+</CustomFieldTranslation>

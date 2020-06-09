@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o ano fiscal mais recente cadastrado em Metas do Participantes relacionado a esse participante. --></help>
+    <label><!-- Último Ano Fiscal --></label>
+    <name>V_UltimoAnoFiscal__c</name>
+</CustomFieldTranslation>

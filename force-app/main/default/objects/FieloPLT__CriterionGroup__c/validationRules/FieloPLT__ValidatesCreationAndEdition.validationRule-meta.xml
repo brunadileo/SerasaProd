@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ValidatesCreationAndEdition</fullName>
+    <active>true</active>
+    <description>If a Challenge Mission is &quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot;, a Criterion Group cannot be created or edited.</description>
+    <errorConditionFormula>( 
+ISPICKVAL(FieloPLT__Mission__r.FieloPLT__Challenge__r.FieloPLT__Status__c,&apos;Pending&apos;) || 
+ISPICKVAL(FieloPLT__Mission__r.FieloPLT__Challenge__r.FieloPLT__Status__c,&apos;Scheduled&apos;) || 
+ISPICKVAL(FieloPLT__Mission__r.FieloPLT__Challenge__r.FieloPLT__Status__c,&apos;Active&apos;) 
+) 
+&amp;&amp; 
+( 
+ISBLANK(FieloPLT__Mission__r.FieloPLT__StartDate__c) || FieloPLT__Mission__r.FieloPLT__StartDate__c &lt;= TODAY()
+)
+&amp;&amp;
+OR(
+ISCHANGED(FieloPLT__Field__c),
+ISCHANGED(FieloPLT__Level__c),
+ISCHANGED(FieloPLT__LogicalExpression__c),
+ISCHANGED(FieloPLT__Mission__c),
+ISCHANGED(FieloPLT__Mode__c),
+ISCHANGED(FieloPLT__Operator__c),
+ISCHANGED(FieloPLT__Order__c),
+ISCHANGED(FieloPLT__RelatedList__c),
+ISCHANGED(FieloPLT__Rule__c),
+ISCHANGED(FieloPLT__Segment__c),
+ISCHANGED(FieloPLT__Value__c)
+)</errorConditionFormula>
+    <errorMessage>If a Challenge Mission is &quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot;, a Criterion Group cannot be created or edited.</errorMessage>
+</ValidationRule>

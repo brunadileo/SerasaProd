@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo preenchido logo após a carga de dados de Resultados e Metas e limpo após 6 dias corridos --></help>
+    <label><!-- Diparar Dinamize --></label>
+    <name>V_DipararDinamize__c</name>
+    <picklistValues>
+        <masterLabel>Sim</masterLabel>
+        <translation><!-- Sim --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

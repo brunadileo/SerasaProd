@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valida_Pontos_de_Youbet_Extra</fullName>
+    <active>true</active>
+    <description>Não permite incluir valor de lance do Youbet Extra que seja diferente de 1, já que o valor do lance será utilizado na quantidade.</description>
+    <errorConditionFormula>AND(
+
+RecordType.DeveloperName = &quot;Leiloes&quot;,
+ISPICKVAL(Iniciativa__c, &quot;Youbet Extra&quot;),
+
+OR(
+FieloPLT__Points__c &lt;&gt; 0,
+V_BetcoinsComp__c &lt;&gt; 1)
+
+)</errorConditionFormula>
+    <errorDisplayField>V_BetcoinsComp__c</errorDisplayField>
+    <errorMessage>Para Youbet Extra, o campo &quot;Pontos&quot; deve ser 0 e o campo &quot;Betcoins - Extra&quot; deve ser 1.</errorMessage>
+</ValidationRule>

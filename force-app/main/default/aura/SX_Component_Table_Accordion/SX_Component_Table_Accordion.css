@@ -1,0 +1,19 @@
+.THIS .table-default th , .THIS .table-default td {
+	text-align: center;
+}
+.THIS .accordion-header:hover {
+	background-color: #17a2b8!important;
+	color: #fff;
+	cursor: pointer;
+}
+.THIS [aria-expanded="true"] .fa:before {
+	content: "\f077";
+}
+.THIS .w-100 {
+	width: 100% !important;
+}
+@media (min-width: 576px) {
+	.THIS .w-sm-auto {
+		width: auto !important;
+	}
+}

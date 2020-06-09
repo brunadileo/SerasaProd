@@ -1,0 +1,406 @@
+<aura:component controller="SX_AboutController" implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+	<aura:attribute name="member" type="FieloPLT__Member__c" />
+
+	<div class="component-wrapper">
+		<!-- TABS NAVIGATION -->
+		<nav>
+			<div class="nav nav-tabs bg-white" id="nav-tab" role="tablist">
+				<!-- TAB NAVIGATION - INSIDERS -->
+				<a class="nav-item nav-link flex-grow-1 border-left border-top border-right active" id="nav-insiders-tab" data-toggle="tab" href="#nav-insiders" role="tab" aria-controls="nav-insiders" aria-selected="true">
+					Insiders
+				</a>
+				<!-- TAB NAVIGATION - ELITE -->
+				<a class="nav-item nav-link flex-grow-1 border-left border-top border-right" id="nav-elite-tab" data-toggle="tab" href="#nav-elite" role="tab" aria-controls="nav-elite" aria-selected="false">
+					Elite
+				</a>
+				<!-- TAB NAVIGATION - YOUBET -->
+				<a class="nav-item nav-link flex-grow-1 border-left border-top border-right" id="nav-youbet-tab" data-toggle="tab" href="#nav-youbet" role="tab" aria-controls="nav-youbet" aria-selected="false">
+					Youbet
+				</a>
+				<!-- TAB NAVIGATION - SPY -->
+				<a class="nav-item nav-link flex-grow-1 border-left border-top border-right" id="nav-spy-tab" data-toggle="tab" href="#nav-spy" role="tab" aria-controls="nav-spy" aria-selected="false">
+					Sales Person of the Year
+				</a>
+			</div>
+		</nav>
+
+		<!-- TAB CONTENT -->
+		<div class="tab-content d-flex align-items-center border-left border-bottom border-right p-3 p-md-5 bg-white" id="nav-tabContent">
+			<!-- TAB CONTENT - INSIDERS -->
+			<div class="tab-pane fade show active" id="nav-insiders" role="tabpanel" aria-labelledby="nav-insiders-tab">
+				<div class="tab-content__insiders">
+					<!-- LOGO INSIDERS -->
+					<img src="/insiders/resource/SX_Images/logo-insiders.png" alt="Logo Insiders" class="d-block mx-auto"/>
+
+					<!-- TITLE -->
+					<div class="about-insiders__title mt-5 text-center">
+						TODAS AS INICIATIVAS JUNTAS EM ÚNICO PROGRAMA!
+					</div>
+
+					<!-- TEXT -->
+					<div class="about-insiders__text mt-3">
+						<p>
+							O Programa de incentivo Insiders possui 3 campanhas:  Elite, Youbet e Sales Person of the Year.
+						</p>
+						<p>
+							A finalidade deste Programa é incentivar, premiar e reconhecer você, profissional da força de vendas da Serasa Experian. 
+						</p>
+					</div>
+
+					<!-- LOGOS -->
+					<div class="about-insiders__logos mt-5">
+						<img src="/insiders/resource/SX_Images_fy20/menu-elitefy20.png" alt="Elite Logo" class="logos__elite"/>
+						<img src="/insiders/resource/SX_Images/logo-youbet-nobg.png" alt="Youbet" class="logos__youbet"/>
+						<img src="/insiders/resource/SX_Images/logospynobg.png" alt="Sales Person of The Year Logo" class="logos__spy"/>
+					</div>
+				</div>
+			</div>
+
+			<!-- TAB CONTENT - ELITE -->
+			<div class="tab-pane fade" id="nav-elite" role="tabpanel" aria-labelledby="nav-elite-tab">
+				<div class="tab-content__elite">
+					<div class="d-flex flex-column flex-md-row align-items-center">
+						<!-- ELITE LOGO -->
+						<img src="/insiders/resource/SX_Images_fy20/menu-elitefy20.png" alt="Elite Logo" class="elite__logo mr-md-3 mb-4 mb-md-0"/>
+
+						<!-- TEXT -->
+						<div>
+							<p class="text-grey-5">
+								No Elite seu desempenho é avaliado com base em 4 critérios, que conforme atingimento, geram um score que influencia na sua posição do ranking. Todos os critérios de avaliação são monitorados mensalmente e cada atualização de performance pode refletir na sua colocação e na disputa das vagas disponíveis. 
+							</p>
+							<p class="text-elite">
+								Ao final do FY20, os vencedores ganharão uma viagem com acompanhante para a Croácia.
+							</p>
+						</div>
+					</div>
+
+					<!-- ELITE LOWER INFO -->
+					<div class="elite__lower-info mt-5">
+						<div class="evaluatin-criteria">
+							<div class="evaluation-criteria__title">
+								<span class="fa fa-angle-right font-size-6"></span>
+								<span class="font-size-6">
+									CRITÉRIOS DE AVALIAÇÃO SCORE
+								</span>
+							</div>
+
+							<div class="evaluatin-criteria__grid pt-4">
+								<div class="d-flex flex-column align-items-center">
+									<img src="/insiders/resource/SX_Images/money-icon.png" alt="Tamanho da Carteira"/>
+									<span class="text-grey-5 mt-3">
+										TAMANHO DA CARTEIRA
+									</span>
+								</div>
+
+								<div class="d-flex flex-column align-items-center">
+									<img src="/insiders/resource/SX_Images/quarter-icon.png" alt="Resultado do Q1"/>
+									<span class="text-grey-5 mt-3">
+										RESULTADO Q1
+									</span>
+								</div>
+
+								<div class="d-flex flex-column align-items-center">
+									<img src="/insiders/resource/SX_Images/reach-goal-icon.png" alt="Atingimento YTD"/>
+									<span class="text-grey-5 mt-3">
+										ATINGIMENTO YTD
+									</span>
+								</div>
+
+								<div class="d-flex flex-column align-items-center">
+									<img src="/insiders/resource/SX_Images/star-icon.png" alt="Superação YTD"/>
+									<span class="text-grey-5 mt-3">
+										SUPERAÇÃO YTD
+									</span>
+								</div>
+							</div>
+						</div>
+						<div>
+							<!-- TITLE -->
+							<div class="stay-alert__title">
+								<span class="fa fa-angle-right font-size-6"></span>
+								<span class="font-size-6">
+									FIQUE DE OLHO
+								</span>
+							</div>
+
+							<!-- TEXT -->
+							<div class="pt-4">
+								<p class="text-grey-5">
+									Sua posição no ranking <span class="text-elite">não garante a viagem!</span> Para se tornar elegível, você precisa atingir <span class="text-elite">100% da sua meta do FY20.</span> Além disso, o score pode mudar a cada apuração mensal. Logo, quanto mais cadência nas vendas você tiver, mais próximo estará de fazer parte do Elite que conhecerá a Croácia!
+								</p>
+								<p class="text-grey-5">
+									O fechamento de Disputas Comerciais acontece  a cada trimestre e isso <span class="text-elite">pode afetar seu score</span> e colocação no ranking. Por isso, é importante também fazer esse acompanhamento de perto.
+								</p>
+								<a onclick="{!c.openEliteAgreement}" class="text-elite mt-3">
+									Quer saber mais? Consulte o REGULAMENTO!
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- TAB CONTENT - YOUBET -->
+			<div class="tab-pane fade" id="nav-youbet" role="tabpanel" aria-labelledby="nav-youbet-tab">
+				<div class="tab-content__youbet">
+					<div class="d-flex flex-column flex-md-row align-items-center">
+						<!-- ELITE LOGO -->
+						<img src="/insiders/resource/SX_Images/logo-youbet-nobg.png" alt="Youbet Logo" class="youbet__logo mr-md-3 mb-4 mb-md-0"/>
+
+						<!-- TEXT -->
+						<div>
+							<!-- VISÃO RESTO -->
+							<aura:if isTrue="{!v.member.V_PapelYoubet__c != 'DIRETORES'}">
+								<p class="text-grey-5">
+									Durante o período da campanha você acumulará betcoins de acordo com seu atingimento em 4 critérios. As betcoins funcionam como moedas virtuais para que você possa dar lances nos Youbets (leilões) disponíveis no site.  Leva o prêmio do respectivo Youbet o participante que fizer a maior aposta!
+								</p>
+							</aura:if>
+
+							<!-- VISÃO DIRETOR -->
+							<aura:if isTrue="{!v.member.V_PapelYoubet__c == 'DIRETORES'}">
+								<p class="text-grey-5">
+									Durante o período da campanha os participantes acumularão betcoins de acordo com seu atingimento em 4 critérios. As betcoins funcionam como moedas virtuais para que eles possam dar lances nos Youbets (leilões) disponíveis no site.  Leva o prêmio do respectivo Youbet o participante que fizer a maior aposta.
+								</p>
+							</aura:if>
+						</div>
+					</div>
+
+					<div class="youbet__lower-info mt-5">
+						<div>
+							<!-- TITLE -->
+							<div class="accumulate-betcoins__title">
+								<span class="fa fa-angle-right font-size-6"></span>
+								<span class="font-size-6">
+									ACUMULO DE BETCOINS
+								</span>
+							</div>
+
+							<!-- TEXT -->
+							<div class="pt-4">
+								<p class="text-grey-5">
+									<span class="text-youbet">
+										ATINGIMENTO DE META MENSAL
+									</span>
+									<div class="text-grey-5">
+										100% = 50 betcoins.
+									</div>
+								</p>
+
+								<p class="text-grey-5">
+									<span class="text-youbet">
+										ATINGIMENTO DE META TRIMESTRAL
+									</span>
+									<div class="text-grey-5">
+										100% = 150 betcoins.
+									</div>
+								</p>
+
+								<p class="text-grey-5">
+									<span class="text-youbet">
+										PRODUTOS ESTRATÉGICOS
+									</span>
+									<div class="text-grey-5">
+										1 betcoin a cada 1% de receita advinda de produtos estratégicos.
+									</div>
+								</p>
+
+								<p class="text-grey-5">
+									<span class="text-youbet">
+										ATINGIMENTO DE META DO LÍDER NO QUARTER
+									</span>
+									<div class="text-grey-5">
+										100% = 50 betcoins.
+									</div>
+								</p>
+							</div>
+						</div>
+	
+						<div>
+							<div class="prizes__title">
+								<span class="fa fa-angle-right font-size-6"></span>
+								<span class="font-size-6">
+									PRÊMIOS
+								</span>
+							</div>
+
+							<p class="d-flex flex-column">
+								<span class="text-grey-5 mt-2">
+									Mensais ou trimestrais dependendo do perfil do participante:
+								</span>
+								<span class="text-youbet mt-2">
+									Gerente de Contas ou
+								</span>	
+								<span class="text-youbet mt-2">
+									Lideres/Gerentes Regionais
+								</span>
+							</p>
+
+							<div class="prizes__title">
+								<span class="fa fa-angle-right font-size-6"></span>
+								<span class="font-size-6">
+									REGRAS
+								</span>
+							</div>
+
+							<p class="d-flex flex-column">
+								<span class="text-grey-5 mt-2">
+									Os leilões ficam disponíveis para lances por 24h no site.
+								</span>
+
+								<span class="text-grey-5 mt-2">
+									<!-- VISÃO RESTO -->
+									<aura:if isTrue="{!v.member.V_PapelYoubet__c != 'DIRETORES'}">
+										É possível refazer o lance caso sua aposta seja coberta.
+									</aura:if>
+									<!-- VISÃO DIRETOR -->
+									<aura:if isTrue="{!v.member.V_PapelYoubet__c == 'DIRETORES'}">
+										É possível refazer o lance caso a aposta seja coberta.
+									</aura:if>
+								</span>
+
+								<span class="text-grey-5 mt-2">
+									As betcoins só serão debitadas do ganhador do prêmio.
+								</span>
+							</p>
+
+							<a onclick="{!c.openYoubetAgreement}" class="text-youbet mt-3">
+								Quer saber mais? Consulte o REGULAMENTO!
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- TAB CONTENT - SPY -->
+			<div class="tab-pane fade" id="nav-spy" role="tabpanel" aria-labelledby="nav-spy-tab">
+				<div class="tab-content__youbet">
+					<div class="d-flex flex-column flex-md-row align-items-center">
+						<!-- SPY LOGO -->
+						<img src="/insiders/resource/SX_Images/logospynobg.png" alt="spy Logo" class="spy__logo mr-md-3 mb-4 mb-md-0"/>
+
+						<!-- TEXT -->
+						<div>
+							<p class="text-grey-5">
+								Os comportamentos de premiação do Sales Person of the Year são avaliados por badges, e cada badge acumulada possui um valor em pontos. Os 5 participantes com mais pontos serão avaliados por uma banca técnica da Serasa para definição do Vendedor e Líder do ano, que serão divulgados na Convenção de Vendas.
+							</p>
+						</div>
+					</div>
+
+					<div class="spy__lower-info mt-5">
+						<div>
+							<!-- TITLE -->
+							<div class="badges-category__title">
+								<span class="fa fa-angle-right font-size-6"></span>
+								<span class="font-size-6">
+									CATEGORIA BADGES
+								</span>
+							</div>
+
+							<!-- TEXT -->
+							<div class="d-flex flex-column pt-4">
+								<!-- BADGE ELITE -->
+								<div class="d-flex flex-column flex-md-row align-items-center">
+									<img src="/insiders/resource/SX_Images/badge-elite-nobg.png" alt="Badge Elite" class="mr-md-3 mb-3 mb-md-0"/>
+									<div class="d-flex flex-column text-center text-md-left">
+										<span class="text-spy">
+											ELITE
+										</span>
+										<span class="text-grey-5">
+											<!-- VISÃO RESTO -->
+											<aura:if isTrue="{!v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+												Pontua pela sua performance na campanha até o final do FY.
+											</aura:if>
+
+											<!-- VISÃO DIRETOR -->
+											<aura:if isTrue="{!v.member.V_PapelSalesPersonYear__c == 'DIRETORES'}">
+												Pontuam pela performance na campanha até o final do FY.
+											</aura:if>
+										</span>
+									</div>
+								</div>
+
+								<!-- BADGE YOUBET -->
+								<div class="d-flex flex-column flex-md-row align-items-center mt-3">
+									<img src="/insiders/resource/SX_Images/badge-youbet-nobg.png" alt="Badge Youbet" class="mr-md-3 mb-3 mb-md-0"/>
+									<div class="d-flex flex-column text-center text-md-left">
+										<span class="text-spy">
+											YOUBET
+										</span>
+										<span class="text-grey-5">
+											<!-- VISÃO RESTO -->
+											<aura:if isTrue="{!v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+												Pontua pelo seu comportamento na campanha, percentual de produtos estratégicos, acúmulo de betcoins e youbet conquistado.
+											</aura:if>
+
+											<!-- VISÃO DIRETOR -->
+											<aura:if isTrue="{!v.member.V_PapelSalesPersonYear__c == 'DIRETORES'}">
+												Pontuam pelo comportamento da campanha, percentual de produtos estratégicos, acúmulo de betcoins e youbet conquistado.
+											</aura:if>
+										</span>
+									</div>
+								</div>
+
+								<!-- BADGE ENGAJAMENTO -->
+								<div class="d-flex flex-column flex-md-row align-items-center mt-3">
+									<img src="/insiders/resource/SX_Images/badge-engajamento-nobg.png" alt="Badge Youbet" class="mr-md-3 mb-3 mb-md-0"/>
+									<div class="d-flex flex-column text-center text-md-left">
+										<span class="text-spy">
+											ENGAJAMENTO
+										</span>
+										<span class="text-grey-5">
+											<!-- VISÃO RESTO -->
+											<aura:if isTrue="{!v.member.V_PapelSalesPersonYear__c != 'DIRETORES'}">
+												Pontua pelo seu engajamento e participação nas campanhas. 
+											</aura:if>
+
+											<!-- VISÃO DIRETOR -->
+											<aura:if isTrue="{!v.member.V_PapelSalesPersonYear__c == 'DIRETORES'}">
+												Pontuam pelo seu engajamento e participação nas campanhas. 
+											</aura:if>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<div>
+							<div class="user__title">
+								<span class="fa fa-angle-right font-size-6"></span>
+								<span class="font-size-6">
+									PARTICIPANTES
+								</span>
+							</div>
+
+							<div class="pt-4">
+								<p class="d-flex flex-column">
+									<span class="text-spy">
+										LÍDERES DO ANO
+									</span>
+									<span class="text-grey-5">
+										Líderes e Gerentes Regionais
+									</span>
+								</p>
+	
+								<p class="d-flex flex-column">
+									<span class="text-spy">
+										VENDEDOR DO ANO
+									</span>
+									<span class="text-grey-5">
+										Gerentes de contas
+									</span>
+								</p>
+							</div>
+
+							<a onclick="{!c.openSpyAgreement}" class="text-spy mt-3">
+								Quer saber mais? Consulte o REGULAMENTO!
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>      
+	</div>
+
+</aura:component>

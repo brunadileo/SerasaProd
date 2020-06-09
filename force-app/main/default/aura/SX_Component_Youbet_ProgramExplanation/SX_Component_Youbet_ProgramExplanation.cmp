@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="programTitleOne" type="String" default="YouBet Perene" access="global" />
+    <aura:attribute name="programDescriptionOne" type="String" default="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse blanditiis est provident nesciunt molestias voluptates! Nulla porro aspernatur, accusamus commodi enim, dicta optio repellendus amet quaerat, odit doloremque, explicabo temporibus impedit ratione? A iusto laudantium omnis, voluptatibus exercitationem explicabo error deleniti, quisquam ut temporibus placeat ipsa suscipit ipsam quis." access="global" />
+    <aura:attribute name="programTitleTwo" type="String" default="YouBet Extra" access="global" />
+    <aura:attribute name="programDescriptionTwo" type="String" default="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dignissimos, at dolorum harum recusandae quibusdam quidem, officia iusto dolore aliquid tempora enim repellat sequi laborum totam sint incidunt perspiciatis quam doloribus nam facere quo. Aliquam neque alias recusandae, non ipsam illo cumque animi accusamus quidem reprehenderit, possimus eius corporis, tempora." access="global" />
+
+	<div class="d-flex flex-column flex-sm-row flex-xl-column h-auto h-xl-100">
+		<div class="px-0 px-sm-3 px-xl-0">
+			<h4 class="m-0 font-size-5 text-center text-xl-left">{!v.programTitleOne}</h4>
+			<p>{!v.programDescriptionOne}</p>
+		</div>
+		<div class="px-0 px-sm-3 px-xl-0 py-xl-3">
+			<h4 class="m-0 font-size-5 text-center text-xl-left">{!v.programTitleTwo}</h4>
+			<p>{!v.programDescriptionTwo}</p>
+		</div>
+	</div>
+
+</aura:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a Category to group different types of Models. --></help>
+    <label><!-- Category --></label>
+    <name>FieloPLT__Category__c</name>
+    <picklistValues>
+        <masterLabel>Miscellaneous</masterLabel>
+        <translation><!-- Miscellaneous --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

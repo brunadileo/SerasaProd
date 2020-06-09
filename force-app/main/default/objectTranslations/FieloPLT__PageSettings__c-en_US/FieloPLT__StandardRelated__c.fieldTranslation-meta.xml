@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Related Standard --></label>
+    <name>FieloPLT__StandardRelated__c</name>
+    <picklistValues>
+        <masterLabel>Activity History</masterLabel>
+        <translation><!-- Activity History --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approval History</masterLabel>
+        <translation><!-- Approval History --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Content Deliveries</masterLabel>
+        <translation><!-- Content Deliveries --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Files</masterLabel>
+        <translation><!-- Files --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Notes &amp; Attachments</masterLabel>
+        <translation><!-- Notes &amp; Attachments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Object History</masterLabel>
+        <translation><!-- Object History --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open Activities</masterLabel>
+        <translation><!-- Open Activities --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

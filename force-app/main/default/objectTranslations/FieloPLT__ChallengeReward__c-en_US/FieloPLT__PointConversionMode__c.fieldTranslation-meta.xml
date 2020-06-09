@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose how Points are calculated: Fixed Value for fixed number of Points; Factor for numerical field that can be divided by a specific number; Multiplier for numerical field that can be multiplied by a specific number; or None if using another reward type --></help>
+    <label><!-- Point Conversion Mode --></label>
+    <name>FieloPLT__PointConversionMode__c</name>
+    <picklistValues>
+        <masterLabel>Factor</masterLabel>
+        <translation><!-- Factor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed Value</masterLabel>
+        <translation><!-- Fixed Value --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiplier</masterLabel>
+        <translation><!-- Multiplier --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

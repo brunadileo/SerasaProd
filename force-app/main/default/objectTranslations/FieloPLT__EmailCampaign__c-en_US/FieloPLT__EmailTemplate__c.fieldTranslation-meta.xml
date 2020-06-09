@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the Fielo Email Template you want to use in your campaign. Only templates of type Campaign will appear. You can view, edit and create Fielo Email Templates in the Programs tab. --></help>
+    <label><!-- Email Template --></label>
+    <name>FieloPLT__EmailTemplate__c</name>
+    <relationshipLabel><!-- Email Campaigns --></relationshipLabel>
+</CustomFieldTranslation>

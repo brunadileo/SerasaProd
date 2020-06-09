@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FieloPLT__Reward__c.ParticipantesPerfiCompativeis__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FieloPLT__Reward__c.ParticipantesPerfiCompativeis__r$V_Saldo__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FieloPLT__Reward__c$V_TotalBetcoinsLances__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Reward__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Betcoins potenciais e apostadas - Prêmio</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Results_Participantes_eleg_veis_dos_leli_es__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Reward__c$V_DataHoraFimYoubet__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

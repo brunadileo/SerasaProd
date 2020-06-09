@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__LogicalExpression__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Logical expressions which can be applied to Level Criteria. The expressions available are: &quot;All&quot; (it meets all the established criteria); &quot;Any&quot; (it meets at least one established Criterion) and &quot;Custom&quot; (it enables creating a formula based on the established criteria. E.g. ((1 AND 2) OR 3).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Logical expressions which can be applied to Level Criteria: &quot;All&quot; (it meets all the established criteria); &quot;Any&quot; (it meets at least one Criterion) and &quot;Custom&quot; (it enables creating a formula based on the established criteria. E.g. ((1 AND 2) OR 3).</inlineHelpText>
+    <label>Match Criteria</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

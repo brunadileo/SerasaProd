@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When ticked, it specifies where &quot;Program Point Type&quot; used in a Redemption come from. --></help>
+    <label><!-- Audit Points --></label>
+    <name>FieloPLT__AuditPoints__c</name>
+</CustomFieldTranslation>

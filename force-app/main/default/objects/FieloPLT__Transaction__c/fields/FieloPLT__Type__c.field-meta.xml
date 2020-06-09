@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Different kind of Transactions which depend on their purpose: Adjustment, Challenge Reward, Expiration and Reversion</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Transaction type (Adjustment, Challenge Reward, Expiration and Reversion).</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+                <label>Adjustment</label>
+            </value>
+            <value>
+                <fullName>Challenge Reward</fullName>
+                <default>false</default>
+                <label>Challenge Reward</label>
+            </value>
+            <value>
+                <fullName>Expiration</fullName>
+                <default>false</default>
+                <label>Expiration</label>
+            </value>
+            <value>
+                <fullName>Reversion</fullName>
+                <default>false</default>
+                <label>Reversion</label>
+            </value>
+            <value>
+                <fullName>Betcoins Extra - Cortesia</fullName>
+                <default>false</default>
+                <label>Betcoins Extra - Cortesia</label>
+            </value>
+            <value>
+                <fullName>Youbet Extra - Fornecedor - Elegível H1 &gt;= 80%</fullName>
+                <default>false</default>
+                <label>Youbet Extra - Fornecedor - Elegível H1 &gt;= 80%</label>
+            </value>
+            <value>
+                <fullName>Elegibilidade - % AM YTD - AGO 18 &gt;= 100% - DISTR</fullName>
+                <default>false</default>
+                <label>Elegibilidade - % AM YTD - AGO 18 &gt;= 100% - DISTR</label>
+            </value>
+            <value>
+                <fullName>Elegibilidade - % AM YTD - SET 18 &gt;= 100% - DISTR</fullName>
+                <default>false</default>
+                <label>Elegibilidade - % AM YTD - SET 18 &gt;= 100% - DISTR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

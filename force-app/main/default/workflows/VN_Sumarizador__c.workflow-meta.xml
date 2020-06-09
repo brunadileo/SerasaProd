@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>AtualizaCargoSumarizador</fullName>
+        <field>V_Cargo__c</field>
+        <formula>Participante__r.V_CargoDetalhado__c</formula>
+        <name>Atualiza Cargo no sumarizador</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>AtualizaResultadoSEMetaParticipante</fullName>
+        <field>V_ResultadoSE__c</field>
+        <formula>V_ResultadoSE__c</formula>
+        <name>Atualiza Resultado SE Meta Participante</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Atualiza_AM_YTD_Ant_no_Meta_do_Partici</fullName>
+        <description>Atualiza o % AM YTD do mês anterior no meta do participante</description>
+        <field>V_AMYTDAnterior__c</field>
+        <formula>V_AMYTDAnterior__c</formula>
+        <name>Atualiza %AM YTD Ant. no Meta do Partici</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_AtualizaAreaSumarizador</fullName>
+        <field>V_Area__c</field>
+        <formula>TEXT(Participante__r.V_Area__c)</formula>
+        <name>Atualiza Área no Sumarizador</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_AtualizaLiderancaSumarizador</fullName>
+        <field>V_Lideranca__c</field>
+        <formula>TEXT( Participante__r.V_Lideranca__c)</formula>
+        <name>Atualiza Liderança no Sumarizador</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_SUMAMYTDFatorado</fullName>
+        <field>V_PercentualAMYTDFatorado__c</field>
+        <formula>IF( V_IDXAnoFiscal__c =1,0,
+   IF(AND( V_IDXAnoFiscal__c = V_MesFYAnterior__c , V_IDXAnoFiscalPeriodo__c = V_IDXAnoFiscalPeriodoAnterior__c ), V_PercentualAMYTDFatoradoAnterior__c ,
+      IF(AND( V_IDXAnoFiscal__c = V_MesFYAnterior__c , V_IDXAnoFiscalPeriodo__c =1), (V_PercentualAMYTDPeriodoAnterior__c * V_IDXAnoFiscalPeriodoAnterior__c) + V_PercentualAMYTDFatoradoAnterior__c ,
+         IF( V_IDXAnoFiscalPeriodo__c  =1, (V_PercentualAMYTDPeriodoAnterior__c * V_IDXAnoFiscalPeriodoAnterior__c) + V_PercentualAMYTDFatoradoAnterior__c , V_PercentualAMYTDFatoradoAnterior__c ))))</formula>
+        <name>VN_SUM% AM YTD Fatorado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_SUMIDXAnoFiscal</fullName>
+        <field>V_IDXAnoFiscal__c</field>
+        <formula>IF(   
+   V_Meta__c =0, V_MesFYAnterior__c ,
+   IF(V_Meta__c &gt;0, V_MesFYAnterior__c +1 ,V_MesFYAnterior__c)
+)</formula>
+        <name>VN_SUMIDX Ano Fiscal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_SUMIDXSemestre</fullName>
+        <field>V_IDXSemestre__c</field>
+        <formula>IF(OR(V_Mes__c = 1,V_Mes__c = 7),1,
+   IF(V_Meta__c = 0, V_IDXSemestreAnterior__c, V_IDXSemestreAnterior__c + 1 ))</formula>
+        <name>VN_SUMIDX Semestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_SUMIDXTrimestre</fullName>
+        <field>V_IDXTrimestre__c</field>
+        <formula>IF(OR(V_Mes__c = 1,V_Mes__c = 4,V_Mes__c = 7,V_Mes__c = 10),1,
+    IF( V_Meta__c = 0, V_IDXTrimestreAnterior__c, V_IDXTrimestreAnterior__c + 1 ))</formula>
+        <name>VN_SUMIDX Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_SUMMetaYTDPeriodo</fullName>
+        <field>V_MetaYTDPeriodo__c</field>
+        <formula>IF( V_IDXAnoFiscal__c =0,0,
+   IF( V_IDXAnoFiscal__c =1, V_MetaYTD__c ,
+      IF( V_IDXAnoFiscal__c = V_MesFYAnterior__c , V_MetaYTDPeriodoAnterior__c ,
+        IF( V_IDXAnoFiscalPeriodo__c =1, V_MetaYTD__c - V_MetaYTDAnterior__c , V_MetaYTDPeriodoAnterior__c + V_Meta__c ))))</formula>
+        <name>VN_SUMMeta YTD Período</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_SUMPercentualAMYTDSemestreFatorado</fullName>
+        <field>V_PercentualAMYTDSemestreFatorado__c</field>
+        <formula>IF( V_IDXSemestre__c =1,0,
+   IF(AND( V_IDXSemestre__c = V_IDXSemestreAnterior__c , V_IDXSemestrePeriodo__c = V_IDXSemestrePeriodoAnterior__c ), V_PercentuaAMYTDSemestreFatoradoAnterior__c ,
+      IF(AND( V_IDXSemestre__c = V_IDXSemestreAnterior__c , V_IDXSemestrePeriodo__c =1), (V_PercentualAMYTDSemestrePeriodoAnterior__c * V_IDXSemestrePeriodoAnterior__c) + V_PercentuaAMYTDSemestreFatoradoAnterior__c ,
+         IF( V_IDXSemestrePeriodo__c =1, (V_PercentualAMYTDSemestrePeriodoAnterior__c * V_IDXSemestrePeriodoAnterior__c) + V_PercentuaAMYTDSemestreFatoradoAnterior__c , V_PercentuaAMYTDSemestreFatoradoAnterior__c ))))</formula>
+        <name>VN_SUM% AM YTD Semestre Fatorado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_SUMPercentualAMYTDTrimestrePeriodo</fullName>
+        <field>V_PercentualAMYTDTrimestrePeriodo__c</field>
+        <formula>IF( V_MetaYTDTrimestrePeriodo__c &lt;=0, 0, V_ValorYTDTrimestrePeriodo__c / V_MetaYTDTrimestrePeriodo__c)</formula>
+        <name>VN_SUM% AM YTD Trimestre Período</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_SUMValorYTDSemestrePeriodo</fullName>
+        <field>V_ValorYTDSemestrePeriodo__c</field>
+        <formula>IF( V_IDXSemestre__c =0,0,
+   IF( V_IDXSemestre__c =1, V_ValorYTDSemestre__c ,
+      IF(AND( V_IDXSemestre__c = V_IDXSemestreAnterior__c , V_IDXSemestrePeriodo__c = V_IDXSemestrePeriodoAnterior__c ), V_ValorYTDSemestrePeriodoAnterior__c ,
+         IF( V_IDXSemestrePeriodo__c =1, V_ValorYTDSemestre__c - V_ValorYTDSemestreAnterior__c , V_ValorYTDSemestrePeriodoAnterior__c + V_Valor__c ))))</formula>
+        <name>VN_SUMValor YTD Semestre Período</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAM1Semestre</fullName>
+        <field>V_PercentualAM1Semestre__c</field>
+        <formula>V_PercentualAMYTDSemestre__c</formula>
+        <name>Atualiza % AM - 1º Semestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAM1Trimestre</fullName>
+        <field>V_PercentualAM1Trimestre__c</field>
+        <formula>V_PercentualAMYTDTrimestre__c</formula>
+        <name>Atualiza % AM - 1º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAM2Semestre</fullName>
+        <field>V_PercentualAM2Semestre__c</field>
+        <formula>V_PercentualAMYTDSemestre__c</formula>
+        <name>Atualiza % AM - 2º Semestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAM2Trimestre</fullName>
+        <field>V_PercentualAM2Trimestre__c</field>
+        <formula>V_PercentualAMYTDTrimestre__c</formula>
+        <name>Atualiza % AM - 2º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAM3Trimestre</fullName>
+        <field>V_PercentualAM3Trimestre__c</field>
+        <formula>V_PercentualAMYTDTrimestre__c</formula>
+        <name>Atualiza % AM - 3º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAM4Trimestre</fullName>
+        <field>V_PercentualAM4Trimestre__c</field>
+        <formula>V_PercentualAMYTDTrimestre__c</formula>
+        <name>Atualiza % AM - 4º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaMesMetaParticipante</fullName>
+        <field>V_UltimoMesAtualizado__c</field>
+        <formula>CASE( MCEILING(V_Mes__c) , 
+10, &quot;Janeiro&quot;, 
+11, &quot;Fevereiro&quot;,
+12, &quot;Março&quot;,
+1, &quot;Abril&quot;,
+2, &quot;Maio&quot;,
+3, &quot;Junho&quot;,
+4, &quot;Julho&quot;,
+5, &quot;Agosto&quot;,
+6, &quot;Setembro&quot;,
+7, &quot;Outubro&quot;,
+8, &quot;Novembro&quot;,
+9, &quot;Dezembro&quot;,
+&quot;Error&quot;)</formula>
+        <name>Atualiza Mes no Meta do Participante</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaMetaMetaParticipante</fullName>
+        <field>V_Meta__c</field>
+        <formula>V_Meta__c</formula>
+        <name>Atualiza Meta no Meta do Participante</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaMetaParticipante</fullName>
+        <field>V_Valor__c</field>
+        <formula>V_Valor__c</formula>
+        <name>Atualiza Valor no Meta do Participante</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaPercentuaMetaParticipante</fullName>
+        <field>V_PercentualAMMes__c</field>
+        <formula>V_PercentualAMMes__c</formula>
+        <name>Atualiza Percentual Meta do Participante</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaPersonaMeta</fullName>
+        <field>V_Persona__c</field>
+        <formula>V_Persona__c</formula>
+        <name>Atualiza Persona na Meta</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaSEMetaParticipante</fullName>
+        <field>V_PercentualSEMes__c</field>
+        <formula>V_PercentualSEMes__c</formula>
+        <name>Atualiza %SE no Meta do Participante</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaScoreAMEliteAF</fullName>
+        <description>Atingimento FY: Calcula score de atingimento de meta Elite do participante no ano fiscal.</description>
+        <field>V_ScoreAMYTD__c</field>
+        <formula>IF(
+V_PercentualAMYTD__c &lt; 0.8, 1,
+
+IF(
+AND(V_PercentualAMYTD__c &gt;= 0.8, V_PercentualAMYTD__c &lt; 0.9), 2,
+
+IF(
+AND(V_PercentualAMYTD__c &gt;= 0.9, V_PercentualAMYTD__c &lt; 0.95), 3,
+
+IF(
+AND(V_PercentualAMYTD__c &gt;= 0.95, V_PercentualAMYTD__c &lt; 1), 4,
+
+IF(
+V_PercentualAMYTD__c &gt;= 1, 5,0)))))</formula>
+        <name>Atualiza Score de AM Elite AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaScoreAtingFY</fullName>
+        <description>Atualiza o campo &quot;Score de Atingimento FY&quot; no registro relacionado Meta do Participante.</description>
+        <field>V_ScoreAtingimentoFY__c</field>
+        <formula>V_ScoreAMYTD__c</formula>
+        <name>Atualiza | Score de Ating. FY</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaScoreSupQ1</fullName>
+        <description>Atualiza o campo &quot;Score de Superação Q1&quot; no registro relacionado Meta do Participante.</description>
+        <field>V_ScoreSuperacaoQ1__c</field>
+        <formula>V_ScoreSMQ1__c</formula>
+        <name>Atualiza | Score de Sup. Q1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaScoreSuperFY</fullName>
+        <description>Atualiza o campo &quot;Score de Superação FY&quot; no registro relacionado Meta do Participante.</description>
+        <field>V_ScoreSuperacaoFY__c</field>
+        <formula>V_ScoreSMYTD__c</formula>
+        <name>Atualiza | Score de Super. FY</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotalMetas1Semestre</fullName>
+        <field>V_TotalMetas1Semestre__c</field>
+        <formula>V_MetaYTDSemestre__c</formula>
+        <name>Atualiza Total Metas - 1º Semestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotalMetas1Trimestre</fullName>
+        <field>V_TotalMetas1Trimestre__c</field>
+        <formula>V_MetaYTDTrimestre__c</formula>
+        <name>Atualiza Total Metas - 1º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotalMetas2Semestre</fullName>
+        <field>V_TotalMetas2Semestre__c</field>
+        <formula>V_MetaYTDSemestre__c</formula>
+        <name>Atualiza Total Metas - 2º Semestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotalMetas2Trimestre</fullName>
+        <field>V_TotalMetas2Trimestre__c</field>
+        <formula>V_MetaYTDTrimestre__c</formula>
+        <name>Atualiza Total Metas - 2º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotalMetas3Trimestre</fullName>
+        <field>V_TotalMetas3Trimestre__c</field>
+        <formula>V_MetaYTDTrimestre__c</formula>
+        <name>Atualiza Total Metas - 3º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotalMetas4Trimestre</fullName>
+        <field>V_TotalMetas4Trimestre__c</field>
+        <formula>V_MetaYTDTrimestre__c</formula>
+        <name>Atualiza Total Metas - 4º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotaldeVendas1Semestre</fullName>
+        <field>V_TotaldeVendas1Semestre__c</field>
+        <formula>V_ValorYTDSemestre__c</formula>
+        <name>Atualiza Total de Vendas - 1º Semestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotaldeVendas1Trimestre</fullName>
+        <field>V_TotaldeVendas1Trimestre__c</field>
+        <formula>V_ValorYTDTrimestre__c</formula>
+        <name>Atualiza Total de Vendas - 1º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotaldeVendas2Semestre</fullName>
+        <field>V_TotaldeVendas2Semestre__c</field>
+        <formula>V_ValorYTDSemestre__c</formula>
+        <name>Atualiza Total de Vendas - 2º Semestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotaldeVendas2Trimestre</fullName>
+        <field>V_TotaldeVendas2Trimestre__c</field>
+        <formula>V_ValorYTDTrimestre__c</formula>
+        <name>Atualiza Total de Vendas - 2º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotaldeVendas3Trimestre</fullName>
+        <field>V_TotaldeVendas3Trimestre__c</field>
+        <formula>V_ValorYTDTrimestre__c</formula>
+        <name>Atualiza Total de Vendas - 3º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaTotaldeVendas4Trimestre</fullName>
+        <field>V_TotaldeVendas4Trimestre__c</field>
+        <formula>V_ValorYTDTrimestre__c</formula>
+        <name>Atualiza Total de Vendas - 4º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizarTotalMetas2Trimestre</fullName>
+        <field>V_TotalMetas2Trimestre__c</field>
+        <formula>V_MetaYTDTrimestre__c</formula>
+        <name>Atualiza Total Metas - 2º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizarTotaldeVendas2Trimestre</fullName>
+        <field>V_TotaldeVendas2Trimestre__c</field>
+        <formula>V_ValorYTDTrimestre__c</formula>
+        <name>Atualiza Total de Vendas - 2º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizarTotaldeVendas3Trimestre</fullName>
+        <field>V_TotalMetas3Trimestre__c</field>
+        <formula>V_ValorYTDTrimestre__c</formula>
+        <name>Atualiza Total de Vendas - 3º Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteAF</fullName>
+        <description>Superação FY: Calcula score de superação de meta Elite do participante no ano fiscal.</description>
+        <field>V_ScoreSMYTD__c</field>
+        <formula>IF(
+AND(V_PercentualAMYTD__c &gt; 1, V_PercentualAMYTD__c &lt; 1.05), 1,
+
+IF(
+AND(V_PercentualAMYTD__c &gt;= 1.05, V_PercentualAMYTD__c &lt; 1.1),  2,
+
+IF(
+AND(V_PercentualAMYTD__c &gt;= 1.1, V_PercentualAMYTD__c &lt; 1.15),   3,
+
+IF(
+AND(V_PercentualAMYTD__c &gt;= 1.15, V_PercentualAMYTD__c &lt; 1.2), 4,
+
+IF(
+V_PercentualAMYTD__c &gt;= 1.2, 5,0)))))</formula>
+        <name>Calcula Score de SM Elite AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteQ1</fullName>
+        <description>Superação Quarter 1: Calcula score de superação de meta Q1 Elite do participante no ano fiscal.</description>
+        <field>V_ScoreSMQ1__c</field>
+        <formula>IF( V_PercentualAMYTDTrimestre__c &gt;= 1.05, 1,0 )</formula>
+        <name>Calcula Score SM Elite Q1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_PreencheAMYTDMeta</fullName>
+        <description>Preenche % AM YTD na Meta com base no campo de mesmo rótulo no último sumarizador processado as mecânicas.</description>
+        <field>V_AMYTD__c</field>
+        <formula>V_PercentualAMYTD__c</formula>
+        <name>Preenche % AM YTD na Meta</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_MetaDoParticipante__c</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>1 - VN_SUMIDX Ano Fiscal</fullName>
+        <actions>
+            <name>VN_SUMIDXAnoFiscal</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>OR( ISCHANGED(V_Meta__c ),     ISCHANGED(V_MesFYAnterior__c ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>10 - Calcula Score - Quarter 1 AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMEliteQ1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Superação Quarter 1: Calcula score de superação de meta Q1 Elite do participante no ano fiscal.  Superação Quarter 1</description>
+        <formula>AND(  OR(V_Mes__c =1, V_Mes__c=2, V_Mes__c=3), V_ProcessarCalculos__c = TRUE )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>11 - Calcula Score de SM Elite AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMEliteAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Superação FY: Calcula score de superação de meta Elite do participante no ano fiscal.</description>
+        <formula>V_ProcessarCalculos__c = TRUE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>2 - VN_SUMMeta YTD Período</fullName>
+        <actions>
+            <name>VN_SUMMetaYTDPeriodo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR( ISCHANGED(V_MetaYTD__c),     ISCHANGED(V_MetaYTDPeriodoAnterior__c),     ISCHANGED(V_IDXAnoFiscalPeriodo__c),     ISCHANGED(V_MetaYTDAnterior__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>3 - VN_SUM%25 AM YTD Fatorado</fullName>
+        <actions>
+            <name>VN_SUMAMYTDFatorado</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR ( ISCHANGED(V_IDXAnoFiscalPeriodo__c),      ISCHANGED(V_IDXAnoFiscalPeriodoAnterior__c),      ISCHANGED(V_PercentualAMYTDFatoradoAnterior__c),      ISCHANGED(V_PercentualAMYTDPeriodoAnterior__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>4 - VN_SUMIDX Semestre</fullName>
+        <actions>
+            <name>VN_SUMIDXSemestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>OR ( ISCHANGED(V_Meta__c), ISCHANGED(V_IDXSemestreAnterior__c)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>5 - VN_SUMValor YTD Semestre Período</fullName>
+        <actions>
+            <name>VN_SUMValorYTDSemestrePeriodo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR (  ISCHANGED(V_ValorYTDSemestre__c),       ISCHANGED(V_IDXSemestrePeriodo__c),       ISCHANGED(V_IDXSemestrePeriodoAnterior__c),       ISCHANGED(V_ValorYTDSemestrePeriodoAnterior__c),       ISCHANGED(V_ValorYTDSemestreAnterior__c),       ISCHANGED(V_Valor__c),
+V_ProcessarCalculos__c = true
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>6 - VN_SUM%25 AM YTD Semestre Fatorado</fullName>
+        <actions>
+            <name>VN_SUMPercentualAMYTDSemestreFatorado</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR (  ISCHANGED(V_IDXSemestrePeriodo__c),       ISCHANGED(V_IDXSemestrePeriodoAnterior__c),       ISCHANGED(V_PercentuaAMYTDSemestreFatoradoAnterior__c),       ISCHANGED(V_PercentualAMYTDSemestrePeriodoAnterior__c)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>7 - VN_SUMIDX Trimestre</fullName>
+        <actions>
+            <name>VN_SUMIDXTrimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>OR(  ISCHANGED(V_Meta__c), ISCHANGED(V_IDXTrimestreAnterior__c)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>8 - VN_SUM%25 AM YTD Trimestre Período</fullName>
+        <actions>
+            <name>VN_SUMPercentualAMYTDTrimestrePeriodo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR (  ISCHANGED(V_MetaYTDTrimestrePeriodo__c),       ISCHANGED(V_ValorYTDTrimestrePeriodo__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>9 - Calcula Score de AM Elite AF</fullName>
+        <actions>
+            <name>V_AtualizaScoreAMEliteAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atingimento FY: Calcula score de atingimento de meta Elite do participante no ano fiscal.</description>
+        <formula>V_ProcessarCalculos__c = TRUE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza %25 AM YTD na Meta</fullName>
+        <actions>
+            <name>V_PreencheAMYTDMeta</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>VN_Sumarizador__c.V_ProcessarMecanicas__c</field>
+            <operation>equals</operation>
+            <value>Verdadeiro</value>
+        </criteriaItems>
+        <description>Atualiza % AM YTD na Meta com base no valor do sumarizador</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza %7C Score de Superação Q1</fullName>
+        <actions>
+            <name>V_AtualizaScoreSupQ1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger
+Atualiza o campo Score de Superação Q1 na meta do participante, pegando o valor do campo &quot;Score SM Elite Q1&quot; do sumarizador</description>
+        <formula>AND( OR(V_Mes__c =1, V_Mes__c=2, V_Mes__c=3),  V_ProcessarMecanicas__c  = TRUE )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza 1º Semestre Meta Participante</fullName>
+        <actions>
+            <name>V_AtualizaAM1Semestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotalMetas1Semestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotaldeVendas1Semestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>V_Mes__c = 6</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza 1º Trimestre Meta Participante</fullName>
+        <actions>
+            <name>V_AtualizaAM1Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotalMetas1Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotaldeVendas1Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>V_Mes__c = 3</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza 2º Semestre Meta Participante</fullName>
+        <actions>
+            <name>V_AtualizaAM2Semestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotalMetas2Semestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotaldeVendas2Semestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>V_Mes__c = 12</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza 2º Trimestre Meta Participante</fullName>
+        <actions>
+            <name>V_AtualizaAM2Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizarTotalMetas2Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizarTotaldeVendas2Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>V_Mes__c = 6</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza 3º Trimestre Meta Participante</fullName>
+        <actions>
+            <name>V_AtualizaAM3Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotalMetas3Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotaldeVendas3Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>V_Mes__c = 9</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza 4º Trimestre Meta Participante</fullName>
+        <actions>
+            <name>V_AtualizaAM4Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotalMetas4Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaTotaldeVendas4Trimestre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>V_Mes__c = 12</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza informações meta do Participante</fullName>
+        <actions>
+            <name>AtualizaResultadoSEMetaParticipante</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Atualiza_AM_YTD_Ant_no_Meta_do_Partici</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaMesMetaParticipante</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaMetaMetaParticipante</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaMetaParticipante</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaPercentuaMetaParticipante</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaPersonaMeta</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaSEMetaParticipante</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>07/11/19 - Alterado para trigger</description>
+        <formula>V_ProcessarMecanicas__c</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Novo - Atribui Score %28Ating%2E e Sup%29</fullName>
+        <actions>
+            <name>V_AtualizaScoreAtingFY</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaScoreSuperFY</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>VN_Sumarizador__c.V_ProcessarMecanicas__c</field>
+            <operation>equals</operation>
+            <value>Verdadeiro</value>
+        </criteriaItems>
+        <description>07/11/19 - Alterado para trigger
+Atribui os scores de atingimento e superação na Meta do Participante ao &quot;Processar Mecânicas&quot; do Sumarizador.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

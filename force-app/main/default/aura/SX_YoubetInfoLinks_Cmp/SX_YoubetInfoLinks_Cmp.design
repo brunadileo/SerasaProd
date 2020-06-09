@@ -1,0 +1,3 @@
+<design:component label="CT - Youbet | Informational Links">
+	<design:attribute name="youbetType" label="Tipo de Youbet" datasource="Selecione, youbet, youbet-extra"/>
+</design:component>

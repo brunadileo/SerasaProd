@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Redemption__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The Redemption order that the Member has made.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Redemption order that the Member has made.</inlineHelpText>
+    <label>Redemption</label>
+    <referenceTo>FieloPLT__Redemption__c</referenceTo>
+    <relationshipLabel>Redemption Items</relationshipLabel>
+    <relationshipName>RedemptionItems</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

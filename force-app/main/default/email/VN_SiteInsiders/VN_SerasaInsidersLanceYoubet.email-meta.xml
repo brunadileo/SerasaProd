@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Modelo de email a ser enviado aos participantes que derem os lances</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa Insiders: lance youbet</name>
+    <style>none</style>
+    <subject>Youbet: fique de olho no lance!</subject>
+    <textOnly>{!FieloPLT__RedemptionItem__c.V_NomeTratamentoParticipante__c},
+
+fique de olho!
+
+Seu lance no último prêmio foi feito com sucesso!
+
+Seu saldo atual é de V_BetcoinsComp__c
+
+Acompanhe no site a apuração dos resultados e o encerramento deste Youbet. Estamos torcendo por você!
+
+Acesse o site: 
+
+https://sandbox-serasa-community.cs11.force.com/comunidade</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

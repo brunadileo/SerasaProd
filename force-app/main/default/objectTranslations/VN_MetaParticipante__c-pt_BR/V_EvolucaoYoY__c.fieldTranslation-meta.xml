@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentual que será alimentado através de carga no último mês do ano fiscal. --></help>
+    <label><!-- % Evolução YoY --></label>
+    <name>V_EvolucaoYoY__c</name>
+</CustomFieldTranslation>

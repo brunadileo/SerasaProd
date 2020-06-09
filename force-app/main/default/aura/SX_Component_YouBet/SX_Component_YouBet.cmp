@@ -1,0 +1,49 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="background" type="String" default="74388E" access="global" />
+	<aura:attribute name="bgBtn" type="String" default="F7CC32" access="global" />
+    <aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" />
+    <aura:attribute name="circleOne" type="String" default="Lances Realizados" access="global" />
+    <aura:attribute name="circleTwo" type="String" default="Extrato" access="global" />
+    <aura:attribute name="circleThree" type="String" default="Regulamento" access="global" />
+    <aura:attribute name="product" type="String" default="https://www.pngarts.com/files/1/IPhone-PNG-Image-Background.png" access="global" />
+
+	<div class="row h-auto h-lg-100 m-0" style="{!'background: #' + v.background}">
+		<div class="col-xl-6 d-flex flex-column justify-content-between align-items-center h-auto h-xl-100 p-3">
+			<div class="d-flex justify-content-center align-items-center w-80 w-sm-40 w-xl-80">
+				<img src="{!v.logo}" class="img-fluid"/>
+			</div>
+			<div class="d-flex justify-content-center align-items-center d-xl-none">
+				<img src="{!v.product}" class="w-80 w-sm-30"/>
+			</div>
+			<div class="row p-3">
+				<a href="./youbet-bets" class="col-4 d-flex flex-column justify-content-start align-items-center text-center">
+					<div class="circle-container d-flex align-items-center justify-content-center rounded-circle mb-2 text-white font-size-5 font-size-hg-7" style="{!'background: #' + v.bgBtn}">
+						<span class="d-flex justify-content-center align-items-center fa fa-check"></span>
+					</div>
+					<span class="text-white">{!v.circleOne}</span>
+				</a>
+				<a href="./youbet-extrato" class="col-4 d-flex flex-column justify-content-start align-items-center text-center">
+					<div class="circle-container d-flex align-items-center justify-content-center rounded-circle mb-2 text-white font-size-5 font-size-hg-7" style="{!'background: #' + v.bgBtn}">
+						<span class="d-flex justify-content-center align-items-center fa fa-plus"></span>
+					</div>
+					<span class="text-white">{!v.circleTwo}</span>
+				</a>
+				<a href="./youbet-regulamento" class="col-4 d-flex flex-column justify-content-start align-items-center text-center">
+					<div class="circle-container d-flex align-items-center justify-content-center rounded-circle mb-2 text-white font-size-5 font-size-hg-7" style="{!'background: #' + v.bgBtn}">
+						<span class="d-flex justify-content-center align-items-center fa fa-gavel"></span>
+					</div>
+					<span class="text-white">{!v.circleThree}</span>
+				</a>
+			</div>
+		</div>
+		<div class="d-none d-xl-block col-sm-6 h-auto h-xl-100 p-0">
+			<div class="d-flex justify-content-center align-items-center h-auto h-xl-100">
+				<img src="{!v.product}" class="h-auto h-xl-100"/>
+			</div>
+		</div>
+	</div>
+
+	
+
+</aura:component>

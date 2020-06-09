@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_BetcoinsComp__c</fullName>
+    <description>Saldo de pontos gerado pela iniciativa Youbet Extra. Quando a iniciativa for criada, necessário renomear o rótulo do campo para &quot;Betcoins - Nome do Leilão&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Saldo de pontos gerado pela iniciativa Youbet Extra. Quando a iniciativa for criada, necessário renomear o rótulo do campo para &quot;Betcoins - Nome do Leilão&quot;.</inlineHelpText>
+    <label>Betcoins - Extra</label>
+    <summarizedField>FieloPLT__RedemptionItem__c.V_BetcoinsComp__c</summarizedField>
+    <summaryFilterItems>
+        <field>FieloPLT__RedemptionItem__c.FieloPLT__Status__c</field>
+        <operation>notEqual</operation>
+        <value>Reverted</value>
+    </summaryFilterItems>
+    <summaryForeignKey>FieloPLT__RedemptionItem__c.FieloPLT__Redemption__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

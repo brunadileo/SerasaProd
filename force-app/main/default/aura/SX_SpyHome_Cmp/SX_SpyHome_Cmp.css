@@ -1,0 +1,117 @@
+.THIS .component-content {
+	min-height: 200px;
+	overflow-y: auto;
+}
+.THIS .component-header {
+	background: url(/insiders/resource/SX_Images/spy-header-background.jpg) no-repeat #385595;
+	background-size: auto 100%;
+}
+.THIS .component-header img {
+	width: 125px;
+}
+.THIS .component-header a:hover,
+.THIS .component-header a:active,
+.THIS .component-header a:focus {
+	color: #fff;
+}
+.THIS .component-title h1,
+.THIS .component-title h2,
+.THIS .component-title h3,
+.THIS .component-title h4,
+.THIS .component-title h5,
+.THIS .icon-angle {
+	color: #bf992e;
+}
+.THIS .slds-accordion__list-item {
+	margin-bottom: 1rem;
+	border-top: none;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+.THIS .slds-accordion__section {
+	padding: 0;
+}
+.THIS .slds-accordion__summary {
+	margin-bottom: 0 !important;
+}
+.THIS .slds-accordion__summary-heading {
+	margin: 0;
+}
+.THIS .component-accordion-content {
+	padding: 2rem 5rem;
+}
+.THIS .slds-button:focus {
+	text-decoration: none;
+}
+.THIS .slds-truncate {
+	width: 100%;
+}
+.THIS .component-accordion-header-info {
+	border: 1px solid #ccc;
+}
+.THIS .component-accordion-header-info img {
+	width: 90px;
+}
+.THIS .component-accordion-header-button {
+	min-height: 25px;
+	background: #eee;
+}
+.THIS .component-accordion-header-button {
+	cursor: pointer;
+}
+.THIS .component-accordion-header-button-icon {
+	position: absolute;
+	left: 50%;
+}
+.THIS .disabled-badge {
+	filter: grayscale(100%) opacity(30%) !important;
+}
+.THIS .btn-search {
+	background: #bf992e;
+}
+.THIS .slds-button > lightning-primitive-icon {
+	display: none;
+}
+.THIS lightning-primitive-icon {
+	padding-left: .5rem;
+}
+.THIS .slds-select {
+	height: 36px;
+}
+.THIS .uiInput--input.input:focus,
+.THIS .uiInput--input .input:focus,
+.THIS .uiInput--input.input:active,
+.THIS .uiInput--input .input:active,
+.THIS .slds-select {
+    border-color: rgb(212, 212, 212);
+    box-shadow: none;
+}
+.THIS .btn  {
+	text-shadow: none;
+}
+.THIS .component-content-no-results {
+	min-height: 200px;
+}
+.THIS .icon-angle:before {
+	content: "\f105";
+}
+.THIS a.btn-default:hover {
+	color:#fff;
+}
+@media (max-width: 991px) {
+	.THIS .component-accordion-header-button-icon {
+		left: 95%;
+	}
+}
+@media (max-width: 575px) {
+	.THIS .component-accordion-header-button-icon {
+		left: 90%;
+	}
+	.THIS .icon-angle:before {
+		content: "\f107";
+	}
+	.THIS .component-accordion-content {
+		padding: 2rem;
+	}
+}

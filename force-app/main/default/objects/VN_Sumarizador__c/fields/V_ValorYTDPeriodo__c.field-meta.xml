@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ValorYTDPeriodo__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( V_IDXAnoFiscal__c =0,0,
+   IF( V_IDXAnoFiscal__c =1, V_ValorYTD__c ,
+      IF(AND( V_IDXAnoFiscal__c = V_MesFYAnterior__c , V_IDXAnoFiscalPeriodo__c = V_IDXAnoFiscalPeriodoAnterior__c ), V_ValorYTDPeriodoAnterior__c ,
+        IF( V_IDXAnoFiscalPeriodo__c =1, V_ValorYTD__c - V_ValorYTDAnterior__c , V_ValorYTDPeriodoAnterior__c + V_Valor__c ))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Valor YTD Período</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

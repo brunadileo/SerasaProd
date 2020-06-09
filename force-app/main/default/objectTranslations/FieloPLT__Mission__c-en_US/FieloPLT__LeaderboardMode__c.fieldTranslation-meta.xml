@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose how Mission progress is displayed: &quot;Progress&quot; to show the progress percentage of Members participating in a Mission (Mission with Objective only) or &quot;Performance&quot; to show Members&apos; performance score. --></help>
+    <label><!-- Leaderboard Mode --></label>
+    <name>FieloPLT__LeaderboardMode__c</name>
+    <picklistValues>
+        <masterLabel>Performance</masterLabel>
+        <translation><!-- Performance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Time</masterLabel>
+        <translation><!-- Time --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

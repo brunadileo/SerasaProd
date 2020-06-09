@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score &quot;Dinheiro Novo&quot; do participante. Campo utilizado para o ranking do SPY. --></help>
+    <label><!-- Score Dinheiro Novo SPY - AF --></label>
+    <name>V_ScoreDinheiroNovoSPYAF__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o comportamento do Score Elite do mês atual com o do mês anterior. --></help>
+    <label><!-- Range Score Elite - Mês 8 x Mês 7 --></label>
+    <name>V_RangeScoreElite5oMesAFxRange4oMesAF__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Valor a ser utilizado para a carga de metas do AF, resultados e de notas fiscais em aberto. --></help>
+    <label><!-- Valor AF --></label>
+    <name>V_ValorAF__c</name>
+</CustomFieldTranslation>

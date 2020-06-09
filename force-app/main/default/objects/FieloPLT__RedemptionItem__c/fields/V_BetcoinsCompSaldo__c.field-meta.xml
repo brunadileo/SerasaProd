@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_BetcoinsCompSaldo__c</fullName>
+    <description>Saldo de betcoins extra do participante.</description>
+    <externalId>false</externalId>
+    <formula>FieloPLT__Redemption__r.FieloPLT__Member__r.V_BetcoinsComp__c</formula>
+    <inlineHelpText>Saldo de betcoins extra do participante.</inlineHelpText>
+    <label>Betcoins Extra - Saldo</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

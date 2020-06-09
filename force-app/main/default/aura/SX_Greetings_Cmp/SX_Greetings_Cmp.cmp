@@ -1,0 +1,10 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="lMember" type="FieloPLT__Member__c"/>
+    
+   	<div class="greetings font-size-5">
+   		<span>Olá,</span>
+   		<span>{!v.lMember.Name}</span>
+   	</div>    
+	
+</aura:component>

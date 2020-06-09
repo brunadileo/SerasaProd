@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Meta do primeiro mês do ano fiscal do participante. --></help>
+    <label><!-- Meta - Mês 4 --></label>
+    <name>V_MetaPrimeiroMesAF__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Set the criteria to link your report to the relevant Program, Challenge or Promotion. --></help>
+    <label><!-- Report Filter --></label>
+    <name>FieloPLT__ReportFilter__c</name>
+</CustomFieldTranslation>

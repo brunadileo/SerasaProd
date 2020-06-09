@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Area__c</fullName>
+    <description>Área do participante no momento de criação do Youbet.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Área do participante no momento de criação do Youbet.</inlineHelpText>
+    <label>Área</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

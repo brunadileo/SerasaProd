@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When ticked, Action (Rule) Engine is skipped and Members automatically obtain Points from Transactions. --></help>
+    <label><!-- Skip Engine --></label>
+    <name>FieloPLT__SkipEngine__c</name>
+</CustomFieldTranslation>

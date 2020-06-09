@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ao ser assinalado esse campo, os workflows de cálculo do registro serão acionados. --></help>
+    <label><!-- Processar Cálculos --></label>
+    <name>V_ProcessarCalculos__c</name>
+</CustomFieldTranslation>

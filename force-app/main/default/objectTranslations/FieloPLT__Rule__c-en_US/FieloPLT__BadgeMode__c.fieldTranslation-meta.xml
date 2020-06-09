@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a Badge type: &quot;Fixed Value&quot; (e.g. specific number of Instant Badges chosen from the available Badges) or &quot;Specified by Field&quot; (e.g. Dynamic field in which Badges are given according to the chosen field). --></help>
+    <label><!-- Badge mode --></label>
+    <name>FieloPLT__BadgeMode__c</name>
+    <picklistValues>
+        <masterLabel>Fixed Value</masterLabel>
+        <translation><!-- Fixed Value --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specified by Field</masterLabel>
+        <translation><!-- Specified by Field --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

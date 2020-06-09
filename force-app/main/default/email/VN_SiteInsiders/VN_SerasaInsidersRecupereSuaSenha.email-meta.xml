@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email de recuperação de senha do programa Serasa Insiders</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa Insiders: recupere sua senha</name>
+    <style>none</style>
+    <subject>Serasa Insiders: recupere sua senha!</subject>
+    <textOnly>Insiders
+
+Ver no navegador
+
+Oi {!Receiving_User.Name},
+parece que você esqueceu sua senha.
+
+Acesse o site e cadastre uma nova senha.
+
+Acesse o site</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

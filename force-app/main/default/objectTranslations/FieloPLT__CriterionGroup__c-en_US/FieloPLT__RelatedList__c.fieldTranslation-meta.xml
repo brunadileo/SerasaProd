@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the name of the Related list which analyzes the Criterion Group. --></help>
+    <label><!-- Related List --></label>
+    <name>FieloPLT__RelatedList__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It stores the progress percentage of a Member who participates in a Mission (Mission Member). Leaderboard Value depends on Mission Type, Objective Type and Objective Value/Field (if applicable). --></help>
+    <label><!-- Leaderboard Value --></label>
+    <name>FieloPLT__LeaderboardValue__c</name>
+</CustomFieldTranslation>

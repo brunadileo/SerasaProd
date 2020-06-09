@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tudo</fullName>
+    <columns>NAME</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>V_AnoFiscal__c</columns>
+    <columns>V_DataInicio__c</columns>
+    <columns>V_DataFim__c</columns>
+    <columns>V_PeriodoAF__c</columns>
+    <columns>V_Vigente__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tudo</label>
+    <language>pt_BR</language>
+</ListView>

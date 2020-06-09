@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select how you&apos;ll prioritize your Challenge Rewards. See Fielo documentation for details on each Table Type. --></help>
+    <label><!-- Table Type --></label>
+    <name>FieloPLT__TableType__c</name>
+    <picklistValues>
+        <masterLabel>Level Table</masterLabel>
+        <translation><!-- Level Table --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mission Table</masterLabel>
+        <translation><!-- Mission Table --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Position Range</masterLabel>
+        <translation><!-- Position Range --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Singular</masterLabel>
+        <translation><!-- Singular --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Time Table</masterLabel>
+        <translation><!-- Time Table --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Value Range</masterLabel>
+        <translation><!-- Value Range --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

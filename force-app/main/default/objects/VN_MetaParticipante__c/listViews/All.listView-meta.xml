@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>V_Participante__c</columns>
+    <columns>V_ScoreElite__c</columns>
+    <columns>V_Meta__c</columns>
+    <columns>V_PapelElite__c</columns>
+    <columns>V_ParticRankingElite__c</columns>
+    <columns>V_ElegivelAoElite__c</columns>
+    <columns>V_Valor__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tudo</label>
+    <language>pt_BR</language>
+</ListView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Informação será enviada pela Serasa em função da mudança de ÁREA, LIDERANÇA OU SETOR do participante no ano fiscal. Se houver ponderação, haverá cálculo ponderado para percentual de atingimento e superação de meta. --></help>
+    <label><!-- Ponderação? --></label>
+    <name>V_Ponderacao__c</name>
+</CustomFieldTranslation>

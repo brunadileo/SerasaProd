@@ -1,0 +1,11 @@
+.THIS .circle-container{
+	width: 5vw;
+    height: 5vw;
+}
+.THIS .circle-container > span{
+	min-width: 35px;
+	min-height: 35px;
+}
+.THIS .btn {
+	white-space: normal;
+}

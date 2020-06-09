@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__All</fullName>
+    <columns>NAME</columns>
+    <columns>FieloPLT__Member__c</columns>
+    <columns>V_BetcoinsInvestidos__c</columns>
+    <columns>V_QtdeLancesRealizados__c</columns>
+    <columns>FieloPLT__Status__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FieloPLT__Origin__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Todos os Lances</label>
+    <language>en_US</language>
+</ListView>

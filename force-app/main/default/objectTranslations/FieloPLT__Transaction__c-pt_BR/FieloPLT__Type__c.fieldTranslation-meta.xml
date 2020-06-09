@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Transaction type (Adjustment, Challenge Reward, Expiration and Reversion). --></help>
+    <label>Tipo</label>
+    <name>FieloPLT__Type__c</name>
+    <picklistValues>
+        <masterLabel>Adjustment</masterLabel>
+        <translation><!-- Adjustment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Betcoins Extra - Cortesia</masterLabel>
+        <translation><!-- Betcoins Extra - Cortesia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Challenge Reward</masterLabel>
+        <translation><!-- Challenge Reward --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elegibilidade - % AM YTD - AGO 18 &gt;= 100% - DISTR</masterLabel>
+        <translation><!-- Elegibilidade - % AM YTD - AGO 18 &gt;= 100% - DISTR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elegibilidade - % AM YTD - SET 18 &gt;= 100% - DISTR</masterLabel>
+        <translation><!-- Elegibilidade - % AM YTD - SET 18 &gt;= 100% - DISTR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expiration</masterLabel>
+        <translation><!-- Expiration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reversion</masterLabel>
+        <translation><!-- Reversion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Youbet Extra - Fornecedor - Elegível H1 &gt;= 80%</masterLabel>
+        <translation><!-- Youbet Extra - Fornecedor - Elegível H1 &gt;= 80% --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

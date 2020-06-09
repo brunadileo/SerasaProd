@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__PositivePointsQuantity</fullName>
+    <active>true</active>
+    <description>The number of Points must be positive.</description>
+    <errorConditionFormula>FieloPLT__Points__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>FieloPLT__Points__c</errorDisplayField>
+    <errorMessage>The number of Points must be positive.</errorMessage>
+</ValidationRule>

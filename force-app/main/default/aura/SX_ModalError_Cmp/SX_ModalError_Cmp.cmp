@@ -1,0 +1,32 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+  <aura:attribute name="headerTitle" type="Aura.Component[]">
+    <div class="d-flex justify-content-end">
+      <lightning:button class="fa fa-times btn p-0 border-0 bg-transparent text-secondary font-size-7" onclick="{!c.closeModalError}"/>
+    </div>
+  </aura:attribute>
+
+  <aura:handler event="c:SX_Alert_Evt" action="{!c.errorModal}"/>  
+  <aura:attribute name="msg" type="String"/>
+
+  <!-- VALORES: error e success -->
+  <aura:attribute name="tipo" type="String"/>
+
+  <div id="modalError" class="position-fixed modal-overlay" style="display: none" onclick="{!c.closeModalError}">
+    <div class="modal-container">
+      <div class="modal-helper">
+        <lightning:card title="{!v.headerTitle}" class="modal-card pb-4">
+          <div class="w-70 d-flex flex-column align-items-center justify-content-center mx-auto my-0">
+            <aura:if isTrue="{! v.tipo == 'error' }">
+              <span class="fas fa-times-circle font-size-24 text-danger"></span>
+            </aura:if>
+            <aura:if isTrue="{! v.tipo == 'success' }">
+              <span class="fas fa-check-circle font-size-24 text-success"></span>
+            </aura:if>
+            <span class="mt-3 text-grey-6 text-center font-weight-bold font-size-5">{!v.msg}</span>
+          </div>
+        </lightning:card>      
+      </div>
+    </div>
+  </div>
+  <ltng:require scripts="{!$Resource.SX_script}" />
+</aura:component>

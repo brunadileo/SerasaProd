@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__StandardActions__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Buttons, Tools or Actions which can be added to Page Settings.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the Standard Actions to include in the Page Setting.</inlineHelpText>
+    <label>Standard Actions</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Edit</fullName>
+                <default>false</default>
+                <label>Edit</label>
+            </value>
+            <value>
+                <fullName>Delete</fullName>
+                <default>false</default>
+                <label>Delete</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Clone</fullName>
+                <default>false</default>
+                <label>Clone</label>
+            </value>
+            <value>
+                <fullName>View</fullName>
+                <default>false</default>
+                <label>View</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Page Settings Management</label>
+            </value>
+            <value>
+                <fullName>Sharing</fullName>
+                <default>false</default>
+                <label>Sharing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

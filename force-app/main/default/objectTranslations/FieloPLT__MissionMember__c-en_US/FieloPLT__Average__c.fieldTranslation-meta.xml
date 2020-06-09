@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Average number of the Target Object established in a Mission. --></help>
+    <label><!-- Average --></label>
+    <name>FieloPLT__Average__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__DataFilters__c</fullName>
+    <deprecated>false</deprecated>
+    <description>JSON string which lets you customly filter a &quot;Related List&quot; Page Setting.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter a JSON string to filter this Related Page Setting to a particular data class.</inlineHelpText>
+    <label>Data Filters</label>
+    <length>3000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

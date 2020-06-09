@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the date you want your Email Campaign to be sent out. If blank, your campaign will start immediately. --></help>
+    <label><!-- Date --></label>
+    <name>FieloPLT__Date__c</name>
+</CustomFieldTranslation>

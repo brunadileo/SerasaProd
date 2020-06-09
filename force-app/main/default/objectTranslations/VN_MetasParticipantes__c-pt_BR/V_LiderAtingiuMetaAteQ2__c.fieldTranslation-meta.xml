@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Se o valor for 2, será atribuída a badge &quot;TEAM 2x&quot; para o participante no processamento do 6o. mês do ano fiscal. --></help>
+    <label><!-- Líder Atingiu Meta Até 2o. Quarter --></label>
+    <name>V_LiderAtingiuMetaAteQ2__c</name>
+</CustomFieldTranslation>

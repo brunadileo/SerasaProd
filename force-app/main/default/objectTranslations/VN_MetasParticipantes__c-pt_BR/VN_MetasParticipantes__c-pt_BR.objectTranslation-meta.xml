@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Meta do Participante - OLD</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Metas dos Participantes - OLD</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Layout de Meta do Participante</layout>
+        <sections>
+            <label><!-- 1o. Semestre - Ano Fiscal --></label>
+            <section>1o. Semestre - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- 1o. Trimestre - Ano Fiscal --></label>
+            <section>1o. Trimestre - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- 2o. Semestre - Ano Fiscal --></label>
+            <section>2o. Semestre - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- 2o. Trimestre - Ano Fiscal --></label>
+            <section>2o. Trimestre - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- 3o. Trimestre - Ano Fiscal --></label>
+            <section>3o. Trimestre - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- 4o. Trimestre - Ano Fiscal --></label>
+            <section>4o. Trimestre - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Décimo Mês - Ano Fiscal --></label>
+            <section>Décimo Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Décimo Primeiro Mês - Ano Fiscal --></label>
+            <section>Décimo Primeiro Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Décimo Segundo Mês - Ano Fiscal --></label>
+            <section>Décimo Segundo Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Links personalizados --></label>
+            <section>Links personalizados</section>
+        </sections>
+        <sections>
+            <label><!-- Nono Mês - Ano Fiscal --></label>
+            <section>Nono Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Oitavo Mês - Ano Fiscal --></label>
+            <section>Oitavo Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Primeiro Mês - Ano Fiscal --></label>
+            <section>Primeiro Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Quarto Mês - Ano Fiscal --></label>
+            <section>Quarto Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Quinto Mês - Ano Fiscal --></label>
+            <section>Quinto Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Resultado Consolidado - Ano Fiscal --></label>
+            <section>Resultado Consolidado - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Resultados - Betcoins Ganhos (Perenes e Extras) --></label>
+            <section>Resultados - Betcoins Ganhos (Perenes e Extras)</section>
+        </sections>
+        <sections>
+            <label><!-- Resultados - Lances Realizados --></label>
+            <section>Resultados - Lances Realizados</section>
+        </sections>
+        <sections>
+            <label><!-- Resultados - Leilões Ganhos --></label>
+            <section>Resultados - Leilões Ganhos</section>
+        </sections>
+        <sections>
+            <label><!-- Segundo Mês - Ano Fiscal --></label>
+            <section>Segundo Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Sexto Mês - Ano Fiscal --></label>
+            <section>Sexto Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Sétimo Mês - Ano Fiscal --></label>
+            <section>Sétimo Mês - Ano Fiscal</section>
+        </sections>
+        <sections>
+            <label><!-- Terceiro Mês - Ano Fiscal --></label>
+            <section>Terceiro Mês - Ano Fiscal</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Formato inválido do &quot;Ano Fiscal&quot;. Exemplo correto: FY19 --></errorMessage>
+        <name>Valida_Formato_do_Ano_Fiscal</name>
+    </validationRules>
+</CustomObjectTranslation>

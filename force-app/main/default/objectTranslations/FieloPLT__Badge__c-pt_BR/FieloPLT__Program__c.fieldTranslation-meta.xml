@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a Program where the Member who obtains the Badge belongs to. --></help>
+    <label>Programa</label>
+    <name>FieloPLT__Program__c</name>
+    <relationshipLabel><!-- Badges --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ValidateDates</fullName>
+    <active>true</active>
+    <description>The End Date must be on or after the Start Date.</description>
+    <errorConditionFormula>NOT(ISNULL(FieloPLT__StartDate__c)) &amp;&amp;
+NOT(ISNULL(FieloPLT__EndDate__c)) &amp;&amp;
+FieloPLT__EndDate__c &lt; FieloPLT__StartDate__c</errorConditionFormula>
+    <errorDisplayField>FieloPLT__EndDate__c</errorDisplayField>
+    <errorMessage>The End Date must be on or after the Start Date.</errorMessage>
+</ValidationRule>

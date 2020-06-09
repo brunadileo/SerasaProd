@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Liderança do participante responsável pelo resultado do período. Para efeito de histórico. --></help>
+    <label><!-- Cod Dir Liderança --></label>
+    <name>V_CodigoLideranca__c</name>
+</CustomFieldTranslation>

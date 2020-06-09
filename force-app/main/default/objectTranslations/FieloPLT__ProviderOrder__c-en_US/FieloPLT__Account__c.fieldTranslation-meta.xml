@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Provider related to the Provider Order. Provider must be a SFDC Account, either a Person or Business Account. --></help>
+    <label><!-- Provider --></label>
+    <name>FieloPLT__Account__c</name>
+    <relationshipLabel><!-- Provider Orders --></relationshipLabel>
+</CustomFieldTranslation>

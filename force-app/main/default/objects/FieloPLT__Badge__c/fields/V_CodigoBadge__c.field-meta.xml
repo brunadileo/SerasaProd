@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_CodigoBadge__c</fullName>
+    <description>Campo criado para vínculo de imagens</description>
+    <displayFormat>B-{0000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Código Badge</label>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

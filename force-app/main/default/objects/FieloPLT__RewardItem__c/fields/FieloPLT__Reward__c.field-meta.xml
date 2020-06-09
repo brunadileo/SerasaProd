@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Reward__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Reward from a Reward item.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Reward from a Reward item.</inlineHelpText>
+    <label>Reward</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>FieloPLT__Reward__c.FieloPLT__StockManagement__c</field>
+            <operation>notEqual</operation>
+            <value>Unlimited</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>FieloPLT__Reward__c</referenceTo>
+    <relationshipLabel>Reward Items</relationshipLabel>
+    <relationshipName>RewardItems</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

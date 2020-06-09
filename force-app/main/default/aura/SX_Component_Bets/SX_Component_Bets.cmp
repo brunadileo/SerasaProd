@@ -1,0 +1,47 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="labelOne" type="String" default="Lance Atual" access="global" />
+    <aura:attribute name="labelTwo" type="String" default="Maior Aposta" access="global" />
+    <aura:attribute name="labelThree" type="String" default="Tempo Até Concluir" access="global" />
+    <aura:attribute name="labelBtn" type="String" default="DAR LANCE" access="global" />
+    <aura:attribute name="labelFour" type="String" default="Próximo YOUbet" access="global" />
+    <aura:attribute name="bgField" type="String" default="343a40" access="global" />
+    <aura:attribute name="bgBtn" type="String" default="f1c40f" access="global" />
+	
+	<div class="row h-auto h-xl-100 m-0 p-md-5">
+		<div class="d-flex align-items-center justify-content-center col-md-6 col-xl-7 h-auto h-xl-100 p-3 img-wrapper bg-white">
+			<img src="https://cdn.shopify.com/s/files/1/0892/6470/products/iphone-x-gray-select-2017_AV111_f6750768-3220-4d79-b1c2-96c4b84e7f7e.png?v=1527193465" alt="" class="max-height img-fluid"/>
+		</div>
+		<div class="d-flex flex-column justify-content-xl-around col-md-6 col-xl-5 h-auto h-xl-100 info-wrapper p-3 bg-white">
+			<h3 class="font-size-6 text-dark">
+				<span class="fa fa-angle-double-right"></span> iPhone X
+			</h3>
+			<div class="d-flex flex-md-column justify-content-around justify-content-md-start">
+				<div class="d-flex flex-column my-2">
+					<span class="font-italic">{!v.labelOne}</span>
+					<span class="font-size-6 font-weight-bold text-dark">999 betcoins</span>
+				</div>
+				<div class="d-flex flex-column my-2">
+					<span class="font-italic">{!v.labelTwo}</span>
+					<span class="font-size-6 font-weight-bold text-dark">John Doe</span>
+				</div>
+			</div>
+			<div class="d-flex flex-column my-3 my-xl-0">
+				<span class="font-italic">{!v.labelThree}</span>
+				<div class="w-100 p-1 text-white font-size-6 text-center" style="{!'background: #' + v.bgField}">05:32:17</div>
+			</div>
+			<div class="d-flex flex-column justify-content-center align-items-center my-3 my-xl-0">
+				<div class="input-group mb-1">
+				  <input type="number" class="form-control border-0 rounded-0 font-weight-bold font-size-5 text-center" aria-label="Lance" placeholder="Seu Lance..."/>
+				</div>
+				<div class="w-100 btn btn-default p-3 font-weight-bold my-3 my-md-0" style="{!'background: #' + v.bgBtn}">{!v.labelBtn}</div>
+			</div>
+			<div>
+				<span class="font-italic">{!v.labelFour}</span>
+				<div class="w-100 p-1 text-white font-size-6 text-center" style="{!'background: #' + v.bgField}">01/01/01</div>
+			</div>
+		</div>
+	</div>
+	
+
+</aura:component>

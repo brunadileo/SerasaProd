@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo indica o lance do leilão ganhador (maior quantidade de pontos). Será atualizado por batch após o término da vigência do leilão. --></help>
+    <label><!-- Lance Ganhador --></label>
+    <name>V_LanceGanhador__c</name>
+</CustomFieldTranslation>

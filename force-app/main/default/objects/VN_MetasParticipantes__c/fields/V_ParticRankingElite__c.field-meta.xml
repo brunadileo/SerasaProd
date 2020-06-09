@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ParticRankingElite__c</fullName>
+    <description>Utilizado para indicar se é participante do Ranking do Elite ou não. Não participa se o participante estiver &quot;Inativo&quot; OU tiver &quot;Teste&quot; em seu nome.</description>
+    <externalId>false</externalId>
+    <formula>AND(
+
+TEXT( V_Participante__r.FieloPLT__Status__c ) = &apos;Active&apos;,
+NOT(CONTAINS( UPPER( V_Participante__r.Name), &apos;TESTE&apos;))
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Utilizado para indicar se é participante do Ranking do Elite ou não. Não participa se o participante estiver &quot;Inativo&quot; OU tiver &quot;Teste&quot; em seu nome.</inlineHelpText>
+    <label>Participante - Ranking Elite</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

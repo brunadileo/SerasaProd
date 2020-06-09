@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Valor atingido pelo líder no quarter. --></help>
+    <label><!-- % AM do Líder Imediato Quarter --></label>
+    <name>V_PercAMLiderImediatoQuarter__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ChallengeReward__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Challenge Reward that has the Instant Badge set to be granted to Member.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Challenge Reward that has the Instant Badge set to be granted to Member.</inlineHelpText>
+    <label>Challenge Reward</label>
+    <referenceTo>FieloPLT__ChallengeReward__c</referenceTo>
+    <relationshipLabel>Badge Members</relationshipLabel>
+    <relationshipName>BadgesMembers</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

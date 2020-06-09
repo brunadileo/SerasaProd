@@ -1,0 +1,7 @@
+<design:component label="CC - General | Area Header">
+	<design:attribute name="logo" label="Logo da Área"/>
+	<design:attribute name="title" label="Título da Área"/>
+	<design:attribute name="bgBtn" label="Cor de Fundo do Botão" description="Cores no formato HEX (#??????)"/>
+	<design:attribute name="cta" label="Call To Action"/>
+	<design:attribute name="linkBtn" label="Link Botão"/>
+</design:component>

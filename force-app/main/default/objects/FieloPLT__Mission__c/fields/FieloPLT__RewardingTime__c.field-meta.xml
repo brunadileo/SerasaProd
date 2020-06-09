@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RewardingTime__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Rewarding Time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>FieloPLT__TableType__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accomplished</fullName>
+                <default>false</default>
+                <label>Accomplished</label>
+            </value>
+            <value>
+                <fullName>Challenge Finished</fullName>
+                <default>false</default>
+                <label>Challenge Finished</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Singular</controllingFieldValue>
+            <controllingFieldValue>Time Position</controllingFieldValue>
+            <valueName>Accomplished</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Singular</controllingFieldValue>
+            <controllingFieldValue>Time Position</controllingFieldValue>
+            <controllingFieldValue>Performance Value</controllingFieldValue>
+            <controllingFieldValue>Performance Position</controllingFieldValue>
+            <valueName>Challenge Finished</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

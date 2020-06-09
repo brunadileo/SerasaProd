@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Participante relacionado à venda ou NF aberta. --></help>
+    <label><!-- Participante --></label>
+    <name>V_Participante__c</name>
+    <relationshipLabel><!-- Resultados (Participante) --></relationshipLabel>
+</CustomFieldTranslation>

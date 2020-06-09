@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When the order fulfilled externally, this record contains data from the provider. --></help>
+    <label><!-- Provider Order --></label>
+    <name>FieloPLT__ProviderOrder__c</name>
+    <relationshipLabel><!-- Redemption Items --></relationshipLabel>
+</CustomFieldTranslation>

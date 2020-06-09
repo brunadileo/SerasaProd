@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the API name for the field that will store your Point Type&apos;s Months Until Expiration value (e.g. MileMonthsuntilexpiration__c). --></help>
+    <label><!-- Months Until Expiration Field --></label>
+    <name>FieloPLT__MonthsUntilExpirationField__c</name>
+</CustomFieldTranslation>

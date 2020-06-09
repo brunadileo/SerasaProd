@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It evaluates the Initial and Final Date from the Challenge. --></help>
+    <label><!-- Date &amp; Time --></label>
+    <name>FieloPLT__Date__c</name>
+</CustomFieldTranslation>

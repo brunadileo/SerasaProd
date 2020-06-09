@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Participante</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Participantes</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Member Query --></label>
+        <name>FieloPLT__MemberQuery</name>
+    </fieldSets>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome Completo</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Email is required to avoid Contact duplication. --></errorMessage>
+        <name>FieloPLT__ContactMatchingField</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The related Program cannot be modified. --></errorMessage>
+        <name>FieloPLT__ModifyProgram</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Members cannot have negative Points. --></errorMessage>
+        <name>FieloPLT__NegativePoints</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Organization Member cannot be a Manager. --></errorMessage>
+        <name>FieloPLT__OrganizationAccountCanNotBeManager</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Organization Member cannot be related to another Organization Member. --></errorMessage>
+        <name>FieloPLT__OrganizationAccountRelation</name>
+    </validationRules>
+</CustomObjectTranslation>

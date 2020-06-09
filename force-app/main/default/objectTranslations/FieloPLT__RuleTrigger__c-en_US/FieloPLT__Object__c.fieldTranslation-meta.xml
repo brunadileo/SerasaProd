@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the Object of the Action. By default, all Fielo objects related to Members are included. --></help>
+    <label><!-- Object --></label>
+    <name>FieloPLT__Object__c</name>
+    <picklistValues>
+        <masterLabel>FieloPLT__Event__c</masterLabel>
+        <translation><!-- FieloPLT__Event__c --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

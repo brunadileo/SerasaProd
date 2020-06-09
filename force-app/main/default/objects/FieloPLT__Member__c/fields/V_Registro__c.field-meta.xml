@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Registro__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Registro do participante. Campo utilizado pelo Planejamento para apuração de dados.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Registro do participante. Campo utilizado pelo Planejamento para apuração de dados.</inlineHelpText>
+    <label>Registro</label>
+    <length>10</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

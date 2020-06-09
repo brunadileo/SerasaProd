@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PapelSalesPersonYear__c</fullName>
+    <externalId>false</externalId>
+    <label>Papel Sales Person Year</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GERENTES DE CONTAS</fullName>
+                <default>false</default>
+                <label>GERENTES DE CONTAS</label>
+            </value>
+            <value>
+                <fullName>LÍDERES (COORDENADORES) E GERENTE REGIONAIS</fullName>
+                <default>false</default>
+                <label>LÍDERES (COORDENADORES) E GERENTE REGIONAIS</label>
+            </value>
+            <value>
+                <fullName>DIRETORES</fullName>
+                <default>false</default>
+                <label>DIRETORES</label>
+            </value>
+            <value>
+                <fullName>NÃO ELEGÍVEL</fullName>
+                <default>false</default>
+                <label>NÃO ELEGÍVEL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

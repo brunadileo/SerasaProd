@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_NomeTramento__c</fullName>
+    <description>Nome de tratamento do participante</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Nome de tratamento do participante</inlineHelpText>
+    <label>Nome de tratamento</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

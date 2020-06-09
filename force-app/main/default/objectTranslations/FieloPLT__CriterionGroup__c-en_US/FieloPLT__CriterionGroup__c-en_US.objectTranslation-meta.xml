@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- If a Challenge Mission is &quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot;, a Criterion Group cannot be created or edited. --></errorMessage>
+        <name>FieloPLT__ValidatesCreationAndEdition</name>
+    </validationRules>
+</CustomObjectTranslation>

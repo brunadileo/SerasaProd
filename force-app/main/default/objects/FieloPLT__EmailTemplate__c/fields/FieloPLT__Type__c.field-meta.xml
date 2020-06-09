@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Defines whether the template will be used for an Email Campaign or Transactional Emails.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose whether you&apos;ll use this template for Email Campaigns (&quot;Campaign&quot;) or Transactional Emails (&quot;Transaction&quot;).</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+                <label>Campaign</label>
+            </value>
+            <value>
+                <fullName>Transaction</fullName>
+                <default>false</default>
+                <label>Transaction</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

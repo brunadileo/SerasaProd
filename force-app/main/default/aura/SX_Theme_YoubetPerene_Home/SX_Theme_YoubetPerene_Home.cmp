@@ -1,0 +1,31 @@
+<aura:component implements="forceCommunity:themeLayout" description="Custom Content Layout" access="global">
+	<aura:attribute name="header" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="area1" type="Aura.Component[]" required="false"/>
+     <aura:attribute name="title2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="area2" type="Aura.Component[]" required="false"/>
+     <aura:attribute name="title3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="area3" type="Aura.Component[]" required="false"/>
+
+    <ltng:require styles="{!join(',', 
+    				$Resource.SX_style, 
+    				$Resource.SX_FontAwesomeIcons + '/css/all.min.css')}"/>
+    <ltng:require scripts="{!$Resource.SX_script}"/>
+
+	<div id="wrapper" class="bg-light">
+		<div class="w-100 columns">{!v.header}</div>
+		<div class="h-auto h-custom row m-0">
+			<div class="col-xl-3 columns">{!v.area1}</div>
+			<div class="col-xl-4">
+				<div class="h-auto h-xl-10 columns p-3">{!v.title2}</div>
+				<div class="h-auto h-xl-90 columns p-3">{!v.area2}</div>
+			</div>
+			<div class="d-none d-xl-block col-xl-5 p-3">
+				<div class="h-auto h-xl-10 columns p-3">{!v.title3}</div>
+				<div class="h-auto h-xl-90 columns p-3">{!v.area3}</div>
+			</div>
+		</div>
+	</div>
+
+	<c:SX_SubComponent_MenuButton/>
+
+</aura:component>

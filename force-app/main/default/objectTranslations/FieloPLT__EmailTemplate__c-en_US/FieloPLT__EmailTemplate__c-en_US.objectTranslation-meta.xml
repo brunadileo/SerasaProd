@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- The program is mandatory. --></errorMessage>
+        <name>FieloPLT__ProgramValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Template Unique Name is mandatory. --></errorMessage>
+        <name>FieloPLT__TemplateUniqueNameMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The type is mandatory. --></errorMessage>
+        <name>FieloPLT__TypeValidation</name>
+    </validationRules>
+</CustomObjectTranslation>

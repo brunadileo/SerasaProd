@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__SkipEngine__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>When ticked, Action (Rule) Engine is skipped and Members obtain Points from Transactions. This field is automatically completed when a Reverted Transaction is chosen.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When ticked, Action (Rule) Engine is skipped and Members automatically obtain Points from Transactions.</inlineHelpText>
+    <label>Skip Engine</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

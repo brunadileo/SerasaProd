@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ChangeStockMode</fullName>
+    <active>true</active>
+    <description>Only allowed when stock equals zero.</description>
+    <errorConditionFormula>((ISPICKVAL(PRIORVALUE(FieloPLT__StockManagement__c), &apos;Controlled By Quantity&apos;) &amp;&amp; (ISPICKVAL(FieloPLT__StockManagement__c, &apos;Unlimited&apos;) || ISPICKVAL(FieloPLT__StockManagement__c, &apos;Controlled By Item&apos;))) ||
+(ISPICKVAL(PRIORVALUE(FieloPLT__StockManagement__c), &apos;Controlled By Item&apos;) &amp;&amp; (ISPICKVAL(FieloPLT__StockManagement__c, &apos;Unlimited&apos;) ||
+ISPICKVAL(FieloPLT__StockManagement__c, &apos;Controlled By Quantity&apos;)))) &amp;&amp;
+FieloPLT__Stock__c &gt; 0</errorConditionFormula>
+    <errorDisplayField>FieloPLT__StockManagement__c</errorDisplayField>
+    <errorMessage>Only allowed when stock equals zero.</errorMessage>
+</ValidationRule>

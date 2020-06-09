@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_MinimoBetcoinsYoubetPerene__c</fullName>
+    <description>Indica se o participante recebeu acima de 1.000 betcoins em função da iniciativa Youbet Perene.</description>
+    <externalId>false</externalId>
+    <formula>V_TotalBetcoinsPerenesAF__c &gt; 1000</formula>
+    <inlineHelpText>Indica se o participante recebeu acima de 1.000 betcoins em função da iniciativa Youbet Perene.</inlineHelpText>
+    <label>Mínimo Betcoins em Youbet Perene?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ScoreUnicoPotencialCarteira__c</fullName>
+    <description>Utilizado no campo &quot;Score Elite Anual&quot; para ajuste de cálculo desse score.</description>
+    <externalId>false</externalId>
+    <formula>V_ScorePotencialCarteira__c - (12 * V_ScorePotencialCarteira__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Utilizado no campo &quot;Score Elite Anual&quot; para ajuste de cálculo desse score.</inlineHelpText>
+    <label>Score Único Potencial da Carteira</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

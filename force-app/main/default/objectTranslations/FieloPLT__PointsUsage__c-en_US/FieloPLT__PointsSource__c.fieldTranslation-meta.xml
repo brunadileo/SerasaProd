@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It refers to the Point origin (e.g. Transaction, Challenge). --></help>
+    <label><!-- Point Source --></label>
+    <name>FieloPLT__PointsSource__c</name>
+    <relationshipLabel><!-- Points Usage (Points Source) --></relationshipLabel>
+</CustomFieldTranslation>

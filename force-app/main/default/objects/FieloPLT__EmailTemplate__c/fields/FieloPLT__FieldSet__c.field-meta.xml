@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__FieldSet__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Holds a list of all of the merge fields used in the Salesforce E-mail Template used by an Email Template.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ths is a list of all of the merge fields used in the Salesforce E-mail Template used by this Fielo Email Template.</inlineHelpText>
+    <label>Field Set</label>
+    <length>1000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

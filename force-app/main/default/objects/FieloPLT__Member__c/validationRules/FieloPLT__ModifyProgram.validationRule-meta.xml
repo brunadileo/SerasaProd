@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ModifyProgram</fullName>
+    <active>true</active>
+    <description>The related Program cannot be modified.</description>
+    <errorConditionFormula>ISCHANGED(FieloPLT__Program__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(FieloPLT__Program__c)))</errorConditionFormula>
+    <errorDisplayField>FieloPLT__Program__c</errorDisplayField>
+    <errorMessage>The related Program cannot be modified.</errorMessage>
+</ValidationRule>

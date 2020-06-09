@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter Icon JSON code for &quot;Related List&quot; &quot;View&quot; and &quot;Landing&quot; Page Setting types (Category + Name). --></help>
+    <label><!-- Icon --></label>
+    <name>FieloPLT__Icon__c</name>
+</CustomFieldTranslation>

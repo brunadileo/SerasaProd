@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ValorLanceGanhador__c</fullName>
+    <description>Indica o valor do lance ganhador do Youbet.</description>
+    <externalId>false</externalId>
+    <formula>V_Reward__r.V_ValorLanceGanhador__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indica o valor do lance ganhador do Youbet.</inlineHelpText>
+    <label>Valor do Lance Ganhador</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

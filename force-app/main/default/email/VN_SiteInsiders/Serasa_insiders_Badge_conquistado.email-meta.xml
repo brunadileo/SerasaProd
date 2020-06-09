@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa insiders - Badge conquistado</name>
+    <style>none</style>
+    <subject>Serasa Insiders: Badge conquistado!</subject>
+    <textOnly>Sales Person of the Year
+
+Parabéns {!Receiving_User.FirstName} {!Receiving_User.LastName},
+Você conquistou uma nova badge!
+
+Para conferir é só acessar o site
+
+Acesse o site
+https://serasainsiders.force.com/insiders</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

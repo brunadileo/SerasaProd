@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_QtdMesesComMetaRes2Trimestre__c</fullName>
+    <externalId>false</externalId>
+    <label>Qtd Meses com Meta/Res. -  2º Trimestre</label>
+    <summaryFilterItems>
+        <field>VN_Sumarizador__c.V_Mes__c</field>
+        <operation>equals</operation>
+        <value>3, 4, 5</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>VN_Sumarizador__c.V_Meta__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>VN_Sumarizador__c.V_Valor__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </summaryFilterItems>
+    <summaryForeignKey>VN_Sumarizador__c.V_MetaDoParticipante__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Valor__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Valor de vendas ou NF em aberto do participante realizada no mês e ano definidos.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Valor de vendas ou NF em aberto do participante realizada no mês e ano definidos.</inlineHelpText>
+    <label>Valor</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>8</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

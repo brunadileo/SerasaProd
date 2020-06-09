@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Reward Item to be delivered to the Member. Used only for Rewards whose stock is &quot;Controlled by item&quot;. --></help>
+    <label><!-- Reward Item --></label>
+    <name>FieloPLT__RewardItem__c</name>
+    <relationshipLabel>Itens de Resgate/Lances</relationshipLabel>
+</CustomFieldTranslation>

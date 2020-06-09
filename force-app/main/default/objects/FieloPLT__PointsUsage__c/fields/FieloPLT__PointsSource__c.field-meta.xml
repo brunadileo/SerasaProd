@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__PointsSource__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>It refers to the Point origin (e.g. Transaction, Challenge).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>It refers to the Point origin (e.g. Transaction, Challenge).</inlineHelpText>
+    <label>Point Source</label>
+    <referenceTo>FieloPLT__Point__c</referenceTo>
+    <relationshipLabel>Points Usage (Points Source)</relationshipLabel>
+    <relationshipName>PointsSource</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

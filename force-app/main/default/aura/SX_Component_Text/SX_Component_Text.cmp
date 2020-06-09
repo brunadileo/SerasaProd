@@ -1,0 +1,24 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<div class="text-box text-base">
+		<p>
+			Para mudar é preciso
+			<br />
+			<span class="text-base-secondary">fazer diferente.</span>
+			<br />
+			Olhe para dentro e descubra:
+			<br />
+			<span class="text-base-secondary">O que te faria orgulhoso de si hoje?</span>
+		</p>
+		<p>
+			O sucesso da Serasa Experian
+			<br />
+			é reflexo do <span class="text-base-secondary">seu crescimento.</span>
+			<br />
+			Escolha <span class="text-base-secondary">o seu melhor</span> caminho,
+			<br />
+			nós vamos junto com você.
+		</p>
+	</div>
+
+</aura:component>

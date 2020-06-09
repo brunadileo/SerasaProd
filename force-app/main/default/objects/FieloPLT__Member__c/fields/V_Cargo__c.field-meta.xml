@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Cargo__c</fullName>
+    <description>Cargo atual do participante.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cargo atual do participante.</inlineHelpText>
+    <label>Categoria</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>V_Area__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>COORDENADOR | GERENTE REGIONAL VIP</fullName>
+                <default>false</default>
+                <label>COORDENADOR | GERENTE REGIONAL VIP</label>
+            </value>
+            <value>
+                <fullName>DIRETOR</fullName>
+                <default>false</default>
+                <label>DIRETOR</label>
+            </value>
+            <value>
+                <fullName>GERENTE DE CONTAS</fullName>
+                <default>false</default>
+                <label>GERENTE DE CONTAS</label>
+            </value>
+            <value>
+                <fullName>LÍDER</fullName>
+                <default>false</default>
+                <label>LÍDER</label>
+            </value>
+            <value>
+                <fullName>COORDENADOR II</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>COORDENADOR II</label>
+            </value>
+            <value>
+                <fullName>GERENTE DE VENDAS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>GERENTE DE VENDAS</label>
+            </value>
+            <value>
+                <fullName>VICE-PRESIDENTE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>VICE-PRESIDENTE</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>VERTICAIS</controllingFieldValue>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <valueName>COORDENADOR | GERENTE REGIONAL VIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VERTICAIS</controllingFieldValue>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <valueName>DIRETOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VERTICAIS</controllingFieldValue>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <valueName>GERENTE DE CONTAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VERTICAIS</controllingFieldValue>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <valueName>LÍDER</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

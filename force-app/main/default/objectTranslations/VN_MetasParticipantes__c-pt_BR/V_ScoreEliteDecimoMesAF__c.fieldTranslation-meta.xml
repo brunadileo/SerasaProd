@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o Score Elite do 10o. mês do ano fiscal. --></help>
+    <label><!-- Score Elite - Mês 1 --></label>
+    <name>V_ScoreEliteDecimoMesAF__c</name>
+</CustomFieldTranslation>

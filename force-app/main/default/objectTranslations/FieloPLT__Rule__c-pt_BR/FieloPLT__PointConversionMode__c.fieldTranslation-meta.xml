@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose how Points are calculated for this Rule: Fixed Value for a fixed number of Points, Factor for a numerical field that is divided by a specified value and Multiplier for a numerical field that is multiplied by a specified value --></help>
+    <label><!-- Point Conversion Mode --></label>
+    <name>FieloPLT__PointConversionMode__c</name>
+    <picklistValues>
+        <masterLabel>Factor</masterLabel>
+        <translation><!-- Factor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed Value</masterLabel>
+        <translation><!-- Fixed Value --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiplier</masterLabel>
+        <translation><!-- Multiplier --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

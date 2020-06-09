@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ContactMatchingField</fullName>
+    <active>true</active>
+    <description>This validation rule is useful when the non duplication contact process is triggered, to avoid duplicate contact due to an empty common unique field (email).</description>
+    <errorConditionFormula>ISBLANK(FieloPLT__Email__c) &amp;&amp; (ISPICKVAL(FieloPLT__Type__c, &apos;Organization Contributor&apos;) || ISPICKVAL(FieloPLT__Type__c, &apos;Individual Account&apos;))</errorConditionFormula>
+    <errorDisplayField>FieloPLT__Email__c</errorDisplayField>
+    <errorMessage>Email is required to avoid Contact duplication.</errorMessage>
+</ValidationRule>

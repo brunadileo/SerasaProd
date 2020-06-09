@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_RegistroParticipante__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Registro exclusivo do participante na Serasa Experian. Não aceita duplicidade de registros.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Registro exclusivo do participante na Serasa Experian. Não aceita duplicidade de registros.</inlineHelpText>
+    <label>Login</label>
+    <length>10</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

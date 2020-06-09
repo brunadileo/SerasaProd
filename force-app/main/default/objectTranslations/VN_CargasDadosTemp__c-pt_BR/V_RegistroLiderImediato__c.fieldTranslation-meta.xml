@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Registro do líder imediato do participante. --></help>
+    <label><!-- Registro do Líder Imediato --></label>
+    <name>V_RegistroLiderImediato__c</name>
+</CustomFieldTranslation>

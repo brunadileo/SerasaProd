@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__IsProcessed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>If ticked, Tracker is processed. Depending on all Challenge settings and status, several related processes may be triggered.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If ticked, Tracker is processed. Depending on all Challenge settings and status, several related processes may be triggered.</inlineHelpText>
+    <label>Processed</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

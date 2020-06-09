@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__EndDate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Challenge final date. If no Final date is established, Challenge lasts indefinetely as long as it remains &quot;Active&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a date for the Challenge to end. If blank, the Challenge will last as long as it remains Active.</inlineHelpText>
+    <label>End Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

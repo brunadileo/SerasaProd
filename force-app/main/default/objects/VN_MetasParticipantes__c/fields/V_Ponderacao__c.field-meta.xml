@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Ponderacao__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Informação será enviada pela Serasa em função da mudança de ÁREA, LIDERANÇA OU SETOR do participante no ano fiscal. Se houver ponderação, haverá cálculo ponderado para percentual de atingimento e superação de meta.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Informação será enviada pela Serasa em função da mudança de ÁREA, LIDERANÇA OU SETOR do participante no ano fiscal. Se houver ponderação, haverá cálculo ponderado para percentual de atingimento e superação de meta.</inlineHelpText>
+    <label>Ponderação?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

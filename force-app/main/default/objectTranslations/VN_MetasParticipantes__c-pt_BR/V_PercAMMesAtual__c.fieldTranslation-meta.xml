@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o percentual de atingimento de meta do último mês atualizado. Campo utilizado para a comunicação com o participante. --></help>
+    <label><!-- % AM - Último Mês Processado --></label>
+    <name>V_PercAMMesAtual__c</name>
+</CustomFieldTranslation>

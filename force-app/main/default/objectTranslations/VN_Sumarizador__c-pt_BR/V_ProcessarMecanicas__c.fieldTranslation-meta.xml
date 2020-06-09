@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ao ser assinalado esse campo, as mecânicas de pontos do registro serão acionadas. Esse campo só pode ser assinalado se o campo &quot;Processar Cálculos&quot; já estiver assinalado. --></help>
+    <label><!-- Processar Mecânicas --></label>
+    <name>V_ProcessarMecanicas__c</name>
+</CustomFieldTranslation>

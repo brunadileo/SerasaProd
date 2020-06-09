@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ScoreEliteSextoMesAF__c</fullName>
+    <description>Indica o Score Elite do participante até o 6o. mês do ano fiscal (1o. Semestre).</description>
+    <externalId>false</externalId>
+    <formula>V_ScorePotencialCarteira__c + 
+V_ScoreAMEliteSextoMesAF__c + 
+V_ScoreSMEliteSextoMesAF__c + 
+V_ScoreAMH1EliteSemestre1AF__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indica o Score Elite do participante até o 6o. mês do ano fiscal (1o. Semestre).</inlineHelpText>
+    <label>Score Elite - Mês 9</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

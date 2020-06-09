@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_RegulamentoYoubet__c</fullName>
+    <description>Utilizado para a inclusão do texto de regulamento do Youbet Perene ou Complementar.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Utilizado para a inclusão do texto de regulamento do Youbet Perene ou Complementar.</inlineHelpText>
+    <label>Regulamento Youbet</label>
+    <length>100768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

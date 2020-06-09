@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number made up of Code and Code Range which identifies the Redemption Item. --></help>
+    <label>Código Único</label>
+    <name>FieloPLT__UniqueCode__c</name>
+</CustomFieldTranslation>

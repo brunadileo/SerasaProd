@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__MaxValue__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It stores the maximum value of Missions whose Objective Type is &quot;Max. Value&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>It stores the maximum value of Missions whose Objective Type is &quot;Max. Value&quot;.</inlineHelpText>
+    <label>Max.Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

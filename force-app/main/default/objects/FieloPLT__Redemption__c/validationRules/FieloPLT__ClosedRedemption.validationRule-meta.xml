@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ClosedRedemption</fullName>
+    <active>false</active>
+    <description>The Redemption order is closed.</description>
+    <errorConditionFormula>AND(   ISPICKVAL(FieloPLT__Status__c, &apos;Closed&apos;) ,ISCHANGED(FieloPLT__Points__c) )</errorConditionFormula>
+    <errorMessage>The Redemption order is closed.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It shows the kind of Mission. Missions with Objective meet a particular goal; Mission without Objective do not include a established aim. This field is automatically completed after creating a Mission whether its &quot;Objective&quot; section is completed or not. --></help>
+    <label><!-- Type --></label>
+    <name>FieloPLT__Type__c</name>
+</CustomFieldTranslation>

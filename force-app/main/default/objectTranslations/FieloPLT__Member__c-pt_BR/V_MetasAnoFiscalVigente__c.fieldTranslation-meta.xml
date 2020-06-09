@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Exibe a identificação do ano fiscal vigente do participante. --></help>
+    <label><!-- Zz_Metas do Ano Fiscal Vigente --></label>
+    <name>V_MetasAnoFiscalVigente__c</name>
+    <relationshipLabel>Participantes</relationshipLabel>
+</CustomFieldTranslation>

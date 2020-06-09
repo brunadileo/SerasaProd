@@ -1,0 +1,38 @@
+.THIS .w-100 {
+	width: 100% !important;
+}
+.THIS td:nth-child(2) {
+	background: #ccc;
+	color: #343a40;
+}
+.THIS td:nth-child(4) {
+	background: #ccc;
+	color: #343a40;
+}
+.THIS th, .THIS td {
+	text-align: center;
+}
+.THIS .table-default td:last-child {
+	justify-content: space-between;
+}
+.THIS .table-default td:last-child:before {
+	display: flex;
+}
+/*Media Queries*/
+@media (max-width: 767px) {
+	.THIS td:nth-child(2) {
+		background: transparent;
+	}
+	.THIS td:nth-child(4) {
+		background: transparent;
+	}
+	.THIS tr {
+		border: 1rem solid #f8f9fa;
+		background: #fff;
+	}
+}
+@media (min-width: 576px) {
+	.THIS .w-sm-auto {
+		width: auto !important;
+	}
+}

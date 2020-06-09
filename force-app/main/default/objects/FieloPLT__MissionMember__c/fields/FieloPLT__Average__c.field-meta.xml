@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Average__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It stores the average number of the Target Object established in a Mission.</description>
+    <externalId>false</externalId>
+    <formula>IF( !ISNULL(FieloPLT__Summary__c) &amp;&amp; !ISNULL(FieloPLT__Counter__c) &amp;&amp; FieloPLT__Counter__c != 0 , FieloPLT__Summary__c / FieloPLT__Counter__c, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Average number of the Target Object established in a Mission.</inlineHelpText>
+    <label>Average</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

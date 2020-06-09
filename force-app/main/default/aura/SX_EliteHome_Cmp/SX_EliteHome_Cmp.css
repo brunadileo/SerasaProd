@@ -1,0 +1,204 @@
+.THIS .component-header a:hover,
+.THIS .component-header a:active,
+.THIS .component-header a:focus {
+	color: #fff;
+}
+
+/* CHECK PERFORMANCE */
+.THIS .check-performance {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: max-content repeat(2, 1fr) repeat(3, max-content);
+	grid-row-gap: 2.5rem;
+	grid-column-gap: 1.5rem;
+}
+.THIS .check-performance__title {
+	grid-column: 1 / -1;
+	color: #0667cd;
+	font-size: 1.25rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.THIS .spots,
+.THIS .ranking-position,
+.THIS .current-score,
+.THIS .score-composition {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 34%;
+	border: 1px solid #cccccc;
+}
+.THIS .spots__label,
+.THIS .ranking-position__label,
+.THIS .current-score__label,
+.THIS .score-composition__label {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+	color: #666666;
+	text-transform: uppercase;
+	line-height: 1;
+}
+.THIS .ranking-position__label,
+.THIS .current-score__label,
+.THIS .score-composition__label {
+	font-weight: bold;
+}
+.THIS .spots__value,
+.THIS .ranking-position__value,
+.THIS .current-score__value,
+.THIS .score-composition__value {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: .5rem;
+	background-color: #0667cd;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.THIS .check-performance__score-composition {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+
+.THIS .check-performance__score-composition:before {
+	content: "composição do seu score";
+	position: absolute;
+	top: -1.3rem;;
+	left: 0;
+	color: #0667cd;
+	font-size: .75rem;
+	text-transform: uppercase;
+}
+
+.THIS .check-performance__last-update {
+	margin-top: -2rem;
+	color: #666666;
+	font-size: .75rem;
+}
+
+.THIS .score-composition__label {
+	padding: .5rem;
+}
+
+.THIS .check-performance__mini-banner {
+	grid-column: 1 / -1;
+}
+
+.THIS .check-performance__mini-banner img {
+	width: 100%;
+}
+
+/* RANKING TABLE */
+.THIS .component-content-rankings {
+	background: #eeeeee;
+	border-top: 5px solid #0667cd;
+}
+.THIS .component-content-rankings-table {
+	table-layout: fixed;
+}
+.THIS .component-content-rankings-table th{
+	text-align: center;
+}
+.THIS .component-content-rankings-table tr {
+	position: relative;
+}
+.THIS .component-content-rankings-table td {
+	border-bottom: 1px solid #fff;
+	text-align: center;
+}
+.THIS .component-content-rankings-table th:first-child, 
+.THIS .component-content-rankings-table td:first-child {
+	padding: 5px 0 5px 2rem;
+}
+.THIS .component-content-rankings-table th:last-child, 
+.THIS .component-content-rankings-table td:last-child {
+	padding: 5px 0;
+}
+.THIS .component-content-rankings-table tr:last-child td {
+	border-bottom: none;
+}
+.THIS .component-content-rankings-table td div {
+	width: 35px;
+	height: 35px;
+	margin: 0 auto;
+}
+.THIS .component-content-rankings-table-position {
+	position: relative;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	padding-top: 3px;
+	background: #fff;
+	color: #0667cd;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+}
+.THIS .component-content-rankings-table-position:after {
+	content: "VOCÊ ESTÁ AQUI";
+	position: absolute;
+	right: -95px;
+	color: #666;
+	font-size: 12px;
+	font-weight: bold;
+}
+.THIS .component-content-rankings-table-elegible {
+	position: relative;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	padding-top: 3px;
+	border-radius: 50%;
+	background: #0667cd!important;
+	color: #fff;
+}
+.THIS .component-content-rankings-table-elegible:before {
+	content: "ELEGÍVEL";
+	position: absolute;
+	left: -60px;
+	color: #0667cd;
+	font-size: 12px;
+	font-weight: bold;
+}
+.THIS a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.THIS .component-icon-shield {
+	width: 20px
+}
+.THIS a.btn-default:hover {
+	color:#fff;
+}
+.THIS .line-height-custom {
+	line-height: 30px;
+}
+@media (max-width: 768px) {
+	.THIS .check-performance {
+		grid-template-columns: 1fr;
+	    grid-template-rows: max-content repeat(4, 1fr) repeat(5, max-content);
+	}
+}
+
+@media (max-width: 480px) {
+	.THIS .check-performance {
+		grid-template-columns: 1fr;
+	    grid-template-rows: max-content repeat(3, 1fr) repeat(6, max-content);
+	}
+	.THIS .spots__label,
+	.THIS .ranking-position__label,
+	.THIS .current-score__label,
+	.THIS .score-composition__label {
+		font-size: 1rem;
+	}
+	.THIS .check-performance__score-composition {
+		grid-template-columns: 1fr;
+	}
+}

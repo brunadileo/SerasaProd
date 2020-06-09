@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_AnoFiscalConcluido__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo atualizado por batch após a conclusão da carga de vendas do último mês do ano fiscal. Esse campo será utilizado para o cálculo da elegibilidade anual do Elite.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Campo atualizado por batch após a conclusão da carga de vendas do último mês do ano fiscal. Esse campo será utilizado para o cálculo da elegibilidade anual do Elite.</inlineHelpText>
+    <label>Ano Fiscal Concluído?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

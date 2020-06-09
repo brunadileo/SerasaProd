@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score de &quot;Títulos em Aberto&quot; do participante no ano fiscal. Campo utilizado para o ranking do SPY. --></help>
+    <label><!-- Score Títulos em Aberto SPY - AF --></label>
+    <name>V_ScoreTitulosAbertosSPYAF__c</name>
+</CustomFieldTranslation>

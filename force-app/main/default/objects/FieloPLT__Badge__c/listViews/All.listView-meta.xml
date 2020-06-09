@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>V_Classificacao__c</columns>
+    <columns>V_Ordem__c</columns>
+    <columns>V_Pontos__c</columns>
+    <columns>FieloPLT__Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>V_PapelSalesPersonYear__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tudo</label>
+    <language>pt_BR</language>
+</ListView>

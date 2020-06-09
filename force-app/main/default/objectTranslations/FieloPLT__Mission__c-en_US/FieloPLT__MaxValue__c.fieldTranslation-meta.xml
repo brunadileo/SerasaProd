@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It stores the maximum Leaderboard Value obtained when processing Tracker for all Members who are part of a Mission (Mission Members). --></help>
+    <label><!-- Max.Value --></label>
+    <name>FieloPLT__MaxValue__c</name>
+</CustomFieldTranslation>

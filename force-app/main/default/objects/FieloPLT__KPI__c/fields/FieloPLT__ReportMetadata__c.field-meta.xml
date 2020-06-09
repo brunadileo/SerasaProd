@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ReportMetadata__c</fullName>
+    <deprecated>false</deprecated>
+    <description>JSON string which contains formatting data for Custom Reports. Used internally.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a JSON string containing formatting data for Custom Reports.</inlineHelpText>
+    <label>Report Metadata</label>
+    <length>4000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

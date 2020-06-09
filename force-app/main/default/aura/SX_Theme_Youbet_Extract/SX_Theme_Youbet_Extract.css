@@ -1,0 +1,21 @@
+.THIS {
+    position: absolute;
+    min-width: 100%;
+}
+.THIS, .THIS .columns > div, .THIS .columns > div > div {
+    height: auto;
+}
+/*Media Query*/
+@media (min-width: 1200px) {
+    .THIS .h-custom {
+        height: calc(100% - 97px);
+    }
+    .THIS, .THIS .columns > div, .THIS .columns > div > div {
+        height: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .THIS .h-lg-auto {
+        height: auto !important;
+    }
+}

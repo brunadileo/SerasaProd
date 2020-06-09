@@ -1,0 +1,68 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_AgreementController">
+		
+	<aura:handler event="c:SX_YouBetModal_Evt" action="{!c.openAgreementModal}"/>
+	<aura:handler event="c:SX_SpyModal_Evt" action="{!c.openSpyAgreementModal}"/>  
+
+	<aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+	<aura:attribute name="member" type="FieloPLT__Member__c" /> 
+	<aura:attribute name="reward" type="FieloPLT__Reward__c" /> 
+	<aura:attribute name="agreement" type="FieloPLT__Agreement__c" /> 
+	<aura:attribute name="showAccept" type="Boolean" />
+
+	<aura:attribute name="youbetType" type="String"/>
+
+	<div id="agreementModal" class="position-fixed modal-overlay" style="display: none" onclick="{!c.closeModal}">
+	    <div class="position-relative d-flex h-100 align-items-center justify-content-center">
+		    <lightning:card title="{!v.headerTitle}" class="modal-card">
+				<!-- YOUBET EXTRA -->
+				<aura:renderIf isTrue="{! or(v.youbetType == 'youbet', v.youbetType == 'youbet-extra')}"> 
+					<!-- TITLE -->
+					<h2 class="{!'mb-4 py-3 px-4 font-size-8 bg-' + v.youbetType + ' text-center'}">Regulamento</h2>
+					<div class="w-70 h-100 d-flex flex-column mx-auto my-0 ">
+						<!-- BODY -->
+						<div class="agreement-content text-grey-6">
+							<aura:unescapedHtml value="{!v.reward.V_RegulamentoYoubet__c != null ? v.reward.V_RegulamentoYoubet__c : 'Aguarde o próximo youbet'}"/>	
+						</div>
+					</div>
+				</aura:renderIf>
+
+				<!-- ELITE -->
+				<aura:renderIf isTrue="{! v.youbetType == 'elite'}">
+					<div class="agreement__elite">
+						<!-- TITLE -->
+						<h2 class="mb-4 font-size-8 text-center">
+							<img src="/insiders/resource/SX_Images_fy20/elitefy20_header_modal.png" alt="Elite Logo"/>
+							<span>
+								Regulamento
+							</span>
+						</h2>
+						<div class="w-70 h-100 d-flex flex-column mx-auto my-0 ">
+							<!-- BODY -->
+							<div class="agreement-content pr-3 text-grey-6">
+								<aura:unescapedHtml value="{!v.member.FieloPLT__Program__r.V_RegulamentoElite__c}"/>
+							</div>
+						</div>
+					</div>
+				</aura:renderIf>
+
+				<!-- SPY -->
+				<aura:renderIf isTrue="{! v.youbetType == 'spy'}">
+					<div class="w-70 h-100 d-flex flex-column mx-auto my-0 ">
+						<!-- TITLE -->
+						<h2 class="{!'mt-5 mb-5 font-size-8 text-' + v.youbetType + ' text-center'}">Regulamento</h2>
+						<!-- BODY -->
+						<div class="agreement-content pr-3 text-grey-6">
+							<aura:unescapedHtml value="{!v.member.FieloPLT__Program__r.V_RegulamentoSPY__c}"/>
+						</div>
+					</div>
+				</aura:renderIf>
+				<hr/>
+				<!-- BUTTONS -->
+				<div class="accept-box w-70 d-flex flex-column align-items-center mx-auto my-0">
+					<ui:button aura:id="submit" label="Ok" press="{!c.closeModal}" class="{!'btn btn-default ml-3 px-5 py-2 bg-' + v.youbetType + ' text-white'}"/>
+				</div>
+		    </lightning:card>
+		</div>
+	</div>
+	<ltng:require scripts="{!$Resource.SX_script}" />
+</aura:component>

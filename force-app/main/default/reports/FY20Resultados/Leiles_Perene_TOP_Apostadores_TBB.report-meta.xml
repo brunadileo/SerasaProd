@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$FieloPLT__Points__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$V_BetcoinsSaldo__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__Reward__c$Iniciativa__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Youbet Perene</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$V_Participante__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>TESTE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Reward__c$V_DataHoraInicioYoubet__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>7/1/2019 12:00 AM</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <aggregateType>Sum</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$V_Participante__c</field>
+        <sortByName>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$FieloPLT__Points__c</sortByName>
+        <sortOrder>Desc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$V_NomePremio__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Leilões Perene - TOP Apostadores</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Results_Lances_dos_leiloes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$FieloPLT__Points__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Reward__c$V_DataHoraFimYoubet__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

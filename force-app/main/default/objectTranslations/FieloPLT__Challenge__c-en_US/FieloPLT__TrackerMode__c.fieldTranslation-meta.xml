@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose &quot;Stored&quot; to generate a Tracker for this Challenge. If &quot;Unstored&quot; is chosen, no Tracker is generated. --></help>
+    <label><!-- Tracker Mode --></label>
+    <name>FieloPLT__TrackerMode__c</name>
+    <picklistValues>
+        <masterLabel>Stored</masterLabel>
+        <translation><!-- Stored --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unstored</masterLabel>
+        <translation><!-- Unstored --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

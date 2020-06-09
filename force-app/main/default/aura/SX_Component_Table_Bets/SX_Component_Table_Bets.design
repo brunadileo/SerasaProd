@@ -1,0 +1,9 @@
+<design:component label="CC - Table Bets">
+	<design:attribute name="filterOne" label="Display do Primeiro Filter" />
+	<design:attribute name="filterTwo" label="Display do Segundo Filter" />
+	<design:attribute name="filterThree" label="Display do Terceiro Filter" />
+	<design:attribute name="columnLabelOne" label="Label da Primeira Coluna" />
+	<design:attribute name="columnLabelTwo" label="Label da Segunda Coluna" />
+	<design:attribute name="columnLabelThree" label="Label da Terceira Coluna" />
+	<design:attribute name="columnLabelFour" label="Label da Quarta Coluna" />
+</design:component>

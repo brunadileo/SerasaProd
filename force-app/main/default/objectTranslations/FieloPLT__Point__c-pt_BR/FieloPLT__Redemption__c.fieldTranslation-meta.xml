@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Redemption in which Points were spent on. --></help>
+    <label>Resgate/Lance</label>
+    <name>FieloPLT__Redemption__c</name>
+    <relationshipLabel>Betcoins</relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ScoreEliteAFProjetado__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+
+OR(
+ISNULL(V_MetaAF__c), V_MetaAF__c = 0), 0,
+
+IF(
+V_TotalVendasYTD__c / V_MetaAF__c &lt;= 0.8, 1 ,
+
+IF(
+AND(
+V_TotalVendasYTD__c / V_MetaAF__c &gt; 0.8, V_TotalVendasYTD__c / V_MetaAF__c &lt;= 0.9), 
+2 ,
+
+IF(
+AND(
+V_TotalVendasYTD__c / V_MetaAF__c &gt; 0.9, V_TotalVendasYTD__c / V_MetaAF__c &lt;= 0.95), 
+3 ,
+
+IF(
+AND(
+V_TotalVendasYTD__c / V_MetaAF__c &gt; 0.95, V_TotalVendasYTD__c / V_MetaAF__c &lt;= 1), 
+4 ,
+
+IF(
+V_TotalVendasYTD__c / V_MetaAF__c &gt; 1, 5 , 0
+
+))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Score Elite AF - Projetado</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

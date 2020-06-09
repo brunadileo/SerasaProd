@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__All</fullName>
+    <columns>NAME</columns>
+    <columns>FieloPLT__Description__c</columns>
+    <columns>FieloPLT__Points__c</columns>
+    <columns>FieloPLT__StockManagement__c</columns>
+    <columns>FieloPLT__Stock__c</columns>
+    <columns>FieloPLT__ExpirationDate__c</columns>
+    <columns>FieloPLT__IsInstantReward__c</columns>
+    <columns>FieloPLT__UniqueVoucher__c</columns>
+    <columns>FieloPLT__Program__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>FieloPLT__Reward__c.Premios</value>
+    </filters>
+    <label>Todos Prêmios</label>
+    <language>en_US</language>
+</ListView>

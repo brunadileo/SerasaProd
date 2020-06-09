@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Serasa Insiders: Encerramento Youbet</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa Insiders: Encerramento Youbet</name>
+    <style>none</style>
+    <subject>Youbet: confira o resultado do último leilão!</subject>
+    <textOnly>ENCERRAMENTO GERAL
+
+{!User.V_NomeTratamentoParticipante__c}, o Youbet do prêmio {!VN_ParticipanteComPerfilCompativel__c.V_Reward__c} está encerrado!
+Quem ganhou foi: {!VN_ParticipanteComPerfilCompativel__c.V_Vencedor__c}.
+
+Lembre-se, as betcoins apostadas só foram debitadas do ganhador, fique atento aos próximos leilões!
+
+Acesse o site
+
+
+Caso não esteja visualizando corretamente esta mensagem, acesse este link</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

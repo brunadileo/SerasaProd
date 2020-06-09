@@ -1,0 +1,92 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    
+    <!-- <aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" /> -->
+	
+	<div class="h-auto h-xl-100 d-flex align-items-center justify-content-center">
+		<table class="w-70 w-xl-50 table table-borderless">
+			<thead>
+				<tr>
+					<th>SCORE</th>
+					<th>TOTAL</th>
+					<th>TOTAL EQUIPE</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>12</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr class="bg-dark text-white">
+					<td>7</td>
+					<td>1</td>
+					<td>1</td>
+					<td>ELEGÍVEL</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</aura:component>

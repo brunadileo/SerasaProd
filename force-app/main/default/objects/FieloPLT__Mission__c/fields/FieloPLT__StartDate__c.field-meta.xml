@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__StartDate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Date when the Mission starts. If no Initial date is established, Mission will be valid as long as its Challenge is &quot;Active&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a date for the Mission to begin. If blank, the Mission will be valid as long as its Challenge is &quot;Active&quot;.</inlineHelpText>
+    <label>Start Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

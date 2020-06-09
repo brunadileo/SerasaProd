@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ValidatePointsValue</fullName>
+    <active>true</active>
+    <description>Points cannot be empty or 0.</description>
+    <errorConditionFormula>AND( OR( ISPICKVAL(FieloPLT__PointConversionMode__c,&apos;Fixed Value&apos;), ISPICKVAL(FieloPLT__PointConversionMode__c,&apos;Factor&apos;), ISPICKVAL(FieloPLT__PointConversionMode__c,&apos;Multiplier&apos;) ), OR(FieloPLT__ConversionValue__c == 0, ISNULL(FieloPLT__ConversionValue__c), ISBLANK(FieloPLT__ConversionValue__c)) )</errorConditionFormula>
+    <errorMessage>Points cannot be empty or 0.</errorMessage>
+</ValidationRule>

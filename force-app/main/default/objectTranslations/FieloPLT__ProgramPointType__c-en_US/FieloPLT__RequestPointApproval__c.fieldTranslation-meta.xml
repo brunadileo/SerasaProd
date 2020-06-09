@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Tick this if you each Point Type to be approved before being granted to Members. --></help>
+    <label><!-- Request Point Approval --></label>
+    <name>FieloPLT__RequestPointApproval__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- User Profile ID. When empty, Fielo REST Profile is completed. --></help>
+    <label><!-- Profile ID --></label>
+    <name>FieloPLT__ProfileId__c</name>
+</CustomFieldTranslation>

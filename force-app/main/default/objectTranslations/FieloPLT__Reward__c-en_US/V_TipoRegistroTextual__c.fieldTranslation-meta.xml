@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Nome textual do tipo de registro a ser usado em process builder. --></help>
+    <label><!-- Tipo de Registro Textual --></label>
+    <name>V_TipoRegistroTextual__c</name>
+</CustomFieldTranslation>

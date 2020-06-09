@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Automatização do disparo de e-mail para os participantes que deram lances em um Youbet.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa Insiders: Confirmação de  lance youbet</name>
+    <style>none</style>
+    <subject>Youbet: lance confirmado!</subject>
+    <textOnly>CONFIRMAÇÃO DE LANCE
+
+{!FieloPLT__RedemptionItem__c.V_NomeTratamentoParticipante__c}, seu lance foi feito com sucesso!Você apostou {!FieloPLT__RedemptionItem__c.V_BetcoinsInvestidos__c} betcoins no prêmio {!FieloPLT__RedemptionItem__c.V_NomePremio__c}.
+
+Importante: Não esqueça que agora as betcoins apostadas só serão debitadas do ganhador do prêmio!
+
+Boa sorte e acompanhe esse Youbet no site.
+
+Acesse o site
+
+https://serasainsiders.force.com/insiders/s/login/</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

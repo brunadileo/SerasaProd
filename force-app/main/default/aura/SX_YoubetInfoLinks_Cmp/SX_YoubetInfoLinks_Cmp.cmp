@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+ 	<aura:attribute name="youbetType" type="String"/>
+ 	<aura:registerEvent name="showModal" type="c:SX_YouBetModal_Evt"/>
+
+   	<div class="d-flex">
+   		<!-- <div class="{!'btn btn-default bg-' + v.youbetType + ' mx-3'}">
+   			COMO ACUMULAR BETCOINS
+		   </div> -->
+		<aura:if isTrue="false">
+			<a href="./" class="{!'btn btn-default bg-btn-home bg-' + v.youbetType}">
+				HOME
+			</a>
+		</aura:if>
+   		<a onclick="{!c.openAgreement}" class="{!'btn btn-default bg-' + v.youbetType + ' mx-3'}">
+   			REGULAMENTO
+   		</a>
+   	</div>    
+	
+</aura:component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Utilizado para indicar se é participante do Ranking do Elite ou não. Não participa se o participante estiver &quot;Inativo&quot; OU tiver &quot;Teste&quot; em seu nome. --></help>
+    <label><!-- Participante - Ranking Elite --></label>
+    <name>V_ParticRankingElite__c</name>
+</CustomFieldTranslation>

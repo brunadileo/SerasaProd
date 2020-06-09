@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PercentualAMAteDecimoMesAF__c</fullName>
+    <description>Percentual de atingimento de meta do participante até o 10o. mês do ano fiscal. Cálculo utilizado no Elite e SPY.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+NOT(ISNULL(V_AMAteDecimoMesAFPonderado__c )), V_AMAteDecimoMesAFPonderado__c,
+
+IF(
+
+V_MetaAF__c = 0, 0, 
+
+(( V_ResultadoPrimeiroMesAF__c + 
+V_ResultadoSegundoMesAF__c + 
+V_ResultadoTerceiroMesAF__c + 
+V_ResultadoQuartoMesAF__c + 
+V_ResultadoQuintoMesAF__c + 
+V_ResultadoSextoMesAF__c + 
+V_ResultadoSetimoMesAF__c + 
+V_ResultadoOitavoMesAF__c +
+V_ResultadoNonoMesAF__c +
+V_ResultadoDecimoMesAF__c ) / 
+
+V_MetaAF__c)
+
+))</formula>
+    <inlineHelpText>Percentual de atingimento de meta do participante até o 10o. mês do ano fiscal. Cálculo utilizado no Elite e SPY.</inlineHelpText>
+    <label>% AM Até Mês 1</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

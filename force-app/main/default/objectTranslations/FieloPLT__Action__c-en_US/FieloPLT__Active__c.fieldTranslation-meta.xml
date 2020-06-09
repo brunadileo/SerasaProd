@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Action status. If checked, there are related Rules or Missions within an active Promotion or Challenge. Only Actions with Active status are processed. --></help>
+    <label><!-- Active --></label>
+    <name>FieloPLT__Active__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_BetcoinsInvestidos__c</fullName>
+    <description>Betcoins consolidados em um único ponto (perene ou complementar). Campo a ser utilizado em front ends.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ FieloPLT__Points__c &gt; 0, FieloPLT__Points__c, V_BetcoinsComp__c 
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Betcoins consolidados em um único ponto (perene ou complementar). Campo a ser utilizado em front ends.</inlineHelpText>
+    <label>Betcoins Investidos</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

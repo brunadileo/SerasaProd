@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__DynamicObjective__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>If ticked, &quot;Objective Field&quot; can be any numerical field from the Member.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If ticked, &quot;Objective Field&quot; can be any numerical field from the Member.</inlineHelpText>
+    <label>Dynamic Objective Field</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

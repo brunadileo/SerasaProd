@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valida_Lance_Minimo_e_Resgatar_Agora</fullName>
+    <active>true</active>
+    <description>Se o campo &quot;Lance Mínimo&quot; estiver preenchido, o campo &quot;Lance para Resgatar&quot; precisa estar vazio, e vice-versa.</description>
+    <errorConditionFormula>OR(
+
+AND(
+RecordType.Name = &quot;Leilões&quot;,
+NOT(ISNULL(V_LanceMinimo__c)),
+NOT(ISNULL(V_LanceResgatarAgora__c))
+),
+
+AND(
+RecordType.Name = &quot;Leilões&quot;,
+OR(
+V_LanceMinimo__c = 0,
+V_LanceResgatarAgora__c = 0)
+))</errorConditionFormula>
+    <errorDisplayField>V_LanceMinimo__c</errorDisplayField>
+    <errorMessage>Se o campo &quot;Lance Mínimo&quot; estiver preenchido, o campo &quot;Lance para Resgatar&quot; precisa estar vazio, e vice-versa. Nenhum desses campos pode conter o valor zero também.</errorMessage>
+</ValidationRule>

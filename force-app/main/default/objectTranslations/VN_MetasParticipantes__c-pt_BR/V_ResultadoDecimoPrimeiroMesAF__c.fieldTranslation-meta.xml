@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Resultado do participante no 11o. mês do ano fiscal. --></help>
+    <label><!-- Resultado - Mês 2 --></label>
+    <name>V_ResultadoDecimoPrimeiroMesAF__c</name>
+</CustomFieldTranslation>

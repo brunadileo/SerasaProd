@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PotencialCarteira__c</fullName>
+    <description>Valor do Tamanho da Carteira do participante. O atual critério é o mesmo valor do total de metas do ano fiscal do participante.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Valor do Tamanho da Carteira do participante. O atual critério é o mesmo valor do total de metas do ano fiscal do participante.</inlineHelpText>
+    <label>Tamanho da Carteira</label>
+    <summarizedField>VN_Sumarizador__c.V_Meta__c</summarizedField>
+    <summaryForeignKey>VN_Sumarizador__c.V_MetaDoParticipante__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

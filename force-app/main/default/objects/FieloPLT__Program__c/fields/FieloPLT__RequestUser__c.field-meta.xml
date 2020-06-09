@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RequestUser__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>When on, a new Member will only be assigned a User if approved through a Workflow process. This option cannot be applied to Programs that use a Communities-based loyalty portal.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When on, a new Member will only be assigned a User if approved through a Workflow process. This option cannot be applied to Programs that use a Communities-based loyalty portal.</inlineHelpText>
+    <label>Request User</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

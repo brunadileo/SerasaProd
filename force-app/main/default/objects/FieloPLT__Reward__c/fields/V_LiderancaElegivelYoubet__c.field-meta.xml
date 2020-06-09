@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_LiderancaElegivelYoubet__c</fullName>
+    <description>Liderança do participante elegível ao Youbet.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Liderança do participante elegível ao Youbet.</inlineHelpText>
+    <label>Liderança Elegível ao Youbet</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MULTI SECTOR</fullName>
+                <default>false</default>
+                <label>MULTI SECTOR</label>
+            </value>
+            <value>
+                <fullName>REGIÕES</fullName>
+                <default>false</default>
+                <label>REGIÕES</label>
+            </value>
+            <value>
+                <fullName>MULTI CANAL</fullName>
+                <default>false</default>
+                <label>MULTI CANAL</label>
+            </value>
+            <value>
+                <fullName>VAREJO, CPG E PAGAMENTOS</fullName>
+                <default>false</default>
+                <label>VAREJO, CPG E PAGAMENTOS</label>
+            </value>
+            <value>
+                <fullName>BANCOS E FINANCEIRAS</fullName>
+                <default>false</default>
+                <label>BANCOS E FINANCEIRAS</label>
+            </value>
+            <value>
+                <fullName>GRANDES BANCOS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>GRANDES BANCOS</label>
+            </value>
+            <value>
+                <fullName>NOVOS NEGÓCIOS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NOVOS NEGÓCIOS</label>
+            </value>
+            <value>
+                <fullName>SERVIÇOS FINANCEIROS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SERVIÇOS FINANCEIROS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

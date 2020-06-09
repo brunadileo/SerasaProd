@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the type of Page Setting you want to create. Type is directly linked to where you&apos;re applying the Page Setting. --></help>
+    <label><!-- Type --></label>
+    <name>FieloPLT__Type__c</name>
+    <picklistValues>
+        <masterLabel>Detail</masterLabel>
+        <translation><!-- Detail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edit</masterLabel>
+        <translation><!-- Edit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landing</masterLabel>
+        <translation><!-- Landing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lookup</masterLabel>
+        <translation><!-- Lookup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation><!-- New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Related</masterLabel>
+        <translation><!-- Related --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Related - New</masterLabel>
+        <translation><!-- Related - New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>View</masterLabel>
+        <translation><!-- View --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

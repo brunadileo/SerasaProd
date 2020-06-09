@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Segment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Targets the Email Campaign by Segment. When using this field, only the Members who are part of the selected Segment(s) will receive the campaign email. Segments are configured in the Programs tab.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Add the Segment(s) you want to be part of the campaign. You can view, edit and create Segments in the Programs tab.</inlineHelpText>
+    <label>Segment</label>
+    <referenceTo>FieloPLT__Segment__c</referenceTo>
+    <relationshipLabel>Email Campaigns</relationshipLabel>
+    <relationshipName>EmailCampaigns</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

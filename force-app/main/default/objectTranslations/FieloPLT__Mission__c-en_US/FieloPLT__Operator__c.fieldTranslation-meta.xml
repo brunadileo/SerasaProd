@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a mathematical operator with which to compare the Action counter or Target Object field summary and the Objective Value or Objective Field. --></help>
+    <label><!-- Operator --></label>
+    <name>FieloPLT__Operator__c</name>
+    <picklistValues>
+        <masterLabel>equals</masterLabel>
+        <translation><!-- equals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>greater or equal</masterLabel>
+        <translation><!-- greater or equal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>greater than</masterLabel>
+        <translation><!-- greater than --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>less or equal</masterLabel>
+        <translation><!-- less or equal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>less than</masterLabel>
+        <translation><!-- less than --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

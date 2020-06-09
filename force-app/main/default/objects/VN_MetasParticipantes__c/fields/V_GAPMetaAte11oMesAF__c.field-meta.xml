@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_GAPMetaAte11oMesAF__c</fullName>
+    <description>Indica o resultado que faltou para o participante atingir a meta até o 11o. Mês do ano fiscal.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+(V_TotalVendasAteDecimoPrimeiroMesAF__c / (V_MetaPrimeiroMesAF__c + V_MetaSegundoMesAF__c + V_MetaTerceiroMesAF__c + V_MetaQuartoMesAF__c + V_MetaQuintoMesAF__c + V_MetaSextoMesAF__c + V_MetaSetimoMesAF__c + V_MetaOitavoMesAF__c + V_MetaNonoMesAF__c + V_MetaDecimoMesAF__c + V_MetaDecimoPrimeiroMesAF__c)) &gt;= 1, 0, 
+V_MetaPrimeiroMesAF__c + V_MetaSegundoMesAF__c + V_MetaTerceiroMesAF__c + V_MetaQuartoMesAF__c + V_MetaQuintoMesAF__c + V_MetaSextoMesAF__c + V_MetaSetimoMesAF__c + V_MetaOitavoMesAF__c + V_MetaNonoMesAF__c + V_MetaDecimoMesAF__c + V_MetaDecimoPrimeiroMesAF__c - V_TotalVendasAteDecimoPrimeiroMesAF__c
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indica o resultado que faltou para o participante atingir a meta até o 11o. Mês do ano fiscal.</inlineHelpText>
+    <label>GAP Meta Até Mês 2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

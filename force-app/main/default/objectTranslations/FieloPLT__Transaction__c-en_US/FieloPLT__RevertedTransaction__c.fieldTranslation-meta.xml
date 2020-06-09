@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Transaction that was reverted. --></help>
+    <label><!-- Reverted Transaction --></label>
+    <name>FieloPLT__RevertedTransaction__c</name>
+    <relationshipLabel><!-- Transactions --></relationshipLabel>
+</CustomFieldTranslation>

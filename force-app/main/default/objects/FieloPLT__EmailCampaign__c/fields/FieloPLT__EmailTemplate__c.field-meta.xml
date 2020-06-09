@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__EmailTemplate__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Fielo Email Template to be used in the Email Campaign.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the Fielo Email Template you want to use in your campaign. Only templates of type Campaign will appear. You can view, edit and create Fielo Email Templates in the Programs tab.</inlineHelpText>
+    <label>Email Template</label>
+    <referenceTo>FieloPLT__EmailTemplate__c</referenceTo>
+    <relationshipLabel>Email Campaigns</relationshipLabel>
+    <relationshipName>EmailCampaigns</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

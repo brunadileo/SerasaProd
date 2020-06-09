@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose an &quot;Instant Badge&quot;. --></help>
+    <label><!-- Instant Badge --></label>
+    <name>FieloPLT__InstantBadge__c</name>
+    <relationshipLabel>Regras</relationshipLabel>
+</CustomFieldTranslation>

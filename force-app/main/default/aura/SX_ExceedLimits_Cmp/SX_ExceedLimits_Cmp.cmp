@@ -1,0 +1,348 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_EliteTeamPerfomanceController">
+    <aura:handler event="c:SX_YouBetModal_Evt" action="{!c.youbetModal}"/> 
+
+    <div id="exceedlimitsModal" class="position-fixed modal-overlay" style="display: none" onclick="{!c.closeModal}">
+        <div class="position-relative d-flex h-100 align-items-center justify-content-center">
+            <lightning:card title="{!v.headerTitle}" class="modal-card">
+                <!-- TITLE -->
+                <h2 class="m-0 p-4 font-size-8">
+                    Regulamento Campanha Supere seus Limites Serasa Experian
+                </h2>
+                
+                <div class="p-5">
+                    <!-- FIRST SECTION -->
+                    <!-- TITLE -->
+                    <h3 class="text-elite">1. A Campanha</h3>
+                    <!-- CONTENT -->
+                    <p class="text-grey-6 font-size-4">
+                        A finalidade desta Campanha é incentivar, premiar e reconhecer os profissionais da força de vendas da Serasa Experian. Serão premiados aqueles funcionários que cumprirem o objetivo proposto nesta campanha, dentro das normas estabelecidas no presente Regulamento.
+                    </p>
+
+                    <!-- SECOND SECTION -->
+                    <!-- TITLE -->
+                    <h3 class="text-elite">2. Público Elegível</h3>
+                    <!-- CONTENT -->
+                    <p class="text-grey-6 font-size-4">
+                        Para as campanhas trimestrais serão elegíveis todos da estrutura de <i>Large Accounts</i>, que possuam os cargos de gerente de contas, executivo de vendas, especialista de vendas, executivo de contas, consultor de vendas e gerente de operações comerciais distribuidores.
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Para a campanha semestral serão elegíveis todos da estrutura de <i>Large Accounts</i>, que possuam os cargos citados acima (campanhas trimestrais) e, os cargos de gerente de vendas, gerente de vendas regional, diretor de contas, coordenador de vendas e diretor de vendas.
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Apenas serão elegíveis para a campanha os empregados que:
+                    </p> 
+
+                    <ol class="text-grey-6 font-size-4">
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">a)</span>
+                            Fizerem parte da Diretoria de&nbsp; <i> Large Accounts </i> &nbsp;e possuem algum dos cargos citados anteriormente;
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">b)</span>
+                            Possuem meta direta de receita;
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">c)</span>
+                            Recebam remuneração variável;
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">d)</span>
+                            <div>
+                                Apenas será elegível a Campanha do Quarter o empregado que contribuir no mínimo por 3 meses, com meta e resultado, em cada período da campanha:
+
+                                <ul>
+                                    <li class="d-flex mt-3">
+                                        <span class="text-elite mr-1">•</span>
+                                        <div>
+                                            Para a Campanha do Q1, o empregado deverá ter meta e resultado em abril, maio e junho. Para a Campanha do Q2, deverá ter meta e resultado em julho, agosto e setembro. Para a Campanha do Q3, deverá ter meta e resultado outubro, novembro e dezembro. Para a Campanha do Q4, deverá ter meta e resultado janeiro, fevereiro e março.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">e)</span>
+                            <div>
+                                Apenas será elegível a Campanha do Half o empregado que contribuir no mínimo por 6 meses, com meta e resultado por todo o período da campanha, assim sendo:
+
+                                <ul>
+                                    <li class="d-flex mt-3">
+                                        <span class="text-elite mr-1">•</span>
+                                        <div>
+                                            Para a campanha do H1, o empregado deverá ter meta e resultado de abril à setembro.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <!-- THIRD SECTION -->
+                    <!-- TITLE -->
+                    <h3 class="text-elite">3. O Prêmio</h3>
+                    <!-- CONTENT -->
+                    <p class="text-grey-6 font-size-4">
+                        Durante o período da campanha os participantes poderão concorrer a 1(um) carro ao final de cada <i>quarter</i> e 1(um) carro ao final do primeiro semestre, caso a diretoria de <i>Large Accounts</i> atinja o desafio descrito no item <b>6 "Dinâmica de apuração"</b>.
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Após o fechamento e apuração dos resultados do Q1 (abr/mai/jun), caso a diretoria de Large Accounts tenha superado a meta em 101% ou mais, será sorteado 01 (um) Hyundai HB20 0km(ou similar), entre os 10 primeiros colocados no ranking do Elite daquele período, e, que estejam elegíveis conforme item 2 “Público elegível”.
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Após o fechamento e apuração dos resultados de Q2, Q3 e Q4 (jul/ago/set, out/nov/dez, jan/fev/mar), caso a diretoria de <i>Large Accounts</i> tenha superado a meta em 101% ou mais, será sorteado 01 (um) Hyundai HB20 0km(ou similar) entre todos que atingirem 101% (sem arredondamento) ou mais da meta do período, e que estejam elegíveis conforme item 2 “Público elegível”. 
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Adicionalmente, caso a diretoria de <i>Large Accounts</i> supere a meta semestral do H1(abr-set) em 102%, será sorteado 01 (um) Jeep Compass 0KM (ou similar), entre todos que atingiram a meta em 102% (sem arredondamento) ou mais da meta do período, e que estejam elegíveis conforme item 2 “Público elegível”.
+                    </p>
+
+                    <!-- FORTH SECTION -->
+                    <!-- TITLE -->
+                    <h3 class="text-elite">4. Período do Programa</h3>
+                    <!-- CONTENT -->
+                    <p class="text-grey-6 font-size-4">
+                        Abril/19 a março/20.
+                    </p>
+
+                    <!-- FIFTH SECTION -->
+                    <!-- TITLE -->
+                    <h3 class="text-elite">5. Critérios de participação</h3>
+                    <!-- CONTENT -->
+                    <p class="text-grey-6 font-size-4">
+                        Os sorteios disponibilizados para esta campanha terão critérios de elegibilidade específicos, que estarão disponíveis no momento de sua realização.
+                    </p>
+
+                    <!-- SIXTH SECTION -->
+                    <!-- TITLE -->
+                    <h3 class="text-elite">6. Dinâmica de apuração</h3>
+                    <!-- CONTENT -->
+                    <p class="text-grey-6 font-size-4">
+                        Serão realizados sorteios com a premiação de carros, caso a Diretoria de <i>Large Accounts</i> atinja 101% ou mais da meta ao final de cada trimestre e 102% da meta ao final do primeiro semestre. Para as apurações dos Quarters e do Half, serão desconsideradas todas as faturas em aberto determinadas como Disputas Comerciais (definição no item 8 - Informações Gerais) vencidas há, no mínimo, 30 dias.
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Os sorteios acontecerão nos meses subsequentes ao encerramento do trimestre e/ou semestre, após fechamento oficial da companhia. A sua data exata de realização será comunicada previamente.
+                    </p>
+
+                    <p class="d-flex mb-3 ml-3 text-elite font-size-4 font-weight-bold">
+                        <span class="mr-1">a)</span>
+                        <span>
+                            Campanha Quarter: Diretoria <i>Large Accounts</i> atingindo 101% ou mais da meta do trimestre
+                        </span>
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Após o encerramento e apuração de cada trimestre caso a diretoria de <I>Large Accounts</I> tenha atingido 101% ou mais da sua meta, será sorteado 1 (um) carro HB20 0KM (ou similar), de acordo com critérios descritos no item 2 “Público elegível”, conforme:
+                    </p>
+
+                    <ul class="text-grey-6 font-size-4">
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">-</span>
+                            <span>
+                                101% ou mais de atingimento da Diretoria de <i>Large Accounts</i> em Q1: serão elegíveis ao sorteio os 10 primeiros colocados ao ranking do Elite neste período, que reflete os resultados acumulados de abril à junho.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">-</span>
+                            <span>
+                                101% ou mais de atingimento da Diretoria de <i>Large Accounts</i> em Q2: serão elegíveis ao sorteio todos que atingirem 101% ou mais de sua meta acumulada de julho à setembro, sem arredondamento. 
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">-</span>
+                            <span>
+                                101% ou mais de atingimento da Diretoria de <i>Large Accounts</i> em Q3: serão elegíveis ao sorteio todos que atingirem 101% ou mais de sua meta acumulada de outubro à dezembro, sem arredondamento. 
+                            </span>
+                        </li>
+                        <li class="d-flex">
+                            <span class="mr-1">-</span>
+                            <span>
+                                101% ou mais de atingimento da Diretoria de <i>Large Accounts</i> em Q4: serão elegíveis ao sorteio todos que atingirem 101% ou mais de sua meta acumulada de janeiro à março, sem arredondamento.
+                            </span>
+                        </li>
+                    </ul>
+
+                    <p class="text-grey-6 font-size-4">
+                        Para este sorteio cada um dos elegíveis receberá apenas um cupom
+                    </p>
+
+                    <p class="d-flex mb-3 ml-3 text-elite font-size-4 font-weight-bold">
+                        <span class="mr-1">b)</span>
+                        <span>
+                            Campanha <i>Half Year</i>: Diretoria <i>Large Accounts</i> atingindo 102% ou mais da meta do primeiro semestre.
+                        </span>
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Adicionalmente à campanha trimestral, após o encerramento e apuração do primeiro semestre do FY20, caso a diretoria de <i>Large Accounts</i> tenha atingido 102% ou mais da sua meta, será sorteado 1 (um) carro Jeep Compass 0km (ou similar) entre todos os elegíveis, conforme critérios descritos no item 2 “Público elegível” e mediante às seguintes condições:
+                    </p>
+
+                    <ul class="text-grey-6 font-size-4">
+                        <li class="d-flex mb-3">
+                            <span class="mr-1">-</span>
+                            <span>
+                                102% ou mais de atingimento da Diretoria de <i>Large Accounts</i> no H1 (meses abril à setembro): participam do sorteio os elegíveis que atingiram 102% ou mais de sua meta acumulada de abril à setembro, sem arredondamento. 
+                            </span>
+                        </li>
+                        
+                    </ul>
+
+                    <p class="text-grey-6 font-size-4">
+                        Para este sorteio cada um dos elegíveis receberá apenas um cupom
+                    </p>
+
+                    <!-- SEVENTH SECTION -->
+                    <!-- TITLE -->
+                    <h3 class="text-elite">7. Resultados</h3>
+                    <!-- CONTENT -->
+                    <p class="text-grey-6 font-size-4">
+                        A força de vendas será informada por meio de comunicados internos quanto à realização dos sorteios, premiações, critérios e vencedores.
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Serão considerados como vencedores os sorteados, conforme regras descritas no item 6“Dinâmica de apuração”.
+                    </p>
+
+                    <p class="text-grey-6 font-size-4">
+                        Os vencedores serão divulgados no momento dos sorteios e formalizados por comunicado interno posteriormente.
+                    </p>
+
+                    <!-- EIGHTH SECTION -->
+                    <!-- TITLE -->
+                    <h3 class="text-elite">8. Informações Gerais</h3>
+                    <!-- CONTENT -->
+                    <ul class="text-grey-6 font-size-4">
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Para o cálculo dos resultados (Quarters e Half) serão subtraídos os valores das faturas em aberto classificadas como Disputas Comerciais, emitidas no FY20, e vencidas há 30 dias ou mais. Consideramos Disputas Comerciais os casos em que, esgotadas as tratativas internas para resolução de impasses de cobrança, o cliente não está de acordo com as notas em aberto e, então, é necessária a atuação do comercial. O envolvimento do comercial pelo time de Recebíveis em Disputas é permitido apenas em casos de clientes com Renovação contratual ou aditivo em andamento, desconto pendente ou necessidades de apoio do comercial na negociação das notas em aberto. Serão consideradas Disputas Comerciais todos os casos em aberto no Salesforce para o "Gerente de Contas" pelo time de Recebíveis e que contenham um dos motivos abaixo especificados no campo assunto:
+
+                                <ul class="mt-3">
+                                    <li class="d-flex mb-3">
+                                        <span class="mr-1">-</span>
+                                        <span>
+                                            Renovação/Aditivo Contratual (Disputa Comercial);
+                                        </span>
+                                    </li>
+                                    <li class="d-flex mb-3">
+                                        <span class="mr-1">-</span>
+                                        <span>
+                                            Desconto Comercial (Disputa Comercial);
+                                        </span>
+                                    </li>
+                                    <li class="d-flex mb-3">
+                                        <span class="mr-1">-</span>
+                                        <span>
+                                            Apoio do Comercial (Disputa Comercial);
+                                        </span>
+                                    </li>
+                                </ul>
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Para casos de transferências, retornos de licença e/ou admissões, a partir do momento em que for publicada meta para o empregado, os resultados serão contabilizados para fins de campanhas.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <div>
+                                Mudanças de categorias ou dinâmica de remuneração variável:
+
+                                <ul class="mt-3">
+                                    <li class="mb-3">
+                                        Em caso de alterações entre os canais de vendas, será considerado na apuração o resultado acumulado total ponderado e, também, o participante deverá estar atingindo no mínimo 100% (sem arredondamento) no setor atual que atua, exemplo:
+    
+                                        <ul class="ml-3 mt-3">
+                                            <li class="mb-3">
+                                                <u>Exemplo:</u> um empregado atuou 1 mês no canal Regiões e obteve 95% de atingimento e nos últimos 2 meses do <i>quarter</i> ele atuou no Multicanal e obteve 120% de atingimento.
+                                            </li>
+                                            <li class="mb-3">
+                                                Para calcular o atingimento ponderado do quarter fazemos: ((95*1) + (120*2)) / 3 = 111,7%.
+                                            </li>
+                                            <li>
+                                                Neste caso, ele é elegível à campanha do período, pois está atingindo 120% no último canal e possui 111,7% de atingimento acumulado no ano.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Caso o empregado não faça mais parte do quadro da empresa no momento do sorteio e divulgação dos vencedores, não estará elegível ao prêmio, bem como não haverá substituição do prêmio em valor pecuniário.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Caso o empregado esteja em período de aviso prévio no momento do sorteio e divulgação dos vencedores, não estará elegível ao prêmio, bem como não haverá substituição do prêmio em valor pecuniário. 
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Este regulamento poderá ser ajustado, sem aviso prévio, com o objetivo de melhorar o andamento do Programa.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Será formado um comitê de campanhas, composto pela VP de Vendas e a área de Planejamento Comercial, e um comitê de apuração, composto pelas áreas de Planejamento Comercial, Sales MIS e Gestão de Vendas.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Todo e qualquer caso excepcional, será avaliado pelo comitê da campanha, que tomará as decisões cabíveis.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Para casos de mudança de área e função, será avaliada a dinâmica de apuração dos resultados pelo comitê de apuração.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                O comitê de apuração também será responsável pela validação de casos individuais excepcionais e avaliação individual de performance.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                O tema e as regras da campanha são de uso exclusivo interno e não devem ser divulgados e/ou utilizados para fins externos.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                O empregado será desclassificado das campanhas e do sorteio, caso seja comprovada violação das regras comerciais e de <i>Compliance</i> da Serasa Experian.
+                            </span>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <span class="text-elite mr-1">•</span>
+                            <span>
+                                Para a apuração dos indicadores individuais de metas All BUs, resultado All BUs, atingimento de meta, e estrutura hierárquica dos times, serão consideradas as informações divulgadas no arquivo de nome “Metas e Resultados” disponibilizado no diretório:
+                                <br />(\\serasadocs\DIRET_VENDAS\VENDAS\METAS_E_RESULTADOS\FY20).
+                            </span>
+                        </li>
+                    </ul>
+                    <hr/>
+                    <!-- BUTTONS -->
+                    <div class="accept-box w-70 d-flex flex-column align-items-center mx-auto my-0">
+                        <ui:button aura:id="submit" label="Ok" press="{!c.closeModal}" class="btn btn-default ml-3 px-5 py-2 bg-elite text-white"/>
+                    </div>
+                </div>
+            </lightning:card>
+        </div>
+    </div>
+    <ltng:require scripts="{!$Resource.SX_script}" />
+
+</aura:component>

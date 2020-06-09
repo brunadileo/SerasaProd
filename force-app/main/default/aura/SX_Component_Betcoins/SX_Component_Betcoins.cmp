@@ -1,0 +1,22 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" />
+    <aura:attribute name="title" type="String" default="COMO ACUMULAR BETCOINS" access="global" />
+    <aura:attribute name="text" type="String" default="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, similique? Ipsum vero ratione porro odio, beatae similique inventore ex rem, maxime sapiente iusto, vel at veritatis atque ab. Voluptas consectetur dolorum minima! Harum doloribus nostrum maxime cupiditate inventore, aliquid architecto tempora sit porro, sunt soluta possimus commodi, maiores iusto quasi! Totam consequatur adipisci fugiat obcaecati nostrum at, tenetur, saepe, ducimus laudantium autem dolorem iste consectetur cupiditate sint. Nemo, repellendus. Unde placeat quibusdam libero nam ipsum, fugiat porro reprehenderit aut sed recusandae corporis voluptatum cumque similique quasi in error neque alias, dignissimos dolores deserunt pariatur laboriosam suscipit totam aperiam ducimus. Alias!" access="global" />
+	<aura:attribute name="cta" type="String" default="Regulamento" access="global" />
+	<aura:attribute name="bgBtn" type="String" default="f1c40f" access="global" />
+	
+	<div class="d-flex flex-column h-100 py-3 px-3 px-xl-0">
+		<div class="d-flex align-items-start justify-content-center">
+			<img src="{!v.logo}" class="w-80 w-lg-40 w-xl-60"/>
+		</div>
+		<h3 class="my-3 pb-3 border-bottom font-size-5">{!v.title}</h3>
+		<p>{!v.text}</p>
+
+		<div class="d-flex justify-content-center">
+			<a href="./youbet-regulamento" class="btn btn-default p-3 font-weight-bold" style="{!'background: #' + v.bgBtn}">{!v.cta}</a>
+		</div>
+	</div>
+	
+
+</aura:component>

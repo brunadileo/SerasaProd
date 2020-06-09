@@ -1,0 +1,14 @@
+.THIS .max-height {
+	max-height: 100%;
+}
+.THIS .btn {
+	white-space: normal;
+}
+.THIS a:hover {
+	text-decoration: none;
+}
+@media (max-width: 1200px) {
+	.THIS .min-height-custom {
+		min-height: 120px;
+	}
+}

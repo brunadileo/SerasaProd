@@ -1,0 +1,29 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="background" type="String" default="4BA3A6" access="global" />
+	<aura:attribute name="bgBtn" type="String" default="F7CC32" access="global" />
+    <aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" />
+    <aura:attribute name="circleOne" type="String" default="Badges" access="global" />
+    <aura:attribute name="circleTwo" type="String" default="Regulamento" access="global" />
+
+	<div class="d-flex flex-column justify-content-between align-items-center h-auto h-lg-100 p-3" style="{!'background: #' + v.background}">
+		<div class="d-flex justify-content-center align-items-center w-80 w-sm-40 w-xl-80">
+			<img src="{!v.logo}" class="img-fluid"/>
+		</div>
+		<div class="row p-3">
+			<a href="./spy-badges" class="col-6 d-flex flex-column justify-content-start align-items-center text-center">
+				<div class="circle-container d-flex align-items-center justify-content-center rounded-circle mb-2 text-white font-size-5 font-size-hg-7" style="{!'background: #' + v.bgBtn}">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate"></span>
+				</div>
+				<span class="text-white">{!v.circleOne}</span>
+			</a>
+			<a href="./spy-regulamento" class="col-6 d-flex flex-column justify-content-start align-items-center text-center">
+				<div class="circle-container d-flex align-items-center justify-content-center rounded-circle mb-2 text-white font-size-5 font-size-hg-7" style="{!'background: #' + v.bgBtn}">
+					<span class="d-flex justify-content-center align-items-center fa fa-gavel"></span>
+				</div>
+				<span class="text-white">{!v.circleTwo}</span>
+			</a>
+		</div>
+	</div>
+
+</aura:component>

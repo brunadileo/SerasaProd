@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Code__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Preloaded or randomly generated code included in the Unique voucher.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Preloaded or randomly generated code included in the Unique voucher.</inlineHelpText>
+    <label>Code</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

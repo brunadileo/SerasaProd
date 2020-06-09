@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_55787626</developerName>
+        <masterLabel>Faixa de Betcoins</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>FieloPLT__Member__c$FieloPLT__Points__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>0</to>
+            </sourceValues>
+            <value>1) Zero</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>0</from>
+                <to>50</to>
+            </sourceValues>
+            <value>2) 1 a 50</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>50</from>
+                <to>150</to>
+            </sourceValues>
+            <value>3) 51 a 150</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>150</from>
+                <to>300</to>
+            </sourceValues>
+            <value>4) 151 a 300</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>300</from>
+                <to>500</to>
+            </sourceValues>
+            <value>5) 301 a 500</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>500</from>
+            </sourceValues>
+            <value>6) &gt; 500</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FieloPLT__Member__c$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FieloPLT__Member__c$FieloPLT__Points__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>TESTE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$FieloPLT__Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active,Ativo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$V_PapelYoubet__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>GERENTES DE CONTAS,LÍDERES,LÍDERES (COORDENADORES) E GERENTE REGIONAIS</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Member__c$V_Lideranca__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_55787626</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Participantes por Faixa Betcoins</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Results_Participantes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Member__c$LastActivityDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica a quantidade de lances realizados pelos participantes no Youbet. --></help>
+    <label><!-- Qtde de Lances Realizados --></label>
+    <name>V_QtdeLancesRealizados__c</name>
+</CustomFieldTranslation>

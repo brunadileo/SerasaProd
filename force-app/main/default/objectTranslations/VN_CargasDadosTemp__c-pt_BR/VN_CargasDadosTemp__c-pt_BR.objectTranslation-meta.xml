@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Carga de Dados Temp</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cargas de Dados Temp</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Layout de Carga de Dados Temp</layout>
+        <sections>
+            <label><!-- Links personalizados --></label>
+            <section>Links personalizados</section>
+        </sections>
+        <sections>
+            <label><!-- Perfil do Participante --></label>
+            <section>Perfil do Participante</section>
+        </sections>
+        <sections>
+            <label><!-- Valores --></label>
+            <section>Valores</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

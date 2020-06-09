@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose how criteria can be met: All to require each and every Criterion to be true, Any to require just one Criterion to be true and Custom to enter a more complex logical expression using Criterion numbers - e.g. ((1 AND 2) OR 3) --></help>
+    <label><!-- Match Criteria --></label>
+    <name>FieloPLT__LogicalExpression__c</name>
+</CustomFieldTranslation>

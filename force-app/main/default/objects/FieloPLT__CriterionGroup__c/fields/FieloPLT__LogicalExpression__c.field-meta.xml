@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__LogicalExpression__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Logical expression that defines how multiple criteria will be evaluated</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose how criteria can be met: All to require each and every Criterion to be true, Any to require just one Criterion to be true and Custom to enter a more complex logical expression using Criterion numbers - e.g. ((1 AND 2) OR 3)</inlineHelpText>
+    <label>Match Criteria</label>
+    <length>1000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

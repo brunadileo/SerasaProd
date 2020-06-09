@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Score SM Elite Q1 Consolidado --></label>
+    <name>V_ScoreSMEliteQ1Consolidado__c</name>
+</CustomFieldTranslation>

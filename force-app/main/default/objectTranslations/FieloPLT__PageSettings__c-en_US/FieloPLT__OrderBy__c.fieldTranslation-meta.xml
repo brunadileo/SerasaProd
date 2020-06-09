@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the record order JSON code for &quot;Related List&quot; Page Setting type. --></help>
+    <label><!-- Order by --></label>
+    <name>FieloPLT__OrderBy__c</name>
+</CustomFieldTranslation>

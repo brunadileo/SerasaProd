@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- Challenge Reward and Challenge must belong to the same Program. --></errorMessage>
+        <name>FieloPLT__Reward_Program_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Challenge Rewards from &quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot; Challenges cannot be modified. --></errorMessage>
+        <name>FieloPLT__ValidatesCreationAndEdition</name>
+    </validationRules>
+</CustomObjectTranslation>

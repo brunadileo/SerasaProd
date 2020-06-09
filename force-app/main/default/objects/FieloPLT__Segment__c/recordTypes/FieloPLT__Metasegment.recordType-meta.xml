@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Metasegment</fullName>
+    <active>true</active>
+    <description>Segment used to link two or more segments</description>
+    <label>Metasegment</label>
+</RecordType>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FieloPLT__Reward__c$V_DataInicioYoubet__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Reward__c$V_DatafinalYoubet__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Reward__c$Name</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Reward__c$V_CargoElegivelYoubet__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$V_Participante__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$FieloPLT__Quantity__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Reward__c.FieloPLT__RedemptionItems__r$V_LanceGanhador__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Reward__c$V_LiderancaElegivelYoubet__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SX | Youbet | Acompanhamento leilões</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Pr_mios_Leil_es_com_Itens_de_Resgate_Lances__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Reward__c$V_DataInicioYoubet__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

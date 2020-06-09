@@ -1,0 +1,96 @@
+<aura:component controller="SX_HomeThemeController" implements="forceCommunity:themeLayout" description="Custom Content Layout" access="global">
+
+    <aura:attribute name="Member" type="FieloPLT__Member__c"/>
+	<aura:handler name="init" value="{!this}" action="{!c.buscaMember}"/>
+
+    <aura:attribute name="contentone" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="contenttwo" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="contentthree" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="contentfour" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
+
+    <aura:attribute name="agreed" type="Boolean"/>
+    <aura:attribute name="loaded" type="Boolean" default="false"/>
+    <aura:attribute name="agreement" type="FieloPLT__Agreement__c"/> 
+    
+
+    <ltng:require styles="{!join(',', 
+    				$Resource.SX_style, 
+    				$Resource.SX_FontAwesomeIcons + '/css/all.min.css')}"/>
+    <ltng:require scripts="{!$Resource.SX_script}"/>
+	<c:SX_Component_Loading/>
+
+
+	<aura:if isTrue="{! and(v.loaded, v.agreed)}">
+		<div>              
+			<div class="content">
+				<div class="sup-content">
+					<div class="container-serasa">
+						<c:SX_SubComponent_MenuButton/>						
+						<div class="mt-4 box-img">
+							<img src="/insiders/resource/SX_Images/logo-insiders.png" class="logo-img" alt="Serasa Insiders - O seu melhor nos faz maior"/>
+						</div>
+					</div>
+				</div>
+				<div class="container-serasa">
+					<div class="row list-items">
+						<div class="col-12 col-lg-4">
+							<div class="columns mb-3">
+								{!v.contenttwo}
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="columns mb-3">
+								{!v.contentthree}
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="columns mb-3">
+								{!v.contentfour}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer d-flex align-items-center">
+				<div class="container-serasa h-100 columns">
+					{!v.footer}
+				</div>
+			</div>
+		</div>
+		<c:SX_Extract_Cmp />
+		<c:SX_Agreement_Cmp />
+		<c:SX_YoubetsPerformed_Cmp />
+		<c:SX_ChangePassword_Cmp/>  
+	</aura:if>
+
+
+    <aura:if isTrue="{! and(v.loaded, not(v.agreed))}">
+    	<div class="box-content">
+    		<div class="header d-flex align-items-center">
+    			<div class="container-serasa">
+    				<div class="columns w-100 h-100 position-relative d-flex align-items-center">
+    					<div class="header-logo mx-auto">
+    						<img src="/insiders/resource/SX_Images/logo-insiders-mini.png" alt="" style="height: 55px"/>
+    					</div> 
+    				</div>
+    			</div>
+    		</div>
+    		<div class="content-agreement text-grey-6">
+    			<div class="container-serasa">
+    				<aura:unescapedHtml value="{!v.agreement.FieloPLT__Agreement__c}"/>
+			    	<div class="d-flex align-items-center justify-content-between">
+			    		<div class="d-flex align-items-center">
+			    			<ui:inputCheckbox aura:id="accept" class="my-3"/>
+			    			<span class="ml-3 font-weight-bold">Li e aceito os termos do regulamento</span>
+			    		</div>
+			    		<div class="w-10 d-flex justify-content-center">
+			    			<lightning:button label="ENVIAR" onclick="{!c.acceptAgreement}" class="w-100 btn btn-default bg-primary text-white"/>
+			    		</div>
+			    	</div>
+    			</div>
+    		</div>
+    	</div>
+    </aura:if>
+
+</aura:component>

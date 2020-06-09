@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__IsInstantRedemption__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Redemption item from an Instant Reward.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When ticked, a Redemption item was generated from an Instant Reward.</inlineHelpText>
+    <label>Instant Redemption</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

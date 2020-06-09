@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- As mecânicas de atribuição de betcoins ou badges do respectivo mês serão executadas pela aplicação somente após o preenchimento desse campo para Verdadeiro. --></help>
+    <label><!-- Processar Mecânicas - Mês 1 --></label>
+    <name>V_ProcessarMecanicasDecimoMesAF__c</name>
+</CustomFieldTranslation>

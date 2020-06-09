@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Challenge Reward that has the Instant Badge set to be granted to Member. --></help>
+    <label><!-- Challenge Reward --></label>
+    <name>FieloPLT__ChallengeReward__c</name>
+    <relationshipLabel><!-- Badge Members --></relationshipLabel>
+</CustomFieldTranslation>

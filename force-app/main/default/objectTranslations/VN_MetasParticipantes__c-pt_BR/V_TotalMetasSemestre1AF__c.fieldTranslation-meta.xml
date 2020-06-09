@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total de Metas do participante do 1o. semestre do ano fiscal. --></help>
+    <label><!-- Total de Metas - 1o. Sem. --></label>
+    <name>V_TotalMetasSemestre1AF__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Quantidade de lances realizados para este leilão. --></help>
+    <label><!-- Qtde Lances Realizados --></label>
+    <name>V_QtdeLancesRealizados__c</name>
+</CustomFieldTranslation>

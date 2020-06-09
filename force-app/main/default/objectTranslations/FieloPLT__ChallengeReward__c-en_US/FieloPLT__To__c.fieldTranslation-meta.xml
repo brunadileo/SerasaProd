@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the range toward point number of the Challenge Reward (Only for &quot;Value Range&quot; and &quot;Position Range&quot;). --></help>
+    <label><!-- To --></label>
+    <name>FieloPLT__To__c</name>
+</CustomFieldTranslation>

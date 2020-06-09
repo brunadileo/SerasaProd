@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__UsedPoints__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Points used in a specific Transaction.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Points used in a specific Transaction.</inlineHelpText>
+    <label>Used Points</label>
+    <referenceTo>FieloPLT__Point__c</referenceTo>
+    <relationshipLabel>Points Usage (Used Points)</relationshipLabel>
+    <relationshipName>UsedPoints</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

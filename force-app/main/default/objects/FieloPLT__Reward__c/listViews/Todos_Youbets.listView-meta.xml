@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Todos_Youbets</fullName>
+    <columns>NAME</columns>
+    <columns>FieloPLT__Description__c</columns>
+    <columns>Iniciativa__c</columns>
+    <columns>V_PapelYoubet__c</columns>
+    <columns>V_IsActive__c</columns>
+    <columns>V_DataHoraInicioYoubet__c</columns>
+    <columns>V_DataHoraFimYoubet__c</columns>
+    <columns>V_NomeVencedor__c</columns>
+    <columns>V_ValorLanceGanhador__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>FieloPLT__Reward__c.Leiloes</value>
+    </filters>
+    <label>Todos Youbets</label>
+    <language>en_US</language>
+</ListView>

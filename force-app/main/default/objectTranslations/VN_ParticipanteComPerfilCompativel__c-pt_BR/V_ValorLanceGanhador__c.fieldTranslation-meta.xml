@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o valor do lance ganhador do Youbet. --></help>
+    <label><!-- Valor do Lance Ganhador --></label>
+    <name>V_ValorLanceGanhador__c</name>
+</CustomFieldTranslation>

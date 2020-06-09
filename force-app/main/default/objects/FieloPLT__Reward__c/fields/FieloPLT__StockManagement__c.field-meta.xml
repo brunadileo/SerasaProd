@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__StockManagement__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Manages stock control: Controlled by Quantity (Exact Reward number must be entered in &quot;Available Stock Quantity&quot;); Controlled by Item (a defined file - .CSV, .txt - or list is uploaded containing specific Reward codes, each representing a Reward item); Unlimited (no control required; Reward can be redeemed unlimited times).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose how to manage the Reward stock: Controlled by Quantity, Controlled by Item (a list containing specific Reward codes, each representing a Reward item) or Unlimited.</inlineHelpText>
+    <label>Stock Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Controlled By Quantity</fullName>
+                <default>true</default>
+                <label>Controlled By Quantity</label>
+            </value>
+            <value>
+                <fullName>Controlled By Item</fullName>
+                <default>false</default>
+                <label>Controlled By Item</label>
+            </value>
+            <value>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+                <label>Unlimited</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

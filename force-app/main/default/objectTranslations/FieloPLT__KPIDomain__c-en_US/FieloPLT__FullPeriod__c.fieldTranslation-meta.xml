@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When on, the KPI Report will cover the full period of time for which data is available. --></help>
+    <label><!-- Full Period --></label>
+    <name>FieloPLT__FullPeriod__c</name>
+</CustomFieldTranslation>

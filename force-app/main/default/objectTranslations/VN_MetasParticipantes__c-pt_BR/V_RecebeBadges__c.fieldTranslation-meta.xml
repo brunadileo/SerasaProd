@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Para o participante receber badges, ele não pode ser da categoria &quot;DIRETOR&quot; e o campo &quot;Não Receber Badge&quot; no cadastro do participante não pode estar assinalado. --></help>
+    <label><!-- Recebe Badges? --></label>
+    <name>V_RecebeBadges__c</name>
+</CustomFieldTranslation>

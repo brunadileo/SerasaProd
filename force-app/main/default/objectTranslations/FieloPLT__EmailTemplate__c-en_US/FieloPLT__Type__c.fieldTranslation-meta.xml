@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose whether you&apos;ll use this template for Email Campaigns (&quot;Campaign&quot;) or Transactional Emails (&quot;Transaction&quot;). --></help>
+    <label><!-- Type --></label>
+    <name>FieloPLT__Type__c</name>
+    <picklistValues>
+        <masterLabel>Campaign</masterLabel>
+        <translation><!-- Campaign --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transaction</masterLabel>
+        <translation><!-- Transaction --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

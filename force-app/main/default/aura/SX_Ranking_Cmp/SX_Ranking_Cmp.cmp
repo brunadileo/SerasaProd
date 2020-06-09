@@ -1,0 +1,108 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_RankingController">
+	<aura:attribute name="headerTitle" type="Aura.Component[]">
+        <div class="d-flex justify-content-end">
+            <lightning:button class="fa fa-times btn p-0 border-0 bg-transparent text-white font-size-7" onclick="{!c.closeModal}"/>
+        </div>
+    </aura:attribute>
+
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+
+    <aura:handler event="c:SX_YouBetModal_Evt" action="{!c.youbetModal}" /> 
+    <aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+    <aura:attribute name="member" type="FieloPLT__Member__c" />
+    <aura:attribute name="ranking" type="Aura.Component[]"/>
+    <aura:attribute name="rankingVagas" type="Aura.Component[]"/>
+    <aura:attribute name="rankingMap" type="Map"/>
+    <aura:attribute name="rankingQuaseLa" type="Aura.Component[]"/>
+    <aura:attribute name="youbetType" type="String"/>
+    <aura:attribute name="ultimoMesProcessado" type="String"/>
+    <aura:attribute name="ano" type="String"/>
+    <aura:attribute name="anofim" type="String"/>
+    <aura:attribute name="isLoading" type="Boolean" default="false"/>  
+
+	<div id="RankingModal" class="position-fixed modal-overlay" style="display: none" onclick="{!c.closeModal}">
+	    <div class="position-relative d-flex h-100 align-items-center justify-content-center">
+		    <lightning:card title="{!v.headerTitle}" class="modal-card">
+                <h2 class="m-0 font-size-8">
+                    <img src="/insiders/resource/SX_Images_fy20/elitefy20_header_modal.png" alt="Elite Logo"/>
+                    <span>Ranking</span>
+                </h2>
+
+	            <div class="ranking">
+                    <!-- RANKING TABLES -->
+                    <div class="ranking-table">
+                        <div class="ranking-table__header">
+                            <div class="text-secondary text-lg-center">
+                                Posição
+                            </div>
+                            <div class="text-secondary">
+                                Nome
+                            </div>
+                            <div class="text-secondary text-lg-center">
+                                Score
+                            </div>
+                            <div class="text-secondary text-lg-center">
+                                Elegível
+                            </div>
+                        </div>
+                        <div class="ranking-table__body">
+                            <!-- ELIGIBLE -->
+                            <div class="eligible">
+                                <aura:iteration items="{!v.rankingVagas}" var="MemberRanking" indexVar="key">
+                                    <div class="eligible__container">
+                                        <div data-header="Posição" class="text-elite text-lg-center">
+                                            {!MemberRanking.wPosicao}º
+                                        </div>
+                                        <div data-header="Nome" class="text-elite">
+                                            {!MemberRanking.wNome}
+                                        </div>
+                                        <div data-header="Score" class="text-elite text-lg-center">
+                                            {!MemberRanking.wScore}
+                                        </div>
+                                        <div data-header="Elegível" class="text-elite text-lg-center">
+                                            {!MemberRanking.wElegivel}
+                                        </div>
+                                    </div>
+                                </aura:iteration>
+                            </div>
+
+                            <!-- ALMOST THERE -->
+                            <aura:if isTrue="{!v.rankingQuaseLa != null}">
+                                <div class="almost-there">
+                                    <aura:iteration items="{!v.rankingQuaseLa}" var="MemberRankingQuaseLa" indexVar="key2">
+                                        <div class="almost-there__container">
+                                            <div data-header="Posição" class="disabled-memberranking text-lg-center">
+                                                {!MemberRankingQuaseLa.wPosicao}º
+                                            </div>
+                                            <div data-header="Nome" class="disabled-memberranking">
+                                                {!MemberRankingQuaseLa.wNome}
+                                            </div>
+                                            <div data-header="Score" class="disabled-memberranking text-lg-center">
+                                                {!MemberRankingQuaseLa.wScore}
+                                            </div>
+                                            <div data-header="Elegível" class="disabled-memberranking text-lg-center">
+                                                {!MemberRankingQuaseLa.wElegivel}
+                                            </div>
+                                        </div>
+                                    </aura:iteration>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </div>
+
+                    <!-- TEXT -->
+                    <div class="ranking__text">
+                        <div>
+                            * Serão considerados elegíveis, os participantes que atingirem 100% ou mais da meta YTD.
+                        </div>
+                        <div>
+                            * Números atualizados com os resultados de abril/{!v.ano} a {!v.ultimoMesProcessado}/{!v.anofim}
+                        </div>
+                    </div>
+	            </div>
+	        </lightning:card>
+	    </div>
+    </div>
+    <ltng:require scripts="{!$Resource.SX_script}" />
+	
+</aura:component>

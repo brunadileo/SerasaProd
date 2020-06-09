@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Action__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>An Action represents a behavior you want to encourage in a Member. It consists of an object (a Salesforce standard or a custom object) and a Member.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose an Action. An Action represents a behavior you want to encourage in a Member. You can configure Actions in the Libraries tab.</inlineHelpText>
+    <label>Action</label>
+    <referenceTo>FieloPLT__Action__c</referenceTo>
+    <relationshipLabel>Rules</relationshipLabel>
+    <relationshipName>Rules</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

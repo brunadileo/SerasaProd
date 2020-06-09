@@ -1,0 +1,5 @@
+<design:component label="CC - Home | Pitch Text">
+	<design:attribute name="logo" label="page Logo"/>
+	<design:attribute name="background" label="Page Background"/>
+	<design:attribute name="pitchText" label="Pitch Text"/>
+</design:component>

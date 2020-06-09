@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_92798398</developerName>
+        <masterLabel>Critério</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FieloPLT__Transaction__c.FieloPLT__Points__r$V_Origem__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Novo - Youbet Perene - Atingimento de Meta no mês do AF</sourceValue>
+            </sourceValues>
+            <value>Ating. Mensal</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Novo - Youbet - Soluções Estratégicas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adjustment</sourceValue>
+            </sourceValues>
+            <value>Soluções Estratégicas</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Novo - Youbet - Atingimento de Meta no 1º Trimestre do AF</sourceValue>
+            </sourceValues>
+            <value>Ating. Quarter</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Novo - Youbet - Atingimento de Meta do Líder Imediato Quarter</sourceValue>
+            </sourceValues>
+            <value>Ating. Quarter Líder</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FieloPLT__Transaction__c.FieloPLT__Points__r$FieloPLT__TotalPoints__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Transaction__c$Name</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Transaction__c.FieloPLT__Points__r$Name</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Transaction__c$FieloPLT__Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__Transaction__c$FieloPLT__Member__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>TESTE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Transaction__c.FieloPLT__Points__r$CreatedDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>7/1/2019 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Transaction__c$FieloPLT__Member__c.FieloPLT__Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active,Ativo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Transaction__c$FieloPLT__Member__c.V_PapelYoubet__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>GERENTES DE CONTAS,LÍDERES,LÍDERES (COORDENADORES) E GERENTE REGIONAIS</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Transaction__c$V_Sumarizador__c.V_Mes__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_92798398</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Transaction__c.FieloPLT__Points__r$V_Origem__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>FY20 | Betcoins por critério e mês</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>PLAN_Betcoins__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Transaction__c$LastModifiedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

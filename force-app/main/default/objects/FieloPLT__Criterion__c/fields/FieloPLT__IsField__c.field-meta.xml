@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__IsField__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>When ticked, &quot;Value&quot; becomes a picklist of fields from the same object as &quot;Field Name&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tick this box to compare the value of Field Name with the value of another field from the same object.</inlineHelpText>
+    <label>Field</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

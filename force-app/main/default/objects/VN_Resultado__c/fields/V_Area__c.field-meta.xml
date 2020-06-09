@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Area__c</fullName>
+    <description>Área do participante relacionado à venda.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Área do participante relacionado à venda.</inlineHelpText>
+    <label>Área</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>VERTICAIS</fullName>
+                <default>false</default>
+                <label>VERTICAIS</label>
+            </value>
+            <value>
+                <fullName>REGIÕES</fullName>
+                <default>false</default>
+                <label>REGIÕES</label>
+            </value>
+            <value>
+                <fullName>MULTI CANAL</fullName>
+                <default>false</default>
+                <label>MULTI CANAL</label>
+            </value>
+            <value>
+                <fullName>PLANEJAMENTO COMERCIAL</fullName>
+                <default>false</default>
+                <label>PLANEJAMENTO COMERCIAL</label>
+            </value>
+            <value>
+                <fullName>TBD I</fullName>
+                <default>false</default>
+                <label>TBD I</label>
+            </value>
+            <value>
+                <fullName>TBD II</fullName>
+                <default>false</default>
+                <label>TBD II</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

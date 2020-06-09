@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pela carga de dados, deverá receber a concatenação dos campos: Área+Liderança+Setor+Cargo do registro de resultado. Campo esse utilizado para o cálculo da média ponderada de atingimento e superação de metas. --></help>
+    <label><!-- Chave Composta --></label>
+    <name>V_ChaveComposta__c</name>
+</CustomFieldTranslation>

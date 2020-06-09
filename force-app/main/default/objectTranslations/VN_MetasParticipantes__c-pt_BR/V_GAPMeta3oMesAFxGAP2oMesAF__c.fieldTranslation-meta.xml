@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o comportamento do GAP Meta do mês atual com o do mês anterior. --></help>
+    <label><!-- GAP Meta - Mês 6 x Mês 5 --></label>
+    <name>V_GAPMeta3oMesAFxGAP2oMesAF__c</name>
+</CustomFieldTranslation>

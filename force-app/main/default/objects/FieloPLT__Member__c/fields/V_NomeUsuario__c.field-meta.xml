@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_NomeUsuario__c</fullName>
+    <description>Campo criado para o disparo de E-mail do primeiro acesso</description>
+    <externalId>false</externalId>
+    <formula>FieloPLT__User__r.FirstName</formula>
+    <inlineHelpText>Campo criado para o disparo de E-mail do primeiro acesso</inlineHelpText>
+    <label>Nome (Usuário)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

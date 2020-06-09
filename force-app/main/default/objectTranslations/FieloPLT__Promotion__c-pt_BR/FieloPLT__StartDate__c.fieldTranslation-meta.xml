@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a date to start the Promotion. If blank, the Promotion will need to be activated manually. --></help>
+    <label>Data Início</label>
+    <name>FieloPLT__StartDate__c</name>
+</CustomFieldTranslation>

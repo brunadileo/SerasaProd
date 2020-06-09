@@ -1,0 +1,33 @@
+.THIS.modal-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.THIS .modal-card {
+    width: 991px;
+    height: 80%;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
+    border: none;
+    border-radius: 0;
+}
+.THIS .slds-card__header {
+    display: none;
+    margin-bottom: 0;
+}
+.THIS .slds-card__body {
+    height: 100%;
+    overflow-y: auto;
+    margin: 0;
+}
+.THIS .slds-card__body h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0667cd;
+    color: #ffffff;
+}
+.THIS .slds-card__body h2 span {
+    margin: 0 auto
+}

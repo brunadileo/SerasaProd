@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score de atingimento de meta Elite do participante YTD. --></help>
+    <label><!-- Score de AM Elite - AF AUX --></label>
+    <name>V_ScoreAMEliteAFAUX__c</name>
+</CustomFieldTranslation>

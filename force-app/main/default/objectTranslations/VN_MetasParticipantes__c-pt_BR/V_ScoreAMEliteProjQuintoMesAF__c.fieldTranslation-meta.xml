@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score de atingimento de meta Elite projetado do participante até o 5o. mês do ano fiscal. --></help>
+    <label><!-- Score de AM Elite Projetado - Mês 8 --></label>
+    <name>V_ScoreAMEliteProjQuintoMesAF__c</name>
+</CustomFieldTranslation>

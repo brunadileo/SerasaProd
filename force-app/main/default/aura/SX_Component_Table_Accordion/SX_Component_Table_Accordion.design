@@ -1,0 +1,5 @@
+<design:component label="CC - Table Accordion">
+	<design:attribute name="filterOne" label="Display do Primeiro Filter" />
+	<design:attribute name="filterTwo" label="Display do Segundo Filter" />
+	<design:attribute name="filterThree" label="Display do Terceiro Filter" />
+</design:component>

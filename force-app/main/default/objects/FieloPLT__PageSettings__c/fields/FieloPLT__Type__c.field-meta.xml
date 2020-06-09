@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It includes all the possible Page Settings types available to create: Landing, New,  View, Detail, Related and Edit.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the type of Page Setting you want to create. Type is directly linked to where you&apos;re applying the Page Setting.</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Edit</fullName>
+                <default>false</default>
+                <label>Edit</label>
+            </value>
+            <value>
+                <fullName>Related</fullName>
+                <default>false</default>
+                <label>Related</label>
+            </value>
+            <value>
+                <fullName>Landing</fullName>
+                <default>false</default>
+                <label>Landing</label>
+            </value>
+            <value>
+                <fullName>View</fullName>
+                <default>false</default>
+                <label>View</label>
+            </value>
+            <value>
+                <fullName>Detail</fullName>
+                <default>false</default>
+                <label>Detail</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Lookup</fullName>
+                <default>false</default>
+                <label>Lookup</label>
+            </value>
+            <value>
+                <fullName>Related - New</fullName>
+                <default>false</default>
+                <label>Related - New</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

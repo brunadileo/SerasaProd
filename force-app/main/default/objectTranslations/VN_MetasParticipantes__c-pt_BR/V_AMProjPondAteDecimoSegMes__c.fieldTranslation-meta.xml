@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentual de atingimento de metas Projetado PONDERADO do participante até o 12o. mês do ano fiscal. Cálculo utilizado no Elite. --></help>
+    <label><!-- AM Até Mês 3 Projetado - Ponderado --></label>
+    <name>V_AMProjPondAteDecimoSegMes__c</name>
+</CustomFieldTranslation>

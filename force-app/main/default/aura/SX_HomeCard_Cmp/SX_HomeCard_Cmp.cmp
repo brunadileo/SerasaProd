@@ -1,0 +1,229 @@
+<aura:component controller="SX_HomeCardController" implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="type" type="String" access="global" />	
+	<aura:attribute name="borderColor" type="String" default="b635ab" access="global" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+    <aura:attribute name="member" type="FieloPLT__Member__c" />
+    <aura:attribute name="showMsgSemPremio" type="Boolean" default="false"/> 
+    <aura:attribute name="reward" type="FieloPLT__Reward__c" /> 
+    
+	<!-- <aura:attribute name="meta" type="VN_MetasParticipantes__c" /> -->
+	<aura:attribute name="meta" type="VN_MetaParticipante__c" />
+    <aura:attribute name="positionRanking" type="String" />
+    <aura:attribute name="vagas" type="String" />
+    <aura:attribute name="expirado" type="Boolean" default="false"/>
+    <aura:attribute name="numBadges" type="object" />
+    <aura:attribute name="disabled" type="String" />
+
+	<div class="{!'d-flex flex-column bg-white program-card ' + v.disabled}" style="{!'border-color: #' + v.borderColor}">
+		<!-- CARD YOUBET -->
+		<aura:if isTrue="{!v.type == 'Youbet'}">
+			<div class="{!v.member.V_PapelYoubet__c != 'NÃO ELEGÍVEL' ? 'd-flex flex-column justify-content-between flex-fill': 'disabled-item d-flex flex-column justify-content-between flex-fill'}">	
+			<!-- <aura:if isTrue="{! and(v.type == 'Youbet', v.member.V_PapelYoubet__c != 'NÃO ELEGÍVEL')}"> -->
+
+
+				<img src="/insiders/resource/SX_Images/logo-Youbet.jpg" alt=""/>
+				<div class="card-content d-flex flex-column justify-content-center">
+				<!-- <div class="{!'card-content d-flex flex-column justify-content-center ' + (v.member.V_PapelYoubet__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item')}"> -->
+					
+					<aura:if isTrue="{! and(v.member.V_PapelYoubet__c != 'DIRETORES',v.member.V_PapelYoubet__c != 'NÃO ELEGÍVEL')}">
+						<!-- <div class="d-flex justify-content-between px-3 py-2"> -->
+						<div class=	"{!'d-flex justify-content-between px-3 py-2  ' + (v.member.V_PapelYoubet__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item')}">
+							<span class="d-flex align-items-center text-grey-6 font-size-5">Suas betcoins</span>
+							<span class="d-flex align-items-center font-size-6">
+								<span class="text-youbet-extra">{!v.member.FieloPLT__Points__c}</span>
+								<img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" style="height:20px;margin:0 0 .25rem .25rem"/>
+							</span>
+						</div>
+					</aura:if>
+					<hr class="mt-0 mb-2 mx-3"/>
+
+					<!-- QUANDO HOUVER YOUBET -->
+					<aura:if isTrue="{! and(v.showMsgSemPremio, not(v.expirado), v.reward != null)}"> 
+						<div class="auction p-3">
+							<!-- REWARD NAME -->
+							<div class="reward-name text-grey-6">
+									{!v.reward.Name} 
+							</div>
+	
+							<!-- AUCTION INFO -->
+							<div class="h-100 d-flex flex-column justify-content-between">
+								<!-- <span class="reward-name text-grey-6">
+										{!v.reward.Name} 
+								</span> -->
+								<div class="d-flex flex-column mt-4">
+									<div class="d-flex align-items-center">
+										<img src="/insiders/resource/SX_Images/icon-gavel.png" alt="" style="height:15px;margin-bottom:.25rem;filter:grayscale(100%);"/>
+										<span class="offer-info ml-1">
+											{! v.reward.FieloPLT__RedemptionItems__r != null ? v.reward.FieloPLT__RedemptionItems__r[0].FieloPLT__Quantity__c : 0}
+											<img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" style="height:15px;margin:0 0 .25rem .25rem"/>
+										</span>
+									</div>
+									<div class="d-flex align-items-center">
+										<img src="/insiders/resource/SX_Images/icon-clock.png" alt="" style="height:15px;margin-bottom:.25rem;filter:grayscale(100%);"/>
+										<span id="tempo-fim" class="offer-info ml-1"></span>
+									</div>
+								</div>
+							</div>
+	
+							<!-- REWARD IMAGE -->
+							<div class="d-flex align-items-center justify-content-center">
+								<img src="{!'/insiders/servlet/servlet.FileDownload?file='+(v.reward.FieloPLT__Image__c != null ? v.reward.FieloPLT__Image__c :$Resource.SX_images_default + '/no-image-md.png')}" alt="" class="px-3 "/>
+							</div>
+						</div>
+					</aura:if> 
+					<!-- CASO NÃO EXISTIR YOUBETS -->
+					<aura:if isTrue="{! and(or(v.reward == null, v.expirado), v.showMsgSemPremio)}"> 
+						<div class="col-12 col-lg-8">
+							<div class="h-100 d-flex align-items-center justify-content-center">
+								Não há premiações previstas para o seu perfil no momento!
+							</div>
+						</div>
+					</aura:if> 
+						
+					<!-- IR PARA YOUBET EXTRA - OCULTADO -->
+					<aura:if isTrue="">
+						<hr class="m-2"/>
+						<a onclick="{!c.openYoubetExtra}" class="d-flex align-items-center justify-content-end px-3 text-youbet-page"> 
+							<span class="fa fa-angle-right font-size-6"></span>
+							<span class="ml-1 text-underline">Ver YouBet Extra</span>
+						</a>
+					</aura:if>
+				</div>
+				<a onclick="{!c.openYoubetHome}" class="d-flex font-size-3 font-size-xl-4 align-items-center justify-content-center mt-2 p-3 bg-youbet-extra text-white text-center">
+					<span class="pr-3 border-right border-white">{! v.member.V_PapelYoubet__c != 'DIRETORES' ? 'APOSTE NOS SEUS RESULTADOS' : 'ACOMPANHE SUA EQUIPE'}</span>
+					<span class="fa fa-angle-right pl-3 font-size-5"></span>
+				</a>
+			</div>	
+		</aura:if>
+
+
+		<!-- CARD ELITE -->
+		<aura:if isTrue="{!v.type == 'Elite'}">
+			<div class="{!v.member.V_PapelElite__c != 'NÃO ELEGÍVEL' ? 'd-flex flex-column justify-content-between flex-fill': 'disabled-item d-flex flex-column justify-content-between flex-fill'}">	
+				<img src="/insiders/resource/SX_Images_fy20/logo-elitefy20.jpg" alt=""/>
+				<div class="card-content text-grey-6">
+					<div class="d-flex align-items-center justify-content-between mt-2 px-3">
+						<span class="font-size-5 px-3">Score Atual</span>
+						<span class="text-elite font-size-6 px-3">
+							<aura:if isTrue="{!v.member.V_MetaScoreEliteAFCongelado__c == null}">
+								<!-- {!v.meta.V_ScoreEliteAF__c} -->
+								{!v.meta.V_ScoreElite__c}
+								<aura:set attribute="else">
+									{!v.member.V_MetaScoreEliteAFCongelado__c}
+								</aura:set>
+							</aura:if>
+						</span>
+					</div>
+					<aura:if isTrue="false">
+						<hr class="mx-3 my-2"/>
+						<div class="d-flex align-items-center justify-content-between px-3">
+							<span class="px-3">Score Projetado</span>
+							<span class="px-3 text-grey-9 font-size-6">
+								<aura:if isTrue="{!v.member.V_MetaScoreEliteAFProjetadoCongelado__c == null}">
+									<!-- {!v.meta.V_ScoreEliteAFProjetado__c} -->
+									{!v.meta.V_ScoreEliteAFProjetado__c}
+									<aura:set attribute="else">
+										0
+									</aura:set>
+								</aura:if>
+							</span>
+						</div>
+					</aura:if>
+					<hr class="mx-3 my-2"/>
+					<div class="d-flex align-items-center justify-content-between px-3">
+						<span class="px-3 ">Posição no Ranking</span>
+						<span class="px-3 text-grey-9 font-size-6">
+								<!-- {!v.positionRanking == null ? '0' : v.positionRanking} -->
+							<aura:if isTrue="{!v.member.V_PosicaoRankingCongelado__c == null}">
+								{!v.positionRanking == null ? '0' : v.positionRanking}
+								<aura:set attribute="else">
+									{!v.member.V_PosicaoRankingCongelado__c}
+								</aura:set>
+							</aura:if>
+						</span>
+					</div>
+					<hr class="mx-3 my-2"/>
+					<div class="d-flex align-items-center justify-content-between mb-2 px-3">
+						<span class="px-3">Total de Vagas </span>
+						<span class="px-3 text-grey-9 font-size-6">
+							{!v.vagas == null ? '0' : v.vagas}
+						</span>
+					</div>
+				</div>
+				<a href="./elite-home" class="d-flex align-items-center font-size-3 font-size-xl-4 justify-content-center mt-2 p-3 bg-elite text-white text-center">
+					<span class="pr-3 border-right border-white">EMBARQUE NAS SUAS METAS</span>
+					<span class="fa fa-angle-right pl-3 font-size-5"></span>
+				</a>
+			</div>	
+		</aura:if>
+
+		<!-- CARD SPY -->
+		<aura:if isTrue="{!v.type == 'Spy'}">
+			<!-- <div class="{!v.member.V_PapelSalesPersonYear__c != 'NÃO ELEGÍVEL' ? 'd-flex flex-column justify-content-between flex-fill': 'disabled-item d-flex flex-column justify-content-between flex-fill'}"> -->
+			<!-- Como não colocaremos SPY no ar agora, desabilitar o link para a página interna dessa iniciativa. -->
+			<div class="{!v.member.V_PapelSalesPersonYear__c != 'NÃO ELEGÍVEL' ? 'd-flex flex-column justify-content-between flex-fill': 'disabled-item d-flex flex-column justify-content-between flex-fill'}">
+		
+				<img src="/insiders/resource/SX_Images/SPY_banner_350x149.png" alt=""/>
+				<div class="card-content d-flex flex-column justify-content-around py-3 text-grey-6">
+
+						<div class="d-flex align-items-center justify-content-between px-3">
+							<span class="font-size-5 px-3">{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES' ? 'Veja suas badges' : 'Badges que valem pontos'}</span>
+						</div>
+						<hr class="mx-3 my-2"/>
+						<div class="d-flex align-items-center justify-content-between px-3">
+							<div class="d-flex align-items-center">
+								<img src="/insiders/resource/SX_Images/badge-elite.png" class="spy-badges" alt=""/>
+								<span class="ml-3 font-size-5">Elite</span>
+							</div>
+							<span class="px-3 text-grey-9 font-size-6">
+								<aura:if isTrue="{!v.member.V_BadgeEliteCongelado__c == null}">
+									{!v.numBadges.wBadgeElite}
+									<aura:set attribute="else">
+										{!v.member.V_BadgeEliteCongelado__c}
+									</aura:set>
+								</aura:if>
+							</span>
+						</div>
+						<hr class="mx-3 my-2"/>
+						<div class="d-flex align-items-center justify-content-between px-3">
+							<div class="d-flex align-items-center">
+								<img src="/insiders/resource/SX_Images/badge-youbet.png" class="spy-badges" alt=""/>
+								<span class="ml-3 font-size-5">Youbet</span>
+							</div>
+							<span class="px-3 text-grey-9 font-size-6">
+								<aura:if isTrue="{!v.member.V_BadgeYouBetCongelado__c == null}">
+									{!v.numBadges.wBadgeYoubet}
+									<aura:set attribute="else">
+										{!v.member.V_BadgeYouBetCongelado__c}
+									</aura:set>
+								</aura:if>
+							</span>
+						</div>
+						<hr class="mx-3 my-2"/>
+						<div class="d-flex align-items-center justify-content-between px-3">
+							<div class="d-flex align-items-center">
+								<img src="/insiders/resource/SX_Images/badge-engajamento.png" class="spy-badges" alt=""/>
+								<span class="ml-3 font-size-5">Engajamento</span>
+							</div>
+							<span class="px-3 text-grey-9 font-size-6">
+								<aura:if isTrue="{!v.member.V_BadgeEngajamentoCongelado__c == null}">
+									{!v.numBadges.wBadgeEngajamento}
+									<aura:set attribute="else">
+										{!v.member.V_BadgeEngajamentoCongelado__c}
+									</aura:set>
+								</aura:if>
+							</span>
+						</div>
+
+				</div>
+				<a href="./sales-person-of-the-year-home" class="d-flex align-items-center font-size-3 font-size-xl-4 justify-content-center mt-2 p-3 bg-spy-detail text-white text-center">
+					<span class="pr-3 border-right border-white">{! v.member.V_PapelSalesPersonYear__c != 'DIRETORES' ? 'CONFIRA SUAS BADGES' : 'ACOMPANHE SUA EQUIPE'}</span> 
+					<span class="fa fa-angle-right pl-3 font-size-5"></span>
+				</a>
+			</div>	
+		</aura:if>
+
+	</div>
+</aura:component>

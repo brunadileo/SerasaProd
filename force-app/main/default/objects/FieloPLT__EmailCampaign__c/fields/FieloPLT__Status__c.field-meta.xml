@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The current status of the campaign. Options are: Scheduled, when the start Date is in the future; In Progress, when the campaign has already started (for recurrent campaigns); and Sent, when the campaign has been completed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the current status of the campaign.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>InProgress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Sent</fullName>
+                <default>false</default>
+                <label>Sent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

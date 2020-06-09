@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Valor de liderança do participante relacionado à venda. --></help>
+    <label><!-- Liderança --></label>
+    <name>V_Lideranca__c</name>
+    <picklistValues>
+        <masterLabel>GRANDES BANCOS</masterLabel>
+        <translation><!-- GRANDES BANCOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MULTI CANAL</masterLabel>
+        <translation><!-- MULTI CANAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MULTISECTOR</masterLabel>
+        <translation><!-- MULTISECTOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NOVOS NEGÓCIOS</masterLabel>
+        <translation><!-- NOVOS NEGÓCIOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REGIÕES</masterLabel>
+        <translation><!-- REGIÕES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERVIÇOS FINANCEIROS</masterLabel>
+        <translation><!-- SERVIÇOS FINANCEIROS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VAREJO, CPG E PAGAMENTOS</masterLabel>
+        <translation><!-- VAREJO, CPG E PAGAMENTOS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It stores a JSON file in which Rule and/or Mission Criteria, Criterion Group and Master-detail processing are displayed. It is completed when a Promotion or Challenge is enabled. --></help>
+    <label><!-- Criteria Fields --></label>
+    <name>FieloPLT__CriteriaFields__c</name>
+</CustomFieldTranslation>

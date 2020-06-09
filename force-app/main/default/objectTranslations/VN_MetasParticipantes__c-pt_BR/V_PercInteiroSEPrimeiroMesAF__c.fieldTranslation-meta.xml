@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo utilizado para atribuir betcoins de solução estratégica no 1o. mês do ano fiscal. --></help>
+    <label><!-- % Inteiro - SE - Mês 4 --></label>
+    <name>V_PercInteiroSEPrimeiroMesAF__c</name>
+</CustomFieldTranslation>

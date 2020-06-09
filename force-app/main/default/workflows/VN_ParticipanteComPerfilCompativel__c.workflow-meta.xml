@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Encerramento_de_youbet</fullName>
+        <ccEmails>disparosinsiders@valuenet.com.br</ccEmails>
+        <ccEmails>insiders@br.experian.com</ccEmails>
+        <description>Encerramento de youbet</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>insiders@br.experian.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VN_SiteInsiders/VN_SerasaInsidersEncerramentoYoubet</template>
+    </alerts>
+    <alerts>
+        <fullName>VN_Iniciodoleilao</fullName>
+        <ccEmails>disparosinsiders@valuenet.com.br</ccEmails>
+        <ccEmails>insiders@br.experian.com</ccEmails>
+        <description>Serasa Insiders: inicio do leilão Youbet</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>insiders@br.experian.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VN_SiteInsiders/V_Iniciodoleilao</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>V_AtualizaEmailPerfilCompativel</fullName>
+        <description>Atualiza o email do participante com perfil compatível para ser usado no alerta de email Serasa:Início do leilão.</description>
+        <field>Email__c</field>
+        <formula>V_EmailParticipante__c</formula>
+        <name>Atualiza Email Perfil Compatível</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_NomeTratamento_no_perfil_compativel</fullName>
+        <description>Nome de tratamento no perfil compativel</description>
+        <field>V_NomeTramento__c</field>
+        <formula>V_Member__r.V_NomeTratamento__c</formula>
+        <name>Nome de Tratamento no perfil compativel</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Email Perfil compatível</fullName>
+        <actions>
+            <name>V_AtualizaEmailPerfilCompativel</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_NomeTratamento_no_perfil_compativel</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Preenche o campo email do participante com perfil compativel.</description>
+        <formula>true</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Encerramento Youbet email</fullName>
+        <actions>
+            <name>Encerramento_de_youbet</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>V_Finalizado__c</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Serasa Insiders%3A inicio do leilão Youbet</fullName>
+        <actions>
+            <name>VN_Iniciodoleilao</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND (V_EnviaEmailInicioLeilao__c, V_Saldo__c&gt;V_Reward__r.V_LanceMinimo__c,   NOT(ISPICKVAL(V_Member__r.V_PapelYoubet__c,&apos;DIRETORES&apos;)),
+ISCHANGED(V_EnviaEmailInicioLeilao__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

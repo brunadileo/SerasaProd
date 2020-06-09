@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X001_Insiders_InformaYoubetExtra</fullName>
+    <columns>V_Member__c</columns>
+    <columns>V_Reward__c</columns>
+    <columns>V_EmailParticipante__c</columns>
+    <columns>V_DatahoraInicio__c</columns>
+    <columns>V_DatahoraFinal__c</columns>
+    <columns>V_Ativo__c</columns>
+    <columns>V_IDParticipante__c</columns>
+    <columns>V_EmailDinamize__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>V_Iniciativa__c</field>
+        <operation>equals</operation>
+        <value>Youbet Extra</value>
+    </filters>
+    <filters>
+        <field>V_YoubetProcessado__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>001_Insiders_InformaYoubet Extra</label>
+    <language>pt_BR</language>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ValidateMember</fullName>
+    <active>true</active>
+    <description>A Member must be selected.</description>
+    <errorConditionFormula>(FieloPLT__Member__c == null)</errorConditionFormula>
+    <errorDisplayField>FieloPLT__Member__c</errorDisplayField>
+    <errorMessage>A Member must be selected.</errorMessage>
+</ValidationRule>

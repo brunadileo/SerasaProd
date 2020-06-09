@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter a KPI upon which to base your report. You can view, edit and create KPIs by accessing the &quot;Event&quot; Action in the FieloPLT Library. --></help>
+    <label><!-- KPI --></label>
+    <name>FieloPLT__KPI__c</name>
+    <relationshipLabel><!-- KPI Domains --></relationshipLabel>
+</CustomFieldTranslation>

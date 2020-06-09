@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sumarizador</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sumarizadores</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Layout de Sumarizador do Objetivo</layout>
+        <sections>
+            <label><!-- Dados do participante --></label>
+            <section>Dados do participante</section>
+        </sections>
+        <sections>
+            <label><!-- Links personalizados --></label>
+            <section>Links personalizados</section>
+        </sections>
+        <sections>
+            <label><!-- Período --></label>
+            <section>Período</section>
+        </sections>
+        <sections>
+            <label><!-- Semestre --></label>
+            <section>Semestre</section>
+        </sections>
+        <sections>
+            <label><!-- Trimestre --></label>
+            <section>Trimestre</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

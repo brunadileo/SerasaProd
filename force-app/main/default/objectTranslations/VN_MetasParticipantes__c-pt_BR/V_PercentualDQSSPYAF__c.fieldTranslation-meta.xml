@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o percentual de DQS (Data Quality Service) do participante. Campo utilizado para SPY e deverá ser preenchido por carga de dados com o valor já definido pela Serasa Experian. --></help>
+    <label><!-- % DQS SPY - AF --></label>
+    <name>V_PercentualDQSSPYAF__c</name>
+</CustomFieldTranslation>

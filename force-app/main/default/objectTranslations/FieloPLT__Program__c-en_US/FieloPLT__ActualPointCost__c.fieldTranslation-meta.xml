@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It translates Transaction Points into real currency cost. --></help>
+    <label><!-- Actual Point Cost --></label>
+    <name>FieloPLT__ActualPointCost__c</name>
+</CustomFieldTranslation>

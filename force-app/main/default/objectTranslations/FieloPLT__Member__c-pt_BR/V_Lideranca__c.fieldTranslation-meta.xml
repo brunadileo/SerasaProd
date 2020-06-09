@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Liderança do participante. Campo dependente do campo &quot;Área&quot;. --></help>
+    <label><!-- Liderança --></label>
+    <name>V_Lideranca__c</name>
+    <picklistValues>
+        <masterLabel>BANCOS E FINANCEIRAS</masterLabel>
+        <translation><!-- BANCOS E FINANCEIRAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MULTI CANAL</masterLabel>
+        <translation><!-- MULTI CANAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MULTI SECTOR</masterLabel>
+        <translation><!-- MULTI SECTOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REGIÕES</masterLabel>
+        <translation><!-- REGIÕES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SERASA</masterLabel>
+        <translation><!-- SERASA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VAREJO, CPG E PAGAMENTOS</masterLabel>
+        <translation><!-- VAREJO, CPG E PAGAMENTOS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

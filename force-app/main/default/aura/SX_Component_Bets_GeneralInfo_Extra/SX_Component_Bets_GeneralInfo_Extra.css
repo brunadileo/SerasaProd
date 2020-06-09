@@ -1,0 +1,43 @@
+.THIS .btn-default {
+	border-radius: 0 0 .25rem .25rem;
+}
+.THIS .circle-container {
+	max-width: 50px;
+	min-height: 50px;
+}
+.THIS .circle-container:hover {
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,.37);
+}
+.THIS a:hover, .THIS a:focus, .THIS a:active {
+	text-decoration: none;
+}
+.THIS .btn {
+	position: absolute;
+	top: 0;
+}
+.THIS .custom-vertical-offset {
+	margin-top: 5rem;
+}
+@media (max-width: 1199px) {
+	.THIS .circle-container {
+		max-width: 125px;
+		min-height: 125px;
+	}
+	.THIS .btn {
+		position: relative;
+	}
+	.THIS .custom-vertical-offset {
+		margin-top: 0;
+	}
+	.THIS .btn-default {
+		border-radius: .25rem;
+	}
+	.THIS .info-panels {
+		min-height: 100px;
+	}
+}
+@media (max-width: 767px) {
+	.THIS .navigation_buttons {
+		min-height: 200px;
+	}
+}

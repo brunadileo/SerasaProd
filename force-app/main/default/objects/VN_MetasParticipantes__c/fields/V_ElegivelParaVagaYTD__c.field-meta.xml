@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ElegivelParaVagaYTD__c</fullName>
+    <description>Verifica se o participante é elegível a viagar</description>
+    <externalId>false</externalId>
+    <formula>IF(V_Participante__r.V_PosicaoRankingYTD__c=0,FALSE,
+IF(CASE(TEXT(V_Participante__r.V_Cargo__c), 
+            &quot;DIRETOR&quot;, IF(V_Participante__r.V_PosicaoRankingYTD__c&lt;=VALUE($Label.V_VagasDiretor),1,0), 
+            &quot;COORDENADOR | GERENTE REGIONAL VIP&quot;, IF(V_Participante__r.V_PosicaoRankingYTD__c&lt;=VALUE($Label.V_VagasCordenador_GerenteRegional),1,0),
+            &quot;GERENTE DE CONTAS&quot;, IF(V_Participante__r.V_PosicaoRankingYTD__c&lt;=VALUE($Label.V_VagasGerenteDeContas),1,0),
+            &quot;LÍDER&quot;, IF(V_Participante__r.V_PosicaoRankingYTD__c&lt;=VALUE($Label.V_VagasLider),1,0),
+     0) = 1, TRUE , FALSE)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Elegível para vaga YTD</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

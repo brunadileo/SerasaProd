@@ -1,0 +1,3 @@
+<design:component label="CT - Login Theme">
+	<design:attribute name="firstAcess" label="Tipo de Card" description="Opções: Youbet, Elite e Spy" datasource="Selecione, Sim, Não"/>
+</design:component>

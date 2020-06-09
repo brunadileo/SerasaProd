@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_BetcoinsComp__c</fullName>
+    <description>Preencha com valor igual a 1 para Youbet Extra. E com 0 (zero) quando for Youbet Perene.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Preencha com valor igual a 1 para Youbet Extra. E com 0 (zero) quando for Youbet Perene</inlineHelpText>
+    <label>Betcoins - Extra</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

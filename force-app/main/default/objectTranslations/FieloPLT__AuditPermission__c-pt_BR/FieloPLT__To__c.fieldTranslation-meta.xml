@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date when Admin permissions have been granted to. --></help>
+    <label><!-- To --></label>
+    <name>FieloPLT__To__c</name>
+</CustomFieldTranslation>

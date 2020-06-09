@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o último mês atualizado com a carga de resultados para auxiliar a seleção de alguns índices que serão utilizados em comunicação com o participante. --></help>
+    <label><!-- Último Mês Atualizado --></label>
+    <name>V_UltimoMesAtualizado__c</name>
+</CustomFieldTranslation>

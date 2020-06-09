@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Challenge__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Challenge associated with a KPI Domain.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Challenge associated with this KPI Domain.</inlineHelpText>
+    <label>Challenge</label>
+    <referenceTo>FieloPLT__Challenge__c</referenceTo>
+    <relationshipLabel>KPI Domains</relationshipLabel>
+    <relationshipName>KPIDomains</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

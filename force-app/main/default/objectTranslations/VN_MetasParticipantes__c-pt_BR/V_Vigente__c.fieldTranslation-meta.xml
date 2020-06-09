@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Exibe se o registro de metas do participante por ano fiscal é o vigente ou não. --></help>
+    <label><!-- Vigente --></label>
+    <name>V_Vigente__c</name>
+</CustomFieldTranslation>

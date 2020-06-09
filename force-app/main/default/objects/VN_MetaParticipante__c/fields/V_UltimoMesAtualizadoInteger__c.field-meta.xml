@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_UltimoMesAtualizadoInteger__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(V_UltimoMesAtualizado__c,
+&quot;Janeiro&quot;, 10, 
+&quot;Fevereiro&quot;, 11, 
+&quot;Março&quot;, 12,
+&quot;Abril&quot;, 1,
+&quot;Maio&quot;, 2,
+&quot;Junho&quot;, 3,
+&quot;Julho&quot;, 4,
+&quot;Agosto&quot;, 5,
+&quot;Setembro&quot;, 6,
+&quot;Outubro&quot;, 7,
+&quot;Novembro&quot;, 8,
+&quot;Dezembro&quot;, 9,
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Último Mês Atualizado Integer</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

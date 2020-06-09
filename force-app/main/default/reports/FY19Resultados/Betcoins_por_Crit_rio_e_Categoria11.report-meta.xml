@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>FieloPLT__Member__c.FieloPLT__Points__c:SUM/FieloPLT__Point__c.FieloPLT__TotalPoints__c:SUM</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Disponível</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(FieloPLT__Member__c.FieloPLT__Points__c:SUM/FieloPLT__Point__c.FieloPLT__TotalPoints__c:SUM-1)*-1</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Apostado</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_5771800</developerName>
+        <masterLabel>Critério</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Outros</otherBucketLabel>
+        <sourceColumnName>FieloPLT__Member__c.FieloPLT__Points__r$V_Origem__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 1o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 2o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 3o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 4o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 5o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 6o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 7o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 8o. Mês</sourceValue>
+            </sourceValues>
+            <value>Soluções Estratégicas</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 9o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 8o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 7o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 6o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 5o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 4o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 3o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 2o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 1o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 12o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 10o. mês do AF</sourceValue>
+            </sourceValues>
+            <value>Ating. Meta Mensal</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta do Líder Imediato - 2o. Trim do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta do Líder Imediato - 3o. Trim do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta do Líder Imediato - 4o. Trim do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta do Líder Imediato - 1o. Trim do AF</sourceValue>
+            </sourceValues>
+            <value>Ating. Meta Quarter Líder</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 1o. Trimestre do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 2o. Trimestre do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 3o. Trimestre do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 4o. Trimestre do AF</sourceValue>
+            </sourceValues>
+            <value>Ating. Meta Quarter</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_91051510</developerName>
+        <masterLabel>Mês</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FieloPLT__Member__c.FieloPLT__Points__r$V_Origem__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 4o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 4o. mês do AF</sourceValue>
+            </sourceValues>
+            <value>1807 - JUL</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 5o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 5o. mês do AF</sourceValue>
+            </sourceValues>
+            <value>1808 - AGO</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 6o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 6o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 2o. Trimestre do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta do Líder Imediato - 2o. Trim do AF</sourceValue>
+            </sourceValues>
+            <value>1809 - SET</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 7o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 7o. mês do AF</sourceValue>
+            </sourceValues>
+            <value>1810 - OUT</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 8o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 8o. mês do AF</sourceValue>
+            </sourceValues>
+            <value>1811 - NOV</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 9o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 9o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 3o. Trimestre do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta do Líder Imediato - 3o. Trim do AF</sourceValue>
+            </sourceValues>
+            <value>1812 - DEZ</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 10o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 10o. mês do AF</sourceValue>
+            </sourceValues>
+            <value>1901 - JAN</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 11o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 11o. mês do AF</sourceValue>
+            </sourceValues>
+            <value>1902 - FEV</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Solução Estratégica - 12o. Mês</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 12o. mês do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta no 4o. Trimestre do AF</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Youbet Perene - Atingimento de Meta do Líder Imediato - 4o. Trim do AF</sourceValue>
+            </sourceValues>
+            <value>1903 - MAR</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FieloPLT__Member__c$V_CodigoCarteira__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c$V_Registro__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.FieloPLT__Points__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FieloPLT__Member__c.FieloPLT__Points__r$FieloPLT__TotalPoints__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FieloPLT__Member__c$FieloPLT__Points__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>teste</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Member__c.FieloPLT__Points__r$V_Origem__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Perene</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Member__c$V_Lideranca__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Índice de Betcoins Disponível e Apostado</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Results_Participantes_com_Betcoins__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Member__c$LastActivityDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

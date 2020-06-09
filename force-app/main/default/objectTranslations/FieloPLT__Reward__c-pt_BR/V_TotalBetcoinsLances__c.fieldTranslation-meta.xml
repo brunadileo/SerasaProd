@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Valor total de betcoins dos lances realizados para este Youbet. --></help>
+    <label><!-- Total Betcoins dos Lances --></label>
+    <name>V_TotalBetcoinsLances__c</name>
+</CustomFieldTranslation>

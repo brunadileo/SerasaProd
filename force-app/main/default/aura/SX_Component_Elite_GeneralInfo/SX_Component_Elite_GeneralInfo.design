@@ -1,0 +1,8 @@
+<design:component label="CC - Elite | General Info">
+	<design:attribute name="logo" label="Logo da Área"/>
+	<design:attribute name="boxOneLabel" label="Label da Caixa Cinco"/>
+	<design:attribute name="boxTwoLabel" label="Label da Caixa Seis"/>
+	<design:attribute name="boxThreeLabel" label="Label da Caixa Sete"/>
+	<design:attribute name="bgField" label="Cor de Fundo dos Campos em Destaque" description="Cores no formato HEX (#??????)"/>
+	<design:attribute name="bgBtn" label="Cor de Fundo do Botão" description="Cores no formato HEX (#??????)"/>
+</design:component>

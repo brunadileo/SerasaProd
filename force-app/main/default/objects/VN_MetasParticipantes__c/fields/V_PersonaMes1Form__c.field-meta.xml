@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PersonaMes1Form__c</fullName>
+    <description>depois da transição para trigger esse campo pode ser removido.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(V_GAPMetaAte2oMesAF__c &gt; 0,
+V_DiferencaPercentualAMAteMes5AteMes4__c &lt; 0),&apos;Warn&apos;,IF(AND(V_GAPMetaAte2oMesAF__c &gt; 0,V_DiferencaPercentualAMAteMes5AteMes4__c &gt;= 0),&apos;Cold&apos;,IF(AND(V_GAPMetaAte2oMesAF__c = 0,V_DiferencaPercentualAMAteMes5AteMes4__c &lt; 0),&apos;Warm&apos;,IF(AND(V_GAPMetaAte2oMesAF__c = 0,V_DiferencaPercentualAMAteMes5AteMes4__c = 0),&apos;Hot&apos;,IF(AND(V_GAPMetaAte2oMesAF__c = 0,V_DiferencaPercentualAMAteMes5AteMes4__c &gt; 0), &apos;Gold&apos;, &apos;&apos;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Persona Mês 4FORM</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

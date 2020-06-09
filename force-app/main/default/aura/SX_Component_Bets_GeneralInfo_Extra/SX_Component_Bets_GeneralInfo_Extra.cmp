@@ -1,0 +1,51 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="textBtnOne" type="String" default="VER OUTROS YOUBETS" access="global" />
+	<aura:attribute name="labelField" type="String" default="BETCOINS ACUMULADOS" access="global" />
+	<aura:attribute name="textBtnNavOne" type="String" default="EXTRATO" access="global" />
+	<aura:attribute name="textBtnNavTwo" type="String" default="YOUBETS REALIZADOS" access="global" />
+	<aura:attribute name="textBtnNavThree" type="String" default="REGULAMENTO" access="global" />
+	<aura:attribute name="textBtnNavFour" type="String" default="RESULTADO DA EQUIPE" access="global" />
+	<aura:attribute name="bgField" type="String" default="343a40" access="global" />
+    <aura:attribute name="bgBtn" type="String" default="f1c40f" access="global" />
+	
+	<div class="d-flex flex-column align-items-center justify-content-around h-100 px-3 px-xl-0">
+		<div class="w-100 d-flex flex-column flex-sm-row flex-xl-column align-items-center justify-content-around">
+			<a href="" class="w-100 w-sm-auto info-panels d-flex align-items-center justify-content-center btn btn-default my-3 my-xl-0 mx-3 mx-xl-0 py-4 font-weight-bold text-white" style="{!'background: #' + v.bgBtn}">{!v.textBtnOne}</a>
+			<div href="" class="w-100 w-sm-auto info-panels d-flex flex-column p-3 custom-vertical-offset mx-3 mx-xl-0 text-white text-center" style="{!'background: #' + v.bgField}">
+				<span class="font-italic">{!v.labelField}</span>
+				<div class="font-size-7">9.999</div>
+			</div>
+		</div>
+		<div class="w-100 w-xl-auto navigation-buttons d-flex flex-column flex-sm-row flex-xl-column align-items-center justify-content-center">
+			<div class="w-100 d-flex flex-xl-column">
+				<div class="w-100 d-flex flex-column align-items-center justify-content-start text-center my-3 my-xl-1">
+					<a href="" class="w-100 d-flex align-items-center justify-content-center circle-container mb-2 rounded-circle text-white text-center" style="{!'background: #' + v.bgBtn}">
+						<span class="fa fa-plus font-size-6"></span>
+					</a>
+					<span class="w-70 text-dark font-size-3">{!v.textBtnNavOne}</span>
+				</div>
+				<div class="w-100 d-flex flex-column align-items-center justify-content-start text-center my-3 my-xl-1">
+					<a href="" class="w-100 d-flex align-items-center justify-content-center circle-container mb-2 rounded-circle text-white text-center" style="{!'background: #' + v.bgBtn}">
+						<span class="fa fa-check font-size-6"></span>
+					</a>
+					<span class="w-70 text-dark font-size-3">{!v.textBtnNavTwo}</span>
+				</div>
+			</div>
+			<div class="w-100 d-flex flex-xl-column">
+				<div class="w-100 d-flex flex-column align-items-center justify-content-start text-center my-3 my-xl-1">
+					<a href="./youbet-regulamento" class="w-100 d-flex align-items-center justify-content-center circle-container mb-2 rounded-circle text-white text-center" style="{!'background: #' + v.bgBtn}">
+						<span class="fa fa-gavel font-size-6"></span>
+					</a>
+					<span class="w-70 text-dark font-size-3">{!v.textBtnNavThree}</span>
+				</div>
+				<div class="w-100 d-flex flex-column align-items-center justify-content-start text-center my-3 my-xl-1">
+					<a href="" class="w-100 d-flex align-items-center justify-content-center circle-container mb-2 rounded-circle text-white text-center" style="{!'background: #' + v.bgBtn}">
+						<span class="fa fa-table font-size-6"></span>
+					</a>
+					<span class="w-70 text-dark font-size-3">{!v.textBtnNavFour}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</aura:component>

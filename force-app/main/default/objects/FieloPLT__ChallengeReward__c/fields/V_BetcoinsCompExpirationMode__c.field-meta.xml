@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_BetcoinsCompExpirationMode__c</fullName>
+    <description>Campo criado para atender o pré-requisito de tipos de ponto.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Campo criado para atender o pré-requisito de tipos de ponto.</inlineHelpText>
+    <label>Modo de Expiração Ponto - Betcoins Comp</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Days</fullName>
+                <default>false</default>
+                <label>Days</label>
+            </value>
+            <value>
+                <fullName>Months</fullName>
+                <default>false</default>
+                <label>Months</label>
+            </value>
+            <value>
+                <fullName>Specific Date</fullName>
+                <default>false</default>
+                <label>Specific Date</label>
+            </value>
+            <value>
+                <fullName>Recurrent Date</fullName>
+                <default>false</default>
+                <label>Recurrent Date</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

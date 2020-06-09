@@ -1,0 +1,3 @@
+<design:component label="CT - Youbet Home">
+	<design:attribute name="background" label="Cor do Background" description="Opções: Youbet, Youbet Extra" datasource="Selecione, Youbet, Youbet Extra"/>
+</design:component>

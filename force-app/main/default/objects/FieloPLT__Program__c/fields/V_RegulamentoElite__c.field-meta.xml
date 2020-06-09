@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_RegulamentoElite__c</fullName>
+    <description>Utilizado para a inclusão do regulamento da iniciativa Elite.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Utilizado para a inclusão do regulamento da iniciativa Elite.</inlineHelpText>
+    <label>Regulamento Elite</label>
+    <length>131000</length>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

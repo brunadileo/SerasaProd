@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- To target your Promotion by Segment, add the Segment(s) you want to make eligible. If blank, all Program Members will be eligible. You can view, edit and create Segments in the Programs tab. --></help>
+    <label><!-- Segment --></label>
+    <name>FieloPLT__Segment__c</name>
+    <relationshipLabel><!-- Promotions --></relationshipLabel>
+</CustomFieldTranslation>

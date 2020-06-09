@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PeriodoAF__c</fullName>
+    <description>Registrar o período do ano fiscal desejado. Exemplo: 2018-2019</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Registrar o período do ano fiscal desejado. Exemplo: 2018-2019</inlineHelpText>
+    <label>Período AF</label>
+    <length>9</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

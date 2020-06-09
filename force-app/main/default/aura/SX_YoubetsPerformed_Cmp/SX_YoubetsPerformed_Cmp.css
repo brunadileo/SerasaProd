@@ -1,0 +1,200 @@
+.THIS.modal-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.THIS .modal-card {
+    /*transform: translate(-50%, -50%);*/
+    width: 991px;
+    height: 80%;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
+    border: none;
+    border-radius: 0;
+}
+.THIS .slds-card__header {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    margin-bottom: 0;
+    padding: .5rem 1.5rem;
+}
+.THIS .slds-card__body {
+    margin: 0;
+    overflow-y: auto;
+}
+.THIS .slds-card__body h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+.THIS .uiInput--input.input {
+    height: 100%;;
+    padding-right: 30px;
+}
+.THIS input::placeholder {
+    color: #999;
+    font-size:1rem;
+}
+.THIS select {
+    height: 38px !important;
+    color: #888888 !important;
+}
+.THIS .box-filters {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-gap: 1rem;
+    min-height: 45px;
+}
+.THIS .box-filters__inputs {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 1rem;
+}
+.THIS .dateBeginning {
+    padding-top: .75rem;
+    padding-right: 2rem;
+    border-radius: .25rem 0 0 .25rem;
+    border-right: none;
+}
+.THIS .dateEnd {
+    padding-top: .75rem;
+    padding-right: 2rem;
+    border-radius: 0 .25rem .25rem 0;
+}
+.THIS .uiLabel {
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    color: rgb(105,105,105);
+    z-index: 999;
+    font-size: .5rem;
+}
+.THIS .datePicker-openIcon {
+    top: 15px;
+    background: url('/insiders/resource/SX_Images/icon-calendar.png') no-repeat;
+    background-size: 15px;
+}
+.THIS .search-icon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+.THIS .btn {
+    height: 100%;
+    text-shadow: none;
+}
+.THIS lightning-datatable {
+    height: auto;
+    min-height: 200px;
+    overflow-y: auto;
+    color: #666666;
+}
+.THIS lightning-datatable thead th .slds-th__action {
+    display: flex;
+    justify-content: center;
+}
+.THIS lightning-datatable tbody td lightning-primitive-cell-wrapper {
+    justify-content: flex-start;
+}
+.THIS .youbet lightning-datatable td:last-child lightning-primitive-cell-wrapper,
+.THIS .youbet-extra lightning-datatable td:last-child lightning-primitive-cell-wrapper {
+    justify-content: center;
+}
+.THIS .youbet-extra lightning-datatable td:nth-child(5) {
+    padding: 1rem;
+    color: #b635ab;
+}
+.THIS .youbet lightning-datatable td:nth-child(5) {
+    padding: 1rem;
+    color: #48c5ff;
+}
+.THIS lightning-primitive-header-actions {
+    display: none;
+}
+.THIS .youbet lightning-datatable button,
+.THIS .youbet-extra lightning-datatable button {
+    border: 0;
+    color: #fff; 
+}
+.THIS .youbet lightning-datatable button {
+    background: #48c5ff;
+}
+.THIS .youbet-extra lightning-datatable button {
+    background: #b635ab;
+}
+.THIS lightning-datatable .slds-button__icon {
+    margin-right: 0;
+}
+.THIS .uiInput--input.input:focus,
+.THIS .uiInput--input .input:focus,
+.THIS .uiInput--input.input:active,
+.THIS .uiInput--input .input:active,
+.THIS .slds-select {
+    border-color: rgb(212, 212, 212);
+    box-shadow: none;
+}
+@media (max-width: 991px) {
+    .THIS .modal-card {
+        height: 100%;
+    }
+    .THIS lightning-datatable {
+        min-height: auto;
+        overflow-y: unset;
+    }
+    .THIS .slds-table_header-fixed_container::before {
+        border-bottom: none;
+    }
+    .THIS table thead {
+        display: none;
+    }
+    .THIS table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgb(212,212,212);
+    }
+    .THIS table tbody tr:nth-child(odd) {
+        background: #eee;
+    }
+    .THIS table tbody tr th, .THIS table tbody td {
+        border-top: none !important;
+        flex-direction: column;
+        align-items: start;
+    }
+    .THIS table tbody tr th::before, .THIS table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        color: rgb(105,105,105);
+        font-size: .5rem;
+        font-weight: bold;
+    }
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected) {
+        box-shadow: none;
+        background: transparent;
+    }
+}
+@media (max-width: 575px) {
+    .THIS .slds-form-element {
+        width: 100%;
+    }
+    .THIS .box-filters {
+        height: 100%;
+    }
+    .THIS .dateBeginning {
+        margin-bottom: 1rem;
+        border-right: 1px solid rgb(212,212,212);
+        border-radius: .25rem;
+    }
+    .THIS .dateEnd {
+        border-radius: .25rem;
+    }
+}

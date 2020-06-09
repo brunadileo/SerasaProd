@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo atualizado por workflow para contornar limitação de caracteres em campo fórmula do Salesforce. --></help>
+    <label><!-- GAP Meta Até Mês 12 - AUX --></label>
+    <name>V_GAPMetaAte9oMesAFAUX__c</name>
+</CustomFieldTranslation>

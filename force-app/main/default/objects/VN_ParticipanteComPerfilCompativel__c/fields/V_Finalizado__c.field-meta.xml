@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Finalizado__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo preenchido via código (Class SX_Reward_After) quando o Nome do vencedor é alterado.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Youbet Finalizado</inlineHelpText>
+    <label>Finalizado</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

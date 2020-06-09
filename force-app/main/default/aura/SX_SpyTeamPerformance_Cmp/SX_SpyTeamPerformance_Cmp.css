@@ -1,0 +1,137 @@
+.THIS.modal-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.THIS .modal-card {
+    width: 991px;
+    height: 80%;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
+    border: none;
+    border-radius: 0;
+}
+.THIS .slds-card__body {
+    height: calc(100% - 100px);
+    overflow-y: auto;
+    margin: 0;
+}
+.THIS .uiInput--input.input {
+    height: 44px;
+    padding-right: 30px;
+}
+.THIS .slds-select {
+    height: 44px !important;
+}
+.THIS  input::placeholder {
+    color: #999;
+    font-size:1rem;
+}
+.THIS select {
+    height: 38px !important;
+    color: #888888 !important;
+}
+.THIS .search-icon {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+.THIS .btn {
+    height: 44px;
+    text-shadow: none;
+}
+.THIS .box-filters {
+    min-height: 45px;
+}
+.THIS .box-filters label {
+    display: none;
+}
+.THIS .teamperformance-table {
+    height: auto;
+    min-height: 200px;
+    overflow-y: auto;
+    color: #666666;
+}
+.THIS lightning-datatable tbody td lightning-primitive-cell-wrapper {
+    justify-content: flex-start;
+    color: #385595;
+    font-weight: bold;
+}
+.THIS lightning-datatable tbody td:nth-child(2) lightning-formatted-number:after {
+    content: "Badges";
+    padding-left: .25rem;
+    color: #666;
+    font-weight: normal;
+}
+.THIS lightning-datatable tbody td:last-child lightning-formatted-number:after {
+    content: "Pontos";
+    padding-left: .25rem;
+    color: #666;
+    font-weight: normal;
+}
+.THIS lightning-primitive-header-actions {
+    display: none;
+}
+.THIS .uiInput--input.input:focus,
+.THIS .uiInput--input .input:focus,
+.THIS .uiInput--input.input:active,
+.THIS .uiInput--input .input:active,
+.THIS .slds-select {
+    border-color: rgb(212, 212, 212);
+    box-shadow: none;
+}
+@media (max-width: 991px) {
+    .THIS .modal-card {
+        height: 100%;
+    }
+    .THIS .box-filters {
+        min-height: 200px;
+    }
+    .THIS .teamperformance-table {
+        min-height: auto;
+        overflow-y: unset;
+    }
+    .THIS .slds-table_header-fixed_container::before {
+        border-bottom: none;
+    }
+    .THIS table thead {
+        display: none;
+    }
+    .THIS table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgb(212,212,212);
+    }
+    .THIS table tbody tr:nth-child(odd) {
+        background: #eee;
+    }
+    .THIS table tbody tr th, .THIS table tbody td {
+        border-top: none !important;
+        flex-direction: column;
+        align-items: start;
+    }
+    .THIS table tbody tr th::before, .THIS table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        color: rgb(105,105,105);
+        font-size: .5rem;
+        font-weight: bold;
+    }
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+    .THIS .slds-table_bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover > td:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover > th:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:focus > td:not(.slds-is-selected),
+    .THIS .slds-table--bordered:not(.slds-no-row-hover) tbody tr:focus > th:not(.slds-is-selected) {
+        box-shadow: none;
+        background: transparent;
+    }
+}
+@media (max-width: 575px) {
+    .THIS .box-filters {
+        min-height: 300px;
+    }
+}

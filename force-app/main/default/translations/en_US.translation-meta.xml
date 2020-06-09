@@ -1,0 +1,4351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Lead Generation --></label>
+        <name>Lead_Generation</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Relationship Management --></label>
+        <name>Relationship_Management</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Sales Leadership --></label>
+        <name>Sales_Leadership</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Sales Operations --></label>
+        <name>Sales_Operations</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- Account owner: Role --></label>
+        <name>FieloPLT__AccountOwnerMustHaveRule</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Action: Missing dependency --></label>
+        <name>FieloPLT__ActionDependencyMissing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Action: No Target Member --></label>
+        <name>FieloPLT__ActionWithoutTargetMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Actions --></label>
+        <name>FieloPLT__Actions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Actions: Delete Validation --></label>
+        <name>FieloPLT__ActionsDeleteValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Activate --></label>
+        <name>FieloPLT__Activate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Active --></label>
+        <name>FieloPLT__Active</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Agreement: Active --></label>
+        <name>FieloPLT__ActiveAgreement</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Active libraries --></label>
+        <name>FieloPLT__ActiveLibraries</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Activity History --></label>
+        <name>FieloPLT__ActivityHistory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add --></label>
+        <name>FieloPLT__Add</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddChReward --></label>
+        <name>FieloPLT__AddChReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddColumn --></label>
+        <name>FieloPLT__AddColumn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddCondition --></label>
+        <name>FieloPLT__AddCondition</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Criterion --></label>
+        <name>FieloPLT__AddCriterion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddCrossFieldColumn --></label>
+        <name>FieloPLT__AddCrossFieldColumn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddCrossFieldCondition --></label>
+        <name>FieloPLT__AddCrossFieldCondition</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddOrRemove --></label>
+        <name>FieloPLT__AddOrRemove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Add Rewards --></label>
+        <name>FieloPLT__AddRewards</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddRow --></label>
+        <name>FieloPLT__AddRow</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddSection --></label>
+        <name>FieloPLT__AddSection</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AddToCart --></label>
+        <name>FieloPLT__AddToCart</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Adjust --></label>
+        <name>FieloPLT__Adjust</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Adjust Transaction --></label>
+        <name>FieloPLT__AdjustmentTransaction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Agreement --></label>
+        <name>FieloPLT__Agreement</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AgreementAccept --></label>
+        <name>FieloPLT__AgreementAccept</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Agreement: Deprecated --></label>
+        <name>FieloPLT__AgreementDeprecated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Agreement: Used --></label>
+        <name>FieloPLT__AgreementUsed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Agreement: Usage warning --></label>
+        <name>FieloPLT__AgreementWarningUse</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- All --></label>
+        <name>FieloPLT__All</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Object: Described in cache --></label>
+        <name>FieloPLT__AlreadyInDescribeCache</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- And --></label>
+        <name>FieloPLT__And</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Relational operator &quot;And&quot;/&quot;Or&quot;: Not found --></label>
+        <name>FieloPLT__AndOrOperatorNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Any --></label>
+        <name>FieloPLT__Any</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AppliesToAllProfiles --></label>
+        <name>FieloPLT__AppliesToAllProfiles</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AppliesToAllPrograms --></label>
+        <name>FieloPLT__AppliesToAllPrograms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AppliesToAllRecordTypes --></label>
+        <name>FieloPLT__AppliesToAllRecordTypes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Approval History --></label>
+        <name>FieloPLT__ApprovalHistory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Are you sure? --></label>
+        <name>FieloPLT__Areyousure</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Assigned Badge --></label>
+        <name>FieloPLT__AssignedBadge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Assigned Points --></label>
+        <name>FieloPLT__AssignedPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Assigned Reward --></label>
+        <name>FieloPLT__AssignedReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lookup from Transaction or Tracker --></label>
+        <name>FieloPLT__AtLeastLookupTransactionOrTracker</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AtLeastOneChallengeReward --></label>
+        <name>FieloPLT__AtLeastOneChallengeReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: One Mission --></label>
+        <name>FieloPLT__AtLeastOneMission</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AtLeastOneRule --></label>
+        <name>FieloPLT__AtLeastOneRule</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Audit: Error --></label>
+        <name>FieloPLT__AuditError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Audit Permissions --></label>
+        <name>FieloPLT__AuditPermissions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available --></label>
+        <name>FieloPLT__Available</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available Items --></label>
+        <name>FieloPLT__AvailableItems</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available Rewards --></label>
+        <name>FieloPLT__AvailableRewards</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Available Upgrades --></label>
+        <name>FieloPLT__AvailableUpgrades</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Back --></label>
+        <name>FieloPLT__Back</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Badge API: Achievable --></label>
+        <name>FieloPLT__BadgeAPIAchievable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Badge API: Active --></label>
+        <name>FieloPLT__BadgeAPIActive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Badge API: Expired --></label>
+        <name>FieloPLT__BadgeAPIExpired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Badge API: Lost --></label>
+        <name>FieloPLT__BadgeAPILost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Badge API: N/A --></label>
+        <name>FieloPLT__BadgeAPINotApplicable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Specified by field: Help --></label>
+        <name>FieloPLT__BadgeSpecifiedByFieldHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch execution --></label>
+        <name>FieloPLT__BatchExecution</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch Management --></label>
+        <name>FieloPLT__BatchManagement</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch schedule: Level assignment help --></label>
+        <name>FieloPLT__BatchScheduleLevelAssignmentHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch schedule: Level assignment name --></label>
+        <name>FieloPLT__BatchScheduleLevelAssignmentName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch schedule: Partial Points expiration help --></label>
+        <name>FieloPLT__BatchSchedulePartialPointsExpirationHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch schedule: Partial Points expiration name --></label>
+        <name>FieloPLT__BatchSchedulePartialPointsExpirationName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- zz_deprecated_BatchSchedulePointsExpirationHelp --></label>
+        <name>FieloPLT__BatchSchedulePointsExpirationHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- zz_deprecated_BatchSchedulePointsExpirationName --></label>
+        <name>FieloPLT__BatchSchedulePointsExpirationName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch schedule: Redemption Item expiration help --></label>
+        <name>FieloPLT__BatchScheduleRedemptionItemExpirationHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch schedule: Redemption item expiration name --></label>
+        <name>FieloPLT__BatchScheduleRedemptionItemExpirationName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch schedule:Offline Transactions/Trackers help --></label>
+        <name>FieloPLT__BatchScheduleTransactionOfflineHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch schedule: Offline Transactions/Trackers name --></label>
+        <name>FieloPLT__BatchScheduleTransactionOfflineName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batches processed --></label>
+        <name>FieloPLT__BatchesProcessed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Blank --></label>
+        <name>FieloPLT__Blank</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Block --></label>
+        <name>FieloPLT__Block</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Buttons --></label>
+        <name>FieloPLT__Buttons</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Salesforce Accounts: Unrelated --></label>
+        <name>FieloPLT__CRMAccountsRelated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Existing SF Contact for Individual Member --></label>
+        <name>FieloPLT__CRMContactIndividualAccountError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CSSClass --></label>
+        <name>FieloPLT__CSSClass</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Cancel --></label>
+        <name>FieloPLT__Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CannotChangeKPI --></label>
+        <name>FieloPLT__CannotChangeKPI</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: No deletion --></label>
+        <name>FieloPLT__CannotDeleteMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Records: No deletion --></label>
+        <name>FieloPLT__CannotDeleteRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Records: No insertion or update --></label>
+        <name>FieloPLT__CannotInsertUpdateRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CannotProcessChallenge --></label>
+        <name>FieloPLT__CannotProcessChallenge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Records: No update --></label>
+        <name>FieloPLT__CannotUpdateRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Categories --></label>
+        <name>FieloPLT__Categories</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Member: No modification --></label>
+        <name>FieloPLT__ChMemberCannotBeModified</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: No modification --></label>
+        <name>FieloPLT__ChRewardCannotBeModified</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Different Logical expressions --></label>
+        <name>FieloPLT__ChRewardDifferentLogicalExpression</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid &quot;Badge&quot; --></label>
+        <name>FieloPLT__ChRewardInvalidBadge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid Apex class --></label>
+        <name>FieloPLT__ChRewardInvalidClass</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid &quot;From&quot; --></label>
+        <name>FieloPLT__ChRewardInvalidFrom</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid &quot;From&quot; 2 --></label>
+        <name>FieloPLT__ChRewardInvalidFrom2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid &quot;From&quot; 3 --></label>
+        <name>FieloPLT__ChRewardInvalidFrom3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid &quot;Logical Expression&quot; order --></label>
+        <name>FieloPLT__ChRewardInvalidLogExpressionOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid &quot;Logical Expression&quot; --></label>
+        <name>FieloPLT__ChRewardInvalidLogicalExpression</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid Number field name --></label>
+        <name>FieloPLT__ChRewardInvalidNumberFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Invalid &quot;Reward&quot; --></label>
+        <name>FieloPLT__ChRewardInvalidReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Required &quot;Logical Expression&quot; --></label>
+        <name>FieloPLT__ChRewardLogicalExpressionRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Missing data --></label>
+        <name>FieloPLT__ChRewardMissingData</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Missing &quot;From&quot; --></label>
+        <name>FieloPLT__ChRewardMissingFrom</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Missing &quot;Point Type&quot; --></label>
+        <name>FieloPLT__ChRewardMissingPointType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Missing &quot;To&quot; --></label>
+        <name>FieloPLT__ChRewardMissingTo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Singular Table Type --></label>
+        <name>FieloPLT__ChRewardSingularValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: No deletion --></label>
+        <name>FieloPLT__ChRewardValidationCannotDelete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: &quot;Point Type&quot; required --></label>
+        <name>FieloPLT__ChRewardValidationPointTypeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Reward: Required --></label>
+        <name>FieloPLT__ChRewardValidationRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge API: Active --></label>
+        <name>FieloPLT__ChallengeAPIActive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge API: Completed --></label>
+        <name>FieloPLT__ChallengeAPICompleted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge API: Lost --></label>
+        <name>FieloPLT__ChallengeAPILost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge API: N/A --></label>
+        <name>FieloPLT__ChallengeAPINotApplicable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge API: Open --></label>
+        <name>FieloPLT__ChallengeAPIOpen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Required Final date --></label>
+        <name>FieloPLT__ChallengeActivationEndDateRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Invalid Activation To FromPrevious --></label>
+        <name>FieloPLT__ChallengeActivationInvalidFromToPrevious</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Invalid &quot;From - To&quot; values --></label>
+        <name>FieloPLT__ChallengeActivationInvalidToFrom</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChallengeActivationInvalidToFromPrevious --></label>
+        <name>FieloPLT__ChallengeActivationInvalidToFromPrevious</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Active --></label>
+        <name>FieloPLT__ChallengeActive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Processed --></label>
+        <name>FieloPLT__ChallengeAlreadyProcessed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Record not active --></label>
+        <name>FieloPLT__ChallengeCannotBeActivated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: No edition --></label>
+        <name>FieloPLT__ChallengeCannotBeEdited</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: No deletion --></label>
+        <name>FieloPLT__ChallengeCannotDelete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Successful creation --></label>
+        <name>FieloPLT__ChallengeCreatedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Inactive --></label>
+        <name>FieloPLT__ChallengeInactive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChallengeKPIDomainEndDate --></label>
+        <name>FieloPLT__ChallengeKPIDomainEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChallengeKPIDomainStartDate --></label>
+        <name>FieloPLT__ChallengeKPIDomainStartDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge Leaderboard --></label>
+        <name>FieloPLT__ChallengeLeaderboard</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Leaderboard description --></label>
+        <name>FieloPLT__ChallengeLeaderboardDescription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Member: No deletion --></label>
+        <name>FieloPLT__ChallengeMemberCannotBeDeleted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ch Rewards: Deletion --></label>
+        <name>FieloPLT__ChallengeRewardsDeleted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Scheduled --></label>
+        <name>FieloPLT__ChallengeScheduled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge Status --></label>
+        <name>FieloPLT__ChallengeStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch process: Challenge Status --></label>
+        <name>FieloPLT__ChallengeStatusDescription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Edition validation --></label>
+        <name>FieloPLT__ChallengeValidationEdition</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Change --></label>
+        <name>FieloPLT__Change</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Change Order --></label>
+        <name>FieloPLT__ChangeOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program --></label>
+        <name>FieloPLT__ChangeProgram</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CheckEmail --></label>
+        <name>FieloPLT__CheckEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose date --></label>
+        <name>FieloPLT__ChooseDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose file --></label>
+        <name>FieloPLT__ChooseFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Choose User --></label>
+        <name>FieloPLT__ChooseUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Expiration Badge Value --></label>
+        <name>FieloPLT__ChooseValueExpirationBadge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Clone --></label>
+        <name>FieloPLT__Clone</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Close --></label>
+        <name>FieloPLT__Close</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Codes --></label>
+        <name>FieloPLT__Codes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Column --></label>
+        <name>FieloPLT__Column</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Columns --></label>
+        <name>FieloPLT__Columns</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Comment --></label>
+        <name>FieloPLT__Comment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required fields --></label>
+        <name>FieloPLT__CompleteRequiredFields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Completed date --></label>
+        <name>FieloPLT__CompletedDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Confirm --></label>
+        <name>FieloPLT__Confirm</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Organization Contributor: Block/Unblock --></label>
+        <name>FieloPLT__ConfirmBlockUnblock</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Manager confirmation --></label>
+        <name>FieloPLT__ConfirmSetManager</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact: Member relationship --></label>
+        <name>FieloPLT__ContactAlreadyRelatedToMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contact: Account relationship --></label>
+        <name>FieloPLT__ContactMustBeRelatedToAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Contains --></label>
+        <name>FieloPLT__Contains</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Content Delivery --></label>
+        <name>FieloPLT__ContentDeliveries</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Continue --></label>
+        <name>FieloPLT__Continue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Organization Contributor: Required Manager --></label>
+        <name>FieloPLT__ContributorManagerRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Create --></label>
+        <name>FieloPLT__Create</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Create Fielo Member(s) --></label>
+        <name>FieloPLT__CreateFieloAccounts</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Create Program --></label>
+        <name>FieloPLT__CreateYourFirstProgram</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Created date --></label>
+        <name>FieloPLT__CreatedDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criteria --></label>
+        <name>FieloPLT__Criteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criterion Group: No deletion --></label>
+        <name>FieloPLT__CriteriaGroupValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criterion: No deletion --></label>
+        <name>FieloPLT__CriteriaValidationCannotDelete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CriteriaValidationDateRequired --></label>
+        <name>FieloPLT__CriteriaValidationDateRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criterion: &quot;Field Types&quot; inconsistency --></label>
+        <name>FieloPLT__CriteriaValidationFieldTypesInconsistent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criterion: Invalid &quot;Operator&quot; --></label>
+        <name>FieloPLT__CriteriaValidationInvalidOperator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criteria: Invalid &quot;Value&quot; --></label>
+        <name>FieloPLT__CriteriaValidationInvalidValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criteria: Number required --></label>
+        <name>FieloPLT__CriteriaValidationNumberRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criteria: &quot;Value&quot; required --></label>
+        <name>FieloPLT__CriteriaValidationValueRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criterion: No modification --></label>
+        <name>FieloPLT__CriterionCannotBeModified</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom --></label>
+        <name>FieloPLT__Custom</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomFieldLabel --></label>
+        <name>FieloPLT__CustomFieldLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomFieldToSearchBy --></label>
+        <name>FieloPLT__CustomFieldToSearchBy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomRelatedListHeading --></label>
+        <name>FieloPLT__CustomRelatedListHeading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Custom Rewarding --></label>
+        <name>FieloPLT__CustomRewarding</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data: Successful remotion --></label>
+        <name>FieloPLT__DataRemovedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Data: Successful saving --></label>
+        <name>FieloPLT__DataSavedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Date --></label>
+        <name>FieloPLT__Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Default Promotion --></label>
+        <name>FieloPLT__DefaultPromotion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DefaultValue --></label>
+        <name>FieloPLT__DefaultValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delete --></label>
+        <name>FieloPLT__Delete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delete: Fielo Organization Member with Contributor Members --></label>
+        <name>FieloPLT__DeleteOrganizationAccountWithContributors</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Deliver --></label>
+        <name>FieloPLT__Deliver</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Detail --></label>
+        <name>FieloPLT__Detail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Detail Settings --></label>
+        <name>FieloPLT__DetailSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Displaying --></label>
+        <name>FieloPLT__Displaying</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Draft --></label>
+        <name>FieloPLT__Draft</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Duplicate Record On: --></label>
+        <name>FieloPLT__DuplicateRecordOn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Duplicated Records --></label>
+        <name>FieloPLT__DuplicateRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DuplicatedKPIDomainRecord --></label>
+        <name>FieloPLT__DuplicatedKPIDomainRecord</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Dynamic Segment: Criterion required --></label>
+        <name>FieloPLT__DynamicSegmentWithoutCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit --></label>
+        <name>FieloPLT__Edit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EditSection --></label>
+        <name>FieloPLT__EditSection</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Edit Settings --></label>
+        <name>FieloPLT__EditSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Email: Required --></label>
+        <name>FieloPLT__EmailRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Equals --></label>
+        <name>FieloPLT__Equals</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error --></label>
+        <name>FieloPLT__Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Admin fields --></label>
+        <name>FieloPLT__ErrorAdminFields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: System Admin Role --></label>
+        <name>FieloPLT__ErrorAdminRol</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Available Voucher codes --></label>
+        <name>FieloPLT__ErrorAvailableVoucherCodes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Badge Member Expired --></label>
+        <name>FieloPLT__ErrorBadgeMemberExpired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Challenge Segment --></label>
+        <name>FieloPLT__ErrorChallengeSegment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Captcha --></label>
+        <name>FieloPLT__ErrorChooseAssignedPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Select Badge --></label>
+        <name>FieloPLT__ErrorChooseBadge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Choose Instant Reward --></label>
+        <name>FieloPLT__ErrorChooseInstantReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid date --></label>
+        <name>FieloPLT__ErrorDateInvalid</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Delete default Program --></label>
+        <name>FieloPLT__ErrorDeleteDefaultProgram</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Delete Fielo Member account --></label>
+        <name>FieloPLT__ErrorDeleteFieloAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Delete Items Quantity --></label>
+        <name>FieloPLT__ErrorDeleteItemsQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error description --></label>
+        <name>FieloPLT__ErrorDescription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Edit Agreement --></label>
+        <name>FieloPLT__ErrorEditAgreement</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Blocked Fielo Member account --></label>
+        <name>FieloPLT__ErrorFieloAccountBlocked</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Empty file --></label>
+        <name>FieloPLT__ErrorFileIsEmpty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Image without dimensions --></label>
+        <name>FieloPLT__ErrorImageCeroDimensions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Image type --></label>
+        <name>FieloPLT__ErrorImageType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Importing Program with Instant Rewards --></label>
+        <name>FieloPLT__ErrorImportingProgramWithInstantReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Inactive Member --></label>
+        <name>FieloPLT__ErrorInactiveMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Insufficient Points --></label>
+        <name>FieloPLT__ErrorInsufficientPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Insufficient Inventory --></label>
+        <name>FieloPLT__ErrorInsufficientStock</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid Custom field --></label>
+        <name>FieloPLT__ErrorInvalidCustomField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Invalid Owner --></label>
+        <name>FieloPLT__ErrorInvalidOwner</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid Recurrent Date --></label>
+        <name>FieloPLT__ErrorInvalidRecurrenceDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Negative error --></label>
+        <name>FieloPLT__ErrorManageStock</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Member lookup --></label>
+        <name>FieloPLT__ErrorMemberLookup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Metasegment Deletion --></label>
+        <name>FieloPLT__ErrorMetasegmentDeletion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Different Programs Metasegment --></label>
+        <name>FieloPLT__ErrorMetasegmentFromDifferentPrograms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Wrong Metasegment parameter --></label>
+        <name>FieloPLT__ErrorMetasegmentWrongParameter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Inconsistent  Mission Depency dates --></label>
+        <name>FieloPLT__ErrorMissionDatesSecuence</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Mission Final date --></label>
+        <name>FieloPLT__ErrorMissionEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Mission Initial Date --></label>
+        <name>FieloPLT__ErrorMissionStartDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Criterion --></label>
+        <name>FieloPLT__ErrorOnCriterion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Fielo Organization Member action --></label>
+        <name>FieloPLT__ErrorOrganizationAccountAction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Positive Point balance --></label>
+        <name>FieloPLT__ErrorPointDelete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Point Type Expiration --></label>
+        <name>FieloPLT__ErrorPointTypeExpiration</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Create &quot;Points&quot; --></label>
+        <name>FieloPLT__ErrorPointsCreate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Positive Value --></label>
+        <name>FieloPLT__ErrorPositiveValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: File processing --></label>
+        <name>FieloPLT__ErrorProcessingFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid Null field --></label>
+        <name>FieloPLT__ErrorQueryInvalidFieldNull</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Number quantity --></label>
+        <name>FieloPLT__ErrorRedemptionCreateBackEndQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Delete Redemption --></label>
+        <name>FieloPLT__ErrorRedemptionDelete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Redemption Rule --></label>
+        <name>FieloPLT__ErrorRedemptionEngine</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Redemption Items delivered --></label>
+        <name>FieloPLT__ErrorRedemptionItemsDeliver</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Redemption Items required --></label>
+        <name>FieloPLT__ErrorRedemptionItemsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Related IDs Required --></label>
+        <name>FieloPLT__ErrorRelatedIdsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Required Criterion field --></label>
+        <name>FieloPLT__ErrorRequiredCriterionField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Required Rule Trigger --></label>
+        <name>FieloPLT__ErrorRequiredRuleTriggers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Reward &quot;Controlled by Item&quot; --></label>
+        <name>FieloPLT__ErrorRevertItemControlledByItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Revert Member Blocked --></label>
+        <name>FieloPLT__ErrorRevertMemberBlocked</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Revert Dependant Mission --></label>
+        <name>FieloPLT__ErrorRevertMissionSecuence</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Revert Pending Points --></label>
+        <name>FieloPLT__ErrorRevertPointsPending</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Review Errors Form --></label>
+        <name>FieloPLT__ErrorReviewErrorsForm</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Create items --></label>
+        <name>FieloPLT__ErrorRewardsCreateItems</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Reward cannot be deleted --></label>
+        <name>FieloPLT__ErrorRewardsDelete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Rule Trigger Member Lookup --></label>
+        <name>FieloPLT__ErrorRuleTriggerMemberLookup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Required Criterion value --></label>
+        <name>FieloPLT__ErrorSelectCriterionValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Select Member or Program --></label>
+        <name>FieloPLT__ErrorSelectMemberOrProgram</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Select a Point Type --></label>
+        <name>FieloPLT__ErrorSelectOnePointType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Select Specific Point Type --></label>
+        <name>FieloPLT__ErrorSelectSpecificPointType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Point Type Date Value --></label>
+        <name>FieloPLT__ErrorSelectValuePointType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Shopping cart input quantity --></label>
+        <name>FieloPLT__ErrorShoppingcartQuantityInput</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Non existent Member --></label>
+        <name>FieloPLT__ErrorTheMemberDoesNotExist</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Tracker Deleted --></label>
+        <name>FieloPLT__ErrorTrackerDeleted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Tracker Revert Challenge Status --></label>
+        <name>FieloPLT__ErrorTrackerRevertChallengeStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Transaction edit/delete --></label>
+        <name>FieloPLT__ErrorTransactionNotEditDelete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Member transfer --></label>
+        <name>FieloPLT__ErrorTransferMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upload file: Try again --></label>
+        <name>FieloPLT__ErrorUploadFileTryAgain</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Existing Document --></label>
+        <name>FieloPLT__ExistingDocument</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Export --></label>
+        <name>FieloPLT__Export</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Export Levels --></label>
+        <name>FieloPLT__ExportLevels</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Export Segments --></label>
+        <name>FieloPLT__ExportSegments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- External URL --></label>
+        <name>FieloPLT__ExternalURL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- External URL --></label>
+        <name>FieloPLT__ExternalURLPhotoUpload</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Failure --></label>
+        <name>FieloPLT__Failures</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- False --></label>
+        <name>FieloPLT__False</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Feedback --></label>
+        <name>FieloPLT__Feedback</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Field --></label>
+        <name>FieloPLT__Field</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FieldApiName --></label>
+        <name>FieloPLT__FieldApiName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FieldLabel --></label>
+        <name>FieloPLT__FieldLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FieldNoFound --></label>
+        <name>FieloPLT__FieldNoFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Change status --></label>
+        <name>FieloPLT__Fielo_ChangeStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- File --></label>
+        <name>FieloPLT__File</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- File not found --></label>
+        <name>FieloPLT__FileNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- File size limit --></label>
+        <name>FieloPLT__FileSizeLimit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Files --></label>
+        <name>FieloPLT__Files</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Filter Criteria --></label>
+        <name>FieloPLT__FilterCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FilterRequired --></label>
+        <name>FieloPLT__FilterRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- First --></label>
+        <name>FieloPLT__First</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- First Name --></label>
+        <name>FieloPLT__FirstName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- FiterSelector --></label>
+        <name>FieloPLT__FiterSelector</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- From --></label>
+        <name>FieloPLT__From</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Full PointType Value --></label>
+        <name>FieloPLT__FullPointTypeValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Generate Order --></label>
+        <name>FieloPLT__GenerateOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Get from GitHub --></label>
+        <name>FieloPLT__GetFromGitHub</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Go --></label>
+        <name>FieloPLT__Go</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Go to list --></label>
+        <name>FieloPLT__GotoList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Go to Processes --></label>
+        <name>FieloPLT__GotoProcesses</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Grant Admin permissions --></label>
+        <name>FieloPLT__GrantAdminPermissions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Greater or Equal --></label>
+        <name>FieloPLT__GreaterOrEqual</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Greater than --></label>
+        <name>FieloPLT__GreaterThan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Help --></label>
+        <name>FieloPLT__Help</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Highlight --></label>
+        <name>FieloPLT__Highlight</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- History --></label>
+        <name>FieloPLT__History</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Image URL --></label>
+        <name>FieloPLT__ImageURL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import --></label>
+        <name>FieloPLT__Import</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import Failed --></label>
+        <name>FieloPLT__ImportFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import Levels --></label>
+        <name>FieloPLT__ImportLevels</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import Segments --></label>
+        <name>FieloPLT__ImportSegments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Menu Import: Sucess --></label>
+        <name>FieloPLT__ImportSuccess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import: Validation Failed --></label>
+        <name>FieloPLT__ImportValidationFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Import: Validation Success --></label>
+        <name>FieloPLT__ImportValidationSuccess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Inactivate --></label>
+        <name>FieloPLT__Inactivate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Inactive --></label>
+        <name>FieloPLT__Inactive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Inactive libraries --></label>
+        <name>FieloPLT__InactiveLibraries</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Incentives --></label>
+        <name>FieloPLT__Incentives</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Incorrect Character: Close Pars --></label>
+        <name>FieloPLT__IncorrectCaractClosePars</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Incorrect Character: Open Pars --></label>
+        <name>FieloPLT__IncorrectCaractOpenPars</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward Delivery class: Non-existant --></label>
+        <name>FieloPLT__InexistingRewardDeliveryClass</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- zz_deprecated_InfoCategoryChangePhoto --></label>
+        <name>FieloPLT__InfoCategoryChangePhoto</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- zz_deprecated_Info Empty Table --></label>
+        <name>FieloPLT__InfoEmptyTable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info: Level photo change --></label>
+        <name>FieloPLT__InfoLevelChangePhoto</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Load Items text --></label>
+        <name>FieloPLT__InfoLoadItemsByFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info: Create Member from Account --></label>
+        <name>FieloPLT__InfoMemberCreateFromAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info: No action for Action Trigger --></label>
+        <name>FieloPLT__InfoNoActionForRuleTrigger</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info: Create Redemption from backend --></label>
+        <name>FieloPLT__InfoRedemptionCreateBackEnd</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info: Reward Items Loaded --></label>
+        <name>FieloPLT__InfoRewarItemLoadInserted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info: Failed Reward Item loading --></label>
+        <name>FieloPLT__InfoRewarItemLoadInsertedFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info: Reward photo change --></label>
+        <name>FieloPLT__InfoRewardChangePhoto</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- zz_deprecated_InfoTagChangePhoto --></label>
+        <name>FieloPLT__InfoTagChangePhoto</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Information --></label>
+        <name>FieloPLT__Information</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Instant Badge --></label>
+        <name>FieloPLT__InstantBadge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Instant Badge: Fixed and Dynamic value Help --></label>
+        <name>FieloPLT__InstantBadgeFixedValueAndSpecifiedByFieldHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Instant Reward --></label>
+        <name>FieloPLT__InstantReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Instant Reward: Fixed and Dynamic value Help --></label>
+        <name>FieloPLT__InstantRewardFixedValueAndSpecifiedByFieldHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Relational operators: Invalid &quot;And&quot;/&quot;Or&quot; --></label>
+        <name>FieloPLT__InvalidAndOrOperator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid argument --></label>
+        <name>FieloPLT__InvalidArgument</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Class --></label>
+        <name>FieloPLT__InvalidClass</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidCondition --></label>
+        <name>FieloPLT__InvalidCondition</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Condition field --></label>
+        <name>FieloPLT__InvalidConditionField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Criteria: Invalid order --></label>
+        <name>FieloPLT__InvalidCriteriaOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Criterion order on Logical expression --></label>
+        <name>FieloPLT__InvalidCriterionLogicalExpression</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Date field --></label>
+        <name>FieloPLT__InvalidDateField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Export Records --></label>
+        <name>FieloPLT__InvalidExportRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidFieldName --></label>
+        <name>FieloPLT__InvalidFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid injected fields --></label>
+        <name>FieloPLT__InvalidInjectedFields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid JSON format --></label>
+        <name>FieloPLT__InvalidJSONFormat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Logical Expression --></label>
+        <name>FieloPLT__InvalidLogicalExpression</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid &quot;Lookup from Email Alert&quot; --></label>
+        <name>FieloPLT__InvalidLookupFromEmailAlert</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid &quot;Lookup from Tracker&quot; --></label>
+        <name>FieloPLT__InvalidLookupFromTracker</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid &quot;Lookup from Transaction&quot; --></label>
+        <name>FieloPLT__InvalidLookupFromTransaction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Invalid Type --></label>
+        <name>FieloPLT__InvalidMemberType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Number Field Name --></label>
+        <name>FieloPLT__InvalidNumberFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Object --></label>
+        <name>FieloPLT__InvalidObject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidObjectSubQuery --></label>
+        <name>FieloPLT__InvalidObjectSubQuery</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidPeriod --></label>
+        <name>FieloPLT__InvalidPeriod</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Profile/Permission Invalid --></label>
+        <name>FieloPLT__InvalidProfileOrPermissionSet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program: Invalid --></label>
+        <name>FieloPLT__InvalidProgram</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Record Type --></label>
+        <name>FieloPLT__InvalidRecordType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InvalidRecordTypeForObject --></label>
+        <name>FieloPLT__InvalidRecordTypeForObject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Record Type --></label>
+        <name>FieloPLT__InvalidRecordTypeForObjects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid SObject Type: Null --></label>
+        <name>FieloPLT__InvalidSObjectTypeNull</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Subscription --></label>
+        <name>FieloPLT__InvalidSubscription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delivered Item --></label>
+        <name>FieloPLT__ItemDelivered</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Item: Successful reversion --></label>
+        <name>FieloPLT__ItemRevertedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Items --></label>
+        <name>FieloPLT__Items</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delivered Items --></label>
+        <name>FieloPLT__ItemsDelivered</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required Items --></label>
+        <name>FieloPLT__ItemsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption Items: Successful reversion --></label>
+        <name>FieloPLT__ItemsRevertedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- JSON: Array required --></label>
+        <name>FieloPLT__JSONArrayRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- JSON invalid relational operator --></label>
+        <name>FieloPLT__JsonInvalidOperator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KPIClassRequired --></label>
+        <name>FieloPLT__KPIClassRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KPINameRequired --></label>
+        <name>FieloPLT__KPINameRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- KPITypeRequired --></label>
+        <name>FieloPLT__KPITypeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Label --></label>
+        <name>FieloPLT__Label</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Landing Settings --></label>
+        <name>FieloPLT__LandingSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LandingView --></label>
+        <name>FieloPLT__LandingView</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Last --></label>
+        <name>FieloPLT__Last</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LastName --></label>
+        <name>FieloPLT__LastName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Less or equal --></label>
+        <name>FieloPLT__LessOrEqual</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Less than --></label>
+        <name>FieloPLT__LessThan</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Level without Criterion --></label>
+        <name>FieloPLT__LevelErrorOrderWithoutCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Level without Criterion not unique --></label>
+        <name>FieloPLT__LevelErrorUniqueLevelWithoutCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Level: Import error type --></label>
+        <name>FieloPLT__LevelImportErrorType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Level: Processing status --></label>
+        <name>FieloPLT__LevelProcessingStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Levels --></label>
+        <name>FieloPLT__Levels</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Libraries: Not included --></label>
+        <name>FieloPLT__LibrariesNotIncluded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Library: Active --></label>
+        <name>FieloPLT__LibraryActive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Library: No upgrade --></label>
+        <name>FieloPLT__LibraryCannotUpgraded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Library: Inactive --></label>
+        <name>FieloPLT__LibraryInactive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Library: Upgraded --></label>
+        <name>FieloPLT__LibraryUpgraded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LinkAction --></label>
+        <name>FieloPLT__LinkAction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LinkButton --></label>
+        <name>FieloPLT__LinkButton</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LinkTool --></label>
+        <name>FieloPLT__LinkTool</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Load --></label>
+        <name>FieloPLT__Load</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Load Item --></label>
+        <name>FieloPLT__LoadItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Loading --></label>
+        <name>FieloPLT__Loading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Local Development --></label>
+        <name>FieloPLT__LocalDevelopment</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Local Library: Active --></label>
+        <name>FieloPLT__LocalLibraryCannotBeActive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Local Library: Inactive --></label>
+        <name>FieloPLT__LocalLibraryCannotBeInactive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Logical Expression --></label>
+        <name>FieloPLT__LogicalExpression</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LookupAdditionalField --></label>
+        <name>FieloPLT__LookupAdditionalField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lookup from Tracker: Empty --></label>
+        <name>FieloPLT__LookupFromTrackerNotEmpty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lookup from Transaction: Empty --></label>
+        <name>FieloPLT__LookupFromTransactionNotEmpty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Lookup from Email Alert: Empty --></label>
+        <name>FieloPLT__LookupfromEmailAlertNotEmpty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LookupsMandatoryRuleTrigger --></label>
+        <name>FieloPLT__LookupsMandatoryRuleTrigger</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Manage --></label>
+        <name>FieloPLT__Manage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Manage Programs --></label>
+        <name>FieloPLT__ManagePrograms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ManageStandardRelatedLists --></label>
+        <name>FieloPLT__ManageStandardRelatedLists</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mark as used --></label>
+        <name>FieloPLT__MarkAsUsed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MashupStatistics --></label>
+        <name>FieloPLT__MashupStatistics</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Match Criteria --></label>
+        <name>FieloPLT__MatchCriteria</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Match Criteria: Required --></label>
+        <name>FieloPLT__MatchCriteriaRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member --></label>
+        <name>FieloPLT__Member</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Subscribed --></label>
+        <name>FieloPLT__MemberAlreadySubscribed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Pending approval --></label>
+        <name>FieloPLT__MemberApprovalSubmit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Blocked Member --></label>
+        <name>FieloPLT__MemberBlocked</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Blocked or Rejected --></label>
+        <name>FieloPLT__MemberBlockedOrRejected</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Existent User --></label>
+        <name>FieloPLT__MemberExistingUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required Member ID --></label>
+        <name>FieloPLT__MemberIdRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Member --></label>
+        <name>FieloPLT__MemberInvalid</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Member required --></label>
+        <name>FieloPLT__MemberMustBeChosen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required Member --></label>
+        <name>FieloPLT__MemberRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Set Manager --></label>
+        <name>FieloPLT__MemberSetAsManager</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unblocked Member --></label>
+        <name>FieloPLT__MemberUnblocked</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Unset Manager --></label>
+        <name>FieloPLT__MemberUnsetAsManager</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Members --></label>
+        <name>FieloPLT__MembersInvalid</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Message sent --></label>
+        <name>FieloPLT__MessageSent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: No modification --></label>
+        <name>FieloPLT__MissionCannotBeModified</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: No edition --></label>
+        <name>FieloPLT__MissionCannotEdit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Different &quot;Field Type&quot; --></label>
+        <name>FieloPLT__MissionCriterionDifferentFieldType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Invalid &quot;Field Name&quot; --></label>
+        <name>FieloPLT__MissionCriterionInvalidFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Invalid &quot;Operator&quot; --></label>
+        <name>FieloPLT__MissionCriterionInvalidOperator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Invalid &quot;Value&quot; --></label>
+        <name>FieloPLT__MissionCriterionInvalidValues</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Missing &quot;Date&quot; --></label>
+        <name>FieloPLT__MissionCriterionMissingDateValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Missing &quot;Field Name&quot; --></label>
+        <name>FieloPLT__MissionCriterionMissingFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Missing &quot;Field Type&quot; --></label>
+        <name>FieloPLT__MissionCriterionMissingFieldType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Missing &quot;Number&quot; --></label>
+        <name>FieloPLT__MissionCriterionMissingNumberValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Missing &quot;Operator&quot; --></label>
+        <name>FieloPLT__MissionCriterionMissingOperator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Missing &quot;Value&quot; --></label>
+        <name>FieloPLT__MissionCriterionMissingValues</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Criterion: Missing &quot;Value&quot; --></label>
+        <name>FieloPLT__MissionCriterionMissingValues2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Invalid &quot;Field to Aggregate&quot; --></label>
+        <name>FieloPLT__MissionInvalidFieldToAggregate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Invalid &quot;Logical Expression&quot; order --></label>
+        <name>FieloPLT__MissionInvalidLogExpressionOrder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Invalid &quot;Logical Expression&quot; --></label>
+        <name>FieloPLT__MissionInvalidLogicalExpression</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Invalid &quot;Objective Field&quot; --></label>
+        <name>FieloPLT__MissionInvalidObjectiveField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Rewarding --></label>
+        <name>FieloPLT__MissionRewarding</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: No deletion --></label>
+        <name>FieloPLT__MissionValidationCannotDelete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: &quot;Field to Aggregate&quot; --></label>
+        <name>FieloPLT__MissionValidationFieldToAggregate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Invalid &quot;Action&quot; --></label>
+        <name>FieloPLT__MissionValidationInvalidAction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: &quot;Objective Field&quot; required --></label>
+        <name>FieloPLT__MissionValidationObjectiveFieldRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: &quot;Objective Value&quot; required --></label>
+        <name>FieloPLT__MissionValidationObjectiveValueRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: &quot;Operator&quot; required 1 --></label>
+        <name>FieloPLT__MissionValidationOperatorRequired1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: &quot;Operator&quot; required 2 --></label>
+        <name>FieloPLT__MissionValidationOperatorRequired2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Missions With Objective: Table Types --></label>
+        <name>FieloPLT__MissionWithObjectiveTableTypeValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Missions With Objective: Leaderboard Mode --></label>
+        <name>FieloPLT__MissionWithObjectiveValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Missing &quot;Field to Aggregate&quot; --></label>
+        <name>FieloPLT__MissionWithoutFieldToAggregate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MissionWithoutLeaderboardModeValidation --></label>
+        <name>FieloPLT__MissionWithoutLeaderboardModeValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Missing &quot;Objective Field&quot; --></label>
+        <name>FieloPLT__MissionWithoutObjectiveField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Missions Without Objective: Table Types --></label>
+        <name>FieloPLT__MissionWithoutObjectiveTableTypeValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Missing &quot;Objective Type&quot; --></label>
+        <name>FieloPLT__MissionWithoutObjectiveType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Without Objective: Leaderboard Mode --></label>
+        <name>FieloPLT__MissionWithoutObjectiveValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission: Missing &quot;Objective Value&quot; --></label>
+        <name>FieloPLT__MissionWithoutObjectiveValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Missions: Invalid Rewarding Time --></label>
+        <name>FieloPLT__MissionsInvalidRewardingTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Missions: Invalid Rewarding Time --></label>
+        <name>FieloPLT__MissionsInvalidRewardingTimePerformance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Missions: Invalid Table Type --></label>
+        <name>FieloPLT__MissionsInvalidTableType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Missions: Table Type Singular --></label>
+        <name>FieloPLT__MissionsTableTypeSingular</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Missions: Table Type Time Position --></label>
+        <name>FieloPLT__MissionsTableTypeTimePosition</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Dependency --></label>
+        <name>FieloPLT__MissionsWithObjectiveRequiredMissions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mode --></label>
+        <name>FieloPLT__Mode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Model --></label>
+        <name>FieloPLT__Model</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Model: Empty --></label>
+        <name>FieloPLT__ModelEmpty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Model: Required --></label>
+        <name>FieloPLT__ModelMustBeChosen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- More --></label>
+        <name>FieloPLT__More</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Multiple Redemptions --></label>
+        <name>FieloPLT__MultipleRedemptionsCreated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Logical expression --></label>
+        <name>FieloPLT__MustChooseALogicalExpresion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Complete &quot;Action&quot; --></label>
+        <name>FieloPLT__MustCompleteOneOfTheActions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Name --></label>
+        <name>FieloPLT__Name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Net Points --></label>
+        <name>FieloPLT__NetPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New --></label>
+        <name>FieloPLT__New</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewItem --></label>
+        <name>FieloPLT__NewItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewLink --></label>
+        <name>FieloPLT__NewLink</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Manual --></label>
+        <name>FieloPLT__NewManual</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Model --></label>
+        <name>FieloPLT__NewModel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Records:Deletion --></label>
+        <name>FieloPLT__NewRecordsCannotRegisteredDeletion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Redemption --></label>
+        <name>FieloPLT__NewRedemption</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NewRemote --></label>
+        <name>FieloPLT__NewRemote</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Settings --></label>
+        <name>FieloPLT__NewSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Next --></label>
+        <name>FieloPLT__Next</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unavailable Reward Items --></label>
+        <name>FieloPLT__NoAvailableItems</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Delivery: No Redemption Items to deliver --></label>
+        <name>FieloPLT__NoItemsDeliver</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption Items: No reversion --></label>
+        <name>FieloPLT__NoItemsRevert</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No record to revert --></label>
+        <name>FieloPLT__NoRecordToRevert</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No records to show --></label>
+        <name>FieloPLT__NoRecordsToShow</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No results found --></label>
+        <name>FieloPLT__NoResultsFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- None --></label>
+        <name>FieloPLT__None</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Not contains --></label>
+        <name>FieloPLT__NotContains</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Not equal --></label>
+        <name>FieloPLT__NotEquals</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unit of Work: No support --></label>
+        <name>FieloPLT__NotSupportedByUnitOfWork</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Notes Attachments --></label>
+        <name>FieloPLT__NotesAttachments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OK --></label>
+        <name>FieloPLT__OK</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OR --></label>
+        <name>FieloPLT__OR</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Object: No Edition --></label>
+        <name>FieloPLT__ObjectCannotBeModified</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Objective --></label>
+        <name>FieloPLT__Objective</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Of --></label>
+        <name>FieloPLT__Of</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OnChange --></label>
+        <name>FieloPLT__OnChange</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OnlyNewRecordsRegisteredAsNew --></label>
+        <name>FieloPLT__OnlyNewRecordsRegisteredAsNew</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- MIssion: Without Objective --></label>
+        <name>FieloPLT__OnlyOneMIssionWithoutObjective</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Inactive Action: Deletion --></label>
+        <name>FieloPLT__OnlyWithInactiveActionCanBeDeleted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Open Activities --></label>
+        <name>FieloPLT__OpenActivities</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Successful Operation --></label>
+        <name>FieloPLT__OperationSuccessful</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Operator --></label>
+        <name>FieloPLT__Operator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Relational operators: Not found --></label>
+        <name>FieloPLT__OperatorNotFound</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Order --></label>
+        <name>FieloPLT__Order</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No records to order --></label>
+        <name>FieloPLT__OrderRecordsNoRecords</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Organization and Contributor Member --></label>
+        <name>FieloPLT__OrgAccountContributorError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Fielo Organization Member already exists --></label>
+        <name>FieloPLT__OrganizationAccountAlreadyExist</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required: CRM Account --></label>
+        <name>FieloPLT__OrganizationAccountCRMRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Fielo Organization Member: Manager --></label>
+        <name>FieloPLT__OrganizationAccountMustHaveAManager</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Fielo Organization &amp; Contributor Member account Program --></label>
+        <name>FieloPLT__OrganizationAccountProgramError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Fielo Organization Member account: Required --></label>
+        <name>FieloPLT__OrganizationAccountRelatedRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Page --></label>
+        <name>FieloPLT__Page</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Parameters --></label>
+        <name>FieloPLT__Parameters</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ParenthesisError --></label>
+        <name>FieloPLT__ParenthesisError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required password --></label>
+        <name>FieloPLT__PasswordIsRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Vouchers history --></label>
+        <name>FieloPLT__PastVouchers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Period --></label>
+        <name>FieloPLT__Period</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PermissionSetFilterItem --></label>
+        <name>FieloPLT__PermissionSetFilterItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SF CRM Person Account: disable --></label>
+        <name>FieloPLT__PersonAccountNotEnabled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upload photo --></label>
+        <name>FieloPLT__PhotoUpload</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Picklist --></label>
+        <name>FieloPLT__Picklist</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required information: complete --></label>
+        <name>FieloPLT__PleaseCompleteTheNecessaryInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Complete the Value --></label>
+        <name>FieloPLT__PleaseCompleteTheValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Image upload: Alert --></label>
+        <name>FieloPLT__PleaseSelectAnImageToUpload</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SF CRM: Select Account --></label>
+        <name>FieloPLT__PleaseSelectAtLeastOneAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select Account --></label>
+        <name>FieloPLT__PleaseSelectAtLeastOneContact</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Select --></label>
+        <name>FieloPLT__PleaseSelectThePointType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Dependency Mission --></label>
+        <name>FieloPLT__PointTypeDependencyMission</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Mission invalid --></label>
+        <name>FieloPLT__PointTypeNotValidForMission</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Rule invalid --></label>
+        <name>FieloPLT__PointTypeNotValidForRule</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Member validation --></label>
+        <name>FieloPLT__PointTypeValidationMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Redemption validation --></label>
+        <name>FieloPLT__PointTypeValidationRedemption</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Redemption Item validation --></label>
+        <name>FieloPLT__PointTypeValidationRedemptionItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Reward validation --></label>
+        <name>FieloPLT__PointTypeValidationReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Point Type: Transaction validation --></label>
+        <name>FieloPLT__PointTypeValidationTransaction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Points --></label>
+        <name>FieloPLT__Points</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Preview --></label>
+        <name>FieloPLT__Preview</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Previous --></label>
+        <name>FieloPLT__Previous</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program: Private Segment --></label>
+        <name>FieloPLT__PrivateSegmentAlreadyExists</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Process Offline --></label>
+        <name>FieloPLT__ProcessOffline</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Profile --></label>
+        <name>FieloPLT__Profile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProfileFilterItem --></label>
+        <name>FieloPLT__ProfileFilterItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProfileOrPermissionSet --></label>
+        <name>FieloPLT__ProfileOrPermissionSet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ProfileSelector --></label>
+        <name>FieloPLT__ProfileSelector</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program --></label>
+        <name>FieloPLT__Program</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program: Successful creation --></label>
+        <name>FieloPLT__ProgramCreatedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program: Default Program error --></label>
+        <name>FieloPLT__ProgramDefaultError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program Required --></label>
+        <name>FieloPLT__ProgramRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Default Program set --></label>
+        <name>FieloPLT__ProgramSetDefault</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program Stats --></label>
+        <name>FieloPLT__ProgramStats</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program: No current Agrrement --></label>
+        <name>FieloPLT__ProgramWithoutCurrentAgrrement</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Progress --></label>
+        <name>FieloPLT__Progress</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotion: Active --></label>
+        <name>FieloPLT__PromotionActive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotion: Successful creation --></label>
+        <name>FieloPLT__PromotionCreatedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotion: Inactive --></label>
+        <name>FieloPLT__PromotionInactive</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotion: KPI Domain End Date --></label>
+        <name>FieloPLT__PromotionKPIDomainEndDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotion: KPI Domain Start Date --></label>
+        <name>FieloPLT__PromotionKPIDomainStartDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Scheduled Promotion --></label>
+        <name>FieloPLT__PromotionScheduled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotion Status --></label>
+        <name>FieloPLT__PromotionStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Batch process: Promotion Status --></label>
+        <name>FieloPLT__PromotionStatusDescription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotion Timeline --></label>
+        <name>FieloPLT__PromotionTimeline</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotions: Edition --></label>
+        <name>FieloPLT__PromotionValidationEdition</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Promotions --></label>
+        <name>FieloPLT__Promotions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Provider Order: Account required --></label>
+        <name>FieloPLT__ProviderOrderMissingAccount</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Program: Public Segment --></label>
+        <name>FieloPLT__PublicSegmentAlreadyExists</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Quantity --></label>
+        <name>FieloPLT__Quantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Quantity: Different than zero --></label>
+        <name>FieloPLT__QuantityCannotZero</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Exceeded quantity --></label>
+        <name>FieloPLT__QuantityExcedeed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Cross-object fields --></label>
+        <name>FieloPLT__QueryErrorCrossObjectFields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid call --></label>
+        <name>FieloPLT__QueryErrorInvalidCall</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid call 2 --></label>
+        <name>FieloPLT__QueryErrorInvalidCall2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid call 3 --></label>
+        <name>FieloPLT__QueryErrorInvalidCall3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid field --></label>
+        <name>FieloPLT__QueryErrorInvalidField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid Fieldset --></label>
+        <name>FieloPLT__QueryErrorInvalidFieldSet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Invalid relationship --></label>
+        <name>FieloPLT__QueryErrorInvalidRelationship</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Quick save --></label>
+        <name>FieloPLT__QuickSave</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReadOnly --></label>
+        <name>FieloPLT__ReadOnly</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recalculate --></label>
+        <name>FieloPLT__Recalculate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recent --></label>
+        <name>FieloPLT__Recent</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recent Members --></label>
+        <name>FieloPLT__RecentMembers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recent Promotions --></label>
+        <name>FieloPLT__RecentPromotions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recently created --></label>
+        <name>FieloPLT__RecentlyCreated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recently modified --></label>
+        <name>FieloPLT__RecentlyModified</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RecordActivatedSuccesfully --></label>
+        <name>FieloPLT__RecordActivatedSuccesfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record: Reversion --></label>
+        <name>FieloPLT__RecordAlreadyReverted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record: Dirty registration --></label>
+        <name>FieloPLT__RecordCannotBeRegisteredAsDirty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RecordClonedSuccesfully --></label>
+        <name>FieloPLT__RecordClonedSuccesfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record: Successful deletion --></label>
+        <name>FieloPLT__RecordDeletedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select a Point Field Name --></label>
+        <name>FieloPLT__RecordFieldNameSelect</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record Inativated Succesfully --></label>
+        <name>FieloPLT__RecordInativatedSuccesfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record name --></label>
+        <name>FieloPLT__RecordName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record: Unprocessed --></label>
+        <name>FieloPLT__RecordNotProcessedYet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record: Processed and awarded --></label>
+        <name>FieloPLT__RecordProcessedAndAwarded</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Record: Submitted for Approval --></label>
+        <name>FieloPLT__RecordSubmittedForApproval</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- New Record type --></label>
+        <name>FieloPLT__RecordTypeOfNewRecord</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RecordTypeSelector --></label>
+        <name>FieloPLT__RecordTypeSelector</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RecordView --></label>
+        <name>FieloPLT__RecordView</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Deleted record --></label>
+        <name>FieloPLT__RecordWasDeleted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Records: No insertion --></label>
+        <name>FieloPLT__RecordsCannotBeInserted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redeem --></label>
+        <name>FieloPLT__Redeem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redeem Voucher --></label>
+        <name>FieloPLT__RedeemRewardVoucher</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption Item: Invalid quantity --></label>
+        <name>FieloPLT__RedempItemInvalidQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption --></label>
+        <name>FieloPLT__Redemption</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption: Creation successfully --></label>
+        <name>FieloPLT__RedemptionCreatedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption Item: Program validation --></label>
+        <name>FieloPLT__RedemptionItemProgramValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption Item: Revert error --></label>
+        <name>FieloPLT__RedemptionItemRevertError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption Item: Select --></label>
+        <name>FieloPLT__RedemptionItemSelectOne</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReflectionMethod --></label>
+        <name>FieloPLT__ReflectionMethod</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Registration Successful --></label>
+        <name>FieloPLT__RegistrationSuccessful</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Related List Settings --></label>
+        <name>FieloPLT__RelatedListSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RelatedLists --></label>
+        <name>FieloPLT__RelatedLists</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Related Points or Program Point Types --></label>
+        <name>FieloPLT__RelatedPointsProgramPointTypes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reload --></label>
+        <name>FieloPLT__Reload</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemoteAction --></label>
+        <name>FieloPLT__RemoteAction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemoteButton --></label>
+        <name>FieloPLT__RemoteButton</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemoteTool --></label>
+        <name>FieloPLT__RemoteTool</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Remove --></label>
+        <name>FieloPLT__Remove</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemoveColumn --></label>
+        <name>FieloPLT__RemoveColumn</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemoveFromJson --></label>
+        <name>FieloPLT__RemoveFromJson</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemoveRow --></label>
+        <name>FieloPLT__RemoveRow</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reorder --></label>
+        <name>FieloPLT__Reorder</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Replace --></label>
+        <name>FieloPLT__Replace</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportAggregations --></label>
+        <name>FieloPLT__ReportAggregations</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Report issue --></label>
+        <name>FieloPLT__ReportAnIssue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportAsOfNow --></label>
+        <name>FieloPLT__ReportAsOfNow</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportDoesntExist --></label>
+        <name>FieloPLT__ReportDoesntExist</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportFilters --></label>
+        <name>FieloPLT__ReportFilters</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportID --></label>
+        <name>FieloPLT__ReportId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportKPIRequired --></label>
+        <name>FieloPLT__ReportKPIRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportRuntimeDetails --></label>
+        <name>FieloPLT__ReportRuntimeDetails</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportTypeRequired --></label>
+        <name>FieloPLT__ReportTypeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReportUniqueNameRequired --></label>
+        <name>FieloPLT__ReportUniqueNameRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reports --></label>
+        <name>FieloPLT__Reports</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required --></label>
+        <name>FieloPLT__Required</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required argument --></label>
+        <name>FieloPLT__RequiredArgument</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Mission Dependency --></label>
+        <name>FieloPLT__RequiredMissions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Revert --></label>
+        <name>FieloPLT__Revert</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error: Review --></label>
+        <name>FieloPLT__ReviewFollowingErrors</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Revoke --></label>
+        <name>FieloPLT__Revoke</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward Catalog --></label>
+        <name>FieloPLT__RewardCatalog</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward Item error: Duplicated value --></label>
+        <name>FieloPLT__RewardErrorDuplicateValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward error: Empty file --></label>
+        <name>FieloPLT__RewardErrorFileEmpty</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward load error: Null file --></label>
+        <name>FieloPLT__RewardErrorFileNull</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward Item load error: File format --></label>
+        <name>FieloPLT__RewardErrorFormatFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward Item load error: Intagible Reward --></label>
+        <name>FieloPLT__RewardErrorIntangible</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward Item load error: Null Reward --></label>
+        <name>FieloPLT__RewardErrorNull</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward Item load error: File size --></label>
+        <name>FieloPLT__RewardErrorSizeFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Reward: Required --></label>
+        <name>FieloPLT__RewardMustBeChosen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required Reward --></label>
+        <name>FieloPLT__RewardRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Specified by field: Field Help --></label>
+        <name>FieloPLT__RewardSpecifiedByFieldHelp</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rewarding --></label>
+        <name>FieloPLT__Rewarding</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rewards --></label>
+        <name>FieloPLT__Rewards</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RowType --></label>
+        <name>FieloPLT__RowType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule --></label>
+        <name>FieloPLT__Rule</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Different &quot;Field type&quot; --></label>
+        <name>FieloPLT__RuleCriterionDifferentFieldType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Invalid &quot;Field Name&quot; --></label>
+        <name>FieloPLT__RuleCriterionInvalidFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Invalid &quot;Operator&quot; --></label>
+        <name>FieloPLT__RuleCriterionInvalidOperator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Invalid &quot;Value&quot; --></label>
+        <name>FieloPLT__RuleCriterionInvalidValues</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Missing &quot;Date&quot; --></label>
+        <name>FieloPLT__RuleCriterionWithoutDateValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Missing &quot;Field Name&quot; --></label>
+        <name>FieloPLT__RuleCriterionWithoutFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Missing &quot;Field Type&quot; --></label>
+        <name>FieloPLT__RuleCriterionWithoutFieldType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Invalid &quot;Value&quot; --></label>
+        <name>FieloPLT__RuleCriterionWithoutNumberValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Missing &quot;Operator&quot; --></label>
+        <name>FieloPLT__RuleCriterionWithoutOperator</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Missing &quot;Value&quot; --></label>
+        <name>FieloPLT__RuleCriterionWithoutValues</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule Criterion: Missing &quot;Value&quot; --></label>
+        <name>FieloPLT__RuleCriterionWithoutValues2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid &quot;Badge Field Name&quot; --></label>
+        <name>FieloPLT__RuleInvalidBadgeFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid &quot;Instant Badge&quot; --></label>
+        <name>FieloPLT__RuleInvalidInstantBadge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid &quot;Instant Reward&quot; --></label>
+        <name>FieloPLT__RuleInvalidInstantReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid &quot;Logical Expression&quot; --></label>
+        <name>FieloPLT__RuleInvalidLogicalExpression</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid &quot;Related List&quot; --></label>
+        <name>FieloPLT__RuleInvalidRelatedList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid &quot;Reward Field Name&quot; --></label>
+        <name>FieloPLT__RuleInvalidRewardFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid &quot;Transaction Field Name&quot; --></label>
+        <name>FieloPLT__RuleInvalidTransactionFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Reward Program validation --></label>
+        <name>FieloPLT__RuleRewardProgramValidation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Badge Field Name&quot; required --></label>
+        <name>FieloPLT__RuleValidationBadgeFieldNameRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Best Option&quot; Rule type validation --></label>
+        <name>FieloPLT__RuleValidationBestOption</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Best Option and Point Types --></label>
+        <name>FieloPLT__RuleValidationBestOptionPointType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Point&quot; Conversion value validation --></label>
+        <name>FieloPLT__RuleValidationConverstionValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Field Name required --></label>
+        <name>FieloPLT__RuleValidationFieldNameRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Instant Badge&quot; required --></label>
+        <name>FieloPLT__RuleValidationInstantBadgeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Instant Reward&quot; required --></label>
+        <name>FieloPLT__RuleValidationInstantRewardRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid Action --></label>
+        <name>FieloPLT__RuleValidationInvalidAction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Invalid Related list --></label>
+        <name>FieloPLT__RuleValidationInvalidRelatedList</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;No Competition&quot; Rule type validation --></label>
+        <name>FieloPLT__RuleValidationNoCompetition</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Point&quot; Conversion mode --></label>
+        <name>FieloPLT__RuleValidationPointConverstionMode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Point&quot; Conversion value required --></label>
+        <name>FieloPLT__RuleValidationPointConvertionValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Point Type&quot; required --></label>
+        <name>FieloPLT__RuleValidationPointType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: &quot;Point Type&quot; required --></label>
+        <name>FieloPLT__RuleValidationPointTypeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Reward Field Name required --></label>
+        <name>FieloPLT__RuleValidationRewardFieldNameRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing Action --></label>
+        <name>FieloPLT__RuleWithoutAction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing &quot;Badge Field Name&quot; --></label>
+        <name>FieloPLT__RuleWithoutBadgeFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing &quot;Conversion value&quot; --></label>
+        <name>FieloPLT__RuleWithoutConversionValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing &quot;Instant Badge&quot; --></label>
+        <name>FieloPLT__RuleWithoutInstantBadge</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing &quot;Instant Reward&quot; --></label>
+        <name>FieloPLT__RuleWithoutInstantReward</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing &quot;Point Type&quot; --></label>
+        <name>FieloPLT__RuleWithoutPointType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing &quot;Reward Field Name&quot; --></label>
+        <name>FieloPLT__RuleWithoutRewardFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing &quot;Transaction Field Name&quot; --></label>
+        <name>FieloPLT__RuleWithoutTransactionFieldName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rule: Missing &quot;Rule Type&quot; --></label>
+        <name>FieloPLT__RuleWithoutType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Rules --></label>
+        <name>FieloPLT__Rules</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Run --></label>
+        <name>FieloPLT__Run</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save --></label>
+        <name>FieloPLT__Save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save &amp; New --></label>
+        <name>FieloPLT__SaveAndNew</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Save as Model --></label>
+        <name>FieloPLT__SaveAsModel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search --></label>
+        <name>FieloPLT__Search</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search by --></label>
+        <name>FieloPLT__SearchBy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Search objects --></label>
+        <name>FieloPLT__SearchObjects</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Section --></label>
+        <name>FieloPLT__Section</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SectionName --></label>
+        <name>FieloPLT__SectionName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SectionTitle --></label>
+        <name>FieloPLT__SectionTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Segment: Import error type --></label>
+        <name>FieloPLT__SegmentImportErrorType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Segments --></label>
+        <name>FieloPLT__Segments</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select file --></label>
+        <name>FieloPLT__SelectAFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select all --></label>
+        <name>FieloPLT__SelectAll</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select an option --></label>
+        <name>FieloPLT__SelectAnOption</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redemption: Select Voucher code or Member --></label>
+        <name>FieloPLT__SelectVoucherCodeOrMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Selected --></label>
+        <name>FieloPLT__Selected</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Send --></label>
+        <name>FieloPLT__Send</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Set Manager --></label>
+        <name>FieloPLT__SetManager</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Settings --></label>
+        <name>FieloPLT__Settings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Share an idea --></label>
+        <name>FieloPLT__ShareAnIdea</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Sharing --></label>
+        <name>FieloPLT__Sharing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SnapshotNotEditable --></label>
+        <name>FieloPLT__SnapshotNotEditable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Specified by field --></label>
+        <name>FieloPLT__SpecifiedByField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- StandardActions --></label>
+        <name>FieloPLT__StandardActions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- StandardButtons --></label>
+        <name>FieloPLT__StandardButtons</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- StandardTools --></label>
+        <name>FieloPLT__StandardTools</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Static Resource: Missing field --></label>
+        <name>FieloPLT__StaticResourceMissingField</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- StatisticsNotAvailable --></label>
+        <name>FieloPLT__StatisticsNotAvailable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Status --></label>
+        <name>FieloPLT__Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Step --></label>
+        <name>FieloPLT__Step</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Stock --></label>
+        <name>FieloPLT__Stock</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SubQueryFilterRequired --></label>
+        <name>FieloPLT__SubQueryFilterRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Subject --></label>
+        <name>FieloPLT__Subject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Submit --></label>
+        <name>FieloPLT__Submit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Subquery: Unsupported --></label>
+        <name>FieloPLT__SubqueryNotSupported</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Subscription --></label>
+        <name>FieloPLT__Subscription</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member creation: Success --></label>
+        <name>FieloPLT__SuccessfulMembersCreation</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Table --></label>
+        <name>FieloPLT__Table</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Table Type: Required --></label>
+        <name>FieloPLT__TableTypeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tags --></label>
+        <name>FieloPLT__Tags</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member: Invalid Value --></label>
+        <name>FieloPLT__TargetMemberInvalidValue</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Salesforce Contact: Member --></label>
+        <name>FieloPLT__TheContactAlreadyHasAMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Required Point action. --></label>
+        <name>FieloPLT__ThePointActionIsMandatory</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction: Offline processing --></label>
+        <name>FieloPLT__TheTransactionWillBeProcessedOffline</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Member Performance Chart --></label>
+        <name>FieloPLT__TitleMemberPerformanceChart</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recent Members --></label>
+        <name>FieloPLT__TitleRecentMembers</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recent Promotions --></label>
+        <name>FieloPLT__TitleRecentPromotions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recent Redemptions --></label>
+        <name>FieloPLT__TitleRecentRedemptions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Recent Rewards --></label>
+        <name>FieloPLT__TitleRecentRewards</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Title: Timeline --></label>
+        <name>FieloPLT__TitleTimeLine</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- To --></label>
+        <name>FieloPLT__To</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tools --></label>
+        <name>FieloPLT__Tools</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Total --></label>
+        <name>FieloPLT__Total</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Total Batches --></label>
+        <name>FieloPLT__TotalBatches</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Total redeemed Points --></label>
+        <name>FieloPLT__TotalRedeemPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tracker Mode is Required --></label>
+        <name>FieloPLT__TrackerModeRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction Member data --></label>
+        <name>FieloPLT__TransactionMemberData</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Level: processing status --></label>
+        <name>FieloPLT__TransactionOfflineProcessingStatus</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction Points --></label>
+        <name>FieloPLT__TransactionPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction Revert error: Generated Transaction --></label>
+        <name>FieloPLT__TransactionRevertErrorGeneratedTransaction</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction Revert error: Insufficient Points --></label>
+        <name>FieloPLT__TransactionRevertErrorInsufficientPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction Revert error: Not approved --></label>
+        <name>FieloPLT__TransactionRevertErrorNoApproved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction Revert error: Unprocessed --></label>
+        <name>FieloPLT__TransactionRevertErrorNoProcessed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction Revert error: Reverted Transaction --></label>
+        <name>FieloPLT__TransactionRevertErrorTransactionReverted</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction: Revert Error --></label>
+        <name>FieloPLT__TransactionRevertErrorUsedPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transaction: Revert successful --></label>
+        <name>FieloPLT__TransactionRevertSucess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Transactions --></label>
+        <name>FieloPLT__Transactions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- True --></label>
+        <name>FieloPLT__True</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Type --></label>
+        <name>FieloPLT__Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TypeDetail --></label>
+        <name>FieloPLT__TypeDetail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TypeEdit --></label>
+        <name>FieloPLT__TypeEdit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TypeLanding --></label>
+        <name>FieloPLT__TypeLanding</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TypeNew --></label>
+        <name>FieloPLT__TypeNew</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TypeRelated --></label>
+        <name>FieloPLT__TypeRelated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TypeView --></label>
+        <name>FieloPLT__TypeView</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- URL --></label>
+        <name>FieloPLT__URL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- URLReflectionMethod --></label>
+        <name>FieloPLT__URLReflectionMethod</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UnableToPerfomQuery --></label>
+        <name>FieloPLT__UnableToPerfomQuery</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unblock --></label>
+        <name>FieloPLT__Unblock</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unit Points --></label>
+        <name>FieloPLT__UnitPoints</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Unset Manager --></label>
+        <name>FieloPLT__UnsetManager</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upgrade --></label>
+        <name>FieloPLT__Upgrade</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upload file --></label>
+        <name>FieloPLT__UploadFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Upload photo --></label>
+        <name>FieloPLT__UploadPhoto</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Valid Email --></label>
+        <name>FieloPLT__ValidEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ValidQuantity --></label>
+        <name>FieloPLT__ValidQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Validate --></label>
+        <name>FieloPLT__Validate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Table Type --></label>
+        <name>FieloPLT__ValidationChallengeTableType</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Table Type 2 --></label>
+        <name>FieloPLT__ValidationChallengeTableType2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Table Type 3 --></label>
+        <name>FieloPLT__ValidationChallengeTableType3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Table Type 4 --></label>
+        <name>FieloPLT__ValidationChallengeTableType4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge: Table Type Singular --></label>
+        <name>FieloPLT__ValidationChallengeTableTypeSingular</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Challenge without Objective --></label>
+        <name>FieloPLT__ValidationChallengeWithoutObjective</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Invalid Logical Expression --></label>
+        <name>FieloPLT__ValidationInvalidLogicalExpression</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Value --></label>
+        <name>FieloPLT__Value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Value: Missing --></label>
+        <name>FieloPLT__ValueMissing</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Value: Missing after RT --></label>
+        <name>FieloPLT__ValueMissingAfterRT</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Version to upgrade --></label>
+        <name>FieloPLT__VersionToUpgrade</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View --></label>
+        <name>FieloPLT__View</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View all --></label>
+        <name>FieloPLT__ViewAll</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- View Settings --></label>
+        <name>FieloPLT__ViewSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Views --></label>
+        <name>FieloPLT__Views</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Visibility --></label>
+        <name>FieloPLT__Visibility</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Voucher Number --></label>
+        <name>FieloPLT__VoucherNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Redeemable Vouchers --></label>
+        <name>FieloPLT__VouchersToRedeem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Pending approval --></label>
+        <name>FieloPLT__WaitingForApproval</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Warning --></label>
+        <name>FieloPLT__Warning</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Week --></label>
+        <name>FieloPLT__Week</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WhereCondition --></label>
+        <name>FieloPLT__WhereCondition</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- checkbox --></label>
+        <name>FieloPLT__checkbox</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- hidden --></label>
+        <name>FieloPLT__hidden</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- input --></label>
+        <name>FieloPLT__input</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- lookup --></label>
+        <name>FieloPLT__lookup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- multiselect --></label>
+        <name>FieloPLT__multiselect</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- radio --></label>
+        <name>FieloPLT__radio</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- richtext --></label>
+        <name>FieloPLT__richtext</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Security error: Field is not insertable --></label>
+        <name>FieloPLT__security_error_field_not_insertable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Security error: Field is not readable --></label>
+        <name>FieloPLT__security_error_field_not_readable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Security error: Field is not updateable --></label>
+        <name>FieloPLT__security_error_field_not_updateable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Security error: Object is not deletable --></label>
+        <name>FieloPLT__security_error_object_not_deletable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Security error: Object is not insertable --></label>
+        <name>FieloPLT__security_error_object_not_insertable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Security error: Object is not readable --></label>
+        <name>FieloPLT__security_error_object_not_readable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Security error: Object is not updatable --></label>
+        <name>FieloPLT__security_error_object_not_updateable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_areyousure --></label>
+        <name>VN_photoupload_areyousure</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_cancel --></label>
+        <name>VN_photoupload_cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_change --></label>
+        <name>VN_photoupload_change</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_delete --></label>
+        <name>VN_photoupload_delete</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_errorimagedimensions --></label>
+        <name>VN_photoupload_errorimagedimensions</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_errorimagetype --></label>
+        <name>VN_photoupload_errorimagetype</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_erroruploadtryagain --></label>
+        <name>VN_photoupload_erroruploadtryagain</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_preview --></label>
+        <name>VN_photoupload_preview</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_save --></label>
+        <name>VN_photoupload_save</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_selectafile --></label>
+        <name>VN_photoupload_selectafile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_selectimage --></label>
+        <name>VN_photoupload_selectimage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_upload --></label>
+        <name>VN_photoupload_upload</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VN_photoupload_uploadnew --></label>
+        <name>VN_photoupload_uploadnew</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_AnoFiscal --></label>
+        <name>V_AnoFiscal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_BadgeElite --></label>
+        <name>V_BadgeElite</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_BadgeEngajamento --></label>
+        <name>V_BadgeEngajamento</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_BadgeYouBet --></label>
+        <name>V_BadgeYouBet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community Elite LInk --></label>
+        <name>V_CommunityLink_Elite</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community Link Home --></label>
+        <name>V_CommunityLink_Home</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community Spy LInk --></label>
+        <name>V_CommunityLink_Spy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Community Youbet LInk --></label>
+        <name>V_CommunityLink_Youbet</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_ComprimentoMinimoSenha --></label>
+        <name>V_ComprimentoMinimoSenha</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_ConfirmarProcessarAnoFiscal --></label>
+        <name>V_ConfirmarProcessarAnoFiscal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_ConfirmarProcessarCalculos --></label>
+        <name>V_ConfirmarProcessarCalculos</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_ConfirmarProcessarMecanica --></label>
+        <name>V_ConfirmarProcessarMecanica</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_DecimoMes --></label>
+        <name>V_DecimoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_DecimoPrimeiroMes --></label>
+        <name>V_DecimoPrimeiroMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_DecimoSegundoMes --></label>
+        <name>V_DecimoSegundoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_DominioEmailVazio --></label>
+        <name>V_DominioEmailVazio</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_ErroGenerico --></label>
+        <name>V_ErroGenerico</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_IniciativaComplementar --></label>
+        <name>V_IniciativaComplementar</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_IniciativaElite --></label>
+        <name>V_IniciativaElite</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_IniciativaPerene --></label>
+        <name>V_IniciativaPerene</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MensagemAnoFiscal12Mes --></label>
+        <name>V_MensagemAnoFiscal12Mes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MensagemProcessarMecanica --></label>
+        <name>V_MensagemProcessarMecanica</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgConfirmaLance --></label>
+        <name>V_MsgConfirmaLance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgErroFecharResgate --></label>
+        <name>V_MsgErroFecharResgate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgLanceArrematado --></label>
+        <name>V_MsgLanceArrematado</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgLanceMinimo --></label>
+        <name>V_MsgLanceMinimo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgLanceResgatarAgora --></label>
+        <name>V_MsgLanceResgatarAgora</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgLanceSucesso --></label>
+        <name>V_MsgLanceSucesso</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgLeilaoExpirado --></label>
+        <name>V_MsgLeilaoExpirado</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgTempoEsgotado --></label>
+        <name>V_MsgTempoEsgotado</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_MsgValorLance --></label>
+        <name>V_MsgValorLance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_NomeContaSerasa --></label>
+        <name>V_NomeContaSerasa</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_NonoMes --></label>
+        <name>V_NonoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_OitavoMes --></label>
+        <name>V_OitavoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_PontuacaoElegivel --></label>
+        <name>V_PontuacaoElegivel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_PrimeiroMes --></label>
+        <name>V_PrimeiroMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_QuartoMes --></label>
+        <name>V_QuartoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_QuintoMes --></label>
+        <name>V_QuintoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_RankingCoordenador_GerenteRegional --></label>
+        <name>V_RankingCoordenador_GerenteRegional</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_RankingDiretor --></label>
+        <name>V_RankingDiretor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_RankingGerenteDeContas --></label>
+        <name>V_RankingGerenteDeContas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_RankingLider --></label>
+        <name>V_RankingLider</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_RecTypeLeiloes --></label>
+        <name>V_RecTypeLeiloes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_ScoreMaxRanking --></label>
+        <name>V_ScoreMaxRanking</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_SegundoMes --></label>
+        <name>V_SegundoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_SetimoMes --></label>
+        <name>V_SetimoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_SextoMes --></label>
+        <name>V_SextoMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_SiteURL --></label>
+        <name>V_SiteURL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_StatusAtivoMember --></label>
+        <name>V_StatusAtivoMember</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_StatusOpen --></label>
+        <name>V_StatusOpen</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_StatusReady --></label>
+        <name>V_StatusReady</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_TerceiroMes --></label>
+        <name>V_TerceiroMes</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_VagasCordenador_GerenteRegional --></label>
+        <name>V_VagasCordenador_GerenteRegional</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_VagasDiretor --></label>
+        <name>V_VagasDiretor</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_VagasGerenteDeContas --></label>
+        <name>V_VagasGerenteDeContas</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- V_VagasLider --></label>
+        <name>V_VagasLider</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- Processamentos --></label>
+        <name>SX_Processamentos</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>Atualiza_AM_do_Lider_Imediato_no_4o_Trimestre-1</fullName>
+        </flows>
+        <fullName>Atualiza_AM_do_Lider_Imediato_no_4o_Trimestre</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Atualiza_Ano_Fiscal_em_Pontos_nova_estrutura-4</fullName>
+        </flows>
+        <fullName>Atualiza_Ano_Fiscal_em_Pontos_nova_estrutura</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Novo_Atualiza_Semestre_Meta_Participante-3</fullName>
+        </flows>
+        <fullName>Novo_Atualiza_Semestre_Meta_Participante</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>VN_AtualizaSemestreTrimestreMetaParticipante-3</fullName>
+        </flows>
+        <fullName>VN_AtualizaSemestreTrimestreMetaParticipante</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Atualiza_AM_do_L_der_Imediato_no_1o_Trimestre-1</fullName>
+        </flows>
+        <fullName>Atualiza_AM_do_L_der_Imediato_no_1o_Trimestre</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Atualiza_AM_do_Lider_Imediato_no_2o_Trimestre-1</fullName>
+        </flows>
+        <fullName>Atualiza_AM_do_Lider_Imediato_no_2o_Trimestre</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Atualiza_AM_do_L_der_Imediato_no_3o_Trimestre-1</fullName>
+        </flows>
+        <fullName>Atualiza_AM_do_L_der_Imediato_no_3o_Trimestre</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>V_AtualizaPapelEliteMeta-2</fullName>
+        </flows>
+        <fullName>V_AtualizaPapelEliteMeta</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>V_AtualizaBadgeMembercomAF-2</fullName>
+        </flows>
+        <fullName>V_AtualizaBadgeMembercomAF</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>V_AtualizaAnoFiscalItemLeilaoResgate-4</fullName>
+        </flows>
+        <fullName>V_AtualizaAnoFiscalItemLeilaoResgate</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>VN_AtualizaMemberContato-1</fullName>
+        </flows>
+        <fullName>VN_AtualizaMemberContato</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Atualiza_Lance_Ganhador_no_Resgate-1</fullName>
+        </flows>
+        <fullName>Atualiza_Lance_Ganhador_no_Resgate</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>V_AtualizaYoubetValorLanceGanhador-1</fullName>
+        </flows>
+        <fullName>V_AtualizaYoubetValorLanceGanhador</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>V_AtualizaYoubetQtdeLancesEParticipanteUltimoLance-1</fullName>
+        </flows>
+        <fullName>V_AtualizaYoubetQtdeLancesEParticipanteUltimoLance</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Follow Up --></label>
+        <name>Follow_Up</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Badge --></description>
+        <label><!-- Badge --></label>
+        <name>Badge</name>
+        <sections>
+            <label><!-- Badge Members --></label>
+            <name>Badge Members</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Badge Member com campos Member e Meta AF --></description>
+        <label><!-- Badge Member com campos Member e Meta AF --></label>
+        <name>Badge_Member_com_campos_Member_e_Meta_AF</name>
+        <sections>
+            <label><!-- Badge Members --></label>
+            <name>Badge Members</name>
+        </sections>
+        <sections>
+            <label><!-- Meta --></label>
+            <name>Meta</name>
+        </sections>
+        <sections>
+            <label><!-- Meta via Member --></label>
+            <name>Meta via Member</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Carga Dados Temp --></description>
+        <label><!-- Carga Dados Temp --></label>
+        <name>Carga_Dados_Temp</name>
+        <sections>
+            <label><!-- Cargas de Dados Temp --></label>
+            <name>Cargas de Dados Temp</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Meta --></description>
+        <label><!-- Meta --></label>
+        <name>Meta</name>
+        <sections>
+            <label><!-- Metas dos Participantes --></label>
+            <name>Metas dos Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Meta x Sumarizador --></description>
+        <label><!-- Meta x Sumarizador --></label>
+        <name>MetaxSumarizador</name>
+        <sections>
+            <label><!-- Metas dos Participantes --></label>
+            <name>Metas dos Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Sumarizadores --></label>
+            <name>Sumarizadores</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- PLAN_Badge Members --></description>
+        <label><!-- PLAN_Badge Members --></label>
+        <name>PLAN_Badge_Members</name>
+        <sections>
+            <label><!-- Badge Members --></label>
+            <name>Badge Members</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- PLAN_Betcoins --></description>
+        <label><!-- PLAN_Betcoins --></label>
+        <name>PLAN_Betcoins</name>
+        <sections>
+            <label><!-- Betcoins --></label>
+            <name>Betcoins</name>
+        </sections>
+        <sections>
+            <label><!-- Sumarizadores --></label>
+            <name>Sumarizadores</name>
+        </sections>
+        <sections>
+            <label><!-- Transações --></label>
+            <name>Transações</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- PLAN_Metas com Badge --></description>
+        <label><!-- PLAN_Metas com Badge --></label>
+        <name>PLAN_Metas_com_Badge</name>
+        <sections>
+            <label><!-- Badge Members --></label>
+            <name>Badge Members</name>
+        </sections>
+        <sections>
+            <label><!-- Metas dos Participantes --></label>
+            <name>Metas dos Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- PLAN_Metas dos Participantes AF --></description>
+        <label><!-- PLAN_Metas dos Participantes AF --></label>
+        <name>PLAN_Metas_dos_Participantes_AF</name>
+        <sections>
+            <label><!-- Metas dos Participantes - AF --></label>
+            <name>Metas dos Participantes - AF</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- PLAN_Metas e Resultados dos Participantes --></description>
+        <label><!-- PLAN_Metas e Resultados dos Participantes --></label>
+        <name>PLAN_Metas_e_Resultados_dos_Participantes</name>
+        <sections>
+            <label><!-- Metas dos Participantes --></label>
+            <name>Metas dos Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Sumarizadores --></label>
+            <name>Sumarizadores</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Badge --></description>
+        <label><!-- Participantes Com Badge --></label>
+        <name>Participantes_Com_Badge</name>
+        <sections>
+            <label><!-- Badge Members --></label>
+            <name>Badge Members</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Betcoins --></description>
+        <label><!-- Participantes Com Betcoins --></label>
+        <name>Participantes_Com_Betcoins</name>
+        <sections>
+            <label><!-- Betcoins --></label>
+            <name>Betcoins</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Meta AF Com Betcoins --></description>
+        <label><!-- Participantes Com Meta AF Com Betcoins --></label>
+        <name>Participantes_Com_Meta_AF_Com_Betcoins</name>
+        <sections>
+            <label><!-- Betcoins --></label>
+            <name>Betcoins</name>
+        </sections>
+        <sections>
+            <label><!-- Metas dos Participantes - AF (Participante) --></label>
+            <name>Metas dos Participantes - AF (Participante)</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Metas AF --></description>
+        <label><!-- Participantes Com Metas AF --></label>
+        <name>Participantes_Com_Metas_AF</name>
+        <sections>
+            <label><!-- Metas dos Participantes - AF (Participante) --></label>
+            <name>Metas dos Participantes - AF (Participante)</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Metas AF Com Badges Ganhas --></description>
+        <label><!-- Participantes Com Metas AF Com Badges Ganhas --></label>
+        <name>Participantes_Com_Metas_AF_Com_Badges_Ganhas</name>
+        <sections>
+            <label><!-- Badges Ganhas --></label>
+            <name>Badges Ganhas</name>
+        </sections>
+        <sections>
+            <label><!-- Metas dos Participantes - AF (Participante) --></label>
+            <name>Metas dos Participantes - AF (Participante)</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Metas AF Com Resultados --></description>
+        <label><!-- Participantes Com Metas AF Com Resultados --></label>
+        <name>Participantes_Com_Metas_AF_Com_Resultados</name>
+        <sections>
+            <label><!-- Metas dos Participantes - AF (Participante) --></label>
+            <name>Metas dos Participantes - AF (Participante)</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Resultados --></label>
+            <name>Resultados</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Perfis Compatíveis --></description>
+        <label><!-- Participantes Com Perfis Compatíveis --></label>
+        <name>Participantes_Com_Perfis_Compativeis</name>
+        <sections>
+            <label><!-- Participantes Com Perfis Compatíveis --></label>
+            <name>Participantes Com Perfis Compatíveis</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Resgate/Leilões Com Lances --></description>
+        <label><!-- Participantes Com Resgate/Leilões Com Lances --></label>
+        <name>Participantes_Com_Resgate_Leil_es_Com_Lances</name>
+        <sections>
+            <label><!-- Itens de Resgate/Lances --></label>
+            <name>Itens de Resgate/Lances</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Resgates/Lances --></label>
+            <name>Resgates/Lances</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Resultado Com Transacao Com Pont --></description>
+        <label><!-- Participantes Com Resultado Com Transacao Com Pont --></label>
+        <name>Participantes_Com_Resultado_Com_Transacao_Com_Pont</name>
+        <sections>
+            <label><!-- Betcoins --></label>
+            <name>Betcoins</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Resultados (Participante) --></label>
+            <name>Resultados (Participante)</name>
+        </sections>
+        <sections>
+            <label><!-- Transações --></label>
+            <name>Transações</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Resultados --></description>
+        <label><!-- Participantes Com Resultados --></label>
+        <name>Participantes_Com_Resultados</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Resultados (Participante) --></label>
+            <name>Resultados (Participante)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Transação --></description>
+        <label><!-- Participantes Com Transação --></label>
+        <name>Participantes_Com_Transa_o</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Transações --></label>
+            <name>Transações</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Transação Com Betcoins --></description>
+        <label><!-- Participantes Com Transação Com Betcoins --></label>
+        <name>Participantes_Com_Transa_o_Com_Betcoins</name>
+        <sections>
+            <label><!-- Betcoins --></label>
+            <name>Betcoins</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Transações --></label>
+            <name>Transações</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes Com Youbets Compatíveis --></description>
+        <label><!-- Participantes Com Youbets Compatíveis --></label>
+        <name>Participantes_Com_Youbets_Compat_veis</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Youbets Compatíveis --></label>
+            <name>Youbets Compatíveis</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes x Metas x Badges --></description>
+        <label><!-- Participantes x Metas x Badges --></label>
+        <name>Participantes_x_Metas_x_Badges</name>
+        <sections>
+            <label><!-- Badge Members --></label>
+            <name>Badge Members</name>
+        </sections>
+        <sections>
+            <label><!-- Metas dos Participantes --></label>
+            <name>Metas dos Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes x Sumarizador --></description>
+        <label><!-- Participantes x Sumarizador --></label>
+        <name>Participantes_x_Sumarizador</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Sumarizadores --></label>
+            <name>Sumarizadores</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Prêmios/Leilões com Itens de Resgate/Lances --></description>
+        <label><!-- Prêmios/Leilões com Itens de Resgate/Lances --></label>
+        <name>Pr_mios_Leil_es_com_Itens_de_Resgate_Lances</name>
+        <sections>
+            <label><!-- Itens de Resgate/Lances --></label>
+            <name>Itens de Resgate/Lances</name>
+        </sections>
+        <sections>
+            <label><!-- Prêmios/Leilões --></label>
+            <name>Prêmios/Leilões</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Regras Com Critérios --></description>
+        <label><!-- Regras Com Critérios --></label>
+        <name>Regras_Com_Criterios</name>
+        <sections>
+            <label><!-- Regras --></label>
+            <name>Regras</name>
+        </sections>
+        <sections>
+            <label><!-- RuleCriteria --></label>
+            <name>RuleCriteria</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Lances dos leilões --></description>
+        <label><!-- Results - Lances dos leilões --></label>
+        <name>Results_Lances_dos_leiloes</name>
+        <sections>
+            <label><!-- Itens de Resgate/Lances --></label>
+            <name>Itens de Resgate/Lances</name>
+        </sections>
+        <sections>
+            <label><!-- Prêmios/Leilões --></label>
+            <name>Prêmios/Leilões</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Leilões --></description>
+        <label><!-- Results - Leilões --></label>
+        <name>Results_Leiloes</name>
+        <sections>
+            <label><!-- Prêmios/Leilões --></label>
+            <name>Prêmios/Leilões</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes --></description>
+        <label><!-- Results - Participantes --></label>
+        <name>Results_Participantes</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes 2 --></description>
+        <label><!-- Results - Participantes 2 --></label>
+        <name>Results_Participantes_2</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes 3 --></description>
+        <label><!-- Results - Participantes 3 --></label>
+        <name>Results_Participantes_3</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes 4 --></description>
+        <label><!-- Results - Participantes 4 --></label>
+        <name>Results_Participantes_4</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes com Badges --></description>
+        <label><!-- Results - Participantes com Badges --></label>
+        <name>Results_Participantes_com_Badges</name>
+        <sections>
+            <label><!-- Badge Members --></label>
+            <name>Badge Members</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes com Betcoins --></description>
+        <label><!-- Results - Participantes com Betcoins --></label>
+        <name>Results_Participantes_com_Betcoins</name>
+        <sections>
+            <label><!-- Betcoins --></label>
+            <name>Betcoins</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes com Metas e Badges --></description>
+        <label><!-- Results - Participantes com Metas e Badges --></label>
+        <name>Results_Participantes_com_Metas_e_Badges</name>
+        <sections>
+            <label><!-- Badges Ganhas --></label>
+            <name>Badges Ganhas</name>
+        </sections>
+        <sections>
+            <label><!-- Meta dos Participantes AF --></label>
+            <name>Meta dos Participantes AF</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes com Metas e Resultados --></description>
+        <label><!-- Results - Participantes com Metas e Resultados --></label>
+        <name>Results_Participantes_com_Metas_e_Resultados</name>
+        <sections>
+            <label><!-- Metas --></label>
+            <name>Metas</name>
+        </sections>
+        <sections>
+            <label><!-- Metas dos Participantes - AF (Participante) --></label>
+            <name>Metas dos Participantes - AF (Participante)</name>
+        </sections>
+        <sections>
+            <label><!-- Objeto Resultados --></label>
+            <name>Objeto Resultados</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Resultados --></label>
+            <name>Resultados</name>
+        </sections>
+        <sections>
+            <label><!-- Score --></label>
+            <name>Score</name>
+        </sections>
+        <sections>
+            <label><!-- Score Projetado --></label>
+            <name>Score Projetado</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Results - Participantes elegíveis dos leliões --></description>
+        <label><!-- Results - Participantes elegíveis dos leliões --></label>
+        <name>Results_Participantes_eleg_veis_dos_leli_es</name>
+        <sections>
+            <label><!-- Participantes Com Perfis Compatíveis --></label>
+            <name>Participantes Com Perfis Compatíveis</name>
+        </sections>
+        <sections>
+            <label><!-- Prêmios/Leilões --></label>
+            <name>Prêmios/Leilões</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Sum x Transação x Pontos --></description>
+        <label><!-- Sum x Transação x Pontos --></label>
+        <name>Sum_x_Transa_o_x_Pontos</name>
+        <sections>
+            <label><!-- Betcoins --></label>
+            <name>Betcoins</name>
+        </sections>
+        <sections>
+            <label><!-- Sumarizadores --></label>
+            <name>Sumarizadores</name>
+        </sections>
+        <sections>
+            <label><!-- Transações --></label>
+            <name>Transações</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Sumarizadores --></description>
+        <label><!-- Sumarizadores --></label>
+        <name>Sumarizadores</name>
+        <sections>
+            <label><!-- Sumarizadores --></label>
+            <name>Sumarizadores</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Usuários com Participantes --></description>
+        <label><!-- Usuários com Participantes --></label>
+        <name>Usuarios_com_Participantes</name>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+        <sections>
+            <label><!-- Usuários --></label>
+            <name>Usuários</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Metas AF C/S Badges --></description>
+        <label><!-- Metas AF C/S Badges --></label>
+        <name>V_MetasAFCSBadges</name>
+        <sections>
+            <label><!-- Badges Ganhas --></label>
+            <name>Badges Ganhas</name>
+        </sections>
+        <sections>
+            <label><!-- Metas dos Participantes - AF --></label>
+            <name>Metas dos Participantes - AF</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participantes C/S Badges --></description>
+        <label><!-- Participantes C/S Badges --></label>
+        <name>V_ParticipantesCSBadges</name>
+        <sections>
+            <label><!-- Badge Members --></label>
+            <name>Badge Members</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Validacao Betboins --></description>
+        <label><!-- Validacao Betboins --></label>
+        <name>Validacao_Betboins</name>
+        <sections>
+            <label><!-- Liderados Imediatos --></label>
+            <name>Liderados Imediatos</name>
+        </sections>
+        <sections>
+            <label><!-- Metas dos Participantes - AF --></label>
+            <name>Metas dos Participantes - AF</name>
+        </sections>
+        <sections>
+            <label><!-- Participantes --></label>
+            <name>Participantes</name>
+        </sections>
+    </reportTypes>
+</Translations>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>VN_MetasParticipantes__c.V_TotalVendasAF__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Resultado</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>VN_MetasParticipantes__c.V_ValorSEPrimeiroMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSESegundoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSETerceiroMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEQuartoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEQuintoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSESextoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSESetimoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEOitavoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSENonoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEDecimoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEDecimoPrimeiroMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEDecimoSegundoMesAF__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Resultado Soluções Estratégicas</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(VN_MetasParticipantes__c.V_ValorSEPrimeiroMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSESegundoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSETerceiroMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEQuartoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEQuintoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSESextoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSESetimoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEOitavoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSENonoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEDecimoMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEDecimoPrimeiroMesAF__c:SUM+
+VN_MetasParticipantes__c.V_ValorSEDecimoSegundoMesAF__c:SUM)/VN_MetasParticipantes__c.V_TotalVendasAF__c:SUM</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Soluções Estratégicas</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>FieloPLT__Member__c$V_Cargo__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c$Name</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSEPrimeiroMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSESegundoMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSETerceiroMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSEQuartoMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSEQuintoMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSESextoMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSESetimoMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSEOitavoMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSENonoMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSEDecimoMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSEDecimoPrimeiroMesAF__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.Metas_dos_Participantes__r$V_PercSEDecimoSegundoMesAF__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>teste,planejamento</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$V_Cargo__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>DIRETOR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$V_Lideranca__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SERASA</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Member__c$V_Lideranca__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Resultado S. Estratégicas</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Results_Participantes_com_Metas_e_Resultados__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>FieloPLT__Member__c$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Member__c$LastActivityDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

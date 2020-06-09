@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__PointType__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Specific Point Type for this Program.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the specific Point Type for this Program.</inlineHelpText>
+    <label>Point Type</label>
+    <referenceTo>FieloPLT__PointType__c</referenceTo>
+    <relationshipLabel>Program Point Types</relationshipLabel>
+    <relationshipName>ProgramPointTypes</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

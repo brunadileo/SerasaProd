@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Se assinalado, indica que o saldo do participante era menor do que o lance mínimo no momento da criação do Youbet. --></help>
+    <label><!-- Saldo Insuficiente --></label>
+    <name>V_SaldoInsuficiente__c</name>
+</CustomFieldTranslation>

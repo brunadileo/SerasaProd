@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RecordMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>FieloPLT__Action__c = null &amp;&amp;
+FieloPLT__Model__c = null &amp;&amp;
+FieloPLT__PageSettings__c = null</errorConditionFormula>
+    <errorMessage>Please add an Action, Model or Page Setting.</errorMessage>
+</ValidationRule>

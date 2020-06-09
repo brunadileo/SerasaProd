@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the object from Action which represents the behavior you want to encourage. It can be the main object or any of its related lists for a whole master-detail process. --></help>
+    <label><!-- Target Object --></label>
+    <name>FieloPLT__RelatedList__c</name>
+</CustomFieldTranslation>

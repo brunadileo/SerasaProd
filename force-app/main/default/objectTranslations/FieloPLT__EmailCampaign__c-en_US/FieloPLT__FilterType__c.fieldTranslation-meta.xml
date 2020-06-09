@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose how you want to target your campaign. You can use segmentation (&quot;Segment&quot;) or specify your own criteria (&quot;Custom&quot;). --></help>
+    <label><!-- Filter Type --></label>
+    <name>FieloPLT__FilterType__c</name>
+    <picklistValues>
+        <masterLabel>Custom</masterLabel>
+        <translation><!-- Custom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Segment</masterLabel>
+        <translation><!-- Segment --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

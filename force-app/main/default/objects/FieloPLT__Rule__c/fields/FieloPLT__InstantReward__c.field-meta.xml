@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__InstantReward__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Instant Reward chosen from &quot;Rewards&quot; which are marked as Instant Rewards.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose an Instant Reward from the &quot;Rewards&quot; which are marked as Instant Rewards.</inlineHelpText>
+    <label>Instant Reward</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>FieloPLT__Reward__c.FieloPLT__IsInstantReward__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>FieloPLT__Reward__c</referenceTo>
+    <relationshipLabel>Rules</relationshipLabel>
+    <relationshipName>Rules</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

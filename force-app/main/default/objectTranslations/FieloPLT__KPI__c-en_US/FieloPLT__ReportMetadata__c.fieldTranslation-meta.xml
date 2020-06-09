@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is a JSON string containing formatting data for Custom Reports. --></help>
+    <label><!-- Report Metadata --></label>
+    <name>FieloPLT__ReportMetadata__c</name>
+</CustomFieldTranslation>

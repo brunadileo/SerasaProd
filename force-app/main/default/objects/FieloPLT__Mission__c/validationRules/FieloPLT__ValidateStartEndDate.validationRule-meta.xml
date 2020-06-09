@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ValidateStartEndDate</fullName>
+    <active>true</active>
+    <description>Invalid Start and/or End Date. A Mission&apos;s start and end dates must fall within the start and end dates of its Challenge.</description>
+    <errorConditionFormula>OR(
+    IF(
+        FieloPLT__EndDate__c &lt; FieloPLT__StartDate__c,
+        true,
+        false
+    ),
+    IF( 
+        NOT(ISNULL(FieloPLT__StartDate__c)),
+        IF( FieloPLT__StartDate__c &lt; FieloPLT__Challenge__r.FieloPLT__StartDate__c, true, false),
+        false
+    ),
+    IF( 
+        AND(
+            NOT(ISNULL(FieloPLT__EndDate__c)), 
+            NOT(ISNULL(FieloPLT__Challenge__r.FieloPLT__EndDate__c))
+        ),
+        if( FieloPLT__EndDate__c &gt; FieloPLT__Challenge__r.FieloPLT__EndDate__c, true, false),
+        false
+    )
+
+)</errorConditionFormula>
+    <errorMessage>Invalid Start and/or End Date. A Mission&apos;s start and end dates must fall within the start and end dates of its Challenge.</errorMessage>
+</ValidationRule>

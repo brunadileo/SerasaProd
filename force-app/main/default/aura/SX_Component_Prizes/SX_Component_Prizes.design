@@ -1,0 +1,3 @@
+<design:component label="CC - Youbet Perene | Prizes">
+	<design:attribute name="bgBtn" label="Cor de Fundo do Botão" description="Cores no formato HEX (#??????)"/>
+</design:component>

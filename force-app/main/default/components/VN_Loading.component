@@ -1,0 +1,35 @@
+<apex:component >
+	<apex:attribute name="value" description="Texto a ser apresentado na tela" type="String" required="false"/>
+	<apex:actionStatus id="loading" stopText="">
+	    <apex:facet name="start">
+	        <div>
+	            <div class="popupBackground" />
+	            <div class="PopupPanel">
+	            	<span class="description">{!IF(ISBLANK(value),'Carregando...',value)}</span>
+	                <div class="loader"></div>
+	            </div>
+	        </div>
+	    </apex:facet>
+	</apex:actionStatus> 
+
+	<style type="text/css">
+		/* This is for the full screen DIV */
+	    .popupBackground {
+	        /* Background color */
+	        background-color:black;
+	        opacity: 0.30;
+	        filter: alpha(opacity = 30);
+	    
+	        /* Dimensions */
+	        width: 100%;
+	        height: 100%;
+	        top: 0;
+	        left: 0;
+	        z-index: 998;
+	        position: fixed;
+	        
+	        /* Mouse */
+	        cursor:wait;
+	    }
+	</style>
+</apex:component>

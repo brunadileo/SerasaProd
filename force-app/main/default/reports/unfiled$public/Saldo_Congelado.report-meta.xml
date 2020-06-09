@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.V_MetaScoreEliteAFCongelado__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.V_MetaScoreEliteAFProjetadoCongelado__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.V_BadgeEliteCongelado__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.V_BadgeEngajamentoCongelado__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.V_BadgeYouBetCongelado__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__Member__c.V_PosicaoRankingCongelado__c</field>
+    </columns>
+    <description>Apresenta o valor congelados do participante no dia 01/04</description>
+    <format>Tabular</format>
+    <name>Saldo Congelado</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$FieloPLT__Member__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CUST_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

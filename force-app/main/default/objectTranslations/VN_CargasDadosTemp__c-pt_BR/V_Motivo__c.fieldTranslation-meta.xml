@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Exibe os motivos das validações do registro preenchido pelo batch. --></help>
+    <label><!-- Motivo --></label>
+    <name>V_Motivo__c</name>
+</CustomFieldTranslation>

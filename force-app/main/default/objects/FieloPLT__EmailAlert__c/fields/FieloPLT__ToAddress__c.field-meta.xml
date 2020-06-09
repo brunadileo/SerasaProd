@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ToAddress__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The E-mail address of the Member to whom the Transactional Email associated with an Email Alert will be sent.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the E-mail address of the Member to whom the Transactional Email associated with this Email Alert was sent.</inlineHelpText>
+    <label>To Address</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Logical expressions which can be applied to Segment Criteria: &quot;All&quot; (it meets all the established criteria); &quot;Any&quot; (it meets at least one Criterion) and &quot;Custom&quot; (it enables creating a formula based on the established criteria. E.g. ((1 AND 2) OR 3). --></help>
+    <label><!-- Match Criteria --></label>
+    <name>FieloPLT__LogicalExpression__c</name>
+</CustomFieldTranslation>

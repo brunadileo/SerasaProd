@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Level__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>It relates a Criterion to a particular Level.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a Criterion for the Level.</inlineHelpText>
+    <label>Level</label>
+    <referenceTo>FieloPLT__Level__c</referenceTo>
+    <relationshipLabel>Level Criteria</relationshipLabel>
+    <relationshipName>LevelCriteria</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

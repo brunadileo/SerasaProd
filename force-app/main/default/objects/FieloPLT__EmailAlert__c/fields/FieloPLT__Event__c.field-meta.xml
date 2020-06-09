@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Event__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Event associated with an Email Alert.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Event associated with the Email Alert.</inlineHelpText>
+    <label>Event</label>
+    <referenceTo>FieloPLT__Event__c</referenceTo>
+    <relationshipLabel>Email Alerts</relationshipLabel>
+    <relationshipName>Email_Alerts</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

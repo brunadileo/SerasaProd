@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Value number from a Challenge which includes a &quot;Mission without Objective&quot; or Challenges which do not deliver Challenge Rewards. --></help>
+    <label><!-- Value --></label>
+    <name>FieloPLT__Value__c</name>
+</CustomFieldTranslation>

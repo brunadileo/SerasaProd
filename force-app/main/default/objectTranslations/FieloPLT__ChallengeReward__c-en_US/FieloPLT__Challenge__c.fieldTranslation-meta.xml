@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Challenge which the Reward belongs to. --></help>
+    <label><!-- Challenge --></label>
+    <name>FieloPLT__Challenge__c</name>
+    <relationshipLabel><!-- Rewards --></relationshipLabel>
+</CustomFieldTranslation>

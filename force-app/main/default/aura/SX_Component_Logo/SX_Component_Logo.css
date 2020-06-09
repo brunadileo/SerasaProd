@@ -1,0 +1,27 @@
+.THIS {
+	display: flex;
+	align-items: center;
+}
+@media (max-width: 991px) {
+	.THIS {
+		 justify-content: center;
+	}
+	.THIS img {
+	    width: 80px !important;
+    	height: auto !important;
+	}
+}
+
+/*@media (max-aspect-ratio: 4/3) {
+	.THIS {
+		align-items: center !important;
+		justify-content: center !important;
+	}
+	.THIS .content-left {
+		display: none;
+	}
+	.THIS .content-right {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
+}*/

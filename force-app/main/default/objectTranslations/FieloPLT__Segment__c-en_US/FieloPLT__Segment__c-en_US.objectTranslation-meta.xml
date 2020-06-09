@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <description><!-- It defines Criteria so that Members are automatically assessed and thus connected to the proper Segment. --></description>
+        <label><!-- Dynamic --></label>
+        <name>FieloPLT__Dynamic</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Segment needs to be manually linked to the chosen Members. --></description>
+        <label><!-- Manual --></label>
+        <name>FieloPLT__Manual</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Segment used to link two or more segments --></description>
+        <label><!-- Metasegment --></label>
+        <name>FieloPLT__Metasegment</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The related Program cannot be modified. --></errorMessage>
+        <name>FieloPLT__ModifyProgram</name>
+    </validationRules>
+</CustomObjectTranslation>

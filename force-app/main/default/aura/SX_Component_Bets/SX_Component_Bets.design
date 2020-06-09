@@ -1,0 +1,9 @@
+<design:component label="CC - Youbet | Prize Bets">
+	<design:attribute name="labelOne" label="Título do Primeiro Campo"/>
+	<design:attribute name="labelTwo" label="Título do Segundo Campo"/>
+	<design:attribute name="labelThree" label="Título do Terceiro Campo"/>
+	<design:attribute name="labelBtn" label="Texto do Botão"/>
+	<design:attribute name="labelFour" label="Título do Quarto Campo"/>
+	<design:attribute name="bgField" label="Cor de Fundo do Campo em Destaque" description="Cores no formato HEX (#??????)"/>
+	<design:attribute name="bgBtn" label="Cor de Fundo do Botão" description="Cores no formato HEX (#??????)"/>
+</design:component>

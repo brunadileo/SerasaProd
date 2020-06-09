@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__TemplateUniqueNameMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( FieloPLT__TemplateUniqueName__c )</errorConditionFormula>
+    <errorDisplayField>FieloPLT__TemplateUniqueName__c</errorDisplayField>
+    <errorMessage>Template Unique Name is mandatory.</errorMessage>
+</ValidationRule>

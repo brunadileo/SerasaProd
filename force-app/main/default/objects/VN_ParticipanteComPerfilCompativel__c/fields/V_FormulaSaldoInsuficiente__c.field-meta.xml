@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_FormulaSaldoInsuficiente__c</fullName>
+    <description>Verifica se o saldo é menor que o lance mínimo</description>
+    <externalId>false</externalId>
+    <formula>V_Saldo__c &lt;V_Reward__r.V_LanceMinimo__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Se assinalado, indica que o saldo do participante era menor do que o lance mínimo no momento da criação do Youbet.</inlineHelpText>
+    <label>Saldo Insuficiente</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

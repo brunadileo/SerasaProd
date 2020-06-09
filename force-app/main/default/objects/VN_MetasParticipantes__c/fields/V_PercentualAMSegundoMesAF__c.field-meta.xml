@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PercentualAMSegundoMesAF__c</fullName>
+    <description>Percentual de atingimento de metas do 2o. mês do ano fiscal. Cálculo utilizado no Youbet.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+OR(
+ISNULL(V_MetaSegundoMesAF__c), V_MetaSegundoMesAF__c = 0), 0,
+
+V_ResultadoSegundoMesAF__c / V_MetaSegundoMesAF__c
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Percentual de atingimento de metas do 2o. mês do ano fiscal. Cálculo utilizado no Youbet.</inlineHelpText>
+    <label>% AM - Mês 5</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,37 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="headerTitle" type="Aura.Component[]">
+        <div class="d-flex justify-content-end">
+            <lightning:button class="fa fa-times btn p-0 border-0 bg-transparent text-secondary font-size-7" onclick="{!c.closeModal}"/>
+        </div>
+    </aura:attribute>
+
+    <aura:handler event="c:SX_YouBetModal_Evt" action="{!c.youbetModal}"/>     
+
+	<div id="alertBetsModal" class="position-absolute modal-overlay" style="display: none">
+	    <div class="position-relavtive">
+		    <lightning:card title="{!v.headerTitle}" class="modal-card">
+                
+	            <div class="w-70 d-flex flex-column align-items-center justify-content-center mx-auto my-0">
+	            	<h2 class="font-size-8 text-youbet text-center font-weight-bold">Parabéns!</h2>
+                    <img src="/insiders/resource/SX_Images/alert-bets.png" alt="" class="alert-bets-img"/>
+                    <span class="mt-3 text-grey-6 font-size-5 font-weight-bold">
+                    	Seu lance de:
+                    </span>
+                    <div class="d-flex align-items-center">
+                    	<span class="font-size-8 text-youbet font-weight-bold">
+                    		2357
+                    	</span>
+                    	<img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" class="alert-bets-icon"/>
+                    </div>
+                    <span class="text-grey-6 font-size-5 font-weight-bold">
+                    	foi realizado com sucesso.
+                    </span>
+                    <span class="w-70 text-grey-6 text-center">
+                    	Acompanhe o leilão na página do Youbet e boa sorte!
+                    </span>
+	            </div>
+	        </lightning:card>
+	    </div>
+    </div>
+	
+</aura:component>

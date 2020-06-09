@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Valor total de metas do participante no 3o. trimestre do ano fiscal. --></help>
+    <label><!-- Total Metas - 3o. Trim. --></label>
+    <name>V_TotalMetasTrimestre3AF__c</name>
+</CustomFieldTranslation>

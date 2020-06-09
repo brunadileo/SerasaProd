@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ProgramConsistency</fullName>
+    <active>true</active>
+    <description>This Badge belongs to other Program. Create a new Badge in this Program so that you can use it.</description>
+    <errorConditionFormula>FieloPLT__Badge__c != null &amp;&amp;
+FieloPLT__Member__r.FieloPLT__Program__c &lt;&gt; FieloPLT__Badge__r.FieloPLT__Program__c</errorConditionFormula>
+    <errorMessage>This Badge belongs to other Program. Create a new Badge in this Program so that you can use it.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentual de soluções estratégicas do 11o. mês do ano fiscal. --></help>
+    <label><!-- % SE - Mês 2 --></label>
+    <name>V_PercSEDecimoPrimeiroMesAF__c</name>
+</CustomFieldTranslation>

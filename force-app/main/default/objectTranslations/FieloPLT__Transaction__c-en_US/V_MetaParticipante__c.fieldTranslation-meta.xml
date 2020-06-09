@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Relaciona o registro de ano fiscal do objeto Meta do Participante à transação que gerou pontos. --></help>
+    <label><!-- Meta do Participante OLD --></label>
+    <name>V_MetaParticipante__c</name>
+    <relationshipLabel><!-- Transações --></relationshipLabel>
+</CustomFieldTranslation>

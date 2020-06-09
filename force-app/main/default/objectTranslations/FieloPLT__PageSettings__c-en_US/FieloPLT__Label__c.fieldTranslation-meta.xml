@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the label to overwrite the default Related label name --></help>
+    <label><!-- Label --></label>
+    <name>FieloPLT__Label__c</name>
+</CustomFieldTranslation>

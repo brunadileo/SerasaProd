@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Tools__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Tools lets you add a Dropdown menu to Page Settings Type Landing, View, and Related.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Add a Dropdown menu to Page Settings Type Landing, View, and Related.</inlineHelpText>
+    <label>Tools</label>
+    <length>3000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

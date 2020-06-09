@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Member__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Member who generated the Email Alert via an Action or Event.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Member who generated the Email Alert via an Action or Event.</inlineHelpText>
+    <label>Member</label>
+    <referenceTo>FieloPLT__Member__c</referenceTo>
+    <relationshipLabel>Email Alerts</relationshipLabel>
+    <relationshipName>EmailAlerts</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

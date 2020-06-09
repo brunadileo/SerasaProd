@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When on, a new Member will only be assigned a User if approved through a Workflow process. This option cannot be applied to Programs that use a Communities-based loyalty portal. --></help>
+    <label><!-- Request User --></label>
+    <name>FieloPLT__RequestUser__c</name>
+</CustomFieldTranslation>

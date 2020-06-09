@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a related object evaluated by the Rule and/or Mission, if different from the &quot;Engine Trigger&quot; Action. --></help>
+    <label><!-- Target Object --></label>
+    <name>FieloPLT__TargetObject__c</name>
+</CustomFieldTranslation>

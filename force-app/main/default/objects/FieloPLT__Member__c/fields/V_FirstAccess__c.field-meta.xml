@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_FirstAccess__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Utilizado para validar se é o primeiro acesso do member, para validar se, durante o primeiro login, devemos solicitar o nome de tratamento.</description>
+    <externalId>false</externalId>
+    <label>Primeiro Acesso</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

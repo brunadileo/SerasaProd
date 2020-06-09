@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If ticked, Challenge is processed and it delivers the appropiate Challenge Reward. --></help>
+    <label><!-- Processed --></label>
+    <name>FieloPLT__IsProcessed__c</name>
+</CustomFieldTranslation>

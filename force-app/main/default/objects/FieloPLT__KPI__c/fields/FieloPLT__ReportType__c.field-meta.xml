@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ReportType__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The framework for a report. Standard is for a Salesforce standard report and Custom is for a custom report model.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the framework for your report: &quot;Standard&quot; to use a Salesforce standard report or &quot;Custom&quot; to use a custom model.</inlineHelpText>
+    <label>Report Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <label>Custom</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo preenchido via process builder para acionar o calculo de Score Tamanho Carteira. --></help>
+    <label><!-- Papel Elite Texto --></label>
+    <name>V_PapelEliteText__c</name>
+</CustomFieldTranslation>

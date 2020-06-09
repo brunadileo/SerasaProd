@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Se assinalado, indica que o cadastro do Youbet foi concluído e que a aplicação poderá relacionar os participantes que cumprirem os critérios desse Youbet para efeito de histórico e análises. --></help>
+    <label><!-- Youbet Completo --></label>
+    <name>V_YoubetCompleto__c</name>
+</CustomFieldTranslation>

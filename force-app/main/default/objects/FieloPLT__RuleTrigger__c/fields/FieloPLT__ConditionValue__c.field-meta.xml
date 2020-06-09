@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ConditionValue__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It enables to choose a value which depends on the *Condition Field* defined before.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a value for the *Condition Field* defined before. Condition Value varies depending on the &quot;Condition Field&quot;.</inlineHelpText>
+    <label>Condition Value</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Registration</fullName>
+                <default>false</default>
+                <label>Registration</label>
+            </value>
+            <value>
+                <fullName>Login</fullName>
+                <default>false</default>
+                <label>Login</label>
+            </value>
+            <value>
+                <fullName>Redeem</fullName>
+                <default>false</default>
+                <label>Redeem</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

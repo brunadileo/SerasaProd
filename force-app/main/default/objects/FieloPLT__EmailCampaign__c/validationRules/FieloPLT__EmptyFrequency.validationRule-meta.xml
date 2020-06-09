@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__EmptyFrequency</fullName>
+    <active>false</active>
+    <description>Recurrent email campaigns require a frequency.</description>
+    <errorConditionFormula>ISPICKVAL( FieloPLT__Type__c , &quot;Recurrent&quot;) &amp;&amp; ISPICKVAL(  FieloPLT__Frequency__c , &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>FieloPLT__Frequency__c</errorDisplayField>
+    <errorMessage>Recurrent email campaigns require a frequency.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__UniqueVoucher__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>When ticked, the Unique Code generated during redemption will encompass all Redemption Items related to a Reward. Used only for Rewards whose Stock Type is &quot;Controlled by Quantity&quot; or &quot;Unlimited&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When switched on, the Unique Code generated during redemption will encompass all Redemption Items related to this Reward. Applies only if the Stock Type for this Reward is &quot;Controlled by Quantity&quot; or &quot;Unlimited&quot;.</inlineHelpText>
+    <label>Unique Voucher</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

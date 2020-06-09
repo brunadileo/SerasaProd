@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the API Name (Prefix__Object__c) of the Object you&apos;re applying this Page Setting to. --></help>
+    <label><!-- Object --></label>
+    <name>FieloPLT__Object__c</name>
+</CustomFieldTranslation>

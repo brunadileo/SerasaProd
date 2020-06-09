@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Optionally, enter a Badge to be awarded as part of the Challenge. You can create Badges in the Members tab. --></help>
+    <label><!-- Badge --></label>
+    <name>FieloPLT__Badge__c</name>
+    <relationshipLabel><!-- Challenge Rewards --></relationshipLabel>
+</CustomFieldTranslation>

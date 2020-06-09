@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It stores the different Segment IDs when assigning more than one Segment Incentives and Rewards (Multisegment). --></help>
+    <label><!-- Related Segments --></label>
+    <name>FieloPLT__RelatedSegments__c</name>
+</CustomFieldTranslation>

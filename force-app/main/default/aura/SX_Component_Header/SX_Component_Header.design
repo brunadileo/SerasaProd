@@ -1,0 +1,3 @@
+<design:component label="CC - General | Header">
+	<design:attribute name="returnLink" label="Link de Retorno" description="Este será o link para que o site voltará quando a seta de retorno for pressionada"/>
+</design:component>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>IF(VN_Sumarizador__c.V_Meta__c:SUM = 0,0,
+VN_Sumarizador__c.V_Valor__c:SUM / VN_Sumarizador__c.V_Meta__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Atingimento</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(VN_Sumarizador__c.V_MetaYTDSemestre__c:SUM = 0, 0, 
+VN_Sumarizador__c.V_ValorYTDSemestre__c:SUM/VN_Sumarizador__c.V_MetaYTDSemestre__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Atingimento YTD Semestre</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>VN_MetaParticipante__c$Name</field>
+    </columns>
+    <columns>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$Name</field>
+    </columns>
+    <columns>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Lideranca__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Meta__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Valor__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_MetaYTDSemestre__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_ValorYTDSemestre__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>VN_MetaParticipante__c$V_Participante__c.Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Teste</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Mes__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1,2,3,4,5,6</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VN_MetaParticipante__c$V_Participante__c.V_Lideranca__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VN_MetaParticipante__c$V_Participante__c.V_PapelElite__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Mes__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Metas e Resultados YTD H1</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>PLAN_Metas_e_Resultados_dos_Participantes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>VN_MetaParticipante__c$LastModifiedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

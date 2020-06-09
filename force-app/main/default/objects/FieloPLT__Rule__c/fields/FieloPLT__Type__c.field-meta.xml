@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It shows available Rule types: &quot;Best Option&quot; (Rules belonging to same Point Type compete against each other. Points are given only for the Rule that represents the best choice for Members) or &quot;No Competition&quot; (All Rules are applied. Points, Instant Rewards and/or Instant Badges are given for each Rule).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a Rule Type: Best Option (Points are awarded only if this Rule grants more than any other for a given Action and Point Type) or No Competition (This rule is always applied)</inlineHelpText>
+    <label>Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Best Option</fullName>
+                <default>true</default>
+                <label>Best Option</label>
+            </value>
+            <value>
+                <fullName>No Competition</fullName>
+                <default>false</default>
+                <label>No Competition</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

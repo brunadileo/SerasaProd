@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Adjustment Transaction --></label>
+        <name>FieloPLT__AdjustTransaction</name>
+    </fieldSets>
+    <validationRules>
+        <errorMessage><!-- Transaction date and time must be valid. --></errorMessage>
+        <name>FieloPLT__ValidateDateTime</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Member must be selected. --></errorMessage>
+        <name>FieloPLT__ValidateMember</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A processed Transaction cannot have null &quot;Points&quot;. --></errorMessage>
+        <name>FieloPLT__ValidateProcessedPoints</name>
+    </validationRules>
+</CustomObjectTranslation>

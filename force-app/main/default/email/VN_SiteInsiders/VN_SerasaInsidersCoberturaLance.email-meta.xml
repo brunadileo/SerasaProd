@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Serasa Insiders: Cobertura de Lance</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa Insiders: Cobertura de Lance</name>
+    <style>none</style>
+    <subject>Youbet: corra para refazer seu lance!</subject>
+    <textOnly>LANCE COBERTO
+
+{!FieloPLT__RedemptionItem__c.FieloPLT__Member__r.Name}, acabaram de cobrir seu lance!Mas não se preocupe, você pode fazer uma nova aposta! Corra para o site, você tem {!FieloPLT__RedemptionItem__c.FieloPLT__Member__r.FieloPLT__Points__c} betcoins para usar!
+
+Acesse o site
+
+
+Caso não esteja visualizando corretamente esta mensagem, acesse este link</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_MetaYTDTrimestre__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND( V_IDXTrimestre__c  != V_IDXTrimestreAnterior__c , V_IDXTrimestre__c &lt;=1), V_Meta__c ,
+   IF( V_IDXTrimestre__c = V_IDXTrimestreAnterior__c , V_MetaYTDTrimestreAnterior__c ,
+ V_MetaYTDTrimestreAnterior__c + V_Meta__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Meta YTD Trimestre</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

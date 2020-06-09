@@ -1,0 +1,39 @@
+.THIS {
+    position: absolute;
+    min-width: 100%;
+}
+.THIS.h-100 {
+    height: 100% !important;
+}
+.THIS, .THIS .columns > div, .THIS .columns > div > div {
+    height: auto;
+}
+.THIS .btn {
+    white-space: normal;
+}
+.THIS .disabled {
+    box-shadow: none;
+    cursor: default;
+}
+.THIS .bg-warning:hover, .THIS .bg-warning:focus {
+    background-color: #ffc107!important;
+}
+/*Media Query*/
+@media (min-width: 1200px) {
+    .THIS .h-custom {
+        height: calc(100% - 97px);
+    }
+    .THIS, .THIS .columns > div, .THIS .columns > div > div {
+        height: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .THIS .h-lg-auto {
+        height: auto !important;
+    }
+}
+@media (min-width: 575) {
+    .THIS .btn {
+        min0-height: 100px;
+    }
+}

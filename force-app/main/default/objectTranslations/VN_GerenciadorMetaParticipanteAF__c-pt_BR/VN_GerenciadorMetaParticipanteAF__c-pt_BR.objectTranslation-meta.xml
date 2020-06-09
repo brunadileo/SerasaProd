@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Gerenciador Meta Participante AF</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Gerenciador Metas Participantes AF</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Layout de Gerenciador Meta Participante AF</layout>
+        <sections>
+            <label><!-- Links personalizados --></label>
+            <section>Links personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- O Gerenciador deve estar vigente para a criação das Metas --></errorMessage>
+        <name>V_ValidarCriarAnoFiscal</name>
+    </validationRules>
+</CustomObjectTranslation>

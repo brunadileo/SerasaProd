@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If ticked, it stores a Criterion boolean value. --></help>
+    <label><!-- Boolean Value --></label>
+    <name>FieloPLT__BooleanValue__c</name>
+</CustomFieldTranslation>

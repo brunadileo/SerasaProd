@@ -1,0 +1,241 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_YoubetBetsContoller">
+
+	<aura:handler event="c:SX_Alert_Evt" action="{!c.myMember}"/> 
+	<aura:handler event="c:SX_Success_Evt" action="{!c.myMember}"/> 
+
+	<aura:attribute name="showError" type="Boolean" required="true" description="" default="false" access="private"/>
+	<aura:attribute name="errorMessage" type="String" required="false" description="" access="private"/>
+
+	<aura:attribute name="youbetType" type="String"/>
+	<aura:attribute name="youbetType2" type="String" default="xxx"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+	<aura:attribute name="member" type="FieloPLT__Member__c" /> 
+
+	<aura:attribute name="reward" type="FieloPLT__Reward__c" />
+	<aura:attribute name="proximoLance" type="String" />
+	<aura:attribute name="youbetFuturo" type="String" />
+
+	<aura:attribute name="carregouDados" type="Boolean" default="false"/>
+	<aura:attribute name="expirado" type="Boolean" default="false"/>
+
+	<aura:attribute name="podeParticiparLeilao" type="Boolean" default="false"/>
+	<aura:attribute name="lstPremios" type="object[]" />
+	<aura:attribute name="hasLstPremios" type="Boolean" default="false"/>
+
+	
+
+		<div class="border bg-white">
+			<div class="youbet-bets-content w-100 row m-0">
+				<div class="youbet-bets-menu col-12 col-lg-4 pl-0">
+					<div class="{!'content-left d-flex flex-column align-items-end p-3 ' + v.youbetType + '-border-color'}">
+						<div class="w-90"> 
+							<aura:if isTrue="{! or(v.member.V_PapelYoubet__c != 'DIRETORES', and(v.member.V_PapelYoubet__c == 'DIRETORES', v.youbetType != 'youbet'))}">
+								<span class="text-grey-6">
+									BETCOINS ACUMULADAS 
+								</span>
+								<div class="d-flex align-items-center">
+									<img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" style="height:20px;margin-bottom:.25rem;"/>
+									<span class="{!'ml-1 ' + v.youbetType + '-color font-size-9'}">
+										 {!v.youbetType == 'youbet' ? v.member.FieloPLT__Points__c : v.member.V_BetcoinsComp__c}
+									</span>
+								</div>
+							</aura:if>
+							<aura:if isTrue="{! or(v.member.V_PapelYoubet__c != 'DIRETORES', and(v.member.V_PapelYoubet__c == 'DIRETORES', v.youbetType != 'youbet'))}">
+								<hr class="mt-0 mb-4"/>
+								<a onclick="{!c.openExtract}" class="d-flex align-items-center">
+									<span class="{!'fa fa-angle-right font-size-6 ' + v.youbetType + '-color'}"></span>
+									<span class="ml-2 text-grey-6">
+										EXTRATO
+									</span>
+								</a>
+								<hr class="my-4"/> 
+							</aura:if>
+							
+							<a onclick="{!c.openYoubetsPerformed}" class="d-flex align-items-center">
+								<span class="{!'fa fa-angle-right font-size-6 ' + v.youbetType + '-color'}"></span>
+								<span class="ml-2 text-grey-6">
+									YOUBETS REALIZADOS
+								</span> 
+							</a>
+							
+							<aura:if isTrue="{! v.member.V_PapelYoubet__c != 'GERENTES DE CONTAS'}">
+								<hr class="my-4"/>
+								<a onclick="{!c.openTeamPerformance}" class="d-flex align-items-center">
+									<span class="{!'fa fa-angle-right font-size-6 ' + v.youbetType + '-color'}"></span>
+									<span class="ml-2 text-grey-6">
+										RESULTADOS DA EQUIPE
+									</span>
+								</a>
+							</aura:if>
+							<hr class="my-4"/>
+							<!-- <aura:if isTrue="{!v.youbetType == 'youbet'}">
+								<a href="./youbet-extra-home" class="d-flex align-items-center youbet-extra-color py-3">
+									<span class="fa fa-angle-right font-size-6"></span>
+									<span class="ml-2">
+										IR PARA YOUBET EXTRA
+									</span>
+								</a>
+							</aura:if>
+							<aura:if isTrue="{!v.youbetType == 'youbet-extra'}">
+								<a href="./youbet-home" class="d-flex align-items-center youbet-color py-3">
+									<span class="fa fa-angle-right font-size-6"></span>
+									<span class="ml-2">
+										IR PARA YOUBET
+									</span>
+								</a>
+							</aura:if> -->
+							<div class="py-3">
+								<div class="{!v.youbetType + '-color'}">
+									NOVIDADE
+								</div>
+								<div class="mt-2 text-grey-6 font-size-3">
+									Este ano, as betcoins só serão debitadas do ganhador do prêmio.
+									<br />
+									Com esta mudança, você poderá dar novos lances, sempre refazendo as apostas.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- QUANDO HOUVER YOUBET -->
+				<aura:if isTrue="{! and(v.carregouDados, not(v.expirado), v.reward != null)}"> 
+					<div class="youbet-bets-product col-12 col-lg-4">
+						<div class="content-middle d-flex flex-column p-3">
+							<span class="{!v.youbetType + '-color'}">
+								{! v.reward.V_IsActive__c ? 'YOUBET ATIVO' : v.proximoLance == null ? 'AGUARDE PRÓXIMO YOUBET' : 'INÍCIO DO YOUBET: '+ v.proximoLance}
+							</span>
+						<span class="text-grey-6 font-size-7">
+							{!v.reward.Name}
+						</span>
+						<div class="border p-3 d-flex justify-content-center">
+							<img src="{!(v.reward.FieloPLT__Image__c != null ? '/insiders/servlet/servlet.FileDownload?file=' + v.reward.FieloPLT__Image__c  : $Resource.SX_images_default + '/no-image-md.png')}"/>
+
+						</div>
+						</div>
+					</div>
+					<div class="youbet-bets-betting col-12 col-lg-4">
+						<div class="content-right d-flex flex-column p-3">
+							<div class="{!'d-flex align-items-center mb-4 ' + v.youbetType + '-color'}">
+								<img src="/insiders/resource/SX_Images/icon-clock.png" alt="" class="{!v.youbetType + '-icon'}" style="height:30px;"/>
+								<div class="d-flex flex-column ml-3 time-left">
+									<!-- <aura:if isTrue=""> -->
+										<span class="font-size-3">
+											Tempo restante
+										</span>
+										<span id="tempo-fim-youbet" class="font-size-7">
+										</span>
+										<!-- {!v.reward.V_DataHoraFimYoubet__c} -->
+									<!-- </aura:if> -->
+									<!-- <aura:if isTrue="">
+										<span class="text-grey-8 font-size-6">
+											Não iniciado
+										</span>
+									</aura:if> -->
+								</div>
+							</div>
+							<div class="d-flex align-items-center mb-4 text-youbet-page">
+								<img src="/insiders/resource/SX_Images/icon-gavel.png" alt="" style="height:30px" />
+								<div class="d-flex flex-column ml-3 time-left">
+									<span class="text-grey-6 font-size-3">
+										{! v.reward.V_IsActive__c ? 'Lance Atual:' : 'Lance Vencedor'}
+									</span>
+									<span class="text-grey-8 font-size-7">
+										<span>
+											{!v.reward.FieloPLT__RedemptionItems__r[0].FieloPLT__Quantity__c == null ? 0 : v.reward.FieloPLT__RedemptionItems__r[0].FieloPLT__Quantity__c}
+										</span>
+										<img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" style="height:20px;margin:0 0 .25rem .25rem;"/>  
+									</span>
+								</div>
+							</div>
+							<div class="d-flex align-items-center text-youbet-page">
+								<img src="/insiders/resource/SX_Images/icon-user.png" alt="" style="height:30px" />
+								<div class="d-flex flex-column ml-3">
+									<span class="text-grey-6 font-size-3 line-height-custom-one">
+										Maior aposta
+									</span>
+									<span class="text-grey-8 font-size-5 line-height-custom-two">
+										 {!v.reward.FieloPLT__RedemptionItems__r[0].FieloPLT__Redemption__r.FieloPLT__Member__r.Name == null ? ' - ' : v.reward.FieloPLT__RedemptionItems__r[0].FieloPLT__Redemption__r.FieloPLT__Member__r.Name } 
+									</span>
+								</div>
+							</div>
+
+							<aura:if isTrue="{! or(v.member.V_PapelYoubet__c != 'DIRETORES', and(v.member.V_PapelYoubet__c == 'DIRETORES', v.youbetType != 'youbet'))}">
+								<div class="d-flex align-items-center mt-4 text-grey-9">
+									<div class="form-item position-relative w-100">
+										<lightning:input aura:id="lance" type="number" disabled="{! !v.reward.V_IsActive__c}"/>
+										<img src="/insiders/resource/SX_Images/icon-betcoins.png" alt="" class="input-icon"/>
+									</div>
+								</div>
+								<div class="d-flex mt-3">
+									<ui:button aura:id="submit" label="{! v.reward.V_IsActive__c ? 'DAR LANCE' : 'NÃO INICIADO'}" press="{!c.darLance}" class="{! and(v.reward.V_IsActive__c,v.podeParticiparLeilao) ? 'btn btn-default w-100 p-2 ' + v.youbetType + '-bg text-white' : 'btn btn-default w-100 p-2 ' + v.youbetType + '-bg text-white disabled-item'}" disabled="{! and(!v.reward.V_IsActive__c, !v.podeParticiparLeilao)}">
+										 <span id="spinner" style="display:none"><ui:spinner /></span>
+									</ui:button> 
+									
+								</div>
+							</aura:if>
+
+
+							<div class="d-flex mt-1 font-size-3">
+								<span class="ml-2 text-grey-6"> 
+										<aura:renderIf isTrue="{!true || v.showError}">
+										  <div id="error" class="mx-1 font-size-3">
+												<ui:outputRichText value="{!v.errorMessage}"/>
+										  </div>
+									 </aura:renderIf>
+									{!v.reward.V_LanceMinimo__c == null ? '' : 'LANCE MÍNIMO: '+ v.reward.V_LanceMinimo__c}
+									{!v.reward.V_LanceResgatarAgora__c == null ? '' : 'PARA RESGATAR AGORA: '+ v.reward.V_LanceResgatarAgora__c}
+								</span>
+							</div>
+
+							<div class="d-flex mt-4"> 
+								<span class="ml-2 text-grey-6"> 
+									{! v.reward.V_IsActive__c ? (v.proximoLance != null ? 'PRÓXIMO YOUBET: ' + v.proximoLance : 'AGUARDE PRÓXIMO YOUBET') : (v.youbetFuturo != null ? 'PRÓXIMO YOUBET: ' + v.youbetFuturo : 'AGUARDE PRÓXIMO YOUBET')}
+								</span>
+							</div>
+						</div>
+					</div>
+				</aura:if> 
+				<!-- CASO NÃO EXISTIR YOUBETS -->
+				 <aura:if isTrue="{! and(or(and(v.reward == null, v.proximoLance == null), v.expirado, v.proximoLance == null), v.carregouDados)}"> 
+					<div class="col-12 col-lg-8">
+						<div class="h-100 d-flex flex-column align-items-center justify-content-center text-grey-6">
+							<span>NÃO HÁ PREMIAÇÕES</span>
+							<span>PREVISTAS PARA O SEU</span>
+							<span>PERFIL NO MOMENTO</span>
+						</div>
+					</div>
+				</aura:if> 
+				
+				<!-- FUTURE YOUBETS -->
+				<aura:if isTrue="{!v.hasLstPremios}">
+					<div class="future-youbets">
+						<div class="border p-3">
+							<div class="future-youbets__card">
+								<aura:iteration items="{!v.lstPremios}" var="premio">
+									<div class="item">
+										<div class="future-youbets__img">
+											<img src="{!(premio.wImgURL != null ? '/insiders/servlet/servlet.FileDownload?file=' + premio.wImgURL  : $Resource.SX_images_default + '/no-image-md.png')}"/>
+										</div>
+										<div class="future-youbets__label">
+											{!premio.wName}
+										</div>
+										<div class="future-youbets__date">
+											{!premio.wDataInicio}
+										</div>
+									</div>
+								</aura:iteration>
+							</div>
+						</div>
+					</div>
+				</aura:if>
+			</div>
+		</div>   
+		<div class="d-flex justify-content-center mt-3">
+			<a href="./" class="btn btn-default bg-btn-home">
+				HOME
+			</a>
+		</div>
+		<ltng:require scripts="{!$Resource.SX_script}" /> 
+	
+</aura:component>

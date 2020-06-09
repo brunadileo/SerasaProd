@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ScoreBUAtingidasAF__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Score em função da quantidade de BUs que tiveram atingimento de metas no ano fiscal. Campo atualizado por workflow.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Score em função da quantidade de BUs que tiveram atingimento de metas no ano fiscal. Cálculo utilizado no SPY.</inlineHelpText>
+    <label>Score BUs Atingidas SPY - AF</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

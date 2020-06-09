@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Reward__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Reward that the Member has redeemed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Reward that the Member has redeemed.</inlineHelpText>
+    <label>Reward</label>
+    <referenceTo>FieloPLT__Reward__c</referenceTo>
+    <relationshipLabel>Redemption Items</relationshipLabel>
+    <relationshipName>RedemptionItems</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentual de atingimento de metas do participante no 4o. trimestre do ano fiscal. Cálculo utilizado no Youbet e SPY. --></help>
+    <label><!-- % AM - 4o. Trim. --></label>
+    <name>V_PercentualAMTrimestre4AF__c</name>
+</CustomFieldTranslation>

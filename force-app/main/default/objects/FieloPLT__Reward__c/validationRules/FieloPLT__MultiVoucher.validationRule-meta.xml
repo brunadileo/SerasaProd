@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__MultiVoucher</fullName>
+    <active>true</active>
+    <description>&quot;Controlled by Item&quot; Rewards with preloaded Vouchers cannot have a Unique Voucher.</description>
+    <errorConditionFormula>FieloPLT__UniqueVoucher__c &amp;&amp;  ISPICKVAL(FieloPLT__StockManagement__c, &apos;Controlled By Item&apos;)</errorConditionFormula>
+    <errorMessage>&quot;Controlled by Item&quot; Rewards with preloaded Vouchers cannot have a Unique Voucher.</errorMessage>
+</ValidationRule>

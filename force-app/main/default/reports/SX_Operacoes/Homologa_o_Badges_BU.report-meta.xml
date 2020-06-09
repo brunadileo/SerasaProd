@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FieloPLT__Member__c.FieloPLT__BadgesMembers__r$Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>teste,planejamento comercial</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Member__c.FieloPLT__BadgesMembers__r$FieloPLT__Badge__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>BU</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Member__c.FieloPLT__BadgesMembers__r$FieloPLT__Badge__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Member__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Homologação Badges BU</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Participantes_Com_Badge__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Member__c$LastActivityDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

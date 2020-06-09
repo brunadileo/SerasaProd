@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score extra do Elite em função da iniciativa Youbet no ano fiscal. Será atribuído um único valor por participante no ano fiscal. --></help>
+    <label><!-- Score Elite Extra - Youbet - AF --></label>
+    <name>V_ScoreEliteExtraYoubetAF__c</name>
+</CustomFieldTranslation>

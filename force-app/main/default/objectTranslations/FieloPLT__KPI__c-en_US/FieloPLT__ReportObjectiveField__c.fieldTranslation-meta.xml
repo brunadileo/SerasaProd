@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the field that contains the data you want to compare against a fixed numerical objective or metric. --></help>
+    <label><!-- Report Objective Field --></label>
+    <name>FieloPLT__ReportObjectiveField__c</name>
+</CustomFieldTranslation>

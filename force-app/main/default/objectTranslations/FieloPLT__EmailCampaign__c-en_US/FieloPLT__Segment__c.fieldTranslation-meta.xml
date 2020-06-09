@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Add the Segment(s) you want to be part of the campaign. You can view, edit and create Segments in the Programs tab. --></help>
+    <label><!-- Segment --></label>
+    <name>FieloPLT__Segment__c</name>
+    <relationshipLabel><!-- Email Campaigns --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_UltimoAnoFiscal__c</fullName>
+    <description>Indica o ano fiscal mais recente cadastrado em Metas dos Participantes relacionado a esse participante.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indica o ano fiscal mais recente cadastrado em Metas do Participantes relacionado a esse participante.</inlineHelpText>
+    <label>Último Ano Fiscal</label>
+    <summarizedField>VN_MetasParticipantes__c.V_Ano__c</summarizedField>
+    <summaryForeignKey>VN_MetasParticipantes__c.V_Participante__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

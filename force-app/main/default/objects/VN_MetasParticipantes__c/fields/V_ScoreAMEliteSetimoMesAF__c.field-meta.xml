@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ScoreAMEliteSetimoMesAF__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Indica o score de atingimento de meta Elite do participante até o 7o. mês do ano fiscal. Campo atualizado por workflow.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indica o score de atingimento de meta Elite do participante até o 7o. mês do ano fiscal. Campo atualizado por workflow.</inlineHelpText>
+    <label>Score de AM Elite - Mês 10</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

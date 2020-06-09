@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter a JSON string to filter this Related Page Setting to a particular data class. --></help>
+    <label><!-- Data Filters --></label>
+    <name>FieloPLT__DataFilters__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,40 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_FooterController">
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="lMember" type="FieloPLT__Member__c" />
+
+
+	<aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" />
+	<aura:attribute name="logoClasses" type="String" default="w-20" access="global" />
+	<aura:attribute name="disabledYoubet" type="String" />
+	<aura:attribute name="disabledElite" type="String" />
+	<aura:attribute name="disabledSpy" type="String" />
+
+	<aura:attribute name="disabled-youbet" type="String" />
+	<aura:attribute name="disabled-elite" type="String" />
+	<aura:attribute name="disabled-spy" type="String" />
+
+	<div class="h-100 m-0 text-grey-6 box-footer p-3 p-lg-0">
+		<div class="footer-copyright font-size-3 font-size-lg-4 d-flex align-items-center justify-content-center p-0">
+			<div class="d-flex align-items-center">
+				&copy; serasa experian 2018
+			</div>
+		</div>
+		<div class="footer-menu d-flex flex-column flex-md-row align-items-center justify-content-center my-3 p-0 footer-links">
+
+			<a href="{!(v.lMember.V_PapelYoubet__c != 'NÃO ELEGÍVEL' ? './youbet-home': './#')}" class="{!'mx-3 my-1 my-lg-0 footer-link ' + v.disabledYoubet+' '+(v.lMember.V_PapelYoubet__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item')}">YOUBET</a>
+	
+			<a href="{!(v.lMember.V_PapelElite__c != 'NÃO ELEGÍVEL' ? './elite-home': './#')}" class="{!'mx-3 my-1 my-lg-0 footer-link ' + v.disabledElite+' '+(v.lMember.V_PapelElite__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item')}">ELITE</a>
+			<!-- <a href="{!(v.lMember.V_PapelSalesPersonYear__c != 'NÃO ELEGÍVEL' ? './sales-person-of-the-year-home': './#')}" class="{!'mx-3 my-1 my-lg-0 footer-link ' + v.disabledSpy+' '+(v.lMember.V_PapelSalesPersonYear__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item')}">SALES PERSON OF THE YEAR </a> -->
+			<!-- Como não colocaremos SPY no ar agora, desabilitar o link para a página interna dessa iniciativa. -->
+			<a href="{!(v.lMember.V_PapelSalesPersonYear__c != 'NÃO ELEGÍVEL' ? './sales-person-of-the-year-home': './#')}" class="{!'mx-3 my-1 my-lg-0 footer-link ' + v.disabledSpy+' '+(v.lMember.V_PapelSalesPersonYear__c != 'NÃO ELEGÍVEL' ? '': 'disabled-item') }">SALES PERSON OF THE YEAR </a>
+			<!-- <a href="" class="mx-3 footer-link disabled-item">CONTATO</a> -->
+			<a href="./about" class="mx-3 my-1 my-lg-0 footer-link">COMO FUNCIONA</a>
+		</div>
+		<div class="footer-logo mb-2 mb-lg-0 d-flex align-items-center justify-content-center justify-content-lg-end p-0">
+			<img src="/insiders/resource/SX_Images/logo-serasa.png" alt=""/>
+		</div>
+	</div>
+	
+	
+</aura:component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_TotalNotasFiscaisAbertasAF__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Total de Notas Fiscais em aberto do participante no ano fiscal. Será preenchida por meio de carga de dados periódica. Sempre exibirá o resultado do último mês (não é cumulativo).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Total de Notas Fiscais em aberto do participante no ano fiscal. Será preenchida por meio de carga de dados periódica. Sempre exibirá o resultado do último mês (não é cumulativo).</inlineHelpText>
+    <label>Total NF em Aberto - AF</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

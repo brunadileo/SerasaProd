@@ -1,0 +1,3086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Atualiza_Chave_Composta_Exclusiva_2</fullName>
+        <description>Atualiza campo exclusivo do registro de Metas dos Participantes para evitar duplicidade de registros.</description>
+        <field>V_ChaveExclusiva__c</field>
+        <formula>Name&amp;&quot;+&quot;&amp;V_CodParticipante__c</formula>
+        <name>Atualiza Chave Composta Exclusiva</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Calcula_Score_de_AM_Elite_AF_2</fullName>
+        <description>Calcula score de atingimento de meta Elite do participante no ano fiscal.</description>
+        <field>V_ScoreSMEliteAF__c</field>
+        <formula>IF( 
+OR(
+ISNULL(V_MetaAF__c),
+V_MetaAF__c = 0), 0,
+
+IF(
+(V_TotalVendasAF__c - V_TotalNotasFiscaisAbertasAUXAF__c) / V_MetaAF__c &lt;= 0.8, 1,
+
+IF( 
+AND(
+(V_TotalVendasAF__c - V_TotalNotasFiscaisAbertasAUXAF__c) / V_MetaAF__c &gt; 0.8, (V_TotalVendasAF__c - V_TotalNotasFiscaisAbertasAUXAF__c) / V_MetaAF__c &lt;= 0.9), 2,
+
+IF(
+AND(
+(V_TotalVendasAF__c - V_TotalNotasFiscaisAbertasAUXAF__c) / V_MetaAF__c &gt; 0.9, (V_TotalVendasAF__c - V_TotalNotasFiscaisAbertasAUXAF__c) / V_MetaAF__c &lt;= 0.95), 3,
+
+IF(
+AND(
+(V_TotalVendasAF__c - V_TotalNotasFiscaisAbertasAUXAF__c) / V_MetaAF__c &gt; 0.95, (V_TotalVendasAF__c - V_TotalNotasFiscaisAbertasAUXAF__c) / V_MetaAF__c &lt;= 1), 4,
+
+IF( 
+(V_TotalVendasAF__c - V_TotalNotasFiscaisAbertasAUXAF__c) / V_MetaAF__c &gt; 1, 5, 0)
+
+)))))</formula>
+        <name>Calcula Score de AM Elite AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Calcula_Score_de_SM_Elite_AF_2</fullName>
+        <description>Calcula score de superação de meta Elite do participante no ano fiscal.</description>
+        <field>V_ScoreSMEliteAF__c</field>
+        <formula>V_ScoreSMEliteAFAUX__c</formula>
+        <name>Calcula Score de SM Elite AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VN_AtualizaTamanhoCarteira</fullName>
+        <description>Atualização do campo Tamanho da Carteira sempre que for criado um registro junto ao objeto &quot;Metas dos Participantes-AF&quot; ou quando o campo &quot;Meta - AF&quot; for editado.</description>
+        <field>V_PotencialCarteira__c</field>
+        <formula>V_MetaAF__c</formula>
+        <name>Atualiza | Tamanho da Carteira</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAMAteUltimoMesProc</fullName>
+        <description>Atualiza o campo &quot;% AM Até o Último Mês Processado&quot;</description>
+        <field>V_PercAMAteUltimoMesProc__c</field>
+        <formula>IF( 
+
+V_UltimoMesAtualizado__c = &apos;Abril&apos;, V_PercentualAMAtePrimeiroMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Maio&apos;, 
+V_PercentualAMAteSegundoMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Junho&apos;, V_PercentualAMAteTerceiroMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Julho&apos;, 
+V_PercentualAMAteQuartoMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Agosto&apos;, 
+V_PercentualAMAteQuintoMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Setembro&apos;, V_PercentualAMAteSextoMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Outubro&apos;, V_PercentualAMAteSetimoMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Novembro&apos;, V_PercentualAMAteOitavoMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Dezembro&apos;, 
+V_PercentualAMAteNonoMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Janeiro&apos;, V_PercentualAMAteDecimoMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Fevereiro&apos;, V_PercentualAMAteDecimoPrimeiroMesAF__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Março&apos;, V_PercentualAMAteDecimoSegundoMesAF__c, 0 
+
+))))))))))))</formula>
+        <name>Atualiza % AM Ate Ultimo Mês Processado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAMProjAteUltimoMesProc</fullName>
+        <description>Atualiza &quot;% AM Projetado Até o Último Mês Processado&quot;.</description>
+        <field>V_PercAMProjAF__c</field>
+        <formula>IF( 
+V_UltimoMesAtualizado__c = &apos;Abril&apos;, V_PercAMProjAtePrimeiroMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Maio&apos;, V_PercAMProjAteSegundoMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Junho&apos;, V_PercAMProjAteTerceiroMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Julho&apos;, V_PercAMProjAteQuartoMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Agosto&apos;, V_PercAMProjAteQuintoMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Setembro&apos;, V_PercAMProjAteSextoMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Outubro&apos;, V_PercAMProjAteSetimoMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Novembro&apos;, V_PercAMProjAteOitavoMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Dezembro&apos;, V_PercAMProjAteNonoMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Janeiro&apos;, V_PercAMProjAteDecimoMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Fevereiro&apos;, V_PercAMProjAteDecimoPrimMes__c, 
+
+IF( 
+V_UltimoMesAtualizado__c = &apos;Março&apos;, V_PercAMProjAteDecimoSegMes__c, 0 
+
+
+))))))))))))</formula>
+        <name>Atualiza % AM Proj Até Último Mês Proc</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaAMProjMesAtual</fullName>
+        <description>Atualiza o percentual de atingimento de meta Elite projetado até o último mês processado.</description>
+        <field>V_PercAMProjAF__c</field>
+        <formula>IF(
+ V_UltimoMesAtualizado__c = &apos;Abril&apos;, V_PercAMProjAtePrimeiroMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Maio&apos;,  V_PercAMProjAteSegundoMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Junho&apos;,  V_PercAMProjAteTerceiroMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Julho&apos;,  V_PercAMProjAteQuartoMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Agosto&apos;,  V_PercAMProjAteQuintoMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Setembro&apos;,  V_PercAMProjAteSextoMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Outubro&apos;,  V_PercAMProjAteSetimoMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Novembro&apos;,  V_PercAMProjAteOitavoMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Dezembro&apos;,  V_PercAMProjAteNonoMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Janeiro&apos;,  V_PercAMProjAteDecimoMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Fevereiro&apos;,  V_PercAMProjAteDecimoPrimMes__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Março&apos;,  V_PercAMProjAteDecimoSegMes__c, 0
+
+
+))))))))))))</formula>
+        <name>Atualiza % AM Projetado Mês Atual</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaGAPMetaAteMes12AUX</fullName>
+        <description>Indica o resultado que faltou para o participante atingir a meta até o 9o. Mês do ano fiscal.</description>
+        <field>V_GAPMetaAte9oMesAFAUX__c</field>
+        <formula>IF( 
+
+(V_TotalVendasAteNonoMesAF__c / ( V_TotalMetasSemestre1AF__c + V_MetaSetimoMesAF__c + V_MetaOitavoMesAF__c + 
+V_MetaNonoMesAF__c)) &gt;= 1, 0, 
+V_TotalMetasSemestre1AF__c + V_MetaSetimoMesAF__c + V_MetaOitavoMesAF__c + V_MetaNonoMesAF__c - V_TotalVendasAteNonoMesAF__c 
+
+)</formula>
+        <name>Atualiza GAP Meta Até Mês 12 - AUX</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaGAPMetaAteMes2AUX</fullName>
+        <description>Indica o resultado que faltou para o participante atingir a meta até o 11o. Mês do ano fiscal.</description>
+        <field>V_GAPMetaAte11oMesAFAUX__c</field>
+        <formula>IF( 
+(V_TotalVendasAteDecimoPrimeiroMesAF__c / ( V_TotalMetasSemestre1AF__c + V_MetaSetimoMesAF__c + V_MetaOitavoMesAF__c + 
+V_MetaNonoMesAF__c + V_MetaDecimoMesAF__c + V_MetaDecimoPrimeiroMesAF__c)) &gt;= 1, 0, 
+V_TotalMetasSemestre1AF__c + V_MetaSetimoMesAF__c + V_MetaOitavoMesAF__c + V_MetaNonoMesAF__c + V_MetaDecimoMesAF__c + V_MetaDecimoPrimeiroMesAF__c - V_TotalVendasAteDecimoPrimeiroMesAF__c 
+)</formula>
+        <name>Atualiza GAP Meta Até Mês 2 - AUX</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaIDAnoFiscal</fullName>
+        <description>Atualiza o campo ID SF do último Ano Fiscal criado no participante.</description>
+        <field>V_IDSFUltimoAF__c</field>
+        <formula>Id</formula>
+        <name>Atualiza ID do Ano Fiscal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <targetObject>V_Participante__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaQuartersBatidosTrim4</fullName>
+        <description>Atualiza o campo &quot;Quarters Batidos - 4o. Trim.&quot;</description>
+        <field>V_QuartersBatidosTrim4__c</field>
+        <formula>IF(
+AND(
+V_PercentualAMTrimestre1AF__c &gt;= 1, 
+V_PercentualAMTrimestre2AF__c &gt;= 1,
+V_PercentualAMTrimestre3AF__c &gt;= 1,
+V_PercentualAMTrimestre4AF__c &gt;= 1), 4, 
+
+IF(
+AND(
+V_PercentualAMTrimestre1AF__c &gt;= 1,
+V_PercentualAMTrimestre2AF__c &gt;= 1,
+V_PercentualAMTrimestre4AF__c &gt;= 1), 3,
+
+IF(
+AND(
+V_PercentualAMTrimestre1AF__c &gt;= 1,
+V_PercentualAMTrimestre3AF__c &gt;= 1,
+V_PercentualAMTrimestre4AF__c &gt;= 1), 3,
+
+IF(
+AND(
+V_PercentualAMTrimestre2AF__c &gt;= 1,
+V_PercentualAMTrimestre3AF__c &gt;= 1,
+V_PercentualAMTrimestre4AF__c &gt;= 1), 3,
+
+
+IF(
+AND(
+V_PercentualAMTrimestre1AF__c &gt;= 1,
+V_PercentualAMTrimestre4AF__c &gt;= 1), 2,
+
+IF(
+AND(
+V_PercentualAMTrimestre2AF__c &gt;= 1,
+V_PercentualAMTrimestre4AF__c &gt;= 1), 2,
+
+IF(
+AND(
+V_PercentualAMTrimestre3AF__c &gt;= 1,
+V_PercentualAMTrimestre4AF__c &gt;= 1), 2,
+
+
+IF(
+V_PercentualAMTrimestre4AF__c &gt;= 1, 1, 0
+
+
+))))))))</formula>
+        <name>Atualiza Quarters Batidos - 4o. Trim.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_AtualizaUltimoMesAtualizado</fullName>
+        <field>V_UltimoMesAtualizado__c</field>
+        <formula>IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosPrimeiroMesAF__c )= FALSE, 
+V_ProcessarCalculosPrimeiroMesAF__c = TRUE), &apos;Abril&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosSegundoMesAF__c )= FALSE, 
+V_ProcessarCalculosSegundoMesAF__c = TRUE), &apos;Maio&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosTerceiroMesAF__c )= FALSE, 
+V_ProcessarCalculosTerceiroMesAF__c = TRUE), &apos;Junho&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosQuartoMesAF__c )= FALSE, 
+V_ProcessarCalculosQuartoMesAF__c = TRUE), &apos;Julho&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosQuintoMesAF__c )= FALSE, 
+V_ProcessarCalculosQuintoMesAF__c = TRUE), &apos;Agosto&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosSextoMesAF__c )= FALSE, 
+V_ProcessarCalculosSextoMesAF__c = TRUE), &apos;Setembro&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosSetimoMesAF__c )= FALSE, 
+V_ProcessarCalculosSetimoMesAF__c = TRUE), &apos;Outubro&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosOitavoMesAF__c )= FALSE, 
+V_ProcessarCalculosOitavoMesAF__c = TRUE), &apos;Novembro&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosNonoMesAF__c )= FALSE, 
+V_ProcessarCalculosNonoMesAF__c = TRUE), &apos;Dezembro&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosDecimoMesAF__c )= FALSE, 
+V_ProcessarCalculosDecimoMesAF__c = TRUE), &apos;Janeiro&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosDecimoPrimeiroMesAF__c )= FALSE, 
+V_ProcessarCalculosDecimoPrimeiroMesAF__c = TRUE), &apos;Fevereiro&apos;,
+
+IF(
+AND( 
+PRIORVALUE( V_ProcessarCalculosDecimoSegundoMesAF__c )= FALSE, 
+V_ProcessarCalculosDecimoSegundoMesAF__c = TRUE), &apos;Março&apos;, &apos;&apos;
+
+))))))))))))</formula>
+        <name>Atualiza Ultimo Mes Atualizado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas10oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 10o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasDecimoMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoDecimoMesAF__c),
+V_ResultadoDecimoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoDecimoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF Abertas - 10o Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas11oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 11o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasDecimoPrimeiroMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoDecimoPrimeiroMesAF__c),
+V_ResultadoDecimoPrimeiroMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoDecimoPrimeiroMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 11o Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas12oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 12o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasDecimoSegundoMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoDecimoSegundoMesAF__c),
+V_ResultadoDecimoSegundoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoDecimoSegundoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 12o Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas1oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 1o. Mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasPrimeiroMes__c</field>
+        <formula>IF(
+
+OR(
+ISNULL(V_ResultadoPrimeiroMesAF__c),
+V_ResultadoPrimeiroMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoPrimeiroMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto no 1o. mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas2oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 2o. Mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasSegundoMes__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoSegundoMesAF__c),
+V_ResultadoSegundoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoSegundoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 2o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas3oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 3o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasTerceiroMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoTerceiroMesAF__c),
+V_ResultadoTerceiroMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoTerceiroMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 3o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas4oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 4o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasQuartoMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoQuartoMesAF__c),
+V_ResultadoQuartoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoQuartoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 4o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas5oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 5o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasQuintoMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoQuintoMesAF__c),
+V_ResultadoQuintoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoQuintoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 5o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas6oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 6o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasSextoMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoSextoMesAF__c),
+V_ResultadoSextoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoSextoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 6o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas7oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 7o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasSetimoMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoSetimoMesAF__c),
+V_ResultadoSetimoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoSetimoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 7o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas8oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 8o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasOitavoMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoOitavoMesAF__c),
+V_ResultadoOitavoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoOitavoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 8o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaPercNFAbertas9oMesAF</fullName>
+        <description>Calcula o percentual de NF em aberto do participante no 9o. mês do ano fiscal.</description>
+        <field>V_PercentualNFAbertasNonoMesAF__c</field>
+        <formula>IF(
+OR(
+ISNULL(V_ResultadoNonoMesAF__c),
+V_ResultadoNonoMesAF__c = 0), 0,
+
+V_TotalNotasFiscaisAbertasAF__c / V_ResultadoNonoMesAF__c
+
+)</formula>
+        <name>Calcula Perc NF em Aberto - 9o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite10oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 10o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteDecimoMesAF__c</field>
+        <formula>IF (V_PercentualAMAteDecimoMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteDecimoMesAF__c &gt; 0.8, V_PercentualAMAteDecimoMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteDecimoMesAF__c &gt; 0.9, V_PercentualAMAteDecimoMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteDecimoMesAF__c &gt; 0.95, V_PercentualAMAteDecimoMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteDecimoMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 10o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite11oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 11o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteDecimoPrimeiroMesAF__c</field>
+        <formula>IF (V_PercentualAMAteDecimoPrimeiroMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteDecimoPrimeiroMesAF__c &gt; 0.8, V_PercentualAMAteDecimoPrimeiroMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteDecimoPrimeiroMesAF__c &gt; 0.9, V_PercentualAMAteDecimoPrimeiroMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteDecimoPrimeiroMesAF__c &gt; 0.95, V_PercentualAMAteDecimoPrimeiroMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteDecimoPrimeiroMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 11o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite12oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 12o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteDecimoSegundoMesAF__c</field>
+        <formula>IF ( 
+V_PercentualAMAteDecimoSegundoMesAF__c &lt;= 0.8, 1, 
+
+IF ( 
+AND(V_PercentualAMAteDecimoSegundoMesAF__c &gt; 0.8, V_PercentualAMAteDecimoSegundoMesAF__c &lt;= 0.9), 2, 
+
+IF ( 
+AND(V_PercentualAMAteDecimoSegundoMesAF__c &gt; 0.9, V_PercentualAMAteDecimoSegundoMesAF__c &lt;= 0.95), 3, 
+
+IF ( 
+AND(V_PercentualAMAteDecimoSegundoMesAF__c &gt; 0.95, V_PercentualAMAteDecimoSegundoMesAF__c &lt;= 1), 4, 
+
+IF ( 
+V_PercentualAMAteDecimoSegundoMesAF__c &gt; 1, 5, 0 
+)))))</formula>
+        <name>Calcula Score AM Elite - 12o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite1oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 1o. mês do ano fiscal.</description>
+        <field>V_ScoreAMElitePrimeiroMesAF__c</field>
+        <formula>IF (OR(ISNULL(V_MetaAF__c), V_MetaAF__c = 0),0,
+IF (V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt;= 0.8, 1,
+IF (AND(V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt; 0.8, V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt;= 0.9), 2,
+IF (AND(V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt; 0.9, V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt;= 0.95), 3,
+IF (AND(V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt; 0.95, V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt;= 1), 4,
+IF (V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt; 1, 5, 0))))))</formula>
+        <name>Calcula Score de AM Elite - 1o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite2oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 2o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteSegundoMesAF__c</field>
+        <formula>IF (OR(ISNULL(V_MetaAF__c), V_MetaAF__c = 0),0, 
+IF (V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt;= 0.8, 1, 
+IF (AND(V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt; 0.8, V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt;= 0.9), 2, 
+IF (AND(V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt; 0.9, V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt;= 0.95), 3, 
+IF (AND(V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt; 0.95, V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt;= 1), 4, 
+IF (V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt; 1, 5, 0))))))</formula>
+        <name>Calcula Score de AM Elite - 2o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite3oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 3o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteTerceiroMesAF__c</field>
+        <formula>IF (V_PercentualAMAteTerceiroMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteTerceiroMesAF__c &gt; 0.8, V_PercentualAMAteTerceiroMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteTerceiroMesAF__c &gt; 0.9, V_PercentualAMAteTerceiroMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteTerceiroMesAF__c &gt; 0.95, V_PercentualAMAteTerceiroMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteTerceiroMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 3o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite4oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 4o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteQuartoMesAF__c</field>
+        <formula>IF (V_PercentualAMAteQuartoMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteQuartoMesAF__c &gt; 0.8, V_PercentualAMAteQuartoMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteQuartoMesAF__c &gt; 0.9, V_PercentualAMAteQuartoMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteQuartoMesAF__c &gt; 0.95, V_PercentualAMAteQuartoMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteQuartoMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 4o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite5oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 5o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteQuintoMesAF__c</field>
+        <formula>IF (V_PercentualAMAteQuintoMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteQuintoMesAF__c &gt; 0.8, V_PercentualAMAteQuintoMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteQuintoMesAF__c &gt; 0.9, V_PercentualAMAteQuintoMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteQuintoMesAF__c &gt; 0.95, V_PercentualAMAteQuintoMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteQuintoMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 5o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite6oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 6o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteSextoMesAF__c</field>
+        <formula>IF (V_PercentualAMAteSextoMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteSextoMesAF__c &gt; 0.8, V_PercentualAMAteSextoMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteSextoMesAF__c &gt; 0.9, V_PercentualAMAteSextoMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteSextoMesAF__c &gt; 0.95, V_PercentualAMAteSextoMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteSextoMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 6o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite7oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 7o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteSetimoMesAF__c</field>
+        <formula>IF (V_PercentualAMAteSetimoMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteSetimoMesAF__c &gt; 0.8, V_PercentualAMAteSetimoMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteSetimoMesAF__c &gt; 0.9, V_PercentualAMAteSetimoMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteSetimoMesAF__c &gt; 0.95, V_PercentualAMAteSetimoMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteSetimoMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 7o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite8oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 8o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteOitavoMesAF__c</field>
+        <formula>IF (V_PercentualAMAteOitavoMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteOitavoMesAF__c &gt; 0.8, V_PercentualAMAteOitavoMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteOitavoMesAF__c &gt; 0.9, V_PercentualAMAteOitavoMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteOitavoMesAF__c &gt; 0.95, V_PercentualAMAteOitavoMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteOitavoMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 8o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMElite9oMesAF</fullName>
+        <description>Calcula score de atingimento de meta Elite no 9o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteNonoMesAF__c</field>
+        <formula>IF (V_PercentualAMAteNonoMesAF__c &lt;= 0.8, 1, 
+IF (AND(V_PercentualAMAteNonoMesAF__c &gt; 0.8, V_PercentualAMAteNonoMesAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercentualAMAteNonoMesAF__c &gt; 0.9, V_PercentualAMAteNonoMesAF__c &lt;= 0.95), 3, 
+IF (AND(V_PercentualAMAteNonoMesAF__c &gt; 0.95, V_PercentualAMAteNonoMesAF__c &lt;= 1), 4, 
+IF (V_PercentualAMAteNonoMesAF__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score AM Elite - 9o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteAF</fullName>
+        <description>Calcula score de atingimento de meta Elite do participante no ano fiscal.</description>
+        <field>V_ScoreAMEliteAF__c</field>
+        <formula>V_ScoreAMEliteAFAUX__c</formula>
+        <name>Calcula Score de AM Elite AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjDecMes</fullName>
+        <description>Calcula score de atingimento de meta Elite Projetado até o 10o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjDecimoMesAF__c</field>
+        <formula>IF (V_PercAMProjAteDecimoMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteDecimoMes__c &gt; 0.8, V_PercAMProjAteDecimoMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteDecimoMes__c &gt; 0.9, V_PercAMProjAteDecimoMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteDecimoMes__c &gt; 0.95, V_PercAMProjAteDecimoMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteDecimoMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 10o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjDecPrimMes</fullName>
+        <description>Calcula score de atingimento de meta Elite Projetado até o 11o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjDecPrimMesAF__c</field>
+        <formula>IF (V_PercAMProjAteDecimoPrimMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteDecimoPrimMes__c &gt; 0.8, V_PercAMProjAteDecimoPrimMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteDecimoPrimMes__c &gt; 0.9, V_PercAMProjAteDecimoPrimMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteDecimoPrimMes__c &gt; 0.95, V_PercAMProjAteDecimoPrimMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteDecimoPrimMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 11o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjDecSegMes</fullName>
+        <description>Calcula score de atingimento de meta Elite Projetado até o 12o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjDecSegMesAF__c</field>
+        <formula>IF ( 
+V_PercAMProjAteDecimoSegMes__c &lt;= 0.8, 1, 
+
+IF ( 
+AND(V_PercAMProjAteDecimoSegMes__c &gt; 0.8, V_PercAMProjAteDecimoSegMes__c &lt;= 0.9), 2, 
+
+IF ( 
+AND(V_PercAMProjAteDecimoSegMes__c &gt; 0.9, V_PercAMProjAteDecimoSegMes__c &lt;= 0.95), 3, 
+
+IF ( 
+AND(V_PercAMProjAteDecimoSegMes__c &gt; 0.95, V_PercAMProjAteDecimoSegMes__c &lt;= 1), 4, 
+
+IF ( 
+V_PercAMProjAteDecimoSegMes__c &gt; 1, 5, 0 
+)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 12o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjNonoMes</fullName>
+        <description>Calcula score de atingimento de meta Elite Projetado até o 9o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjNonoMesAF__c</field>
+        <formula>IF (V_PercAMProjAteNonoMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteNonoMes__c &gt; 0.8, V_PercAMProjAteNonoMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteNonoMes__c &gt; 0.9, V_PercAMProjAteNonoMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteNonoMes__c &gt; 0.95, V_PercAMProjAteNonoMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteNonoMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 9o. Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjOitaMes</fullName>
+        <description>Calcula score de atingimento de meta Elite Projetado até o 8o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjOitavoMesAF__c</field>
+        <formula>IF (V_PercAMProjAteOitavoMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteOitavoMes__c &gt; 0.8, V_PercAMProjAteOitavoMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteOitavoMes__c &gt; 0.9, V_PercAMProjAteOitavoMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteOitavoMes__c &gt; 0.95, V_PercAMProjAteOitavoMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteOitavoMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 8o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjPrimMes</fullName>
+        <description>Calcula score de atingimento de meta Projetado Elite até o 1o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjPrimeiroMesAF__c</field>
+        <formula>IF (V_PercAMProjAtePrimeiroMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAtePrimeiroMes__c &gt; 0.8, V_PercAMProjAtePrimeiroMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAtePrimeiroMes__c &gt; 0.9, V_PercAMProjAtePrimeiroMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAtePrimeiroMes__c &gt; 0.95, V_PercAMProjAtePrimeiroMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAtePrimeiroMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 1o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjQuarMes</fullName>
+        <description>Calcula score de atingimento de meta Elite Projetado até o 4o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjQuartoMesAF__c</field>
+        <formula>IF (V_PercAMProjAteQuartoMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteQuartoMes__c &gt; 0.8, V_PercAMProjAteQuartoMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteQuartoMes__c &gt; 0.9, V_PercAMProjAteQuartoMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteQuartoMes__c &gt; 0.95, V_PercAMProjAteQuartoMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteQuartoMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 4o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjQuiMes</fullName>
+        <description>Calcula score de atingimento de meta Projetado Elite até o 5o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjQuintoMesAF__c</field>
+        <formula>IF (V_PercAMProjAteQuintoMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteQuintoMes__c &gt; 0.8, V_PercAMProjAteQuintoMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteQuintoMes__c &gt; 0.9, V_PercAMProjAteQuintoMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteQuintoMes__c &gt; 0.95, V_PercAMProjAteQuintoMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteQuintoMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 5o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjSegMes</fullName>
+        <description>Calcula score de atingimento de meta Projetado Elite até o 2o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjSegundoMesAF__c</field>
+        <formula>IF (V_PercAMProjAteSegundoMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteSegundoMes__c &gt; 0.8, V_PercAMProjAteSegundoMes__c / V_MetaAF__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteSegundoMes__c &gt; 0.9, V_PercAMProjAteSegundoMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteSegundoMes__c &gt; 0.95, V_PercAMProjAteSegundoMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteSegundoMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 2o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjSetMes</fullName>
+        <description>Calcula score de atingimento de meta Elite Projetado até o 7o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjSetimoMesAF__c</field>
+        <formula>IF (V_PercAMProjAteSetimoMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteSetimoMes__c &gt; 0.8, V_PercAMProjAteSetimoMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteSetimoMes__c &gt; 0.9, V_PercAMProjAteSetimoMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteSetimoMes__c &gt; 0.95, V_PercAMProjAteSetimoMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteSetimoMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 7o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjSexMes</fullName>
+        <description>Calcula score de atingimento de meta Elite Projetado até o 6o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjSextoMesAF__c</field>
+        <formula>IF (V_PercAMProjAteSextoMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteSextoMes__c &gt; 0.8, V_PercAMProjAteSextoMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteSextoMes__c &gt; 0.9, V_PercAMProjAteSextoMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteSextoMes__c &gt; 0.95, V_PercAMProjAteSextoMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteSextoMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 6o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMEliteProjTercMes</fullName>
+        <description>Calcula score de atingimento de meta Elite projetado no 3o. mês do ano fiscal.</description>
+        <field>V_ScoreAMEliteProjTerceiroMesAF__c</field>
+        <formula>IF (V_PercAMProjAteTerceiroMes__c &lt;= 0.8, 1, 
+IF (AND(V_PercAMProjAteTerceiroMes__c &gt; 0.8, V_PercAMProjAteTerceiroMes__c &lt;= 0.9), 2, 
+IF (AND(V_PercAMProjAteTerceiroMes__c &gt; 0.9, V_PercAMProjAteTerceiroMes__c &lt;= 0.95), 3, 
+IF (AND(V_PercAMProjAteTerceiroMes__c &gt; 0.95, V_PercAMProjAteTerceiroMes__c &lt;= 1), 4, 
+IF (V_PercAMProjAteTerceiroMes__c &gt; 1, 5, 0)))))</formula>
+        <name>Calcula Score de AM Elite Proj - 3o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMH1Elite1oSem</fullName>
+        <description>Calcula score Elite de atingimento de metas do participante no 1o. semestre do ano fiscal.</description>
+        <field>V_ScoreAMH1EliteSemestre1AF__c</field>
+        <formula>IF(
+V_PercentualAMSemestre1AF__c &lt; 1, 0, 
+
+IF( 
+AND(V_PercentualAMSemestre1AF__c &gt;= 1, 
+V_PercentualAMSemestre1AF__c &lt; 1.2), 1, 
+
+IF(
+V_PercentualAMSemestre1AF__c &gt;= 1.2, 2, 0)
+
+))</formula>
+        <name>Calcula Score AM H1 Elite - 1o. Sem.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMH1Elite2oSem</fullName>
+        <description>Calcula score Elite de atingimento de metas do participante no 2o. semestre do ano fiscal.</description>
+        <field>V_ScoreAMH1EliteSemestre2AF__c</field>
+        <formula>IF(
+
+OR(ISNULL(V_TotalMetasSemestre2AF__c), V_TotalMetasSemestre2AF__c = 0), 0, 
+
+IF(
+V_TotalVendasSemestre2AF__c / V_TotalMetasSemestre2AF__c &lt; 1, 0, 
+
+IF( 
+AND(V_TotalVendasSemestre2AF__c  / V_TotalMetasSemestre2AF__c &gt;= 1, V_TotalVendasSemestre2AF__c / V_TotalMetasSemestre2AF__c &lt; 1.2), 1, 
+
+IF(
+V_TotalVendasSemestre2AF__c / V_TotalMetasSemestre2AF__c &gt;= 1.2, 2, 0)
+
+)))</formula>
+        <name>Calcula Score AM H1 Elite - 2o. Sem.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMProjetadoAF</fullName>
+        <description>Calcula score de atingimento de meta Elite projetado para o ano fiscal.</description>
+        <field>V_ScoreAMEliteProjAF__c</field>
+        <formula>IF(
+V_PercAMProjAF__c &lt;= 0.8,1,
+
+IF( 
+AND(
+V_PercAMProjAF__c &gt; 0.8,V_PercAMProjAF__c &lt;= 0.9), 2, 
+
+IF( 
+AND( 
+V_PercAMProjAF__c &gt; 0.9,V_PercAMProjAF__c &lt;= 0.95), 3, 
+
+IF( 
+AND( 
+V_PercAMProjAF__c &gt; 0.95,V_PercAMProjAF__c &lt;= 1), 4, 
+
+IF(
+V_PercAMProjAF__c &gt; 1, 5, 0) 
+
+))))</formula>
+        <name>Calcula Score de AM Projetado AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMSPYTrimestre1AF</fullName>
+        <description>Calcula score de atingimento de meta SPY no 1o. trimestre do ano fiscal.</description>
+        <field>V_ScoreAMSPYTrimestre1AF__c</field>
+        <formula>IF (
+
+V_PercentualAMTrimestre1AF__c &gt;= 1, 50, 0
+
+)</formula>
+        <name>Calcula Score de AM SPY - 1o. Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMSPYTrimestre2AF</fullName>
+        <description>Calcula score de atingimento de meta SPY no 2o. trimestre do ano fiscal.</description>
+        <field>V_ScoreAMSPYTrimestre2AF__c</field>
+        <formula>IF(
+
+V_PercentualAMTrimestre2AF__c &gt;= 1, 50, 0
+
+)</formula>
+        <name>Calcula Score de AM SPY - 2o. Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMSPYTrimestre3AF</fullName>
+        <description>Calcula score de atingimento de meta SPY no 3o. trimestre do ano fiscal.</description>
+        <field>V_ScoreAMSPYTrimestre3AF__c</field>
+        <formula>IF(
+
+V_PercentualAMTrimestre3AF__c &gt;= 1, 50, 0
+
+)</formula>
+        <name>Calcula Score de AM SPY - 3o. Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreAMSPYTrimestre4AF</fullName>
+        <description>Calcula score de atingimento de meta SPY no 4o. trimestre do ano fiscal.</description>
+        <field>V_ScoreAMSPYTrimestre4AF__c</field>
+        <formula>IF (
+
+V_PercentualAMTrimestre4AF__c &gt;= 1, 50, 0
+
+)</formula>
+        <name>Calcula Score de AM SPY - 4o. Trimestre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreBUAtingidasAF</fullName>
+        <description>Calcula score de BUs com atingimento de metas no ano fiscal para o SPY.</description>
+        <field>V_ScoreBUAtingidasAF__c</field>
+        <formula>IF(
+V_BUAtingidasAF__c = 1, 50,
+
+IF(
+V_BUAtingidasAF__c = 2, 100,
+
+IF(
+V_BUAtingidasAF__c = 3, 150,
+
+IF(
+V_BUAtingidasAF__c &gt;= 4, 200, 0
+))))</formula>
+        <name>Calcula Score BUs Atingidas AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreDQSSPYAF</fullName>
+        <description>Indica o score DQS (Data Quality Service) do participante. Campo utilizado para o ranking do SPY.</description>
+        <field>V_PercentualDQSSPYAF__c</field>
+        <formula>IF(
+V_PercentualDQSSPYAF__c &lt; 0.80, 0,
+
+IF(
+AND(V_PercentualDQSSPYAF__c &gt;= 0.8, V_PercentualDQSSPYAF__c &lt; 0.90), 25,
+
+IF(
+AND(V_PercentualDQSSPYAF__c &gt;= 0.90, V_PercentualDQSSPYAF__c &lt; 0.94), 50,
+
+IF(
+AND(V_PercentualDQSSPYAF__c &gt;= 0.94, V_PercentualDQSSPYAF__c &lt; 0.98), 75,
+
+IF(
+V_PercentualDQSSPYAF__c &gt;= 0.98, 100, 0)
+
+))))</formula>
+        <name>Calcula Score DQS SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScorePotencialCarteira</fullName>
+        <description>Calcula score conforme o valor do tamanho da carteira do participante.</description>
+        <field>V_ScorePotencialCarteira__c</field>
+        <formula>IF(
+AND(
+ISPICKVAL(V_Participante__r.V_Cargo__c, &apos;GERENTE DE CONTAS&apos;),
+V_PotencialCarteira__c &lt; 7000000), 1, 
+
+IF(
+AND(
+ISPICKVAL(V_Participante__r.V_Cargo__c, &apos;GERENTE DE CONTAS&apos;),
+V_PotencialCarteira__c &gt;= 7000000, 
+V_PotencialCarteira__c &lt; 22000000), 2, 
+
+IF(
+AND(
+ISPICKVAL(V_Participante__r.V_Cargo__c, &apos;GERENTE DE CONTAS&apos;),
+V_PotencialCarteira__c &gt;= 22000000), 3,
+
+IF(
+AND(
+ISPICKVAL(V_Participante__r.V_Cargo__c, &apos;LÍDER&apos;),
+V_PotencialCarteira__c &lt; 80000000), 1,
+
+IF(
+AND(
+ISPICKVAL(V_Participante__r.V_Cargo__c, &apos;LÍDER&apos;),
+V_PotencialCarteira__c &gt;= 80000000), 2,
+
+IF(
+ISPICKVAL(V_Participante__r.V_Cargo__c, &apos;DIRETOR&apos;), 1,
+
+IF(
+ISPICKVAL(V_Participante__r.V_Cargo__c, &apos;GERENTE REGIONAL VIP&apos;), 1,
+
+IF(
+ISPICKVAL(V_Participante__r.V_Cargo__c, &apos;COORDENADOR | GERENTE REGIONAL VIP&apos;), 1, 0
+
+))))))))</formula>
+        <name>Calcula Score Tamanho da Carteira</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite10oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 10o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteDecimoMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteDecimoMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteDecimoMesAF__c &gt; 1, 
+V_PercentualAMAteDecimoMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteDecimoMesAF__c &gt;= 1.05, V_PercentualAMAteDecimoMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteDecimoMesAF__c &gt;= 1.1, V_PercentualAMAteDecimoMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteDecimoMesAF__c &gt;= 1.15, V_PercentualAMAteDecimoMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteDecimoMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 10o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite11oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 11o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteDecimoPrimeiroMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteDecimoPrimeiroMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteDecimoPrimeiroMesAF__c &gt; 1, V_PercentualAMAteDecimoPrimeiroMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteDecimoPrimeiroMesAF__c &gt;= 1.05, V_PercentualAMAteDecimoPrimeiroMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteDecimoPrimeiroMesAF__c &gt;= 1.1, V_PercentualAMAteDecimoPrimeiroMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteDecimoPrimeiroMesAF__c &gt;= 1.15, V_PercentualAMAteDecimoPrimeiroMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteDecimoPrimeiroMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 11o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite12oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 12o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteDecimoSegundoMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteDecimoSegundoMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteDecimoSegundoMesAF__c &gt; 1, V_PercentualAMAteDecimoSegundoMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteDecimoSegundoMesAF__c &gt;= 1.05, V_PercentualAMAteDecimoSegundoMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteDecimoSegundoMesAF__c &gt;= 1.1, V_PercentualAMAteDecimoSegundoMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteDecimoSegundoMesAF__c &gt;= 1.15, V_PercentualAMAteDecimoSegundoMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteDecimoSegundoMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 12o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite1oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 1o. mês do ano fiscal.</description>
+        <field>V_ScoreSMElitePrimeiroMesAF__c</field>
+        <formula>IF(
+
+OR(
+ISNULL(V_MetaAF__c),
+V_MetaAF__c = 0), 0,
+
+IF(
+V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt;= 1, 0,
+
+IF(
+AND(V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt; 1, V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt; 1.05), 1,
+
+IF(
+AND(V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt;= 1.05, V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt; 1.1), 2,
+
+IF(
+AND(V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt;= 1.1, V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt; 1.15), 3,
+
+IF(
+AND(V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt;= 1.15, V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &lt; 1.2), 4,
+
+IF(
+V_ResultadoPrimeiroMesAF__c / V_MetaAF__c &gt;= 1.2, 5, 0)
+
+))))))</formula>
+        <name>Calcula Score de SM Elite - 1o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite2oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 2o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteSegundoMesAF__c</field>
+        <formula>IF(
+
+OR(
+ISNULL(V_MetaAF__c),
+V_MetaAF__c = 0), 0,
+
+IF(
+V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt;= 1, 0,
+
+IF(
+AND(V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt; 1, V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt; 1.05), 1,
+
+IF(
+AND(V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt;= 1.05, V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt; 1.1), 2,
+
+IF(
+AND(V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt;= 1.1, V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt; 1.15), 3,
+
+IF(
+AND(V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt;= 1.15, V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &lt; 1.2), 4,
+
+IF(
+V_TotalVendasAteSegundoMesAF__c / V_MetaAF__c &gt;= 1.2, 5, 0)
+
+))))))</formula>
+        <name>Calcula Score SM Elite - 2o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite3oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 3o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteTerceiroMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteTerceiroMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteTerceiroMesAF__c &gt; 1, V_PercentualAMAteTerceiroMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteTerceiroMesAF__c &gt;= 1.05, V_PercentualAMAteTerceiroMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteTerceiroMesAF__c &gt;= 1.1, V_PercentualAMAteTerceiroMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteTerceiroMesAF__c &gt;= 1.15, V_PercentualAMAteTerceiroMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteTerceiroMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 3o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite4oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 4o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteQuartoMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteQuartoMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteQuartoMesAF__c &gt; 1, V_PercentualAMAteQuartoMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteQuartoMesAF__c &gt;= 1.05, V_PercentualAMAteQuartoMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteQuartoMesAF__c &gt;= 1.1, V_PercentualAMAteQuartoMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteQuartoMesAF__c &gt;= 1.15, V_PercentualAMAteQuartoMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteQuartoMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 4o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite5oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 5o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteQuintoMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteQuintoMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteQuintoMesAF__c &gt; 1, 
+V_PercentualAMAteQuintoMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteQuintoMesAF__c &gt;= 1.05, 
+V_PercentualAMAteQuintoMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteQuintoMesAF__c &gt;= 1.1, 
+V_PercentualAMAteQuintoMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteQuintoMesAF__c &gt;= 1.15, 
+V_PercentualAMAteQuintoMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteQuintoMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 5o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite6oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 6o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteSextoMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteSextoMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteSextoMesAF__c &gt; 1, V_PercentualAMAteSextoMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteSextoMesAF__c &gt;= 1.05, V_PercentualAMAteSextoMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteSextoMesAF__c &gt;= 1.1, V_PercentualAMAteSextoMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteSextoMesAF__c &gt;= 1.15, V_PercentualAMAteSextoMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteSextoMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 6o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite7oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 7o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteSetimoMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteSetimoMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteSetimoMesAF__c &gt; 1, V_PercentualAMAteSetimoMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteSetimoMesAF__c &gt;= 1.05, V_PercentualAMAteSetimoMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteSetimoMesAF__c &gt;= 1.1, V_PercentualAMAteSetimoMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteSetimoMesAF__c &gt;= 1.15, V_PercentualAMAteSetimoMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteSetimoMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 7o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite8oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 8o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteOitavoMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteOitavoMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteOitavoMesAF__c &gt; 1, V_PercentualAMAteOitavoMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteOitavoMesAF__c &gt;= 1.05, V_PercentualAMAteOitavoMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteOitavoMesAF__c &gt;= 1.1, V_PercentualAMAteOitavoMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteOitavoMesAF__c &gt;= 1.15, V_PercentualAMAteOitavoMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteOitavoMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 8o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMElite9oMesAF</fullName>
+        <description>Calcula score de superação de meta Elite no 9o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteNonoMesAF__c</field>
+        <formula>IF( 
+V_PercentualAMAteNonoMesAF__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercentualAMAteNonoMesAF__c &gt; 1, 
+V_PercentualAMAteNonoMesAF__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercentualAMAteNonoMesAF__c &gt;= 1.05, V_PercentualAMAteNonoMesAF__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercentualAMAteNonoMesAF__c &gt;= 1.1, V_PercentualAMAteNonoMesAF__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercentualAMAteNonoMesAF__c &gt;= 1.15, V_PercentualAMAteNonoMesAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercentualAMAteNonoMesAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score SM Elite - 9o. Mês AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjDecMes</fullName>
+        <description>Calcula score de superação de meta Elite Projetado até o 10o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjDecimoMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteDecimoMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteDecimoMes__c &gt; 1, 
+V_PercAMProjAteDecimoMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteDecimoMes__c &gt;= 1.05, V_PercAMProjAteDecimoMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteDecimoMes__c &gt;= 1.1, V_PercAMProjAteDecimoMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteDecimoMes__c &gt;= 1.15, V_PercAMProjAteDecimoMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteDecimoMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 10o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjDecPrimMes</fullName>
+        <description>Calcula score de superação de meta Elite Projetado até o 11o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjDecPrimMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteDecimoPrimMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteDecimoPrimMes__c &gt; 1, V_PercAMProjAteDecimoPrimMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteDecimoPrimMes__c &gt;= 1.05, V_PercAMProjAteDecimoPrimMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteDecimoPrimMes__c &gt;= 1.1, V_PercAMProjAteDecimoPrimMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteDecimoPrimMes__c &gt;= 1.15, V_PercAMProjAteDecimoPrimMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteDecimoPrimMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 11o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjDecSegMes</fullName>
+        <description>Calcula score de superação de meta Elite Projetado até o 12o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjDecSegMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteDecimoSegMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteDecimoSegMes__c &gt; 1, V_PercAMProjAteDecimoSegMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteDecimoSegMes__c &gt;= 1.05, V_PercAMProjAteDecimoSegMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteDecimoSegMes__c &gt;= 1.1, V_PercAMProjAteDecimoSegMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteDecimoSegMes__c &gt;= 1.15, V_PercAMProjAteDecimoSegMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteDecimoSegMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 12o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjNonoMes</fullName>
+        <description>Calcula score de superação de meta Elite Projetado até o 9o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjNonoMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteNonoMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteNonoMes__c &gt; 1, 
+V_PercAMProjAteNonoMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteNonoMes__c &gt;= 1.05, V_PercAMProjAteNonoMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteNonoMes__c &gt;= 1.1, V_PercAMProjAteNonoMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteNonoMes__c &gt;= 1.15, V_PercAMProjAteNonoMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteNonoMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 9o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjOitaMes</fullName>
+        <description>Calcula score de superação de meta Elite Projetado até o 8o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjOitavoMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteOitavoMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteOitavoMes__c &gt; 1, V_PercAMProjAteOitavoMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteOitavoMes__c &gt;= 1.05, V_PercAMProjAteOitavoMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteOitavoMes__c &gt;= 1.1, V_PercAMProjAteOitavoMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteOitavoMes__c &gt;= 1.15, V_PercAMProjAteOitavoMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteOitavoMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 8o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjPrimMes</fullName>
+        <description>Calcula score de superação de meta Projetado Elite até o 1o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjPrimeiroMesAF__c</field>
+        <formula>IF(
+V_PercAMProjAtePrimeiroMes__c &lt;= 1, 0,
+
+IF(
+AND(
+V_PercAMProjAtePrimeiroMes__c &gt; 1, V_PercAMProjAtePrimeiroMes__c &lt; 1.05), 1,
+
+IF(
+AND(V_PercAMProjAtePrimeiroMes__c &gt;= 1.05, V_PercAMProjAtePrimeiroMes__c &lt; 1.1), 2,
+
+IF(
+AND(V_PercAMProjAtePrimeiroMes__c &gt;= 1.1, V_PercAMProjAtePrimeiroMes__c &lt; 1.15), 3,
+
+IF(
+AND(V_PercAMProjAtePrimeiroMes__c &gt;= 1.15, V_PercAMProjAtePrimeiroMes__c &lt; 1.2), 4,
+
+IF(
+V_PercAMProjAtePrimeiroMes__c &gt;= 1.2, 5, 0)
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 1o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjQuarMes</fullName>
+        <description>Calcula score de superação de meta Elite Projetado até o 4o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjQuartoMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteQuartoMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteQuartoMes__c &gt; 1, V_PercAMProjAteQuartoMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteQuartoMes__c &gt;= 1.05, V_PercAMProjAteQuartoMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteQuartoMes__c &gt;= 1.1, V_PercAMProjAteQuartoMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteQuartoMes__c &gt;= 1.15, V_PercAMProjAteQuartoMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteQuartoMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 4o. Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjQuiMes</fullName>
+        <description>Calcula score de superação de meta Projetado Elite até o 5o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjQuintoMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteQuintoMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteQuintoMes__c &gt; 1, 
+V_PercAMProjAteQuintoMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteQuintoMes__c &gt;= 1.05, 
+V_PercAMProjAteQuintoMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteQuintoMes__c &gt;= 1.1, 
+V_PercAMProjAteQuintoMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteQuintoMes__c &gt;= 1.15, 
+V_PercAMProjAteQuintoMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteQuintoMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 5o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjSegMes</fullName>
+        <description>Calcula score de superação de meta Projetado Elite até o 2o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjSegundoMesAF__c</field>
+        <formula>IF(
+V_PercAMProjAteSegundoMes__c &lt;= 1, 0,
+
+IF(
+AND(V_PercAMProjAteSegundoMes__c &gt; 1, V_PercAMProjAteSegundoMes__c &lt; 1.05), 1,
+
+IF(
+AND(V_PercAMProjAteSegundoMes__c &gt;= 1.05, V_PercAMProjAteSegundoMes__c &lt; 1.1), 2,
+
+IF(
+AND(V_PercAMProjAteSegundoMes__c &gt;= 1.1, V_PercAMProjAteSegundoMes__c &lt; 1.15), 3,
+
+IF(
+AND(V_PercAMProjAteSegundoMes__c &gt;= 1.15, V_PercAMProjAteSegundoMes__c &lt; 1.2), 4,
+
+IF(
+V_PercAMProjAteSegundoMes__c &gt;= 1.2, 5, 0)
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 2o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjSetMes</fullName>
+        <description>Calcula score de superação de meta Projetado Elite até o 7o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjSetimoMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteSetimoMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteSetimoMes__c &gt; 1, V_PercAMProjAteSetimoMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteSetimoMes__c &gt;= 1.05, V_PercAMProjAteSetimoMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteSetimoMes__c &gt;= 1.1, V_PercAMProjAteSetimoMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteSetimoMes__c &gt;= 1.15, V_PercAMProjAteSetimoMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteSetimoMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 7o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjSexMes</fullName>
+        <description>Calcula score de superação de meta Elite Projetado até o 6o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjSextoMesAF__c</field>
+        <formula>IF( 
+V_PercAMProjAteSextoMes__c &lt;= 1, 0, 
+
+IF( 
+AND(V_PercAMProjAteSextoMes__c &gt; 1, V_PercAMProjAteSextoMes__c &lt; 1.05), 1, 
+
+IF( 
+AND(V_PercAMProjAteSextoMes__c &gt;= 1.05, V_PercAMProjAteSextoMes__c &lt; 1.1), 2, 
+
+IF( 
+AND(V_PercAMProjAteSextoMes__c &gt;= 1.1, V_PercAMProjAteSextoMes__c &lt; 1.15), 3, 
+
+IF( 
+AND(V_PercAMProjAteSextoMes__c &gt;= 1.15, V_PercAMProjAteSextoMes__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAteSextoMes__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 6o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMEliteProjTercMes</fullName>
+        <description>Calcula score de atingimento de meta Projetado Elite até o 3o. mês do ano fiscal.</description>
+        <field>V_ScoreSMEliteProjTerceiroMesAF__c</field>
+        <formula>IF(
+V_PercAMProjAteTerceiroMes__c &lt;= 1, 0,
+
+IF(
+AND(V_PercAMProjAteTerceiroMes__c &gt; 1, V_PercAMProjAteTerceiroMes__c &lt; 1.05), 1,
+
+IF(
+AND(V_PercAMProjAteTerceiroMes__c &gt;= 1.05, V_PercAMProjAteTerceiroMes__c &lt; 1.1), 2,
+
+IF(
+AND(V_PercAMProjAteTerceiroMes__c &gt;= 1.1, V_PercAMProjAteTerceiroMes__c &lt; 1.15), 3,
+
+IF(
+AND(V_PercAMProjAteTerceiroMes__c &gt;= 1.15, V_PercAMProjAteTerceiroMes__c &lt; 1.2), 4,
+
+IF(
+V_PercAMProjAteTerceiroMes__c &gt;= 1.2, 5, 0)
+
+)))))</formula>
+        <name>Calcula Score de SM Elite Proj - 3o Mês</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_CalculaScoreSMProjetadoAF</fullName>
+        <description>Calcula score Elite de superação de meta projetado para o participante no ano fiscal.</description>
+        <field>V_ScoreSMEliteProjetadoAF__c</field>
+        <formula>IF( 
+V_PercAMProjAF__c &lt;= 1, 0, 
+
+IF( 
+AND( 
+V_PercAMProjAF__c &gt; 1, V_PercAMProjAF__c &lt; 1.05), 1, 
+
+IF( 
+AND( 
+V_PercAMProjAF__c &gt;= 1.05, V_PercAMProjAF__c &lt; 1.1), 2, 
+
+IF( 
+AND( 
+V_PercAMProjAF__c &gt;= 1.1, V_PercAMProjAF__c &lt; 1.15), 3, 
+
+IF( 
+AND( 
+V_PercAMProjAF__c &gt;= 1.15, V_PercAMProjAF__c &lt; 1.2), 4, 
+
+IF( 
+V_PercAMProjAF__c &gt;= 1.2, 5, 0) 
+
+)))))</formula>
+        <name>Calcula Score de SM Projetado AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_MetaYTD</fullName>
+        <field>V_MetaYtd__c</field>
+        <formula>ROUND(IF(NOT(ISNULL(V_UltimoMesAtualizado__c)), 
+    CASE(V_UltimoMesAtualizado__c,
+        &quot;Abril&quot;,
+            V_MetaPrimeiroMesAF__c,
+        &quot;Maio&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c,
+        &quot;Junho&quot;, 
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c,
+        &quot;Julho&quot;, 
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c,
+        &quot;Agosto&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c+
+            V_MetaQuintoMesAF__c,
+        &quot;Setembro&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c+
+            V_MetaQuintoMesAF__c+V_MetaSextoMesAF__c,
+        &quot;Outubro&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c+
+            V_MetaQuintoMesAF__c+V_MetaSextoMesAF__c+V_MetaSetimoMesAF__c,
+        &quot;Novembro&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c+
+            V_MetaQuintoMesAF__c+V_MetaSextoMesAF__c+V_MetaSetimoMesAF__c+V_MetaOitavoMesAF__c,
+        &quot;Dezembro&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c+
+            V_MetaQuintoMesAF__c+V_MetaSextoMesAF__c+V_MetaSetimoMesAF__c+V_MetaOitavoMesAF__c+
+            V_MetaNonoMesAF__c,
+        &quot;Janeiro&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c+
+            V_MetaQuintoMesAF__c+V_MetaSextoMesAF__c+V_MetaSetimoMesAF__c+V_MetaOitavoMesAF__c+
+            V_MetaNonoMesAF__c+V_MetaDecimoMesAF__c,
+        &quot;Fevereiro&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c+
+            V_MetaQuintoMesAF__c+V_MetaSextoMesAF__c+V_MetaSetimoMesAF__c+V_MetaOitavoMesAF__c+
+            V_MetaNonoMesAF__c+V_MetaDecimoMesAF__c+V_MetaDecimoPrimeiroMesAF__c,
+        &quot;Março&quot;,
+            V_MetaPrimeiroMesAF__c+V_MetaSegundoMesAF__c+V_MetaTerceiroMesAF__c+V_MetaQuartoMesAF__c+
+            V_MetaQuintoMesAF__c+V_MetaSextoMesAF__c+V_MetaSetimoMesAF__c+V_MetaOitavoMesAF__c+
+            V_MetaNonoMesAF__c+V_MetaDecimoMesAF__c+V_MetaDecimoPrimeiroMesAF__c+V_MetaDecimoSegundoMesAF__c
+        ,0
+    )
+,0),2)</formula>
+        <name>MetaYTD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreAMSPYAF</fullName>
+        <description>Atualiza o score atingimento de meta do participante após o fechamento do ano fiscal. Índice utilizado para o ranking do SPY.</description>
+        <field>V_ScoreAMSPYAF__c</field>
+        <formula>IF(
+V_PercentualAMAF__c &lt; 0.95, 0,
+
+IF(
+AND(V_PercentualAMAF__c &gt;= 0.95, V_PercentualAMAF__c &lt; 1), 50,
+
+IF(
+AND(V_PercentualAMAF__c &gt;= 1, V_PercentualAMAF__c &lt; 1.2), 200,
+
+IF(
+AND(V_PercentualAMAF__c &gt;= 1.2, V_PercentualAMAF__c &lt; 1.4), 250,
+
+IF(
+V_PercentualAMAF__c &gt;= 1.4, 300, 0)
+
+))))</formula>
+        <name>Score AM SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreBetcoinsPereneSPYAF</fullName>
+        <description>Calcula score em função do total de Betcoins conquistados pelo participante (Youbet Perene) durante o ano fiscal.</description>
+        <field>V_ScoreBetcoinsPerenesAF__c</field>
+        <formula>IF( 
+V_TotalBetcoinsPerenesAF__c &gt; 1000, 25, 0 
+)</formula>
+        <name>Score Betcoins (Youbet Perene) SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreDQSSPYAF</fullName>
+        <description>Atualiza o score DQS (Data Quality Service) do participante. Índice utilizado para o ranking do SPY.</description>
+        <field>V_ScoreDQSSPYAF__c</field>
+        <formula>IF(
+V_PercentualDQSSPYAF__c &lt; 0.80, 0,
+
+IF(
+AND(V_PercentualDQSSPYAF__c &gt;= 0.8, V_PercentualDQSSPYAF__c &lt; 0.90), 25,
+
+IF(
+AND(V_PercentualDQSSPYAF__c &gt;= 0.90, V_PercentualDQSSPYAF__c &lt; 0.94), 50,
+
+IF(
+AND(V_PercentualDQSSPYAF__c &gt;= 0.94, V_PercentualDQSSPYAF__c &lt; 0.98), 75,
+
+IF(
+V_PercentualDQSSPYAF__c &gt;= 0.98, 100, 0)
+
+))))</formula>
+        <name>Score DQS SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreDinheiroNovoSPYAF</fullName>
+        <description>Atualiza o score Dinheiro Novo do participante após o fechamento do ano fiscal. Índice utilizado para o ranking do SPY.</description>
+        <field>V_ScoreDinheiroNovoSPYAF__c</field>
+        <formula>IF(
+V_PercentualDinheiroNovoSPYAF__c &lt; 0.12, 0,
+
+IF(
+V_PercentualDinheiroNovoSPYAF__c &gt;= 0.12, 100, 0
+
+))</formula>
+        <name>Score Dinheiro Novo SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreLanceLeilaoCompSPYAF</fullName>
+        <description>Calcula score de lance realizado em leilão complementar no ano fiscal para o SPY. Se o participante realizar no mínimo um lance em algum leilão complementar durante o ano fiscal, ganhará 5 pontos.</description>
+        <field>V_ScoreLanceLeilaoCompAF__c</field>
+        <formula>IF( 
+V_LancesLeiloesCompAF__c &gt;= 1, 5, 0 
+)</formula>
+        <name>Score de Lance Leilão Comp SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreLanceLeilaoPereneSPYAF</fullName>
+        <description>Calcula score de lance realizado em leilão perene no ano fiscal para o SPY.</description>
+        <field>V_ScoreLanceLeilaoPereneAF__c</field>
+        <formula>IF( 
+V_LancesLeiloesPerenesAF__c &gt;= 1, 5, 0 
+)</formula>
+        <name>Score de Lance Leilão Perene SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreLeilaoCompGanhoSPYAF</fullName>
+        <description>Calcula score de leilão complementar ganho no ano fiscal para o SPY. Se o participante for ganhador de no mínimo um leilão complementar durante o ano fiscal, ganhará 10 pontos.</description>
+        <field>V_ScoreLeilaoCompGanhoAF__c</field>
+        <formula>IF(
+V_LeiloesCompGanhosAF__c &gt;= 1, 10, 0
+)</formula>
+        <name>Score de Leilao Comp Ganho SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreLeilaoPereneGanhoSPYAF</fullName>
+        <description>Calcula score de leilão perene ganho no ano fiscal para o SPY. Se o participante for ganhador de no mínimo um leilão perene durante o ano fiscal, ganhará 25 pontos.</description>
+        <field>V_ScoreLeilaoPereneGanhoAF__c</field>
+        <formula>IF(
+
+V_LeiloesPerenesGanhosAF__c &gt;= 1, 25, 0
+
+)</formula>
+        <name>Score de Leilao Perene Ganho SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>V_ScoreTitulosAbertosSPY_AF</fullName>
+        <description>Atualiza o score Titulos em Aberto do participante após o fechamento do ano fiscal. Índice utilizado para o ranking do SPY.</description>
+        <field>V_ScoreTitulosAbertosSPYAF__c</field>
+        <formula>IF(
+V_PercentualNFAbertasAF__c &gt;= 0.02, 0,
+
+IF(
+AND(V_PercentualNFAbertasAF__c &gt;= 0.015, V_PercentualNFAbertasAF__c &lt; 0.02), 25,
+
+IF(
+AND(V_PercentualNFAbertasAF__c &gt;= 0.01, V_PercentualNFAbertasAF__c &lt; 0.015), 50,
+
+IF(
+AND(V_PercentualNFAbertasAF__c &gt;= 0.005, V_PercentualNFAbertasAF__c &lt; 0.01), 75,
+
+IF(
+V_PercentualNFAbertasAF__c &lt; 0.005, 100, 0)
+
+))))</formula>
+        <name>Score Títulos em Aberto SPY - AF</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Atualiza %25 AM Projetado Mês Atual</fullName>
+        <actions>
+            <name>V_AtualizaAMProjMesAtual</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualiza o campo % AM Projeto do mês atual.</description>
+        <formula>OR(  ISCHANGED( V_UltimoMesAtualizado__c ), ISCHANGED(V_PercAMProjAtePrimeiroMes__c), ISCHANGED(V_PercAMProjAteSegundoMes__c), ISCHANGED(V_PercAMProjAteTerceiroMes__c), ISCHANGED(V_PercAMProjAteQuartoMes__c), ISCHANGED(V_PercAMProjAteQuintoMes__c), ISCHANGED(V_PercAMProjAteSextoMes__c), ISCHANGED(V_PercAMProjAteSetimoMes__c), ISCHANGED(V_PercAMProjAteOitavoMes__c), ISCHANGED(V_PercAMProjAteNonoMes__c), ISCHANGED(V_PercAMProjAteDecimoMes__c), ISCHANGED(V_PercAMProjAteDecimoPrimMes__c), ISCHANGED(V_PercAMProjAteDecimoSegMes__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza %7C Tamanho da Carteira</fullName>
+        <actions>
+            <name>VN_AtualizaTamanhoCarteira</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Regra criada para atualiza o campo &quot;Tamanho da Carteira&quot; com o valor contido no campo &quot;Meta - AF&quot;</description>
+        <formula>OR( 
+ISNEW(), 
+ISCHANGED( V_MetaAF__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza Ano Fiscal no Participante</fullName>
+        <actions>
+            <name>V_AtualizaIDAnoFiscal</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualiza Ano Fiscal no Participante ao criar o registro de ano fiscal e suas metas.</description>
+        <formula>OR(  ISNEW(), ISCHANGED( Name )  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza Chave Composta Exclusiva</fullName>
+        <actions>
+            <name>Atualiza_Chave_Composta_Exclusiva_2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualiza campo exclusivo do registro de Metas dos Participantes para evitar duplicidade de registros.</description>
+        <formula>OR( ISNEW(), ISCHANGED(Name), ISCHANGED(V_CodParticipante__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza GAP Meta Até Mês 12 - AUX</fullName>
+        <actions>
+            <name>V_AtualizaGAPMetaAteMes12AUX</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualização para contornar limitação de caracteres em campo fórmula do Salesforce.</description>
+        <formula>OR( ISCHANGED(V_TotalVendasAteNonoMesAF__c), ISCHANGED(V_TotalMetasSemestre1AF__c), ISCHANGED(V_MetaSetimoMesAF__c), ISCHANGED(V_MetaOitavoMesAF__c), ISCHANGED(V_MetaNonoMesAF__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza GAP Meta Até Mês 2 - AUX</fullName>
+        <actions>
+            <name>V_AtualizaGAPMetaAteMes2AUX</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualização para contornar limitação de caracteres em campo fórmula do Salesforce.</description>
+        <formula>OR( ISCHANGED(V_TotalVendasAteDecimoPrimeiroMesAF__c), ISCHANGED(V_TotalMetasSemestre1AF__c), ISCHANGED(V_MetaSetimoMesAF__c), ISCHANGED(V_MetaOitavoMesAF__c),  ISCHANGED(V_MetaNonoMesAF__c),  ISCHANGED(V_MetaDecimoMesAF__c),  ISCHANGED(V_MetaDecimoPrimeiroMesAF__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza Meta - YTD</fullName>
+        <actions>
+            <name>V_MetaYTD</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>VN_MetasParticipantes__c.V_UltimoMesAtualizado__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza Quarters Batidos - 4o%2E Trim%2E</fullName>
+        <actions>
+            <name>V_AtualizaQuartersBatidosTrim4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualiza o campo Quarters Batidos - 4o. Trim. ao assinalar o campo &quot;Processar Cálculos - Mês 3&quot;.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosDecimoSegundoMesAF__c) = False, V_ProcessarCalculosDecimoSegundoMesAF__c = True )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Atualiza Ultimo Mes Atualizado</fullName>
+        <actions>
+            <name>V_AtualizaAMAteUltimoMesProc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaAMProjAteUltimoMesProc</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_AtualizaUltimoMesAtualizado</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR(  AND( PRIORVALUE( V_ProcessarCalculosPrimeiroMesAF__c )= FALSE, V_ProcessarCalculosPrimeiroMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosSegundoMesAF__c )= FALSE, V_ProcessarCalculosSegundoMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosTerceiroMesAF__c )= FALSE, V_ProcessarCalculosTerceiroMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosQuartoMesAF__c )= FALSE, V_ProcessarCalculosQuartoMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosQuintoMesAF__c )= FALSE, V_ProcessarCalculosQuintoMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosSextoMesAF__c )= FALSE, V_ProcessarCalculosSextoMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosSetimoMesAF__c )= FALSE, V_ProcessarCalculosSetimoMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosOitavoMesAF__c )= FALSE, V_ProcessarCalculosOitavoMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosNonoMesAF__c )= FALSE, V_ProcessarCalculosNonoMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosDecimoMesAF__c )= FALSE, V_ProcessarCalculosDecimoMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosDecimoPrimeiroMesAF__c )= FALSE, V_ProcessarCalculosDecimoPrimeiroMesAF__c = TRUE),  AND( PRIORVALUE( V_ProcessarCalculosDecimoSegundoMesAF__c )= FALSE, V_ProcessarCalculosDecimoSegundoMesAF__c = TRUE)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 10o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas10oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 10o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosDecimoMesAF__c) = False, V_ProcessarCalculosDecimoMesAF__c = True)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 11o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas11oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 11o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosDecimoPrimeiroMesAF__c) = False, V_ProcessarCalculosDecimoPrimeiroMesAF__c = True)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 12o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas12oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 12o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosDecimoSegundoMesAF__c) = False, V_ProcessarCalculosDecimoSegundoMesAF__c = True)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 1o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas1oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 1o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosPrimeiroMesAF__c) = False, V_ProcessarCalculosPrimeiroMesAF__c = True )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 2o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas2oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 2o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosSegundoMesAF__c) = False, V_ProcessarCalculosSegundoMesAF__c = True )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 3o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas3oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 3o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosTerceiroMesAF__c) = False, V_ProcessarCalculosTerceiroMesAF__c = True)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 4o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas4oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 4o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosQuartoMesAF__c) = False, V_ProcessarCalculosQuartoMesAF__c = True )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 5o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas5oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 5o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosQuintoMesAF__c) = False, V_ProcessarCalculosQuintoMesAF__c = True )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 6o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas6oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 6o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosSextoMesAF__c) = False, V_ProcessarCalculosSextoMesAF__c = True )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 7o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas7oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 7o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosSetimoMesAF__c) = False, V_ProcessarCalculosSetimoMesAF__c = True )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 8o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas8oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 8o. Mês do ano fiscal.</description>
+        <formula>AND( PRIORVALUE(V_ProcessarCalculosOitavoMesAF__c) = False, V_ProcessarCalculosOitavoMesAF__c = True)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Percentual de NF em Aberto - 9o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaPercNFAbertas9oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula o percentual de NF em aberto do participante no 9o. Mês do ano fiscal.</description>
+        <formula>OR( AND( PRIORVALUE(V_ProcessarCalculosNonoMesAF__c) = False, V_ProcessarCalculosNonoMesAF__c = True),  AND( V_ProcessarCalculosNonoMesAF__c = True, OR( ISCHANGED(V_TotalNotasFiscaisAbertasAF__c), ISCHANGED(V_ResultadoNonoMesAF__c)))  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score AM H1 Elite - 1o%2E Sem%2E</fullName>
+        <actions>
+            <name>V_CalculaScoreAMH1Elite1oSem</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score Elite de atingimento de metas do participante no 1o. semestre do ano fiscal.</description>
+        <formula>OR(  
+
+AND( PRIORVALUE(V_ProcessarCalculosSextoMesAF__c) = False, V_ProcessarCalculosSextoMesAF__c = True),  
+
+AND( V_ProcessarCalculosSextoMesAF__c = True, 
+OR( 
+ISCHANGED(V_TotalMetasSemestre1AF__c), ISCHANGED(V_TotalVendasSemestre1AF__c),
+ISCHANGED(V_PercentualAMSemestre1AF__c)))
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score AM H1 Elite - 2o%2E Sem%2E</fullName>
+        <actions>
+            <name>V_CalculaScoreAMH1Elite2oSem</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score Elite de atingimento de metas do participante no 2o. semestre do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosDecimoSegundoMesAF__c) = False, V_ProcessarCalculosDecimoSegundoMesAF__c = True),  AND( V_ProcessarCalculosDecimoSegundoMesAF__c = True, OR( ISCHANGED(V_TotalMetasSemestre2AF__c), ISCHANGED(V_TotalVendasSemestre2AF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score BUs Atingidas AF</fullName>
+        <actions>
+            <name>V_CalculaScoreBUAtingidasAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de BUs com atingimento de metas no ano fiscal para o SPY.</description>
+        <formula>OR(  AND(  ISNULL(PRIORVALUE(V_BUAtingidasAF__c)), NOT(ISNULL(V_BUAtingidasAF__c))),  ISCHANGED(V_BUAtingidasAF__c)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score Tamanho da Carteira</fullName>
+        <actions>
+            <name>V_CalculaScorePotencialCarteira</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score conforme o valor do tamanho da carteira do participante no ano fiscal.</description>
+        <formula>OR( ISNEW(), ISCHANGED(V_PotencialCarteira__c) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 10o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite10oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjDecMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite10oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjDecMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 10o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosDecimoMesAF__c) = False, 
+V_ProcessarCalculosDecimoMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosDecimoMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteDecimoMesAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 11o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite11oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjDecPrimMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite11oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjDecPrimMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 11o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosDecimoPrimeiroMesAF__c) = False, 
+V_ProcessarCalculosDecimoPrimeiroMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosDecimoPrimeiroMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteDecimoPrimeiroMesAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 12o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite12oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjDecSegMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite12oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjDecSegMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 12o. mês do ano fiscal.</description>
+        <formula>OR( 
+AND( PRIORVALUE(V_ProcessarCalculosDecimoSegundoMesAF__c) = False, V_ProcessarCalculosDecimoSegundoMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosDecimoSegundoMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteDecimoSegundoMesAF__c), 
+ISCHANGED(V_TotalNotasFiscaisAbertasAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 1o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite1oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjPrimMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite1oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjPrimMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 1o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosPrimeiroMesAF__c) = False, V_ProcessarCalculosPrimeiroMesAF__c = True),  AND( V_ProcessarCalculosPrimeiroMesAF__c = True, OR( ISCHANGED(V_ResultadoPrimeiroMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 2o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite2oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjSegMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite2oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjSegMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 2o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosSegundoMesAF__c) = False, V_ProcessarCalculosSegundoMesAF__c = True),  AND( V_ProcessarCalculosSegundoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteSegundoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 3o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite3oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjTercMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite3oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjTercMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 3o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosTerceiroMesAF__c) = False, 
+V_ProcessarCalculosTerceiroMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosTerceiroMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteTerceiroMesAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 4o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite4oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjQuarMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite4oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjQuarMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 4o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosQuartoMesAF__c) = False, 
+V_ProcessarCalculosQuartoMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosQuartoMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteQuartoMesAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 5o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite5oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjQuiMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite5oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjQuiMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 5o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosQuintoMesAF__c) = False, 
+V_ProcessarCalculosQuintoMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosQuintoMesAF__c = True, 
+OR( 
+ISCHANGED( V_PercentualAMAteQuintoMesAF__c ), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 6o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite6oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjSexMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite6oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjSexMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 6o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosSextoMesAF__c) = False, 
+V_ProcessarCalculosSextoMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosSextoMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteSextoMesAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 7o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite7oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjSetMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite7oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjSetMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 7o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosSetimoMesAF__c) = False, 
+V_ProcessarCalculosSetimoMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosSetimoMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteSetimoMesAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 8o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite8oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjOitaMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite8oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjOitaMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 8o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosOitavoMesAF__c) = False, 
+V_ProcessarCalculosOitavoMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosOitavoMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteOitavoMesAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite - 9o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMElite9oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteProjNonoMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMElite9oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMEliteProjNonoMes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite no 9o. mês do ano fiscal.</description>
+        <formula>OR( 
+
+AND( 
+PRIORVALUE(V_ProcessarCalculosNonoMesAF__c) = False, 
+V_ProcessarCalculosNonoMesAF__c = True), 
+
+AND( 
+V_ProcessarCalculosNonoMesAF__c = True, 
+OR( 
+ISCHANGED(V_PercentualAMAteNonoMesAF__c), 
+ISCHANGED(V_MetaAF__c))) 
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de AM e SM Elite AF</fullName>
+        <actions>
+            <name>Calcula_Score_de_SM_Elite_AF_2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMEliteAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMProjetadoAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreSMProjetadoAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula score de atingimento e superação de meta Elite do participante no ano fiscal.</description>
+        <formula>OR( 
+
+V_ScoreAMEliteAFAUX__c &lt;&gt; V_ScoreAMEliteAF__c, 
+V_ScoreSMEliteAFAUX__c &lt;&gt; V_ScoreSMEliteAF__c, 
+ISCHANGED(V_UltimoMesAtualizado__c), 
+
+AND( 
+ISBLANK(PRIORVALUE(V_UltimoMesAtualizado__c)), 
+NOT(ISBLANK(V_UltimoMesAtualizado__c))) 
+
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 10o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite10oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 10o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosDecimoMesAF__c) = False, V_ProcessarCalculosDecimoMesAF__c = True),  AND( V_ProcessarCalculosDecimoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteDecimoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 11o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite11oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 11o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosDecimoPrimeiroMesAF__c) = False, V_ProcessarCalculosDecimoPrimeiroMesAF__c = True),  AND( V_ProcessarCalculosDecimoPrimeiroMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteDecimoPrimeiroMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 12o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite12oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 12o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosDecimoSegundoMesAF__c) = False, V_ProcessarCalculosDecimoSegundoMesAF__c = True),  AND( V_ProcessarCalculosDecimoSegundoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteDecimoSegundoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 1o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite1oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 1o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosPrimeiroMesAF__c) = False, V_ProcessarCalculosPrimeiroMesAF__c = True),  AND( V_ProcessarCalculosPrimeiroMesAF__c = True, OR( ISCHANGED(V_ResultadoPrimeiroMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 2o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite2oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 2o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosSegundoMesAF__c) = False, V_ProcessarCalculosSegundoMesAF__c = True),  AND( V_ProcessarCalculosSegundoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteSegundoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 3o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite3oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 3o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosTerceiroMesAF__c) = False, V_ProcessarCalculosTerceiroMesAF__c = True),  AND( V_ProcessarCalculosTerceiroMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteTerceiroMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 4o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite4oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 4o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosQuartoMesAF__c) = False, V_ProcessarCalculosQuartoMesAF__c = True),  AND( V_ProcessarCalculosQuartoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteQuartoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 5o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite5oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 5o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosQuintoMesAF__c) = False, V_ProcessarCalculosQuintoMesAF__c = True),  AND( V_ProcessarCalculosQuintoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteQuintoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 6o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite6oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 6o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosSextoMesAF__c) = False, V_ProcessarCalculosSextoMesAF__c = True),  AND( V_ProcessarCalculosSextoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteSextoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 7o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite7oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 7o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosSetimoMesAF__c) = False, V_ProcessarCalculosSetimoMesAF__c = True),  AND( V_ProcessarCalculosSetimoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteSetimoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 8o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite8oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 8o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosOitavoMesAF__c) = False, V_ProcessarCalculosOitavoMesAF__c = True),  AND( V_ProcessarCalculosOitavoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteOitavoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite - 9o%2E Mês do AF</fullName>
+        <actions>
+            <name>V_CalculaScoreSMElite9oMesAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite no 9o. mês do ano fiscal.</description>
+        <formula>OR(  AND( PRIORVALUE(V_ProcessarCalculosNonoMesAF__c) = False, V_ProcessarCalculosNonoMesAF__c = True),  AND( V_ProcessarCalculosNonoMesAF__c = True, OR( ISCHANGED(V_TotalVendasAteNonoMesAF__c), ISCHANGED(V_MetaAF__c))) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Score de SM Elite AF</fullName>
+        <actions>
+            <name>Calcula_Score_de_SM_Elite_AF_2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Calcula score de superação de meta Elite do participante no ano fiscal.</description>
+        <formula>OR(   AND(  PRIORVALUE(V_ProcessarCalculosPrimeiroMesAF__c) = False,  V_ProcessarCalculosPrimeiroMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosSegundoMesAF__c) = False,  V_ProcessarCalculosSegundoMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosTerceiroMesAF__c) = False,  V_ProcessarCalculosTerceiroMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosQuartoMesAF__c) = False,  V_ProcessarCalculosQuartoMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosQuintoMesAF__c) = False,  V_ProcessarCalculosQuintoMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosSextoMesAF__c) = False,  V_ProcessarCalculosSextoMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosSetimoMesAF__c) = False,  V_ProcessarCalculosSetimoMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosOitavoMesAF__c) = False,  V_ProcessarCalculosOitavoMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosNonoMesAF__c) = False,  V_ProcessarCalculosNonoMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosDecimoMesAF__c) = False,  V_ProcessarCalculosDecimoMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosDecimoPrimeiroMesAF__c) = False,  V_ProcessarCalculosDecimoPrimeiroMesAF__c = True),   AND(  PRIORVALUE(V_ProcessarCalculosDecimoSegundoMesAF__c) = False,  V_ProcessarCalculosDecimoSegundoMesAF__c = True)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Scores SPY - AF</fullName>
+        <actions>
+            <name>V_CalculaScoreAMSPYTrimestre1AF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMSPYTrimestre2AF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMSPYTrimestre3AF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_CalculaScoreAMSPYTrimestre4AF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_ScoreAMSPYAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_ScoreDQSSPYAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_ScoreDinheiroNovoSPYAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_ScoreTitulosAbertosSPY_AF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualiza o score DQS (Data Quality Service), Dinheiro Novo, Títulos em Aberto e Atingimento de Metas Trimestral do participante após o fechamento do ano fiscal e a cada trimestre. Índices utilizados para o ranking do SPY.</description>
+        <formula>OR(  OR(  AND( PRIORVALUE(V_ProcessarCalculosDecimoSegundoMesAF__c) = False, V_ProcessarCalculosDecimoSegundoMesAF__c = True),  AND( V_ProcessarCalculosDecimoSegundoMesAF__c = True, OR( ISCHANGED(V_PercentualDQSSPYAF__c), ISCHANGED(V_PercentualDinheiroNovoSPYAF__c), ISCHANGED(V_PercentualNFAbertasAF__c)))),  OR( AND( PRIORVALUE(V_ProcessarCalculosTerceiroMesAF__c) = False, V_ProcessarCalculosTerceiroMesAF__c = True),  AND( V_ProcessarCalculosTerceiroMesAF__c = True, OR( ISCHANGED(V_TotalMetasTrimestre1AF__c), ISCHANGED(V_TotalVendasTrimestre1AF__c))) ),  OR(  AND( PRIORVALUE(V_ProcessarCalculosSextoMesAF__c) = False, V_ProcessarCalculosSextoMesAF__c = True),  AND( V_ProcessarCalculosSextoMesAF__c = True, OR( ISCHANGED(V_TotalMetasTrimestre2AF__c), ISCHANGED(V_TotalVendasTrimestre2AF__c))) ),  OR(  AND( PRIORVALUE(V_ProcessarCalculosNonoMesAF__c) = False, V_ProcessarCalculosNonoMesAF__c = True),  AND( V_ProcessarCalculosNonoMesAF__c = True, OR( ISCHANGED(V_TotalMetasTrimestre3AF__c), ISCHANGED(V_TotalVendasTrimestre3AF__c))) ),  OR(  AND( PRIORVALUE(V_ProcessarCalculosDecimoSegundoMesAF__c) = False, V_ProcessarCalculosDecimoSegundoMesAF__c = True),  AND( V_ProcessarCalculosDecimoSegundoMesAF__c = True, OR( ISCHANGED(V_TotalMetasTrimestre4AF__c), ISCHANGED(V_TotalVendasTrimestre4AF__c))) ),  OR( ISCHANGED(V_MetaAF__c), ISCHANGED(V_TotalVendasAF__c))  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Calcula Scores de Leilão%2C Lances e Betcoins SPY - AF</fullName>
+        <actions>
+            <name>V_ScoreBetcoinsPereneSPYAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_ScoreLanceLeilaoCompSPYAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_ScoreLanceLeilaoPereneSPYAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_ScoreLeilaoCompGanhoSPYAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>V_ScoreLeilaoPereneGanhoSPYAF</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula scores SPY de leilão e betcoins ganhos e lances realizados no ano fiscal.</description>
+        <formula>OR( AND( ISNULL(PRIORVALUE(V_LancesLeiloesCompAF__c)), NOT(ISNULL(V_LancesLeiloesCompAF__c))),  ISCHANGED(V_LancesLeiloesCompAF__c),  AND( ISNULL(PRIORVALUE(V_LancesLeiloesPerenesAF__c)), NOT(ISNULL(V_LancesLeiloesPerenesAF__c))),  ISCHANGED(V_LancesLeiloesPerenesAF__c),  AND( ISNULL(PRIORVALUE(V_LeiloesCompGanhosAF__c)), NOT(ISNULL(V_LeiloesCompGanhosAF__c))),  ISCHANGED(V_LeiloesCompGanhosAF__c),  AND( ISNULL(PRIORVALUE(V_LeiloesPerenesGanhosAF__c)), NOT(ISNULL(V_LeiloesPerenesGanhosAF__c))),  ISCHANGED(V_LeiloesPerenesGanhosAF__c),  AND( ISNULL(PRIORVALUE(V_TotalBetcoinsPerenesAF__c)), NOT(ISNULL(V_TotalBetcoinsPerenesAF__c))),  ISCHANGED(V_TotalBetcoinsPerenesAF__c)  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

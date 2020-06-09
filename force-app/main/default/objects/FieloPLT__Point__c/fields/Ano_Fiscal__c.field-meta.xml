@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ano_Fiscal__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Ano fiscal relacionado ao registro de ponto.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ano fiscal relacionado ao registro de ponto.</inlineHelpText>
+    <label>Ano Fiscal - OLD</label>
+    <referenceTo>VN_MetasParticipantes__c</referenceTo>
+    <relationshipLabel>Points</relationshipLabel>
+    <relationshipName>Points</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

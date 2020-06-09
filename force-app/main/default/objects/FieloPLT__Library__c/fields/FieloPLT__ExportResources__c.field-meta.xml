@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ExportResources__c</fullName>
+    <deprecated>false</deprecated>
+    <description>JSON string that refers to the Static Resource where the Export Point is defined. JSON string must be follow the format in this example: {&quot;ExportPointName&quot;: &quot;ExportConfigObjectName&quot;}.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the JSON string that refers to the Static Resource where the Export Point is defined. JSON string must be follow the format in this example: {&quot;ExportPointName&quot;: &quot;ExportConfigObjectName&quot;}.</inlineHelpText>
+    <label>Export Resources</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

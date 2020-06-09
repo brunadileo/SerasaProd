@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of days/months during which Badges are valid. --></help>
+    <label><!-- Badge Expiration --></label>
+    <name>FieloPLT__BadgeExpiration__c</name>
+</CustomFieldTranslation>

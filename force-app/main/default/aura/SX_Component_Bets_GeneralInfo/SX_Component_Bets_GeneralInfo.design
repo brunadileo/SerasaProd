@@ -1,0 +1,9 @@
+<design:component label="CC - Youbet | Bets General Information &amp; navigation">
+	<design:attribute name="textBtnOne" label="Texto Botão Superior" />
+	<design:attribute name="labelField" label="Tïtulo Do Campo" />
+	<design:attribute name="textBtnNavOne" label="Texto Primeiro Botão de Navegação" />
+	<design:attribute name="textBtnNavTwo" label="Texto Segundo Botão de Navegação" />
+	<design:attribute name="textBtnNavThree" label="Texto Terceiro Botão de Navegação" />
+	<design:attribute name="bgField" label="Cor de Fundo do Campo em Destaque" description="Cores no formato HEX (#??????)"/>
+	<design:attribute name="bgBtn" label="Cor de Fundo do Botão" description="Cores no formato HEX (#??????)"/>
+</design:component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Range de atingimento de metas para a iniciativa SPY. Campo para auxiliar na funcionalidade de atribuição de badges a cada mês no ano fiscal. --></help>
+    <label><!-- INATIVO - Nível AM SPY Até Mês 2 --></label>
+    <name>V_NivelAMSPYAteDecimoPrimeiroMesAF__c</name>
+</CustomFieldTranslation>

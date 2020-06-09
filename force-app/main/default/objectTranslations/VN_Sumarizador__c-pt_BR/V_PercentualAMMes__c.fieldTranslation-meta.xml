@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Apresenta o percentual de atingimento da meta. --></help>
+    <label><!-- % AM Mês --></label>
+    <name>V_PercentualAMMes__c</name>
+</CustomFieldTranslation>

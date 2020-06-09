@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Program__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Program that the Reward is associated with.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Program in which you&apos;ll use this Reward</inlineHelpText>
+    <label>Program</label>
+    <referenceTo>FieloPLT__Program__c</referenceTo>
+    <relationshipLabel>Rewards</relationshipLabel>
+    <relationshipName>Rewards</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ExternalId__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <deprecated>false</deprecated>
+    <description>External ID field that unequivocally identifies some configurable PLT Object records to prevent record duplication. If left blank, it&apos;s automatically completed by a Workflow Rule which concatenes the following: ORG ID + Record ID.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>External ID field that unequivocally identifies some configurable PLT Object records to prevent record duplication. If left blank, it&apos;s automatically completed by a Workflow Rule which concatenes the following: ORG ID + Record ID.</inlineHelpText>
+    <label>External ID</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

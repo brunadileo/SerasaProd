@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RewardingStatus__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Rewarding Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Deliver</fullName>
+                <default>false</default>
+                <label>Deliver</label>
+            </value>
+            <value>
+                <fullName>No Reward</fullName>
+                <default>false</default>
+                <label>No Reward</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

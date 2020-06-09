@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Value__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Value number from a Challenge which includes a &quot;Mission without Objective&quot; or Challenges which do not deliver Challenge Rewards.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Value number from a Challenge which includes a &quot;Mission without Objective&quot; or Challenges which do not deliver Challenge Rewards.</inlineHelpText>
+    <label>Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

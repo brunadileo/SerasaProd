@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Modelo de email enviado para os perfis compatíveis antes do início do leilão</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa Insiders: inicio do leilão Youbet</name>
+    <style>none</style>
+    <subject>Youbet: é hora do lance!</subject>
+    <textOnly>ATIVAÇÃO | TESTE
+
+{!FieloPLT__Member__c.V_NomeTratamento__c}, é sua chance de dar seu melhor lance no Youbet, corra para o site e confira!
+
+Importante:
+
+1. Agora as betcoins só serão debitadas do ganhador do prêmio!
+
+2. Você vai poder refazer o seu lance caso sua aposta seja coberta.
+
+3. Por medidas de segurança, os lances precisam ser feitos pelo seu computador.
+
+O leilão encerra amanhã às {!VN_ParticipanteComPerfilCompativel__c.V_DatahoraFinal__c}h. Aposte em seus resultados!
+
+Acesse o site
+
+Caso não esteja visualizando corretamente esta mensagem, acesse este link</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

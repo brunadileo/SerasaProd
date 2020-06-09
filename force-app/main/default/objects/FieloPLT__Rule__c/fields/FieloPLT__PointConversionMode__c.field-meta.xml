@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__PointConversionMode__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It is the way in which Points can be converted into. The options include: &quot;Fixed Value&quot; (Fixed assigned number of Points), &quot;Factor&quot; (numerical field related to the &quot;Target Object&quot; that can be divided by a specific number) and &quot;Multiplier&quot; (numerical field related to the *Action* object that can be multiplied by a specific number).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose how Points are calculated for this Rule: Fixed Value for a fixed number of Points, Factor for a numerical field that is divided by a specified value and Multiplier for a numerical field that is multiplied by a specified value</inlineHelpText>
+    <label>Point Conversion Mode</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fixed Value</fullName>
+                <default>false</default>
+                <label>Fixed Value</label>
+            </value>
+            <value>
+                <fullName>Factor</fullName>
+                <default>false</default>
+                <label>Factor</label>
+            </value>
+            <value>
+                <fullName>Multiplier</fullName>
+                <default>false</default>
+                <label>Multiplier</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

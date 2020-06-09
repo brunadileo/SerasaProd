@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a relational operator. --></help>
+    <label><!-- Operator --></label>
+    <name>FieloPLT__Operator__c</name>
+    <picklistValues>
+        <masterLabel>equals</masterLabel>
+        <translation><!-- equals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>greater or equal</masterLabel>
+        <translation><!-- greater or equal --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

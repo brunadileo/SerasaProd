@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Segment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Segment(s) applied to a Transactional Email. When using this field, only the Members who are part of the selected Segment(s) will receive the Transactional Email. Segments are configured in the Programs tab.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>To target your Transactional Email by Segment, add the Segment(s) you want to make eligible. If blank, all Program Members will be eligible. You can view, edit and create Segments in the Programs tab.</inlineHelpText>
+    <label>Segment</label>
+    <referenceTo>FieloPLT__Segment__c</referenceTo>
+    <relationshipLabel>Email Templates</relationshipLabel>
+    <relationshipName>EmailTemplates</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

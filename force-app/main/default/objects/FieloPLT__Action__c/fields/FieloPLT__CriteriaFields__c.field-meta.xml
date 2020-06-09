@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__CriteriaFields__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It stores a JSON file in which Rule and/or Mission Criteria, Criterion Group and Master-detail processing are displayed. It is completed when a Promotion or Challenge is enabled.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>It stores a JSON file in which Rule and/or Mission Criteria, Criterion Group and Master-detail processing are displayed. It is completed when a Promotion or Challenge is enabled.</inlineHelpText>
+    <label>Criteria Fields</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

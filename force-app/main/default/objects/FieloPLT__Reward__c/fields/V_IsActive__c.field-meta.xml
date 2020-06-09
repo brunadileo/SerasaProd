@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_IsActive__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(V_YoubetCompleto__c,
+				RecordType.Name = &apos;Leilões&apos;,
+				OR (ISBLANK(V_DataHoraInicioYoubet__c),
+								V_DataHoraInicioYoubet__c &lt;= NOW()),
+				V_DataHoraFimYoubet__c &gt;= NOW())</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Ativo</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

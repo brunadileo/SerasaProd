@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_YoubetCompleto__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Se assinalado, indica que o cadastro do Youbet foi concluído e que a aplicação poderá relacionar os participantes que cumprirem os critérios desse Youbet para efeito de histórico e análises.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Se assinalado, indica que o cadastro do Youbet foi concluído e que a aplicação poderá relacionar os participantes que cumprirem os critérios desse Youbet para efeito de histórico e análises.</inlineHelpText>
+    <label>Youbet Completo</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ReportFilter__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The criteria that link the Report to the Program, Challenge or Promotion record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Set the criteria to link your report to the relevant Program, Challenge or Promotion.</inlineHelpText>
+    <label>Report Filter</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

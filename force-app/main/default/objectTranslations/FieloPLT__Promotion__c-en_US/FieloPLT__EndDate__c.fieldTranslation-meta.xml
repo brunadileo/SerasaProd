@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a date to end the Promotion. If blank, the Promotion will last as long as it remains Active. --></help>
+    <label><!-- End Date --></label>
+    <name>FieloPLT__EndDate__c</name>
+</CustomFieldTranslation>

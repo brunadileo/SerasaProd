@@ -1,0 +1,17 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" />
+    <aura:attribute name="prizeAlert" type="String" default="NÃO TEMOS PREMIAÇÕES PARA O SEU PERFIL NO MOMENTO" access="global" />
+    <aura:attribute name="bgBtn" type="String" default="F7CC32" access="global" />
+
+	<div class="h-auto h-lg-100 d-flex flex-column ">
+		<img src="{!v.logo}" class="w-80 w-sm-50 w-xl-100 h-auto align-self-center"/>
+		<div class="align-self-center align-self-xl-start border border-danger text-danger text-center font-size-5 my-3 p-3">{!v.prizeAlert}</div>
+		<div class="w-100 d-flex">
+			<div class="w-100 d-flex align-items-center justify-content-center btn btn-default mr-2 mr-xl-0 mb-3 py-4" style="{!'background: #' + v.bgBtn}">VEJA OUTROS YOUBETS</div>
+			<div class="w-100 d-flex align-items-center justify-content-center d-xl-none btn btn-default ml-2 ml-xl-0 mb-3 py-4" style="{!'background: #' + v.bgBtn}">RESULTADO DA EQUIPE</div>
+		</div>
+		<div class="btn btn-default mb-3 py-3" style="{!'background: #' + v.bgBtn}">Regulamento</div>
+	</div>
+
+</aura:component>

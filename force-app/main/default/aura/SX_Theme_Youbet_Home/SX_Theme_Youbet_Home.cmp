@@ -1,0 +1,93 @@
+<aura:component implements="forceCommunity:themeLayout" description="Custom Content Layout" access="global">
+	<aura:attribute name="header" type="Aura.Component[]" required="false"/>
+	<aura:attribute name="contentone" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="contenttwo" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="contentthree" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="background" type="String" access="global"/>
+    <aura:attribute name="backgroundYoubet" type="String" default="'/insiders/resource/SX_Images/youbet-background.jpg'" access="global"/>
+      <aura:attribute name="backgroundYoubetExtra" type="String" default="'/insiders/resource/SX_Images/youbetextra-background.jpg'" access="global"/>
+
+    <ltng:require styles="{!join(',', 
+    				$Resource.SX_style, 
+    				$Resource.SX_FontAwesomeIcons + '/css/all.min.css')}"/>
+    <ltng:require scripts="{!$Resource.SX_script}"/>
+	<div>
+		<div class="box-content">
+			<div class="header d-flex align-items-center">
+				<div class="container-serasa">
+					<div class="columns w-100 h-100 position-relative d-flex align-items-center">
+						<div class="d-flex align-items-center">
+							<c:SX_SubComponent_MenuButton/>
+						</div>
+						<div class="header-logo mx-auto">
+							<a href="./">
+								{!v.header}
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<aura:if isTrue="{!v.background == 'Youbet'}">
+				<div class="content" style="{!'background: url(' + v.backgroundYoubet + ') 50% 50%/cover no-repeat fixed'}">
+					<div class="sup-content">
+						<div class="container-serasa">
+							<div class="row py-3">
+								<div class="columns col-6 d-flex align-items-center justify-content-start">
+									{!v.contentone}
+								</div>
+								<div class="columns col-6 d-flex align-items-center justify-content-end">
+									{!v.contenttwo}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="inf-content">
+						<div class="container-serasa">
+							<div class="columns">
+								{!v.contentthree}
+							</div>
+						</div>
+					</div>
+				</div>
+			</aura:if>
+			<aura:if isTrue="{!v.background == 'Youbet Extra'}">
+				<div class="content" style="{!'background: url(' + v.backgroundYoubetExtra + ') 50% 50%/cover no-repeat fixed'}">
+					<div class="sup-content columns">
+						<div class="container-serasa">
+							<div class="row py-3">
+								<div class="columns col-6 d-flex align-items-center justify-content-start">
+									{!v.contentone}
+								</div>
+								<div class="columns col-6 d-flex align-items-center justify-content-end">
+									{!v.contenttwo}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="inf-content">
+						<div class="container-serasa">
+							<div class="columns">
+								{!v.contentthree}
+							</div>
+						</div>
+					</div>
+				</div>
+			</aura:if>
+		</div>
+		<div class="footer d-flex align-items-center">
+			<div class="container-serasa h-100 columns">
+				{!v.footer}
+			</div>
+		</div>
+	</div>
+	<c:SX_EliteTeamPerformance_Cmp />
+	<c:SX_TeamPerformance_Cmp />
+	<c:SX_Extract_Cmp />
+	<c:SX_Agreement_Cmp />
+	<c:SX_YoubetsPerformed_Cmp />
+	<c:SX_ChangePassword_Cmp/> 
+	<c:SX_ModalSuccess_Cmp />
+	<c:SX_ModalError_Cmp />
+	<c:SX_ModalConfirmation_Cmp /> 
+</aura:component>

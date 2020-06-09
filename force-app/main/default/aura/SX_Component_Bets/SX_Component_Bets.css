@@ -1,0 +1,28 @@
+.THIS .img-wrapper {
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.THIS .info-wrapper {
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.THIS .max-height {
+	max-height: 100%;
+}
+.THIS .form-control {
+	min-height: 56px;
+	background: #efefef;
+}
+.THIS .form-control:focus {
+	box-shadow: none;
+}
+.THIS .form-control::placeholder {
+	color:#ccc;
+}
+@media (max-width: 767px) {
+	.THIS .img-wrapper, .THIS .info-wrapper {
+		border: 0;
+	}
+}

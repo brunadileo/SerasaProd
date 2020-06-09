@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ZzPotencialCarteira__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Valor do Tamanho da Carteira do participante. O atual critério é o mesmo valor do total de metas do ano fiscal do participante.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Valor do Tamanho da Carteira do participante. O atual critério é o mesmo valor do total de metas do ano fiscal do participante.</inlineHelpText>
+    <label>Zz_Tamanho da Carteira</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

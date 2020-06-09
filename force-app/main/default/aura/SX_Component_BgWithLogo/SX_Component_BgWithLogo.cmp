@@ -1,0 +1,11 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="logo" type="String" default="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" access="global" />
+    <aura:attribute name="background" type="String" default="https://picsum.photos/2000/1500/?random" access="global" />
+
+	
+	<div class="d-flex align-items-center justify-content-center h-100" style="{!'background-image:linear-gradient(rgba(189, 195, 199, .5), rgba(44, 62, 80, .5)), url('+v.background+');'+'background-size:cover;'}">
+		<img src="{!v.logo}" class="w-90 w-xl-50"/>
+	</div>
+
+</aura:component>

@@ -1,0 +1,8 @@
+Olá, {!Receiving_User.FirstName},
+
+Verifique seu endereço de email para {!Community.Name}. Clique em:
+
+{!EmailVerify.Url}
+
+Obrigado,
+{!Organization.Name}

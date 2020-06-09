@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Se assinalado, enviar alerta de email para os responsáveis das áreas envolvidas. --></help>
+    <label><!-- Notificar POP --></label>
+    <name>V_NotificarPOP__c</name>
+</CustomFieldTranslation>

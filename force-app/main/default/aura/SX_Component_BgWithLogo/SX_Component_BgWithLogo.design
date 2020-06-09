@@ -1,0 +1,4 @@
+<design:component label="CC - Login | Background With Logo">
+	<design:attribute name="logo" label="Page Logo"/>
+	<design:attribute name="background" label="Page Background"/>
+</design:component>

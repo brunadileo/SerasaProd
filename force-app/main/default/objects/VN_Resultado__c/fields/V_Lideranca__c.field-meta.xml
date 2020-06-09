@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Lideranca__c</fullName>
+    <description>Valor de liderança do participante relacionado à venda.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Valor de liderança do participante relacionado à venda.</inlineHelpText>
+    <label>Liderança</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GRANDES BANCOS</fullName>
+                <default>false</default>
+                <label>GRANDES BANCOS</label>
+            </value>
+            <value>
+                <fullName>SERVIÇOS FINANCEIROS</fullName>
+                <default>false</default>
+                <label>SERVIÇOS FINANCEIROS</label>
+            </value>
+            <value>
+                <fullName>MULTISECTOR</fullName>
+                <default>false</default>
+                <label>MULTISECTOR</label>
+            </value>
+            <value>
+                <fullName>REGIÕES</fullName>
+                <default>false</default>
+                <label>REGIÕES</label>
+            </value>
+            <value>
+                <fullName>MULTI CANAL</fullName>
+                <default>false</default>
+                <label>MULTI CANAL</label>
+            </value>
+            <value>
+                <fullName>NOVOS NEGÓCIOS</fullName>
+                <default>false</default>
+                <label>NOVOS NEGÓCIOS</label>
+            </value>
+            <value>
+                <fullName>VAREJO, CPG E PAGAMENTOS</fullName>
+                <default>false</default>
+                <label>VAREJO, CPG E PAGAMENTOS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

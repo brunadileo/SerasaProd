@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ParticRankingElite__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(TEXT( V_Participante__r.FieloPLT__Status__c ) = &apos;Active&apos;,
+TEXT( V_Participante__r.V_NovoContratado__c) = &apos;Não&apos;,
+NOT(CONTAINS( UPPER( V_Participante__r.Name), &apos;TESTE&apos;)),
+(V_PapelElite__c &lt;&gt; &apos;NÃO ELEGÍVEL&apos;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Participa Ranking Elite</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

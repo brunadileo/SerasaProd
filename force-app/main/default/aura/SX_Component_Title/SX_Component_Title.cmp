@@ -1,0 +1,9 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="title" type="String" default="COMO ACUMULAR BETCOINS" access="global" />
+	
+	<div class="d-flex flex-column justify-content-center h-auto h-xl-100 my-3 my-xl-0">
+		<h3 class="m-0 font-size-6 text-center text-xl-left">{!v.title}</h3>
+		<hr class="w-100"/>
+	</div>
+
+</aura:component>

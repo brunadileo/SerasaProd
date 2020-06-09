@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Origin__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Source from which the Redemption is generated.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the source from which the Redemption is generated.</inlineHelpText>
+    <label>Origin</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BackEnd</fullName>
+                <default>false</default>
+                <label>BackEnd</label>
+            </value>
+            <value>
+                <fullName>FrontEnd</fullName>
+                <default>false</default>
+                <label>FrontEnd</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

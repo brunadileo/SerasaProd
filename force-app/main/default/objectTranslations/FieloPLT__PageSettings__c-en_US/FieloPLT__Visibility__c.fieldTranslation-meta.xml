@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter Visibility JSON code to render the Page Setting based on a condition. --></help>
+    <label><!-- Visibility --></label>
+    <name>FieloPLT__Visibility__c</name>
+</CustomFieldTranslation>

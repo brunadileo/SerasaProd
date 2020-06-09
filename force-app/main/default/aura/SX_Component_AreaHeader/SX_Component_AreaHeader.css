@@ -1,0 +1,25 @@
+.THIS .w-logo {
+	width: 35%;
+}
+.THIS .w-title {
+	width: 80%;
+}
+.THIS .max-height {
+	max-height: 100%;
+}
+@media (max-width: 1200px) {
+	.THIS .w-logo {
+		width: 100%;
+	}
+	.THIS .img-fluid {
+		width: 60%;
+	}
+	.THIS .w-title {
+		width: 100%;
+	}
+}
+@media (max-width: 575px) {
+	.THIS .img-fluid {
+		width: 100%;
+	}
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Period__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It shows the time period from &quot;Initial date&quot; to &quot;Final date&quot; in which the Challenge is valid. If there is no &quot;Final date&quot; established but an &quot;Initial date&quot; is chosen, it only shows the &quot;Initial date&quot;. If there is no &quot;Initial date&quot; established but a &quot;final date&quot; is chosen, it shows the time period from the creation date to &quot;Final date&quot;.</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+!ISNULL(FieloPLT__StartDate__c) &amp;&amp; FieloPLT__StartDate__c = FieloPLT__EndDate__c, 
+TEXT(Day(FieloPLT__StartDate__c)) + &apos; &apos; + CASE( MONTH(FieloPLT__StartDate__c), 1, &apos;Jan&apos;, 2, &apos;Feb&apos;, 3, &apos;Mar&apos;, 4, &apos;Apr&apos;, 5, &apos;May&apos;, 6, &apos;Jun&apos;, 7, &apos;Jul&apos;, 8, &apos;Aug&apos;, 9, &apos;Sep&apos;, 10, &apos;Oct&apos;, 11, &apos;Nov&apos;, 12, &apos;Dec&apos;, &apos;&apos;) + &apos; &apos; + TEXT(YEAR(FieloPLT__StartDate__c) ) , 
+IF( Year(FieloPLT__StartDate__c) = Year(FieloPLT__EndDate__c) , 
+IF( Month(FieloPLT__StartDate__c) = Month(FieloPLT__EndDate__c) , 
+TEXT(Day(FieloPLT__StartDate__c)) + &apos; - &apos; + TEXT(Day(FieloPLT__EndDate__c)) + &apos; &apos; + CASE( MONTH(FieloPLT__StartDate__c), 1, &apos;Jan&apos;, 2, &apos;Feb&apos;, 3, &apos;Mar&apos;, 4, &apos;Apr&apos;, 5, &apos;May&apos;, 6, &apos;Jun&apos;, 7, &apos;Jul&apos;, 8, &apos;Aug&apos;, 9, &apos;Sep&apos;, 10, &apos;Oct&apos;, 11, &apos;Nov&apos;, 12, &apos;Dec&apos;, &apos;&apos;) + &apos; &apos; + TEXT(YEAR(FieloPLT__StartDate__c) ) 
+, 
+TEXT(Day(FieloPLT__StartDate__c)) + &apos; &apos; + CASE( MONTH(FieloPLT__StartDate__c), 1, &apos;Jan&apos;, 2, &apos;Feb&apos;, 3, &apos;Mar&apos;, 4, &apos;Apr&apos;, 5, &apos;May&apos;, 6, &apos;Jun&apos;, 7, &apos;Jul&apos;, 8, &apos;Aug&apos;, 9, &apos;Sep&apos;, 10, &apos;Oct&apos;, 11, &apos;Nov&apos;, 12, &apos;Dec&apos;, &apos;&apos;) + &apos; - &apos; + TEXT(Day(FieloPLT__EndDate__c)) + &apos; &apos; + CASE( MONTH(FieloPLT__EndDate__c), 1, &apos;Jan&apos;, 2, &apos;Feb&apos;, 3, &apos;Mar&apos;, 4, &apos;Apr&apos;, 5, &apos;May&apos;, 6, &apos;Jun&apos;, 7, &apos;Jul&apos;, 8, &apos;Aug&apos;, 9, &apos;Sep&apos;, 10, &apos;Oct&apos;, 11, &apos;Nov&apos;, 12, &apos;Dec&apos;, &apos;&apos;) + &apos; &apos; + TEXT(YEAR(FieloPLT__StartDate__c) ) 
+) 
+, 
+IF( ISNULL(FieloPLT__StartDate__c), &apos;&apos;, TEXT(Day(FieloPLT__StartDate__c)) + &apos; &apos; + CASE( MONTH(FieloPLT__StartDate__c), 1, &apos;Jan&apos;, 2, &apos;Feb&apos;, 3, &apos;Mar&apos;, 4, &apos;Apr&apos;, 5, &apos;May&apos;, 6, &apos;Jun&apos;, 7, &apos;Jul&apos;, 8, &apos;Aug&apos;, 9, &apos;Sep&apos;, 10, &apos;Oct&apos;, 11, &apos;Nov&apos;, 12, &apos;Dec&apos;, &apos;&apos;) + &apos; &apos; + TEXT(YEAR(FieloPLT__StartDate__c) ) ) + &apos; - &apos; + IF( ISNULL(FieloPLT__EndDate__c), &apos;&apos;, TEXT(Day(FieloPLT__EndDate__c)) + &apos; &apos; + CASE( MONTH(FieloPLT__EndDate__c), 1, &apos;Jan&apos;, 2, &apos;Feb&apos;, 3, &apos;Mar&apos;, 4, &apos;Apr&apos;, 5, &apos;May&apos;, 6, &apos;Jun&apos;, 7, &apos;Jul&apos;, 8, &apos;Aug&apos;, 9, &apos;Sep&apos;, 10, &apos;Oct&apos;, 11, &apos;Nov&apos;, 12, &apos;Dec&apos;, &apos;&apos;) + &apos; &apos; + TEXT(YEAR(FieloPLT__EndDate__c) ) ) 
+) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Time period in which the Challenge is valid.</inlineHelpText>
+    <label>Period</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

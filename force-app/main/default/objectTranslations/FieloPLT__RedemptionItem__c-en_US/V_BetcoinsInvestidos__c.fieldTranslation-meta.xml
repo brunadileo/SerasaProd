@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo para consolidar o total de betcoins utilizados em perene ou complementar para ser usado em telas do Front End. --></help>
+    <label><!-- Betcoins Investidos --></label>
+    <name>V_BetcoinsInvestidos__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Setor__c</fullName>
+    <description>Campo dependente do campo &quot;Liderança&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Campo dependente do campo &quot;Liderança&quot;.</inlineHelpText>
+    <label>Setor</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>V_Lideranca__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BANCO DO BRASIL</fullName>
+                <default>false</default>
+                <label>BANCO DO BRASIL</label>
+            </value>
+            <value>
+                <fullName>BRADESCO</fullName>
+                <default>false</default>
+                <label>BRADESCO</label>
+            </value>
+            <value>
+                <fullName>CAIXA ECONÔMICA</fullName>
+                <default>false</default>
+                <label>CAIXA ECONÔMICA</label>
+            </value>
+            <value>
+                <fullName>ITAÚ</fullName>
+                <default>false</default>
+                <label>ITAÚ</label>
+            </value>
+            <value>
+                <fullName>SANTANDER</fullName>
+                <default>false</default>
+                <label>SANTANDER</label>
+            </value>
+            <value>
+                <fullName>BENS DURÁVEIS E SERVIÇOS</fullName>
+                <default>false</default>
+                <label>BENS DURÁVEIS E SERVIÇOS</label>
+            </value>
+            <value>
+                <fullName>COOPERATIVAS</fullName>
+                <default>false</default>
+                <label>COOPERATIVAS</label>
+            </value>
+            <value>
+                <fullName>SETOR PÚBLICO</fullName>
+                <default>false</default>
+                <label>SETOR PÚBLICO</label>
+            </value>
+            <value>
+                <fullName>TELECOM, MÍDIA E TECNOLOGIA</fullName>
+                <default>false</default>
+                <label>TELECOM, MÍDIA E TECNOLOGIA</label>
+            </value>
+            <value>
+                <fullName>UTILITIES</fullName>
+                <default>false</default>
+                <label>UTILITIES</label>
+            </value>
+            <value>
+                <fullName>BANCOS E FINANCEIRAS BR</fullName>
+                <default>false</default>
+                <label>BANCOS E FINANCEIRAS BR</label>
+            </value>
+            <value>
+                <fullName>BANCOS E FINANCEIRAS SP</fullName>
+                <default>false</default>
+                <label>BANCOS E FINANCEIRAS SP</label>
+            </value>
+            <value>
+                <fullName>SEGUROS</fullName>
+                <default>false</default>
+                <label>SEGUROS</label>
+            </value>
+            <value>
+                <fullName>CO, NO e NE</fullName>
+                <default>false</default>
+                <label>CO, NO e NE</label>
+            </value>
+            <value>
+                <fullName>PR</fullName>
+                <default>false</default>
+                <label>PR</label>
+            </value>
+            <value>
+                <fullName>REGIÕES WINBACK</fullName>
+                <default>false</default>
+                <label>REGIÕES WINBACK</label>
+            </value>
+            <value>
+                <fullName>RJ, MG e ES</fullName>
+                <default>false</default>
+                <label>RJ, MG e ES</label>
+            </value>
+            <value>
+                <fullName>RS e SC</fullName>
+                <default>false</default>
+                <label>RS e SC</label>
+            </value>
+            <value>
+                <fullName>SP I</fullName>
+                <default>false</default>
+                <label>SP I</label>
+            </value>
+            <value>
+                <fullName>SP II</fullName>
+                <default>false</default>
+                <label>SP II</label>
+            </value>
+            <value>
+                <fullName>SP INTERIOR</fullName>
+                <default>false</default>
+                <label>SP INTERIOR</label>
+            </value>
+            <value>
+                <fullName>CONVÊNIO SPC SERASA EXPERIAN</fullName>
+                <default>false</default>
+                <label>CONVÊNIO SPC SERASA EXPERIAN</label>
+            </value>
+            <value>
+                <fullName>DISTRIBUIDOR</fullName>
+                <default>false</default>
+                <label>DISTRIBUIDOR</label>
+            </value>
+            <value>
+                <fullName>MULTICANAL WINBACK</fullName>
+                <default>false</default>
+                <label>MULTICANAL WINBACK</label>
+            </value>
+            <value>
+                <fullName>REMOTO</fullName>
+                <default>false</default>
+                <label>REMOTO</label>
+            </value>
+            <value>
+                <fullName>VIP MG, CO e NO</fullName>
+                <default>false</default>
+                <label>VIP MG, CO e NO</label>
+            </value>
+            <value>
+                <fullName>VIP RJ, ES e NE</fullName>
+                <default>false</default>
+                <label>VIP RJ, ES e NE</label>
+            </value>
+            <value>
+                <fullName>VIP SP I</fullName>
+                <default>false</default>
+                <label>VIP SP I</label>
+            </value>
+            <value>
+                <fullName>VIP SP II</fullName>
+                <default>false</default>
+                <label>VIP SP II</label>
+            </value>
+            <value>
+                <fullName>VIP SUL</fullName>
+                <default>false</default>
+                <label>VIP SUL</label>
+            </value>
+            <value>
+                <fullName>FINTECHS</fullName>
+                <default>false</default>
+                <label>FINTECHS</label>
+            </value>
+            <value>
+                <fullName>NICHOS</fullName>
+                <default>false</default>
+                <label>NICHOS</label>
+            </value>
+            <value>
+                <fullName>CPG</fullName>
+                <default>false</default>
+                <label>CPG</label>
+            </value>
+            <value>
+                <fullName>VAREJO E MEIOS DE PAGAMENTO</fullName>
+                <default>false</default>
+                <label>VAREJO E MEIOS DE PAGAMENTO</label>
+            </value>
+            <value>
+                <fullName>BANCOS PÚBLICOS</fullName>
+                <default>false</default>
+                <label>BANCOS PÚBLICOS</label>
+            </value>
+            <value>
+                <fullName>ENTIDADES DISTRIBUIDORAS</fullName>
+                <default>false</default>
+                <label>ENTIDADES DISTRIBUIDORAS</label>
+            </value>
+            <value>
+                <fullName>CARREFOUR</fullName>
+                <default>false</default>
+                <label>CARREFOUR</label>
+            </value>
+            <value>
+                <fullName>MEIOS DE PAGAMENTO</fullName>
+                <default>false</default>
+                <label>MEIOS DE PAGAMENTO</label>
+            </value>
+            <value>
+                <fullName>NEGÓCIOS DIGITAIS</fullName>
+                <default>false</default>
+                <label>NEGÓCIOS DIGITAIS</label>
+            </value>
+            <value>
+                <fullName>VAREJO E BEAUTY</fullName>
+                <default>false</default>
+                <label>VAREJO E BEAUTY</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>MULTI SECTOR</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>BENS DURÁVEIS E SERVIÇOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI SECTOR</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>COOPERATIVAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI SECTOR</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>SETOR PÚBLICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI SECTOR</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>TELECOM, MÍDIA E TECNOLOGIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI SECTOR</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>UTILITIES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI SECTOR</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>SEGUROS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>CO, NO e NE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>PR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>RJ, MG e ES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>RS e SC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>SP I</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>SP II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>VIP MG, CO e NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>VIP RJ, ES e NE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>VIP SP I</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>VIP SP II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGIÕES</controllingFieldValue>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>VIP SUL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>CONVÊNIO SPC SERASA EXPERIAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>DISTRIBUIDOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>MULTICANAL WINBACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>REMOTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MULTI CANAL</controllingFieldValue>
+            <valueName>ENTIDADES DISTRIBUIDORAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAREJO, CPG E PAGAMENTOS</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>FINTECHS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAREJO, CPG E PAGAMENTOS</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>NICHOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAREJO, CPG E PAGAMENTOS</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>CPG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAREJO, CPG E PAGAMENTOS</controllingFieldValue>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>VAREJO E MEIOS DE PAGAMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAREJO, CPG E PAGAMENTOS</controllingFieldValue>
+            <valueName>CARREFOUR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAREJO, CPG E PAGAMENTOS</controllingFieldValue>
+            <valueName>MEIOS DE PAGAMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAREJO, CPG E PAGAMENTOS</controllingFieldValue>
+            <valueName>NEGÓCIOS DIGITAIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAREJO, CPG E PAGAMENTOS</controllingFieldValue>
+            <valueName>VAREJO E BEAUTY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <controllingFieldValue>BANCOS E FINANCEIRAS</controllingFieldValue>
+            <valueName>BANCO DO BRASIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <controllingFieldValue>BANCOS E FINANCEIRAS</controllingFieldValue>
+            <valueName>BRADESCO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <controllingFieldValue>BANCOS E FINANCEIRAS</controllingFieldValue>
+            <valueName>CAIXA ECONÔMICA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <controllingFieldValue>BANCOS E FINANCEIRAS</controllingFieldValue>
+            <valueName>ITAÚ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <controllingFieldValue>BANCOS E FINANCEIRAS</controllingFieldValue>
+            <valueName>SANTANDER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <controllingFieldValue>BANCOS E FINANCEIRAS</controllingFieldValue>
+            <valueName>BANCOS E FINANCEIRAS BR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <controllingFieldValue>BANCOS E FINANCEIRAS</controllingFieldValue>
+            <valueName>BANCOS E FINANCEIRAS SP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>REGIÕES WINBACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SERASA</controllingFieldValue>
+            <valueName>SP INTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BANCOS E FINANCEIRAS</controllingFieldValue>
+            <valueName>BANCOS PÚBLICOS</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

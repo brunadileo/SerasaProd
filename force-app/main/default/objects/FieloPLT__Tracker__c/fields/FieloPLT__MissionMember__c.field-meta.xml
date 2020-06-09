@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__MissionMember__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>It shows which Member and Mission the Tracker belongs to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>It shows which Member and Mission the Tracker belongs to.</inlineHelpText>
+    <label>Mission Member</label>
+    <referenceTo>FieloPLT__MissionMember__c</referenceTo>
+    <relationshipLabel>Trackers</relationshipLabel>
+    <relationshipName>Trackers</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- Rule name must be completed. --></errorMessage>
+        <name>FieloPLT__EmptyRuleName</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Points cannot be empty or 0. --></errorMessage>
+        <name>FieloPLT__ValidatePointsValue</name>
+    </validationRules>
+</CustomObjectTranslation>

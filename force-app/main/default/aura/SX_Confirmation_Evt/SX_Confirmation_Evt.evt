@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template" >
+	<aura:attribute name="lance" type="String"/>
+	<aura:attribute name="member" type="FieloPLT__Member__c"/>
+	<aura:attribute name="reward" type="FieloPLT__Reward__c"/>
+	<aura:attribute name="type" type="String"/>
+</aura:event>

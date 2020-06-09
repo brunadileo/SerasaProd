@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Betcoin</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Betcoins</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Betcoin</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Point status cannot be changed. --></errorMessage>
+        <name>FieloPLT__ValidateStatus</name>
+    </validationRules>
+</CustomObjectTranslation>

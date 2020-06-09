@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the source from which the Redemption is generated. --></help>
+    <label>Origem</label>
+    <name>FieloPLT__Origin__c</name>
+    <picklistValues>
+        <masterLabel>BackEnd</masterLabel>
+        <translation>Retaguarda</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FrontEnd</masterLabel>
+        <translation>Portal</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile</masterLabel>
+        <translation><!-- Mobile --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

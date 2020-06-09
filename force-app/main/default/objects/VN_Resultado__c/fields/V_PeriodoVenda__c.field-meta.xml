@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PeriodoVenda__c</fullName>
+    <description>Período da venda recebido na carga Serasa (considerar mês e ano).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Período da venda recebido na carga Serasa (considerar mês e ano).</inlineHelpText>
+    <label>Período da Venda</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

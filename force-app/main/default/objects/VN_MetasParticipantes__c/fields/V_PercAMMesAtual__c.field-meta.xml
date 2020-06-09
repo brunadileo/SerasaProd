@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_PercAMMesAtual__c</fullName>
+    <description>Indica o percentual de atingimento de meta do último mês atualizado. Campo utilizado para a comunicação com o participante.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ V_UltimoMesAtualizado__c = &apos;Abril&apos;,  V_PercentualAMPrimeiroMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Maio&apos;,  V_PercentualAMSegundoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Junho&apos;,  V_PercentualAMTerceiroMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Julho&apos;,  V_PercentualAMQuartoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Agosto&apos;,  V_PercentualAMQuintoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Setembro&apos;,  V_PercentualAMSextoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Outubro&apos;,  V_PercentualAMSetimoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Novembro&apos;,  V_PercentualAMOitavoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Dezembro&apos;,  V_PercentualAMNonoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Janeiro&apos;,  V_PercentualAMDecimoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Fevereiro&apos;,  V_PercentualAMDecimoPrimeiroMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Março&apos;,  V_PercentualAMDecimoSegundoMesAF__c, 0
+
+))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indica o percentual de atingimento de meta do último mês atualizado. Campo utilizado para a comunicação com o participante.</inlineHelpText>
+    <label>% AM - Último Mês Processado</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

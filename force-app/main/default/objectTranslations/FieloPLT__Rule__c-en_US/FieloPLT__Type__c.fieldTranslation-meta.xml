@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a Rule Type: Best Option (Points are awarded only if this Rule grants more than any other for a given Action and Point Type) or No Competition (This rule is always applied) --></help>
+    <label><!-- Type --></label>
+    <name>FieloPLT__Type__c</name>
+    <picklistValues>
+        <masterLabel>Best Option</masterLabel>
+        <translation><!-- Best Option --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Competition</masterLabel>
+        <translation><!-- No Competition --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

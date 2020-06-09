@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria_Diretor</fullName>
+    <columns>NAME</columns>
+    <columns>FieloPLT__User__c</columns>
+    <columns>V_Cargo__c</columns>
+    <columns>V_Registro__c</columns>
+    <columns>FieloPLT__LastTransactionDate__c</columns>
+    <columns>FieloPLT__Points__c</columns>
+    <columns>FieloPLT__Email__c</columns>
+    <columns>V_FirstAccess__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>V_Cargo__c</field>
+        <operation>equals</operation>
+        <value>DIRETOR</value>
+    </filters>
+    <label>Categoria - Diretor</label>
+    <language>en_US</language>
+</ListView>

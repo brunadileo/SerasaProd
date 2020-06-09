@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentual de atingimento de metas PONDERADO do participante até o 10o. mês do ano fiscal. Cálculo utilizado no Elite. --></help>
+    <label><!-- AM Até Mês 1 - Ponderado --></label>
+    <name>V_AMAteDecimoMesAFPonderado__c</name>
+</CustomFieldTranslation>

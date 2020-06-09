@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__OrderBy__c</fullName>
+    <deprecated>false</deprecated>
+    <description>JSON file which allows ordering records in a &quot;Related List&quot; Page Setting type.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the record order JSON code for &quot;Related List&quot; Page Setting type.</inlineHelpText>
+    <label>Order by</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

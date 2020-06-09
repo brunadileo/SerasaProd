@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Label__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It lets you overwrite the default Related label name. Default Label is defined in the Object.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the label to overwrite the default Related label name</inlineHelpText>
+    <label>Label</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

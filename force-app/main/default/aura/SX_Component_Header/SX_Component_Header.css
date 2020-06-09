@@ -1,0 +1,10 @@
+.THIS .top-menu a {
+    transition: .3s ease all;
+}
+.THIS .top-menu a:hover {
+    text-decoration: none;
+    text-shadow: 3px 3px 5px rgba(0,0,0, .6);
+}
+.THIS .mobile-header-img {
+    height: 65px;
+}

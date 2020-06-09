@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ObjectiveValueCannotBe0</fullName>
+    <active>true</active>
+    <description>Missions With Objective cannot have objective value equals 0.</description>
+    <errorConditionFormula>IF( 
+    AND(FieloPLT__Type__c == &apos;With Objective&apos;,
+    NOT(FieloPLT__DynamicObjective__c),
+    FieloPLT__ObjectiveValue__c &lt; 1), 
+    true,
+    false
+)</errorConditionFormula>
+    <errorMessage>Objective Value cannot be 0</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__ConversionValue__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Points or other value by which the &quot;Record Field Name&quot; is divided (Factor) or multiplied (Multiplier).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Points or other value by which the &quot;Record Field Name&quot; is divided (Factor) or multiplied (Multiplier).</inlineHelpText>
+    <label>Point Conversion Value</label>
+    <precision>14</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

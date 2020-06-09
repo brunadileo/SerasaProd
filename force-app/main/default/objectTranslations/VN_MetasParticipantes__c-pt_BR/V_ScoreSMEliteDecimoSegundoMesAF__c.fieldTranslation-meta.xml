@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o score de superação de meta Elite do participante até o 12o. mês do ano fiscal. Nesse cálculo, as notas fiscais em aberto são descontadas das vendas. --></help>
+    <label><!-- Score de SM Elite - Mês 3 --></label>
+    <name>V_ScoreSMEliteDecimoSegundoMesAF__c</name>
+</CustomFieldTranslation>

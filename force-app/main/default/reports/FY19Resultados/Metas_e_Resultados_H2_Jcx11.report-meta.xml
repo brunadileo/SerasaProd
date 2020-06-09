@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_92086153</developerName>
+        <masterLabel>Faixa de Betcoins</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>FieloPLT__Member__c$FieloPLT__Points__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>0</to>
+            </sourceValues>
+            <value>Zero</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>0</from>
+                <to>25</to>
+            </sourceValues>
+            <value>1 a 25</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>25</from>
+                <to>50</to>
+            </sourceValues>
+            <value>26 a 50</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>50</from>
+                <to>100</to>
+            </sourceValues>
+            <value>51 a 100</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>100</from>
+                <to>200</to>
+            </sourceValues>
+            <value>101 a 200</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>200</from>
+                <to>500</to>
+            </sourceValues>
+            <value>201 a 500</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>500</from>
+            </sourceValues>
+            <value>+ 500</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FieloPLT__Member__c$FieloPLT__Points__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_92086153</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__Member__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Teste,planejamento</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Member__c$V_Cargo__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Member__c$V_Lideranca__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Member__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Saldo de Betcoins</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Results_Participantes_com_Metas_e_Resultados__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Member__c$LastActivityDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

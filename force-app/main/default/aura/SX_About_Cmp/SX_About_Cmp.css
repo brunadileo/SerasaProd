@@ -1,0 +1,152 @@
+.THIS .nav-item{
+    text-transform: uppercase;
+}
+.THIS .nav-tabs .nav-link {
+    color: #555;
+    font-size: 18px;
+}
+.THIS .nav-tabs .nav-link.active {
+    color: #c3adf7;
+}
+.THIS .tab-content {
+    min-height: 700px;
+}
+
+/* ABOUT - INSIDERS */
+.THIS .tab-content__insiders {
+    width: 63%;
+    margin: 0 auto;
+}
+.THIS .about-insiders__title {
+    font-size: 24px;
+    color: #0667cd;
+}
+.THIS .about-insiders__text {
+    color: #555;
+}
+.THIS .about-insiders__logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+	-ms-grid-template-columns: repeat(3, 1fr);
+	grid-gap: 15px;
+    -ms-grid-gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+.THIS .logos__elite {
+    height: 90px;
+}
+.THIS .logos__youbet {
+    height: 75px;
+}
+.THIS .logos__spy {
+    height: 100px;
+}
+
+/* ABOUT - ELITE */
+.THIS .elite__logo {
+    width: 225px;
+}
+.THIS .elite__lower-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	-ms-grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+    -ms-grid-gap: 30px;
+}
+.THIS .evaluation-criteria__title,
+.THIS .stay-alert__title {
+    direction: flex;
+    align-items: center;
+    color: #0667cd;
+}
+
+.THIS .evaluatin-criteria__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	-ms-grid-template-columns: repeat(2, 1fr);
+	grid-gap: 15px;
+    -ms-grid-gap: 15px;
+    justify-items: center;
+}
+
+.THIS .elite__lower-info a:hover {
+    text-decoration: none;
+}
+
+/* ABOUT - YOUBET */
+.THIS .youbet__logo {
+    width: 175px;
+}
+.THIS .youbet__lower-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	-ms-grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+    -ms-grid-gap: 30px;
+}
+.THIS .accumulate-betcoins__title,
+.THIS .prizes__title {
+    direction: flex;
+    align-items: center;
+    color: #31b9d5;
+}
+
+/* ABOUT - SPY */
+.THIS .spy__logo {
+    width: 175px;
+}
+.THIS .spy__lower-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+	-ms-grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+    -ms-grid-gap: 30px;
+}
+.THIS .badges-category__title,
+.THIS .user__title {
+    direction: flex;
+    align-items: center;
+    color: #385595;
+}
+
+/* MEDIA */
+@media (max-width: 768px) {
+    .THIS .nav {
+        flex-direction: column;
+    }
+    .THIS .tab-content__insiders {
+        width: 100%;
+    }
+    .THIS .tab-content__insiders > img {
+        width: 50%;
+    }
+    .THIS .elite__logo {
+        width: auto;
+        height: 100px;
+    }
+    .THIS .elite__lower-info,
+    .THIS .youbet__lower-info,
+    .THIS .spy__lower-info {
+        grid-template-columns: 1fr;
+        -ms-grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px) {
+    .THIS .tab-content__insiders > img {
+        width: 75%;
+    }
+    .THIS .about-insiders__title {
+        font-size: 20px;
+    }
+    .THIS .about-insiders__logos {
+        grid-template-columns: 1fr;
+        -ms-grid-template-columns: 1fr;
+        grid-gap: 30px;
+        -ms-grid-gap: 30px;
+    }
+    .THIS .evaluatin-criteria__grid {
+        grid-template-columns: 1fr;
+	    -ms-grid-template-columns: 1fr;
+    }
+}

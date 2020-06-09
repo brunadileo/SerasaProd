@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If your template will be used in an Email Campaign and it requires fields unaccessible from the target Object, choose the Apex class that will configure the fields to be merged in the Salesforce Email Template. --></help>
+    <label><!-- Data Class --></label>
+    <name>FieloPLT__DataClass__c</name>
+</CustomFieldTranslation>

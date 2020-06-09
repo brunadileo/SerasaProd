@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__UniqueCode__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Number made up of Code and Code Range which identifies the Redemption Item. It is the number displayed on the Voucher, whose digits are set in the Program.</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(FieloPLT__Reward__r.FieloPLT__StockManagement__c, &apos;Controlled By Item&apos;), FieloPLT__Code__c,
+   IF ( FieloPLT__CodeRange__c &lt; 10 ,
+      FieloPLT__Code__c + &apos;0&apos; + TEXT( FieloPLT__CodeRange__c ),
+      FieloPLT__Code__c + RIGHT( TEXT( FieloPLT__CodeRange__c ), 2 )
+   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Number made up of Code and Code Range which identifies the Redemption Item.</inlineHelpText>
+    <label>Unique Code</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

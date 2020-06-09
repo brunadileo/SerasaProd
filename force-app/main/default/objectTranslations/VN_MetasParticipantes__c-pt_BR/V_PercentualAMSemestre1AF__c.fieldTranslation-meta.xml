@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentual de atingimento de metas do participante no 1o. Semestre do ano fiscal. Cálculo utilizado no Elite. --></help>
+    <label><!-- % AM - 1o. Sem. --></label>
+    <name>V_PercentualAMSemestre1AF__c</name>
+</CustomFieldTranslation>

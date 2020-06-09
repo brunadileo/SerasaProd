@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Add your own custom Buttons Page Setting Types Landing, View and Related. --></help>
+    <label><!-- Buttons --></label>
+    <name>FieloPLT__Buttons__c</name>
+</CustomFieldTranslation>

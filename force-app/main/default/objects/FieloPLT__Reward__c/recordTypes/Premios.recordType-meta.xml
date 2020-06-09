@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Premios</fullName>
+    <active>true</active>
+    <description>Prêmios para resgate do participante.</description>
+    <label>Prêmios</label>
+    <picklistValues>
+        <picklist>FieloPLT__StockManagement__c</picklist>
+        <values>
+            <fullName>Controlled By Item</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Controlled By Quantity</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Unlimited</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Iniciativa__c</picklist>
+        <values>
+            <fullName>Elite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Youbet Extra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Youbet Perene</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>V_AreaElegivelYoubet__c</picklist>
+        <values>
+            <fullName>MULTI CANAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REGIÕES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VERTICAIS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>V_CargoElegivelYoubet__c</picklist>
+        <values>
+            <fullName>COORDENADOR %7C GERENTE REGIONAL VIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIRETOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GERENTE DE CONTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LÍDER</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>V_LiderancaElegivelYoubet__c</picklist>
+        <values>
+            <fullName>MULTI CANAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MULTI SECTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REGIÕES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAREJO%2C CPG E PAGAMENTOS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>V_PapelYoubet__c</picklist>
+        <values>
+            <fullName>GERENTES DE CONTAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LÍDERES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LÍDERES %28COORDENADORES%29 E GERENTE REGIONAIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NÃO ELEGÍVEL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

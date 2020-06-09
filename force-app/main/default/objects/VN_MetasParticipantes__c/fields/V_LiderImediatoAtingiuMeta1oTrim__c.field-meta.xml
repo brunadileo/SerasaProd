@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_LiderImediatoAtingiuMeta1oTrim__c</fullName>
+    <description>Indica se o líder atingiu a meta ou não no 1o. Trimestre do ano fiscal. Campo a ser utilizado como critério da Action da mecânica de pontos no Fielo.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+V_PercentualAMLiderImediato1oTrim__c &gt;= 1, TRUE, FALSE
+
+)</formula>
+    <inlineHelpText>Indica se o líder atingiu a meta ou não no 1o. Trimestre do ano fiscal. Campo a ser utilizado como critério da Action da mecânica de pontos no Fielo.</inlineHelpText>
+    <label>Líder Imediato Atingiu a Meta - 1o. Trim</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

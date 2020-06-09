@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When switched on, the Reward will be available to be given immediately to Members when they fulfill a Rule or Mission. --></help>
+    <label><!-- Instant Reward --></label>
+    <name>FieloPLT__IsInstantReward__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_DataSumarizador__c</fullName>
+    <description>Campo utilizado para mostrar a partir de qual data deve-se criar o sumarizador do participante.</description>
+    <externalId>false</externalId>
+    <label>Data Sumarizador</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

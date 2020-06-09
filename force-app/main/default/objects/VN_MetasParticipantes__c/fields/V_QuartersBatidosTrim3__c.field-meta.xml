@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_QuartersBatidosTrim3__c</fullName>
+    <description>Indica a quantidade de quarters atingidos até o 3o. quarter.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+AND(
+V_PercentualAMTrimestre1AF__c &gt;= 1, 
+V_PercentualAMTrimestre2AF__c &gt;= 1,
+V_PercentualAMTrimestre3AF__c &gt;= 1), 3, 
+
+IF(
+AND(
+V_PercentualAMTrimestre1AF__c &gt;= 1,
+V_PercentualAMTrimestre3AF__c &gt;= 1), 2,
+
+IF(
+AND(
+V_PercentualAMTrimestre2AF__c &gt;= 1,
+V_PercentualAMTrimestre3AF__c &gt;= 1), 2,
+
+IF(
+V_PercentualAMTrimestre3AF__c &gt;= 1, 1, 0
+
+
+))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indica a quantidade de quarters atingidos até o 3o. quarter.</inlineHelpText>
+    <label>INATIVO - Quarters Batidos - 3o. Trim.</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

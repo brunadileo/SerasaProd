@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total de vendas do 2o. semestre do ano fiscal. Somatória das vendas dos meses 10, 11, 12, 1, 2 e 3. --></help>
+    <label><!-- Total Vendas - 2o. Sem. --></label>
+    <name>V_TotalVendasSemestre2AF__c</name>
+</CustomFieldTranslation>

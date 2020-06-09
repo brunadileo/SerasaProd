@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Transaction which granted the Point. --></help>
+    <label><!-- Transaction --></label>
+    <name>FieloPLT__Transaction__c</name>
+    <relationshipLabel><!-- Points --></relationshipLabel>
+</CustomFieldTranslation>

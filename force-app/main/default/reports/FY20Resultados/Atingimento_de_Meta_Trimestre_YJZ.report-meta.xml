@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>IF(VN_Sumarizador__c.V_Meta__c:SUM = 0,0,
+VN_Sumarizador__c.V_Valor__c:SUM / VN_Sumarizador__c.V_Meta__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Atingimento Mês</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(VN_Sumarizador__c.V_MetaYTD__c:SUM = 0, 0, 
+VN_Sumarizador__c.V_ValorYTD__c:SUM/VN_Sumarizador__c.V_MetaYTD__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Atingimento YTD</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(VN_Sumarizador__c.V_Valor__c:SUM = 0, 0,
+VN_Sumarizador__c.V_ResultadoSE__c:SUM/VN_Sumarizador__c.V_Valor__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Soluções Estratégicas Mês</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_28949597</developerName>
+        <masterLabel>Quarter</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Mes__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>3</to>
+            </sourceValues>
+            <value>Quarter 1</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>3</from>
+                <to>6</to>
+            </sourceValues>
+            <value>Quarter 2</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>6</from>
+                <to>9</to>
+            </sourceValues>
+            <value>Quarter 3</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>9</from>
+            </sourceValues>
+            <value>Quarter 4</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Mes__c</field>
+    </columns>
+    <columns>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$Participante__c</field>
+    </columns>
+    <columns>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Lideranca__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_MetaYTDTrimestre__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_ValorYTDTrimestre__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_PercentualAMYTDTrimestre__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>VN_MetaParticipante__c$V_Participante__c.Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Teste</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_PercentualAMYTDTrimestre__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>100</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Mes__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>3,6,9,12</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VN_MetaParticipante__c$V_Participante__c.V_Lideranca__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VN_MetaParticipante__c$V_Participante__c.V_PapelElite__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_28949597</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Atingimento de Meta Trimestre</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>PLAN_Metas_e_Resultados_dos_Participantes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>VN_MetaParticipante__c$LastModifiedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,4 @@
+<design:component label="CC - Spy | Badges">
+	<design:attribute name="program" label="Nome Do Programa"/>
+	<design:attribute name="linkBadges" label="Link Do Botão (Mobile)"/>
+</design:component>

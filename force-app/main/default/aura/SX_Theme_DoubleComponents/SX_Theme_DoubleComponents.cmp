@@ -1,0 +1,41 @@
+<aura:component implements="forceCommunity:themeLayout" description="Custom Content Layout" access="global">
+	<aura:attribute name="header" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="logo" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="title" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="content1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="content2" type="Aura.Component[]" required="false"/>
+
+    <ltng:require styles="{!join(',', 
+    				$Resource.SX_style, 
+    				$Resource.SX_FontAwesomeIcons + '/css/all.min.css')}"/>
+    <ltng:require scripts="{!$Resource.SX_script}"/>
+
+	<div id="wrapper" class="h-auto h-xl-100 bg-light">
+		<div class="w-100 columns">{!v.header}</div>
+		<div class="d-flex h-auto h-custom row m-0 p-3">
+			<div class="col-xl-2 h-auto h-xl-100 mb-3 mb-xl-0 p-0 columns">{!v.logo}</div>
+			<div class="d-flex flex-column col-xl-10 h-auto h-xl-100 p-0 pl-xl-5 pr-0">
+				<div class="h-auto h-xl-10 columns">{!v.title}</div>
+				<div class="d-flex d-xl-none row mb-4 mx-0">
+					<div class="col-6">
+						<ui:button class="w-100 h-100 d-flex align-items-center justify-content-center p-4 bg-warning text-white btn btn-default myExtract disabled" press="{!c.showMyExtract}">
+							MEU EXTRATO
+						</ui:button>
+					</div>
+					<div class="col-6">
+						<ui:button class="w-100 h-100 d-flex align-items-center justify-content-center p-4 bg-warning text-white btn btn-default teamExtract" press="{!c.showTeamExtract}">
+							EXTRATO DA EQUIPE
+						</ui:button>
+					</div>
+				</div>
+				<div class="h-auto h-xl-90 row m-0">
+					<div id="content1" class="d-block d-xl-block h-auto h-xl-100 col-xl-5 p-0 columns">{!v.content1}</div>
+					<div id="content2" class="d-none d-xl-block h-auto h-xl-100 col-xl-7 p-0 columns">{!v.content2}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<c:SX_SubComponent_MenuButton/>
+
+</aura:component>

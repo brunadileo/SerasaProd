@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email de primeiro acesso do programa Serasa Insiders</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Serasa Insiders: primeiro acesso</name>
+    <style>none</style>
+    <subject>Serasa Insiders: conheça nosso site!</subject>
+    <textOnly>Insiders
+
+Ver no navegador
+
+Olá {!Receiving_User.Name},
+venha conhecer o Serasa Insiders!
+
+Clique no link abaixo, cadastre sua senha e acompanhe a sua performance.
+
+Após o primeiro acesso, utilize seu Login Serasa
+
+e a senha cadastrada para entrar no site.
+
+Clique Aqui
+
+Dica: Evite navegar pelo Internet Explorer.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

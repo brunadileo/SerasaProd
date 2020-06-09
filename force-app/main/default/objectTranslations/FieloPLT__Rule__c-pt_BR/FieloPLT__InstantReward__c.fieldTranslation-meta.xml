@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose an Instant Reward from the &quot;Rewards&quot; which are marked as Instant Rewards. --></help>
+    <label><!-- Instant Reward --></label>
+    <name>FieloPLT__InstantReward__c</name>
+    <relationshipLabel>Regras</relationshipLabel>
+</CustomFieldTranslation>

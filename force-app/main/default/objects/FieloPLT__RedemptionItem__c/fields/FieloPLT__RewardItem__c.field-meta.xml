@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RewardItem__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Reward Item to be delivered to the Member. Used only for Rewards whose stock is &quot;Controlled by item&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Reward Item to be delivered to the Member. Used only for Rewards whose stock is &quot;Controlled by item&quot;.</inlineHelpText>
+    <label>Reward Item</label>
+    <referenceTo>FieloPLT__RewardItem__c</referenceTo>
+    <relationshipLabel>Redemption Items</relationshipLabel>
+    <relationshipName>RedemptionItems</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

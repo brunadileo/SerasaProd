@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__OptimizedProgramQuery__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>When ticked, Site only retrieves Program&apos;s Custom fields defined in the Program fieldset.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When ticked, Site only retrieves Program&apos;s Custom fields defined in the Program fieldset.</inlineHelpText>
+    <label>Optimized Program query</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>VN_ParticipanteComPerfilCompativel__c.V_Saldo__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Potencial de Betcoins</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>FieloPLT__Reward__c.V_TotalBetcoinsLances__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Betcoins Apostadas</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>FieloPLT__Reward__c.V_TotalBetcoinsLances__c:SUM/VN_ParticipanteComPerfilCompativel__c.V_Saldo__c:SUM</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Índice de Utilização</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>FieloPLT__Reward__c.ParticipantesPerfiCompativeis__r$Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FieloPLT__Reward__c$Iniciativa__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Youbet Perene</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Reward__c.ParticipantesPerfiCompativeis__r$V_Member__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>TESTE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Reward__c.ParticipantesPerfiCompativeis__r$V_PodeParticiparLeilao__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Reward__c$V_DataHoraInicioYoubet__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>7/1/2019 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FieloPLT__Reward__c.ParticipantesPerfiCompativeis__r$V_FormulaSaldoInsuficiente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>FieloPLT__Reward__c$V_DataHoraInicioYoubet__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FieloPLT__Reward__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Betcoins potenc. e apostadas por Prêmio</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Results_Participantes_eleg_veis_dos_leli_es__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FieloPLT__Reward__c$V_DataHoraFimYoubet__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the value to be compared with the Action counter or Target Object field summary. --></help>
+    <label><!-- Objective Value --></label>
+    <name>FieloPLT__ObjectiveValue__c</name>
+</CustomFieldTranslation>

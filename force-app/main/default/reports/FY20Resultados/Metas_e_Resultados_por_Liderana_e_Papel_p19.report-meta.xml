@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>IF(VN_Sumarizador__c.V_Meta__c:SUM = 0,0,
+VN_Sumarizador__c.V_Valor__c:SUM / VN_Sumarizador__c.V_Meta__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Atingimento Mês</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(VN_Sumarizador__c.V_MetaYTD__c:SUM = 0, 0, 
+VN_Sumarizador__c.V_ValorYTD__c:SUM/VN_Sumarizador__c.V_MetaYTD__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Atingimento YTD</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(VN_Sumarizador__c.V_Valor__c:SUM = 0, 0,
+VN_Sumarizador__c.V_ResultadoSE__c:SUM/VN_Sumarizador__c.V_Valor__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Soluções Estratégicas Mês</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_97630958</developerName>
+        <masterLabel>Mês</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Mes__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>1</to>
+            </sourceValues>
+            <value>1. Abril</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1</from>
+                <to>2</to>
+            </sourceValues>
+            <value>2. Maio</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>2</from>
+                <to>3</to>
+            </sourceValues>
+            <value>3. Junho</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>3</from>
+                <to>4</to>
+            </sourceValues>
+            <value>4. Julho</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>4</from>
+                <to>5</to>
+            </sourceValues>
+            <value>5. Agosto</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>5</from>
+                <to>6</to>
+            </sourceValues>
+            <value>6. Setembro</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>6</from>
+                <to>7</to>
+            </sourceValues>
+            <value>7. Outubro</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>7</from>
+                <to>8</to>
+            </sourceValues>
+            <value>8. Novembro</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>8</from>
+                <to>9</to>
+            </sourceValues>
+            <value>9. Dezembro</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>9</from>
+                <to>10</to>
+            </sourceValues>
+            <value>10. Janeiro</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>10</from>
+                <to>11</to>
+            </sourceValues>
+            <value>11. Fevereiro</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>11</from>
+            </sourceValues>
+            <value>12. Março</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Mes__c</field>
+    </columns>
+    <columns>
+        <field>VN_MetaParticipante__c$Name</field>
+    </columns>
+    <columns>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$Name</field>
+    </columns>
+    <columns>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Lideranca__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Meta__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_Valor__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_MetaYTD__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_ValorYTD__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>VN_MetaParticipante__c.VN_SumarizadoresDosObjetivos__r$V_ResultadoSE__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>VN_MetaParticipante__c$V_Participante__c.Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Teste</value>
+        </criteriaItems>
+        <language>pt_BR</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VN_MetaParticipante__c$V_Participante__c.V_Lideranca__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VN_MetaParticipante__c$V_Participante__c.V_PapelElite__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_97630958</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Metas e Resultados YTD FY</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>PLAN_Metas_e_Resultados_dos_Participantes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>VN_MetaParticipante__c$LastModifiedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

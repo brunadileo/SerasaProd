@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Valor do Tamanho da Carteira do participante. O atual critério é o mesmo valor do total de metas do ano fiscal do participante. --></help>
+    <label><!-- Tamanho da Carteira --></label>
+    <name>V_PotencialCarteira__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_IDXSemestrePeriodo__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( V_IDXSemestre__c =0,0,
+   IF( V_IDXSemestre__c =1,1,
+      IF( V_IDXSemestre__c = V_IDXSemestreAnterior__c , V_IDXSemestrePeriodoAnterior__c ,
+         IF( V_Ponderou__c = FALSE,1 + V_IDXSemestrePeriodoAnterior__c ,1))))</formula>
+    <label>IDX Semestre Período</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

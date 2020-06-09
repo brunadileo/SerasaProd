@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When unchecked, it disables Agreement trigger. --></help>
+    <label><!-- Agreement --></label>
+    <name>FieloPLT__Agreement__c</name>
+</CustomFieldTranslation>

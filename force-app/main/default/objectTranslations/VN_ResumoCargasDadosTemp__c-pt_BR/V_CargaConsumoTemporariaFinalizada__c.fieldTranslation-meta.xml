@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica se a carga de dados foi finalizada no Fielo. --></help>
+    <label><!-- Carga de Dados Temporária Finalizada? --></label>
+    <name>V_CargaConsumoTemporariaFinalizada__c</name>
+</CustomFieldTranslation>

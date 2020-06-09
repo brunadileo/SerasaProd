@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Actions__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Actions for a specific record within a to &quot;Related List&quot; Page Setting type.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter an Action for a &quot;Related List&quot; Page Setting type.</inlineHelpText>
+    <label>Actions</label>
+    <length>3000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

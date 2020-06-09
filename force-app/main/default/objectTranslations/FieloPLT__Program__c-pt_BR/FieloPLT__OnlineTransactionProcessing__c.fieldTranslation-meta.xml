@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If on, Transactions will be processed online when recorded. Otherwise, they will be processed offline once a day. --></help>
+    <label><!-- Online Processing --></label>
+    <name>FieloPLT__OnlineTransactionProcessing__c</name>
+</CustomFieldTranslation>

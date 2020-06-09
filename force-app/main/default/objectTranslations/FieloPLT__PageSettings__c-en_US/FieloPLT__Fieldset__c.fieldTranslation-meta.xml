@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the JSON stringto add Fieldsets to Landing, View and Related List Page Setting types. --></help>
+    <label><!-- Fieldset --></label>
+    <name>FieloPLT__Fieldset__c</name>
+</CustomFieldTranslation>

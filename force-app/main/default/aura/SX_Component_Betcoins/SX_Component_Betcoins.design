@@ -1,0 +1,7 @@
+<design:component label="CC - Youbet | Betcoins Explanation">
+	<design:attribute name="logo" label="Logo"/>
+	<design:attribute name="title" label="Título"/>
+	<design:attribute name="text" label="Texto"/>
+	<design:attribute name="cta" label="Call To Action"/>
+	<design:attribute name="bgBtn" label="Cor de Fundo do Botão" description="Cores no formato HEX (#??????)"/>
+</design:component>

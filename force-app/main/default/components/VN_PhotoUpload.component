@@ -1,0 +1,140 @@
+<apex:component allowDML="true" controller="VN_PhotoUploadController" >
+  <apex:attribute type="SObject" name="myObject" description="" required="true" assignTo="{!record}" />
+  <apex:attribute type="Boolean" name="saveInRecordField" description="" assignTo="{!saveRecordField}" default="false" />
+  <apex:attribute type="String" name="attachField" description="" assignTo="{!attField}" />
+  <apex:attribute type="String" name="info" description="" />
+  <apex:attribute type="String" name="recordName" description="" assignTo="{!photoName}" default="Record Image"/>
+
+  <script>
+  var ie = {};
+  if (navigator.userAgent.indexOf("MSIE 9.0") !== -1) {
+    ie.cssSrc = "{!URLFOR($Resource.VN_photoupload, 'css/core-photoUpload-ie9.css')}";
+  }else{
+    ie=null;
+  }
+  
+  if (ie){
+    var css = document.createElement("link");
+    
+    if(ie.cssSrc) {
+      css.setAttribute("rel", "stylesheet");
+      css.setAttribute("type", "text/css");
+      css.setAttribute("href", ie.cssSrc);
+      document.getElementsByTagName("head")[0].appendChild(css);
+    }
+  }
+  </script>
+  <apex:includeScript value="{!URLFOR($Resource.VN_photoupload, 'js/jquery.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.VN_photoupload, 'css/core.css')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.VN_photoupload, 'css/cropper.css')}" /> 
+  <apex:includeScript value="{!URLFOR($Resource.VN_photoupload, 'js/cropper.min.js')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.VN_photoupload, 'css/core-photoUpload.css')}" />
+  
+  <style type="text/css">
+    .cropper-point {width: 7px;height: 7px;}
+    .cropper-dashed {border: 0 dashed #1EB1F0;}
+  </style>
+  <div class="slds">
+    <apex:form id="uploadAttachment" >
+  <!-- CARD -->
+  <div class="slds-card slds-m-around--small {!IF(AND(NOT(hasImg), NOT(editPhoto)),'slds-card--empty','')}">
+    <!-- HEADER -->
+    <div class="slds-card__header slds-grid">
+      <!-- TITULO -->
+      <div class="slds-media slds-media--center slds-has-flexi-truncate">
+        <div class="slds-media__body">
+          <h2 class="slds-text-heading--small slds-truncate">{!$Label.VN_photoupload_upload}</h2>
+        </div>
+      </div>
+      <!-- /TITULO -->
+      <apex:panelGroup layout="none" rendered="{!editPhoto}">
+        <div class="slds-no-flex">
+          <div role="group" class="slds-button-group preview">
+            <a href="#" class="slds-button slds-button--neutral">{!$Label.VN_photoupload_preview}</a>
+          </div>
+          <div role="group" class="slds-button-group actions">
+            <apex:commandButton id="Next" action="{!uploadAction}" value="{!$Label.VN_photoupload_save}" styleclass="save slds-button slds-button--neutral"/>
+            <apex:commandButton action="{!cancelEdit}" value="{!$Label.VN_photoupload_cancel}" styleclass="cancel slds-button slds-button--neutral slds-button--destructive slds-button--last"/>
+          </div>
+        </div>
+      </apex:panelGroup>
+      <apex:panelGroup layout="none" rendered="{!!editPhoto && hasImg}">
+        <div class="slds-no-flex">
+          <div role="group" class="slds-button-group">
+            <apex:commandLink value="{!$Label.VN_photoupload_change}" action="{!changePhoto}" styleclass="change slds-button slds-button--neutral"/>
+            <apex:commandLink value="{!$Label.VN_photoupload_delete}" action="{!deletePhoto}" onclick="if (!confirm('{!$Label.VN_photoupload_areyousure}')) return false;" styleclass="delete slds-button slds-button--neutral slds-button--destructive slds-button--last"/>
+          </div>
+        </div>
+      </apex:panelGroup>
+    </div>
+    <!-- BODY -->
+    <div class="slds-card__body slds-p-horizontal--small slds-text-align--center">
+      <apex:panelGroup layout="none" rendered="{!!hasImg && !editPhoto && ISBLANK(record[attField])}">
+        <h3 class="slds-text-heading--small slds-p-top--large slds-p-bottom--large">{!$Label.VN_photoupload_selectimage}</h3>
+        <apex:commandLink value="{!$Label.VN_photoupload_uploadnew}" action="{!changePhoto}" styleclass="slds-button slds-button--neutral slds-button--small slds-m-bottom--x-large"/>
+      </apex:panelGroup>
+      
+      <apex:panelGroup layout="none" rendered="{! !hasImg && !ISBLANK(record[attField])}">
+        <img class="fullImage" src="{!record[attField]}" style="padding-bottom: 30px;"/>
+      </apex:panelGroup>
+      
+      <apex:panelGroup layout="none" rendered="{!hasImg && !editPhoto}">
+        <img class="fullImage" src="{!IF(LEFT(imgId,3)     == '00P', URLFOR($Action.Attachment.Download, imgId),      IF(LEFT(imgId,3)   == '015', DocURL+'/servlet/servlet.ImageServer?id='+imgId+'&oid='+orgId+'&lastMod='+lastMod, URLFOR($Resource.VN_photoupload, 'images/'+imgId)))}"/>
+      </apex:panelGroup>
+      
+      <apex:panelGroup layout="none" rendered="{!editPhoto}">
+        <div class="slds-grid slds-b-bottom--xxx-small-solid-grey slds-p-bottom--x-small slds-m-bottom--x-small">
+          <div class="slds-col slds-text-align--left">
+            <apex:outputText value="{!$Label.VN_photoupload_selectafile}"/><br/>
+            <apex:inputFile value="{!image['Body']}" id="newImg" styleclass="newImg" contentType="{!image['ContentType']}" filename="{!image['Name']}" fileSize="{!image['BodyLength']}"/>
+          </div>
+          <div class="slds-col slds-text-align--right">
+            <span class="dimensionsViewer">
+              <span class="imageFinalWidthViewer"></span> x <span class="imageFinalHeightViewer"></span>&nbsp;
+            </span>
+          </div>
+        </div>
+        <div class="container">
+          <apex:panelGroup rendered="{!hasImg}" layout="none">
+            <img id="imageToCrop" src="data:{!image['ContentType']};base64,{!encImage}"/>
+          </apex:panelGroup>
+          <apex:panelGroup rendered="{!!hasImg}" layout="none">
+            <img id="imageToCrop" src=""/>
+          </apex:panelGroup>
+        </div>
+        <apex:inputTextarea value="{!photoBase64}" styleclass="newImage slds-hide" />
+        
+        <apex:panelGroup rendered="{!error != ''}" layout="none">
+          <div class="message errorM4">
+            <table border="0" cellpadding="0" cellspacing="0" class="messageTable" style="padding:0px;margin:0px;">
+              <tr>
+                <td><img alt="ERROR" class="msgIcon" src="/s.gif" title="ERROR"/></td>
+                <td class="messageCell">
+                  <div class="messageText">
+                    <apex:outputText value="{!error}" escape="false"/>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </apex:panelGroup>
+        
+        <apex:pagemessages />
+      </apex:panelGroup>
+    </div>
+    <!-- /BODY -->
+  </div>
+  <!-- /CARD -->
+  </apex:form>
+  </div>
+
+  <apex:includeScript value="{!URLFOR($Resource.VN_photoupload, 'js/photoUpload.js')}"/>
+  <script type="text/javascript">
+    var config = {
+      errorUpload:"{!$Label.VN_photoupload_erroruploadtryagain}",
+      errorType:"{!$Label.VN_photoupload_errorimagetype}",
+      errorImageCeroDimensions:"{!$Label.VN_photoupload_errorimagedimensions}",
+      contentType:"{!contentType}"
+    }
+  </script>
+</apex:component>

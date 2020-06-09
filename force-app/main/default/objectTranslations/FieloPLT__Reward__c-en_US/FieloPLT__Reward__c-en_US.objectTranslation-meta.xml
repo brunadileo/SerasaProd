@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Leilão</layout>
+        <sections>
+            <label><!-- Betcoins --></label>
+            <section>Betcoins</section>
+        </sections>
+        <sections>
+            <label><!-- Betcoins - Youbet Extra --></label>
+            <section>Betcoins - Youbet Extra</section>
+        </sections>
+        <sections>
+            <label><!-- Critérios do Youbet --></label>
+            <section>Critérios do Youbet</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dados de Lances --></label>
+            <section>Dados de Lances</section>
+        </sections>
+        <sections>
+            <label><!-- Descrição --></label>
+            <section>Descrição</section>
+        </sections>
+        <sections>
+            <label><!-- Gerenciamento de Estoque --></label>
+            <section>Gerenciamento de Estoque</section>
+        </sections>
+        <sections>
+            <label><!-- Regulamento Youbet --></label>
+            <section>Regulamento Youbet</section>
+        </sections>
+        <sections>
+            <label><!-- Variáveis de Elegibilidade do Leilão --></label>
+            <section>Variáveis de Elegibilidade do Leilão</section>
+        </sections>
+        <sections>
+            <label><!-- Vigência do Leilão --></label>
+            <section>Vigência do Leilão</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Leilões para a iniciativa Youbet perene ou extra. --></description>
+        <label><!-- Leilões --></label>
+        <name>Leiloes</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Prêmios para resgate do participante. --></description>
+        <label><!-- Prêmios --></label>
+        <name>Premios</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Value must be positive. --></errorMessage>
+        <name>FieloPLT__AvailableDays</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only allowed when stock equals zero. --></errorMessage>
+        <name>FieloPLT__ChangeStockMode</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Controlled by Item&quot; Rewards with preloaded Vouchers cannot have a Unique Voucher. --></errorMessage>
+        <name>FieloPLT__MultiVoucher</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must specify a point value for the Reward. --></errorMessage>
+        <name>FieloPLT__PointsRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The number of Points must be positive. --></errorMessage>
+        <name>FieloPLT__PositivePointsQuantity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Stock must be positive. --></errorMessage>
+        <name>FieloPLT__PositiveStock</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Value must be positive. --></errorMessage>
+        <name>FieloPLT__PositiveUnitCost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Se o campo &quot;Lance Mínimo&quot; estiver preenchido, o campo &quot;Lance para Resgatar&quot; precisa estar vazio, e vice-versa. Nenhum desses campos pode conter o valor zero também. --></errorMessage>
+        <name>Valida_Lance_Minimo_e_Resgatar_Agora</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Para Youbet Extra, o campo &quot;Pontos&quot; deve ser 0 e o campo &quot;Betcoins - Extra&quot; deve ser 1. --></errorMessage>
+        <name>Valida_Pontos_de_Youbet_Extra</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Para Youbet Perene, o campo &quot;Pontos&quot; deve ser 1 e o campo &quot;Betcoins - Extra&quot; deve ser 0. --></errorMessage>
+        <name>Valida_Pontos_de_Youbet_Perene</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Data/Hora início do Youbet não pode ser maior que a sua data final. --></errorMessage>
+        <name>Valida_Vigencia_de_Youbet</name>
+    </validationRules>
+</CustomObjectTranslation>

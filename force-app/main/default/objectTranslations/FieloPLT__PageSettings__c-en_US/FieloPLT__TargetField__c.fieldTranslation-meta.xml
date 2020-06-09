@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the API Name of a Lookup Field from the Target Object you&apos;ve chosen. --></help>
+    <label><!-- Target Field --></label>
+    <name>FieloPLT__TargetField__c</name>
+</CustomFieldTranslation>

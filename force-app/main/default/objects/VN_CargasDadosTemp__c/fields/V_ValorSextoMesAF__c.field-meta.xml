@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ValorSextoMesAF__c</fullName>
+    <description>Valor do sexto mês do ano fiscal. Pode ser utilizado para a carga de Metas e Soluções Estratégicas.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Valor do sexto mês do ano fiscal. Pode ser utilizado para a carga de Metas e Soluções Estratégicas.</inlineHelpText>
+    <label>Valor - Sexto Mês - AF</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

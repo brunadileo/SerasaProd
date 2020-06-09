@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_TempoRestanteFimLances__c</fullName>
+    <description>Tempo restante para fim dos lances.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+V_DataHoraFimYoubet__c - NOW() &lt; 0, 0,
+V_DataHoraFimYoubet__c - NOW()
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Tempo restante para fim dos lances.</inlineHelpText>
+    <label>Tempo Restante para Fim dos Lances</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

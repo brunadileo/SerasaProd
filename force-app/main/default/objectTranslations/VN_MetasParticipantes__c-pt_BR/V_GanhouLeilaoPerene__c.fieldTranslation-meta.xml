@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica se o participante ganhou no mínimo 1 leilão perene no ano fiscal. --></help>
+    <label><!-- Ganhou Leilão Perene? --></label>
+    <name>V_GanhouLeilaoPerene__c</name>
+</CustomFieldTranslation>

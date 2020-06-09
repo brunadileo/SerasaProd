@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica se o participante realizou no mínimo 1 lance em leilão perene no ano fiscal. --></help>
+    <label><!-- Realizou Lance em Leilão Perene? --></label>
+    <name>V_RealizouLanceLeilaoPerene__c</name>
+</CustomFieldTranslation>

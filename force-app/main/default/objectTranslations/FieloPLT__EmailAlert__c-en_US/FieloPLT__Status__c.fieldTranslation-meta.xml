@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is the status of the triggered Email Alert. It can be Processing, Pending or Sent. --></help>
+    <label><!-- Status --></label>
+    <name>FieloPLT__Status__c</name>
+    <picklistValues>
+        <masterLabel>Pending</masterLabel>
+        <translation><!-- Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Processing</masterLabel>
+        <translation><!-- Processing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent</masterLabel>
+        <translation><!-- Sent --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

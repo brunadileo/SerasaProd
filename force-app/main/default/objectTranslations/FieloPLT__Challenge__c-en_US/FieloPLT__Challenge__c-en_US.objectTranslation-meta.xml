@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- The End Date must be on or after the Start Date. --></errorMessage>
+        <name>FieloPLT__DateValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Active&quot;, &quot;Pending&quot; or &quot;Scheduled&quot; Challenges cannot be edited. --></errorMessage>
+        <name>FieloPLT__EditionValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The End Date must be on or after the Start Date. --></errorMessage>
+        <name>FieloPLT__ValidateDates</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Status change is invalid. --></errorMessage>
+        <name>FieloPLT__ValidatesStatusUpdate</name>
+    </validationRules>
+</CustomObjectTranslation>

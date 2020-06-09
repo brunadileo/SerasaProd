@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ResultadoTerceiroMesAF__c</fullName>
+    <description>Resultado do participante no 3o. mês do ano fiscal.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Resultado do participante no 3o. mês do ano fiscal.</inlineHelpText>
+    <label>Resultado - Mês 6</label>
+    <summarizedField>VN_Resultado__c.V_Valor__c</summarizedField>
+    <summaryFilterItems>
+        <field>VN_Resultado__c.V_Mes__c</field>
+        <operation>equals</operation>
+        <value>6</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>VN_Resultado__c.V_Tipo__c</field>
+        <operation>equals</operation>
+        <value>Resultados</value>
+    </summaryFilterItems>
+    <summaryForeignKey>VN_Resultado__c.V_MetaParticipante__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

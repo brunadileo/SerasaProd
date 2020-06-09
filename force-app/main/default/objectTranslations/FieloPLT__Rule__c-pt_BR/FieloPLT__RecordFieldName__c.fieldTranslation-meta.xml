@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the numerical field from the Action object to be divided (Factor) or multiplied (Multiplier) --></help>
+    <label><!-- Point Field Name --></label>
+    <name>FieloPLT__RecordFieldName__c</name>
+</CustomFieldTranslation>

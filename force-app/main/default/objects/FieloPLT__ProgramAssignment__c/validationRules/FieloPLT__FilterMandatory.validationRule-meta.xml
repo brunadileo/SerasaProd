@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__FilterMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>FieloPLT__Profile__c = null &amp;&amp;
+FieloPLT__Program__c = null &amp;&amp;
+FieloPLT__RecordType__c = null</errorConditionFormula>
+    <errorMessage>Please add a Program, Record Type or a Profile.</errorMessage>
+</ValidationRule>

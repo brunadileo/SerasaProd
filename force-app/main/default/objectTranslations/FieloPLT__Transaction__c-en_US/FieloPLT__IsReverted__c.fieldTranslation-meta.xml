@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If ticked, Transaction has been reverted by the Action (Rule) Engine. --></help>
+    <label><!-- Reverted --></label>
+    <name>FieloPLT__IsReverted__c</name>
+</CustomFieldTranslation>

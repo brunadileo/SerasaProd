@@ -1,0 +1,11 @@
+<design:component label="CC - General | Footer">
+	<design:attribute name="disabledYoubet" label="Desabilitar Link Youbet" datasource="Enable, disabled-item"/>
+	<design:attribute name="disabledElite" label="Desabilitar Link Elite" datasource="Enable, disabled-item"/>
+	<design:attribute name="disabledSpy" label="Desabilitar Link Sales Person" datasource="Enable, disabled-item"/>
+
+<!-- NÃO UTILIZADO -->
+	<design:attribute name="disabled-youbet" label="Desabilitar Link Youbet" datasource="Enable, disabled-item"/>
+	<design:attribute name="disabled-elite" label="Desabilitar Link Elite" datasource="Enable, disabled-item"/>
+	<design:attribute name="disabled-spy" label="Desabilitar Link Sales Person" datasource="Enable, disabled-item"/>
+<!-- NÃO UTILIZADO -->
+</design:component>

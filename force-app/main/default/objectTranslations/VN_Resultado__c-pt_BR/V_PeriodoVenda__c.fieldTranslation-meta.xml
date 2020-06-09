@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Período da venda recebido na carga Serasa (considerar mês e ano). --></help>
+    <label><!-- Período da Venda --></label>
+    <name>V_PeriodoVenda__c</name>
+</CustomFieldTranslation>

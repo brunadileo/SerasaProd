@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica o percentual de atingimento de meta projetado até o 2o. Mês do ano fiscal. --></help>
+    <label><!-- % AM Projetado Até Mês 5 --></label>
+    <name>V_PercAMProjAteSegundoMes__c</name>
+</CustomFieldTranslation>

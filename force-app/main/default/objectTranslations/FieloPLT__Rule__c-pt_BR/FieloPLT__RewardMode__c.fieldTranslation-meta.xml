@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a Reward type: &quot;Fixed Value&quot; (e.g. fixed number of Points) or &quot;Specified by Field&quot; (e.g. Dynamic field in which Points are given according to the chosen field). --></help>
+    <label><!-- Reward mode --></label>
+    <name>FieloPLT__RewardMode__c</name>
+    <picklistValues>
+        <masterLabel>Fixed Value</masterLabel>
+        <translation><!-- Fixed Value --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specified by Field</masterLabel>
+        <translation><!-- Specified by Field --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

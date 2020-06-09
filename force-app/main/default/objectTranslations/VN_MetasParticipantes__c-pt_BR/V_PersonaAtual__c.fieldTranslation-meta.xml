@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica a persona do último mês atualizado do ano fiscal para ser utilizada na comunicação com o participante. --></help>
+    <label><!-- Persona Atual --></label>
+    <name>V_PersonaAtual__c</name>
+</CustomFieldTranslation>

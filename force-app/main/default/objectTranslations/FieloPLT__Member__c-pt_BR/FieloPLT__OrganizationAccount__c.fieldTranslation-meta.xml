@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If the Member is an Organization Contributor, choose the Organization Member he or she is associated with. --></help>
+    <label><!-- Organization Member --></label>
+    <lookupFilter>
+        <errorMessage><!-- Member must be an &quot;Organization Account&quot; and belong to the same Program. --></errorMessage>
+    </lookupFilter>
+    <name>FieloPLT__OrganizationAccount__c</name>
+    <relationshipLabel><!-- Members (Organization Account) --></relationshipLabel>
+</CustomFieldTranslation>

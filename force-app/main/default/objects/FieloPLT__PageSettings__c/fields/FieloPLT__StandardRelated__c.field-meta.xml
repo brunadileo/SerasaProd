@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__StandardRelated__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Related Standard</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ObjectHistory</fullName>
+                <default>false</default>
+                <label>Object History</label>
+            </value>
+            <value>
+                <fullName>ProcessSteps</fullName>
+                <default>false</default>
+                <label>Approval History</label>
+            </value>
+            <value>
+                <fullName>CombinedAttachments</fullName>
+                <default>false</default>
+                <label>Notes &amp; Attachments</label>
+            </value>
+            <value>
+                <fullName>ActivityHistories</fullName>
+                <default>false</default>
+                <label>Activity History</label>
+            </value>
+            <value>
+                <fullName>OpenActivities</fullName>
+                <default>false</default>
+                <label>Open Activities</label>
+            </value>
+            <value>
+                <fullName>AttachedContentDocuments</fullName>
+                <default>false</default>
+                <label>Files</label>
+            </value>
+            <value>
+                <fullName>RelatedContentDistributionList</fullName>
+                <default>false</default>
+                <label>Content Deliveries</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

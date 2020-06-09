@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_GerenciadorMetasAF__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Gerenciador da Metas do Participante por Ano Fiscal.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Gerenciador da Metas do Participante por Ano Fiscal.</inlineHelpText>
+    <label>Gerenciador de Metas por AF</label>
+    <referenceTo>VN_GerenciadorMetaParticipanteAF__c</referenceTo>
+    <relationshipName>Metas_dos_Participantes_AF</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

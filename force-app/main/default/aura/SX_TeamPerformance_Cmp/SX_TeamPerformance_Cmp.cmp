@@ -1,0 +1,86 @@
+<aura:component  implements="forceCommunity:availableForAllPageTypes" access="global" controller="SX_TeamPerformanceController">
+    <aura:attribute name="headerTitle" type="Aura.Component[]">
+        <div class="d-flex justify-content-end">
+            <lightning:button class="fa fa-times btn p-0 border-0 bg-transparent text-white font-size-7" onclick="{!c.closeModal}"/>
+        </div>
+    </aura:attribute>
+
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+
+    <aura:handler event="c:SX_YouBetModal_Evt" action="{!c.youbetModal}"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.myMember}"/>
+    <aura:attribute name="member" type="FieloPLT__Member__c" />
+    <aura:attribute name="lstRdi" type="FieloPLT__RedemptionItem__c[]"/>
+    <aura:attribute name="tableCols" type="List" />
+    <aura:attribute name="youbetType" type="String"/>
+    <aura:attribute name="lstArea" type="List"/>
+    <aura:attribute Name="area" type="String" />  
+    <aura:attribute name="lstSubArea" type="List"/>
+    <aura:attribute Name="subArea" type="String" />
+    <aura:attribute name="lstCargo" type="List"/>
+    <aura:attribute Name="cargo" type="String" />
+
+    <div id='teamPerformanceModal' class="position-fixed modal-overlay" style="display: none" onclick="{!c.closeModal}">
+        <div class="position-relative d-flex h-100 align-items-center justify-content-center">
+            <lightning:card title="{!v.headerTitle}" class="modal-card">
+                <h2 class="{!'mb-4 py-3 px-4 font-size-8 bg-' + v.youbetType + ' text-center'}">Performance da Equipe</h2>
+                <div class="{!'w-90 w-lg-70 h-100 d-flex flex-column mx-auto my-0 ' + v.youbetType}">
+                    <!-- FILTERS & SEARCH -->
+                    <div class="row d-flex align-items-end mb-3 box-filters">
+                        <div class="col-lg-10">
+                            <div class="row d-flex align-items-end">
+                                <div class="col-sm-6 col-lg-3">
+                                    <lightning:select aura:id="area" label="" value="{!v.area}" class="single">
+                                        <option value="">Diretoria</option>
+                                        <aura:iteration items="{!v.lstArea}" var="item">
+                                            <option text="{!item.label}" value="{!item.value}" />
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 mt-3 mt-lg-0">
+                                    <lightning:select aura:id="subArea" label="" value="{!v.subArea}" class="single">
+                                        <option value="">Setor</option>
+                                        <aura:iteration items="{!v.lstSubArea}" var="item">
+                                            <option text="{!item.label}" value="{!item.value}" />
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 mt-3 mt-lg-0">
+                                    <lightning:select aura:id="cargo" label="" value="{!v.cargo}" class="single">
+                                        <option value="">Cargo</option>
+                                        <aura:iteration items="{!v.lstCargo}" var="item">
+                                            <option text="{!item.label}" value="{!item.value}" />
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </div>
+                                <div class="col-sm-6 col-lg-3 mt-3 mt-sm-0">
+                                    <ui:inputText aura:id="palavraChave" keyup="{!c.searchOnEnter}" class="field" placeholder="Buscar"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 my-3 my-lg-0">
+                            <lightning:button label="OK" onclick="{!c.loadResultados}" class="{!'btn btn-default w-100 w-lg-auto bg-' + v.youbetType + ' text-white'}"/>
+                        </div>
+                    </div>
+
+                    <aura:if isTrue="{!v.Spinner}">
+                        <lightning:spinner alternativeText="Loading" size="large" />
+                    </aura:if>
+                             
+                    <div class="teamperformance-table">
+                        <lightning:datatable data="{!v.lstRdi}"
+                                                 columns="{!v.tableCols }"
+                                                 keyField="Id"
+                                                 hideCheckboxColumn="true"
+                                                 sortedBy="{! v.sortedBy }"
+                                                 sortedDirection="{! v.sortedDirection }"
+                                                 defaultSortDirection="{! v.defaultSortDirection }"
+                                                 onsort="{! c.updateColumnSorting }"/>
+                    </div>
+                    <aura:if isTrue="{!!not(empty(v.lstRdi))}"><p class="p-3 text-center">Não há resultados para serem exibidos</p></aura:if>
+                </div>
+            </lightning:card>
+        </div>
+    </div>
+    <ltng:require scripts="{!$Resource.SX_script}" />
+</aura:component>

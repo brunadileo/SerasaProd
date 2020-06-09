@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Campo criado para atender o pré-requisito de tipos de ponto. --></help>
+    <label><!-- Months Until Expiration - Betcoins Comp --></label>
+    <name>V_BetcoinsCompMonthsUntilExpiration__c</name>
+</CustomFieldTranslation>

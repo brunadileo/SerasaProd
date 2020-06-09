@@ -1,0 +1,14 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="returnLink" default="/comunidade" type="string"/>
+	<aura:attribute name="logoLink" default="/comunidade" type="string"/>
+
+	<div class="top-menu w-100 d-flex align-self-center justify-content-start justify-content-xl-center bg-primary py-3 px-4">
+		<a href="{!v.returnLink}" class="text-white align-self-center">
+			<span class="fa fa-chevron-left"></span>
+		</a>
+		<a href="{!v.logoLink}" class="mx-3 mx-sm-auto">
+			<img src="https://logodownload.org/wp-content/uploads/2017/09/serasa-experian-logo.png" class="mobile-header-img"/>
+		</a>
+	</div>
+
+</aura:component>

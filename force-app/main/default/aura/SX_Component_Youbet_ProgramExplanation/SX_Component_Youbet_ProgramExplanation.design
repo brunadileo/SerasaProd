@@ -1,0 +1,6 @@
+<design:component label="CC - Youbet Perene | Program Explanation">
+	<design:attribute name="programTitleOne" label="Primeiro Título"/>
+	<design:attribute name="programDescriptionOne" label="Primeiro Texto"/>
+	<design:attribute name="programTitleTwo" label="Segundo Título"/>
+	<design:attribute name="programDescriptionTwo" label="Segundo Texto"/>
+</design:component>

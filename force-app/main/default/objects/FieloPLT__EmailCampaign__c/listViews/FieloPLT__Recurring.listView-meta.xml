@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Recurring</fullName>
+    <columns>NAME</columns>
+    <columns>FieloPLT__Date__c</columns>
+    <columns>FieloPLT__Frequency__c</columns>
+    <columns>FieloPLT__Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>FieloPLT__CampaignId__c</columns>
+    <columns>FieloPLT__EmailTemplate__c</columns>
+    <columns>FieloPLT__Criteria__c</columns>
+    <columns>FieloPLT__WhereCondition__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FieloPLT__Type__c</field>
+        <operation>equals</operation>
+        <value>Recurrent</value>
+    </filters>
+    <filters>
+        <field>FieloPLT__Status__c</field>
+        <operation>equals</operation>
+        <value>Scheduled</value>
+    </filters>
+    <label>Recurring</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__To__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Range toward point of Challenge Rewards for Challenges whose &quot;Position Table Types&quot; are &quot;Value Range&quot; and &quot;Position Range&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the range toward point number of the Challenge Reward (Only for &quot;Value Range&quot; and &quot;Position Range&quot;).</inlineHelpText>
+    <label>To</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

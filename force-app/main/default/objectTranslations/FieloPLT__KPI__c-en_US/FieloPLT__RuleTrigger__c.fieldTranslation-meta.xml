@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Action (Rule) Trigger that defines how records are processed to generate an outcome for your report. --></help>
+    <label><!-- Action Trigger --></label>
+    <name>FieloPLT__RuleTrigger__c</name>
+    <relationshipLabel><!-- KPIs --></relationshipLabel>
+</CustomFieldTranslation>

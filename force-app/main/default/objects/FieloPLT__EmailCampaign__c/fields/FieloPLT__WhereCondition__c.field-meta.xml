@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__WhereCondition__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The criteria that specify which Members an Email Campaign will be sent to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>These are the criteria that specify which Members the Email Campaign will be sent to.</inlineHelpText>
+    <label>Where Condition</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

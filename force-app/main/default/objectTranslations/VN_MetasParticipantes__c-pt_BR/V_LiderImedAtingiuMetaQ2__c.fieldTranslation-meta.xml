@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Exibe 1 caso o líder imediato tenha atingido a meta do 2o. Quarter do ano fiscal. Cálculo utilizado para a atribuição de badge &quot;TEAM 2x&quot; --></help>
+    <label><!-- Líder Imediato Atingiu Meta - Q2 --></label>
+    <name>V_LiderImedAtingiuMetaQ2__c</name>
+</CustomFieldTranslation>

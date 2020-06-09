@@ -1,0 +1,111 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="program" type="String" default="Programa" access="global" />
+    <aura:attribute name="bgBtn" type="String" default="f1c40f" access="global" />
+    <aura:attribute name="linkBadges" type="String" default="Link" access="global" />
+	
+	<div class="h-100 d-flex flex-column align-items-center px-1 px-xl-4 pt-3 pb-3 pb-xl-0">
+		<a href="{!v.linkBadges}" class="w-90 d-block d-xl-none btn btn-default" style="{!'background: #' + v.bgBtn}">
+			<div class="text-center py-3 px-sm-3 font-weight-bold font-size-6 text-dark">{!v.program} | XX BADGES</div>
+			<div class="d-flex align-items-center justify-content-center bg-transparent text-white">
+				Veja Mais
+			</div>
+		</a>
+		<div class="d-none d-xl-block text-center p-3 font-weight-bold font-size-6 text-dark">{!v.program} | XX BADGES</div>
+		<div class="h-100 d-none d-xl-block bg-white py-3 px-sm-3 overflow-y">
+
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+			<div class="d-flex align-items-center my-3 p-3">
+				<div class="circle-container d-flex align-items-center justify-content-center p-5 rounded-circle bg-dark text-white">
+					<span class="d-flex justify-content-center align-items-center fa fa-certificate font-size-7"></span>
+				</div>
+				<div class="d-flex flex-column ml-3">
+					<span class="text-dark font-weight-bold font-size-5">NOME DO BADGE</span>
+					<span>XX PONTOS</span>
+					<span class="mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ipsum, illum maiores repudiandae soluta neque enim deleniti quo quia dolorem?</span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</aura:component>

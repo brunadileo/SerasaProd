@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ScoreSMEliteAFAUX__c</fullName>
+    <description>Indica o score de superação de meta Elite do participante YTD.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ V_UltimoMesAtualizado__c = &apos;Abril&apos;, V_ScoreSMElitePrimeiroMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Maio&apos;, V_ScoreSMEliteSegundoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Junho&apos;, V_ScoreSMEliteTerceiroMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Julho&apos;, V_ScoreSMEliteQuartoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Agosto&apos;, V_ScoreSMEliteQuintoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Setembro&apos;, V_ScoreSMEliteSextoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Outubro&apos;, V_ScoreSMEliteSetimoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Novembro&apos;, V_ScoreSMEliteOitavoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Dezembro&apos;, V_ScoreSMEliteNonoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Janeiro&apos;, V_ScoreSMEliteDecimoMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Fevereiro&apos;, V_ScoreSMEliteDecimoPrimeiroMesAF__c,
+
+IF(
+ V_UltimoMesAtualizado__c = &apos;Março&apos;, V_ScoreSMEliteDecimoSegundoMesAF__c, 0
+
+))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indica o score de superação de meta Elite do participante YTD.</inlineHelpText>
+    <label>Score de SM Elite - AF AUX</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

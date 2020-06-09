@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose the Reward lookup field API name of the processed object when is under &quot;Specified by Field&quot; mode. --></help>
+    <label><!-- Reward Field Name --></label>
+    <name>FieloPLT__RewardFieldName__c</name>
+</CustomFieldTranslation>

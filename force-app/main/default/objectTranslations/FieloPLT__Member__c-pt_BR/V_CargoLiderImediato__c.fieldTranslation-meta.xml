@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Cargo do Líder imediato atual do participante. --></help>
+    <label><!-- Cargo do Líder Imediato --></label>
+    <name>V_CargoLiderImediato__c</name>
+</CustomFieldTranslation>

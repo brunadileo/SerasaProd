@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RewardBalanceField__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Field API name which keeps track of the specific Point type balance in &quot;Rewards&quot;. It connects Point type with &quot;Rewards&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the API name of the field which keeps track of the Point Type balance in Rewards (e.g. Miles__c).</inlineHelpText>
+    <label>Reward Balance field</label>
+    <length>45</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Set the number of digits displayed on the Voucher (min. 4 digits). --></help>
+    <label><!-- Number of Voucher Digits --></label>
+    <name>FieloPLT__NumberOfVoucherDigits__c</name>
+</CustomFieldTranslation>

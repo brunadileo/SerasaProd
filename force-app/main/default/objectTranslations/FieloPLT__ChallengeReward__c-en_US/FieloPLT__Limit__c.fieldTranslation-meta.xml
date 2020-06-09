@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If using the Singular Table Type, enter the maximum number of times this Challenge Reward can be granted to a Member during the Challenge. --></help>
+    <label><!-- Limit --></label>
+    <name>FieloPLT__Limit__c</name>
+</CustomFieldTranslation>

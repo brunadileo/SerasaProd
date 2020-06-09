@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Score de atingimento de meta Elite no 1o. semestre do ano fiscal. --></help>
+    <label><!-- Score AM H1 Elite - 1o. Sem. --></label>
+    <name>V_ScoreAMH1EliteSemestre1AF__c</name>
+</CustomFieldTranslation>

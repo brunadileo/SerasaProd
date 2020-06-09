@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ProcessarMecanicasSegundoMesAF__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>As mecânicas de atribuição de betcoins ou badges do respectivo mês serão executadas pela aplicação somente após o preenchimento desse campo para Verdadeiro.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>As mecânicas de atribuição de betcoins ou badges do respectivo mês serão executadas pela aplicação somente após o preenchimento desse campo para Verdadeiro.</inlineHelpText>
+    <label>Processar Mecânicas - Mês 5</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

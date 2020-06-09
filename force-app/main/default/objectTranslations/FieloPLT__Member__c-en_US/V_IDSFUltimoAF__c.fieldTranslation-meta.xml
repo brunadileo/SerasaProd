@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- ID SF do último ano fiscal criado. --></help>
+    <label><!-- ID SF - Último Ano Fiscal --></label>
+    <name>V_IDSFUltimoAF__c</name>
+</CustomFieldTranslation>

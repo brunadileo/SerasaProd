@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_YoubetProcessado__c</fullName>
+    <description>Campo atualizado com data e hora após processamento do batch para indicar o lance vencedor após a vigência do Youbet. Se assinalado, indica que o Youbet encerrado já teve a indicação do lance ganhador.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Campo atualizado com data e hora após processamento do batch para indicar o lance vencedor após a vigência do Youbet. Se assinalado, indica que o Youbet encerrado já teve a indicação do lance ganhador.</inlineHelpText>
+    <label>Youbet Processado</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

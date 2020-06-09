@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ValorSEOitavoMesAF__c</fullName>
+    <description>Valor da solução estratégica no 8o. mês do ano fiscal.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Valor da solução estratégica no 8o. mês do ano fiscal.</inlineHelpText>
+    <label>Valor SE - Mês 11</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>8</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Redemption__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>It shows the Redemption reference ID which the Provider Order is related to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Redemption which the Provider Order is related to.</inlineHelpText>
+    <label>Redemption</label>
+    <referenceTo>FieloPLT__Redemption__c</referenceTo>
+    <relationshipLabel>Provider Orders</relationshipLabel>
+    <relationshipName>ProviderOrders</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

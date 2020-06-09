@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_CargoElegivelYoubet__c</fullName>
+    <description>Posição da hierarquia do participante elegível ao Youbet.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Posição da hierarquia do participante elegível ao Youbet.</inlineHelpText>
+    <label>Cargo Elegível ao Youbet</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GERENTE DE CONTAS</fullName>
+                <default>false</default>
+                <label>GERENTE DE CONTAS</label>
+            </value>
+            <value>
+                <fullName>DIRETOR</fullName>
+                <default>false</default>
+                <label>DIRETOR</label>
+            </value>
+            <value>
+                <fullName>COORDENADOR | GERENTE REGIONAL VIP</fullName>
+                <default>false</default>
+                <label>COORDENADOR | GERENTE REGIONAL VIP</label>
+            </value>
+            <value>
+                <fullName>LÍDER</fullName>
+                <default>false</default>
+                <label>LÍDER</label>
+            </value>
+            <value>
+                <fullName>COORDENADOR I</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>COORDENADOR I</label>
+            </value>
+            <value>
+                <fullName>COORDENADOR II</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>COORDENADOR II</label>
+            </value>
+            <value>
+                <fullName>GERENTE REGIONAL VIP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>GERENTE REGIONAL VIP</label>
+            </value>
+            <value>
+                <fullName>LÍDER DE SETOR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>LÍDER DE SETOR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

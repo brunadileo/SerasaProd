@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Agreement Back End --></label>
+        <name>FieloPLT__Agreements</name>
+    </fieldSets>
+    <recordTypes>
+        <description><!-- The Agreement status is Active. --></description>
+        <label><!-- Active --></label>
+        <name>FieloPLT__Active</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- The Agreement status is Draft. --></description>
+        <label><!-- Draft --></label>
+        <name>FieloPLT__Draft</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The related Program cannot be modified. --></errorMessage>
+        <name>FieloPLT__ModifyProgram</name>
+    </validationRules>
+</CustomObjectTranslation>

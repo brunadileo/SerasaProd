@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Object__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Object of the Action. By default, the available Objects to select are the ones which include a lookup to Members, that is, any Object related to Members: Badge Member, Challenge Member, Event, Level Member, Member Segment, Member, Point, Redemption, Tracker and Transaction.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the Object of the Action. By default, all Fielo objects related to Members are included.</inlineHelpText>
+    <label>Object</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FieloPLT__Event__c</fullName>
+                <default>false</default>
+                <label>FieloPLT__Event__c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pontos equivalentes da badge. --></help>
+    <label><!-- Pontos --></label>
+    <name>V_Pontos__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_ProcessarCalculos__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Ao ser assinalado esse campo, os workflows de cálculo do registro serão acionados.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ao ser assinalado esse campo, os workflows de cálculo do registro serão acionados.</inlineHelpText>
+    <label>Processar Cálculos</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Challenge Member status. When &quot;Accomplished&quot;, the Challenge Reward meets its &quot;Logical expression&quot; and can be granted. When &quot;Not Accomplished&quot;, a &quot;Mission with Objective&quot; was not attained and the Challenge Reward cannot be granted. --></help>
+    <label><!-- Status --></label>
+    <name>FieloPLT__Status__c</name>
+    <picklistValues>
+        <masterLabel>Accomplished</masterLabel>
+        <translation><!-- Accomplished --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Accomplished</masterLabel>
+        <translation><!-- Not Accomplished --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

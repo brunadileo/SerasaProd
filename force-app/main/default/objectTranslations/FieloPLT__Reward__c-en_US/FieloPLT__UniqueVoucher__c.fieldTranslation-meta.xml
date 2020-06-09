@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When switched on, the Unique Code generated during redemption will encompass all Redemption Items related to this Reward. Applies only if the Stock Type for this Reward is &quot;Controlled by Quantity&quot; or &quot;Unlimited&quot;. --></help>
+    <label><!-- Unique Voucher --></label>
+    <name>FieloPLT__UniqueVoucher__c</name>
+</CustomFieldTranslation>

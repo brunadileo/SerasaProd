@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Betcoins consolidados em um único ponto (perene ou complementar). Campo a ser utilizado em front ends. --></help>
+    <label><!-- Betcoins Investidos --></label>
+    <name>V_BetcoinsInvestidos__c</name>
+</CustomFieldTranslation>

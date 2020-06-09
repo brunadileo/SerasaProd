@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Score atribuído por lance realizado em leilão extra no ano fiscal. --></help>
+    <label><!-- Score Lance em Leilão Extra - SPY - AF --></label>
+    <name>V_ScoreLanceLeilaoCompAF__c</name>
+</CustomFieldTranslation>

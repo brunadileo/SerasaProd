@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__OrganizationAccountRelation</fullName>
+    <active>true</active>
+    <description>An Organization Member cannot be related to another Organization Member.</description>
+    <errorConditionFormula>IF( AND(ISPICKVAL(FieloPLT__Type__c, &apos;Organization Account&apos;), NOT(ISBLANK(FieloPLT__OrganizationAccount__c)) ),
+true,
+false)</errorConditionFormula>
+    <errorDisplayField>FieloPLT__OrganizationAccount__c</errorDisplayField>
+    <errorMessage>An Organization Member cannot be related to another Organization Member.</errorMessage>
+</ValidationRule>

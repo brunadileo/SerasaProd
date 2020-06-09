@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Mês relacionado à meta do participante. Exemplo: 4 --></help>
+    <label><!-- Mês --></label>
+    <name>V_Mes__c</name>
+</CustomFieldTranslation>

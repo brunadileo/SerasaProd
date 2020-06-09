@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indica se o participante realizou no mínimo 1 lance em leilão extra no ano fiscal. --></help>
+    <label><!-- Realizou Lance em Leilão Extra? --></label>
+    <name>V_RealizouLanceLeilaoCompAF__c</name>
+</CustomFieldTranslation>

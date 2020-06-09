@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__RelatedSegments__c</fullName>
+    <deprecated>false</deprecated>
+    <description>It stores the different Segment IDs when assigning more than one Segment to Incentives and Rewards (Multisegment).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>It stores the different Segment IDs when assigning more than one Segment Incentives and Rewards (Multisegment).</inlineHelpText>
+    <label>Related Segments</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

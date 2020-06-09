@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Utilizado no campo &quot;Score Elite Anual&quot; para ajuste de cálculo desse score. --></help>
+    <label><!-- Score Único Potencial da Carteira --></label>
+    <name>V_ScoreUnicoPotencialCarteira__c</name>
+</CustomFieldTranslation>

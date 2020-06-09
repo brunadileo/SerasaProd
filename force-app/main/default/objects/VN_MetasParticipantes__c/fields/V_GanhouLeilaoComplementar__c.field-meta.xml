@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_GanhouLeilaoComplementar__c</fullName>
+    <description>Indica se o participante ganhou no mínimo 1 leilão extra no ano fiscal.</description>
+    <externalId>false</externalId>
+    <formula>V_LeiloesCompGanhosAF__c &gt;= 1</formula>
+    <inlineHelpText>Indica se o participante ganhou no mínimo 1 leilão extra no ano fiscal.</inlineHelpText>
+    <label>Ganhou Leilão Extra?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

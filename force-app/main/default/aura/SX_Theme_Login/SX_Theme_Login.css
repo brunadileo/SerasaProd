@@ -1,0 +1,63 @@
+@font-face {
+    font-family: DINNextW1G;
+    src: url('/insiders/resource/SX_Fonts/DINNextW1G-Regular.otf');
+}
+.THIS {
+	background: url(/insiders/resource/SX_Bg_login) 50% 50%/cover no-repeat fixed;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow-y: auto;
+	padding: 4rem 10rem;
+	font-family: DINNextW1G;
+}
+.THIS .columns > div, .THIS .columns > div > div {
+	width: 100%;
+}
+.THIS .content-left {
+	width: 250px;
+}
+.THIS .content-right {
+	width: 250px;
+}
+.THIS .container.pb-0 {
+	padding-bottom: 0px !important;
+}
+@media (min-width: 768px) {
+	.THIS {
+		justify-content: start;
+	}
+}
+@media (max-width: 767px) {
+	.THIS {
+		background: url(/insiders/resource/SX_Images/login-background-simple.jpg) 50% 50%/cover no-repeat fixed;
+		padding: 4rem 1rem;
+	}
+	.THIS .box-img {
+		text-align: center;
+	}
+	.THIS .content-left {
+		display: none;
+	}
+	.THIS .content-right { 
+		margin: auto;
+		padding-left: 0px !important;
+	}
+}
+/*@media (max-aspect-ratio: 4/3) {
+	.THIS {
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+	}
+	.THIS .content-left {
+		display: none;
+	}
+	.THIS .content-right {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
+}*/

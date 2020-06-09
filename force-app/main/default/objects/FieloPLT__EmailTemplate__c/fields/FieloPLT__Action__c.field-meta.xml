@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloPLT__Action__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The Action that triggers a Transactional Email. An Action represents a behavior you want to encourage in a Member. Actions are configured in the Libraries tab.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter an Action. An Action represents a behavior you want to encourage in a Member. You can configure Actions in the Libraries tab.</inlineHelpText>
+    <label>Action</label>
+    <referenceTo>FieloPLT__Action__c</referenceTo>
+    <relationshipLabel>Email Templates</relationshipLabel>
+    <relationshipName>EmailTemplates</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

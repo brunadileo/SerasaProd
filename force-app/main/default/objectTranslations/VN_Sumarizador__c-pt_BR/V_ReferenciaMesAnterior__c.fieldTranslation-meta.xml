@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Faz referência ao registro do mês anterior no sumarizador. --></help>
+    <label><!-- Referência ao Mês Anterior --></label>
+    <name>V_ReferenciaMesAnterior__c</name>
+    <relationshipLabel><!-- Sumarizadores (Referência ao Mês Anterior) --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When ticked, it means that the Page Setting was customly created in the Local Development Library and does not come within any of the default Libraries (FieloPLT, FieloELR, FieloPRP). --></help>
+    <label><!-- Custom --></label>
+    <name>FieloPLT__IsCustom__c</name>
+</CustomFieldTranslation>

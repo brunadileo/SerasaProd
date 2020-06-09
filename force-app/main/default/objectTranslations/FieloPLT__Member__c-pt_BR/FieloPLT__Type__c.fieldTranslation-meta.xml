@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose what kind of Member this is: Individual (physical person or sole proprietorship), Organization Contributor Member (physical person contributing to an organization) or Organization Member (a company or entity). --></help>
+    <label>Tipo</label>
+    <name>FieloPLT__Type__c</name>
+    <picklistValues>
+        <masterLabel>Individual Member</masterLabel>
+        <translation><!-- Individual Member --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Organization Contributor Member</masterLabel>
+        <translation><!-- Organization Contributor Member --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Organization Member</masterLabel>
+        <translation><!-- Organization Member --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

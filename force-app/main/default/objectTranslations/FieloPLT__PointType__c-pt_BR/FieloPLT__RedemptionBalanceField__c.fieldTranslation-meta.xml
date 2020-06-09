@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter the API name of the field which keeps track of the Point Type balance in Redemptions (e.g. Miles__c). --></help>
+    <label><!-- Redemption Balance field --></label>
+    <name>FieloPLT__RedemptionBalanceField__c</name>
+</CustomFieldTranslation>

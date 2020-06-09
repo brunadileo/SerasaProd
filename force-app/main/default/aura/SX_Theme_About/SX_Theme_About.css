@@ -1,0 +1,64 @@
+@font-face {
+    font-family: DINNextW1G;
+    src: url('/insiders/resource/SX_Fonts/DINNextW1G-Regular.otf');
+}
+.THIS {
+    font-family: DINNextW1G;
+}
+.THIS .box-content {
+    min-height: calc(100vh - 65px);
+}
+.THIS .container-serasa {
+    max-width: 991px;
+    width: 100%;
+    margin: 0 auto;
+}
+.THIS .header {
+    background: #eeeeee;
+    height: 65px;
+}
+.THIS .header-logo {
+    position: absolute;
+    left: calc(50% - 66px);
+}
+.THIS .content {
+    background: #cdcdcd;
+    height: calc(100vh - 130px);
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+.THIS .footer {
+    height: 10%;
+    background: #eeeeee;
+    min-height: 65px;
+}
+.THIS .footer .columns > div, .THIS .footer .columns > div > div {
+    height: 100%;
+}
+/*.THIS .columns > div, .THIS .columns > div > div {
+    width: 100%;
+}*/
+
+@media (max-width: 1200px) {
+    .THIS .container-serasa { 
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .THIS .content {
+        height: auto;
+        overflow-y: initial;
+        background-attachment: initial !important;
+    }
+    .THIS .footer {
+        height: auto;
+    }
+}
+@media (max-width: 575px) {
+    .THIS .header-logo {
+        left: auto;
+        right: 0;
+    }
+}

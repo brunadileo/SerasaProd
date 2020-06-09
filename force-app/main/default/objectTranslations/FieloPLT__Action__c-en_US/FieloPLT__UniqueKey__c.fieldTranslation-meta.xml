@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- It shows the Action Trigger ID together with the API Name of Target Member Lookup field. --></help>
+    <label><!-- Unique Key --></label>
+    <name>FieloPLT__UniqueKey__c</name>
+</CustomFieldTranslation>

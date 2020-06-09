@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FieloPLT__BadgeMember__c.V_MemberName__c</field>
+    </columns>
+    <columns>
+        <field>FieloPLT__BadgeMember__c.V_Email__c</field>
+    </columns>
+    <description>Relatório para disparo manual de participantes que acumularam badges na última apuração</description>
+    <format>Tabular</format>
+    <name>Disparo: Nova Badge (mensal)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$FieloPLT__BadgeMember__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>
